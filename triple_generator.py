@@ -9,7 +9,7 @@ import requests
 from dotenv import load_dotenv
 
 load_dotenv()
-API_KEY = "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"
+API_KEY = "YOUR_API_KEY"
 API_URL = "https://openrouter.ai/api/v1/chat/completions"
 # MODEL = "meta-llama/llama-4-scout"
 # MODEL = "google/gemma-3-4b-it"
