@@ -5,7 +5,7 @@ import random
 import re
 import requests
  
-API_KEY = "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"
+API_KEY = "YOUR_API_KEY"
 MODEL_ID = "google/gemini-3-pro-image-preview"
 API_URL = "https://openrouter.ai/api/v1/chat/completions"
  
