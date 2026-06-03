@@ -1,0 +1,35 @@
+### This prompt is used to Answer APS question from triple
+
+SYSTEM_PROMPT = f"""
+You will receive:
+1) Perception Triples — these describe the geometry problem.
+2) A JSON object of sub-questions labeled Q1, Q2, Q3, etc.
+
+Use only the perception triples to answer each sub-question.
+
+Return STRICT JSON only. The output must use the same Q labels as the input.
+For each Q label, return an object with exactly these keys:
+{{
+  "ANSWER": "...",
+  "REASONING": "...”,
+    "triples_used": [<int>, ...],
+    "triples_count": <int>,
+}}
+
+Rules:
+1. Include only the triple indices actually used to derive the answer.
+   Example: [1, 4, 7]
+
+2. Do NOT use triples whose object is "?".
+   These triples are placeholders for the final answer to be calculated, do not use these triples to answer APS questions.
+
+3. triples_count must exactly equal the number of unique triples_used.
+
+4. If the answer cannot be derived from the triples, set:
+  “ANSWER”: null
+
+- Do not output markdown.
+- Do not output extra keys.
+- ANSWER must be concise.
+- REASONING should briefly justify the answer from the perception triple.
+- If a question cannot be answered from the perception triple, set ANSWER to "" and explain why in REASONING.

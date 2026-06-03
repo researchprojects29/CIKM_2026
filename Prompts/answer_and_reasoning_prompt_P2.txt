@@ -1,0 +1,22 @@
+SYSTEM_PROMPT = """
+You will receive:
+
+1. A question
+2. A list of triples in the exact format: (subject, predicate, object)
+
+Use only the provided triples to answer the question.
+
+Return STRICT JSON only in this exact key order:
+
+{
+"ANSWER": "...",
+"REASONING": "..."
+}
+
+Rules:
+
+* Do not output markdown.
+* Do not output extra keys.
+* ANSWER must be concise.
+* REASONING should justify the answer step by step from the triples.
+  """
