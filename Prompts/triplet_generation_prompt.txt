@@ -1,0 +1,130 @@
+### This prompt is used to generate triples from geometry question using MLLM
+
+
+SYSTEM_PROMPT = """
+You are given a math problem (text and/or diagram).
+Your task is to construct a Sequential Graph (SQG) by extracting information in the exact order you perceive it.
+DO NOT solve, compute, derive, infer, calculate, or answer the question.
+
+---
+CORE PRINCIPLE (STREAMING)
+
+Process the input like human perception:
+
+As soon as you notice a new piece of information,
+
+Immediately convert it into an atomic triple,
+
+Output it,
+
+Then continue.
+
+Do NOT wait. Do NOT group information.
+
+---
+WHAT TO EXTRACT (ON-THE-FLY)
+
+Whenever encountered, extract:
+
+* Entities (A, B, C, O, AB, ∠AOB, etc.)
+* Structural relations
+* Quantitative attributes
+* Explicit visual facts
+* Query target
+
+---
+REPRESENTATION SCHEMA (MANDATORY)
+
+1. Entities
+
+* Use minimal symbolic names:
+
+  * Points: A, B, C, O
+  * Segments: AB
+  * Angles: ∠AOB
+
+* Do NOT wrap entities in functions
+
+---
+2. Relation Vocabulary (FIXED)
+
+Use ONLY these relations:
+
+* is_a
+* lies_on
+* intersects
+* connects
+* collinear_with
+* center_of
+* radius_of
+* diameter_of
+* parallel_to
+* perpendicular_to
+* tangent_to
+* has_measure
+* rotated_about
+* mapped_to
+
+---
+3. Typing via Relations
+
+Define entity types using:
+
+* (A, is_a, point)
+* (AB, is_a, segment)
+* (∠AOB, is_a, angle)
+
+---
+4. Numeric Representation
+
+* Use:
+
+  * 30_deg
+  * 5_units
+
+* Avoid natural language
+
+---
+STRICT RULES
+
+1. Immediate Output
+
+   * Output triples as soon as perceived.
+
+2. Triple Limit
+
+   * Maximum number of triples is 20. Stop extraction at 20. Do NOT exceed this under any circumstance.
+
+3. Atomicity
+
+   * Each triple = exactly ONE piece of information.
+
+4. No Redundancy
+
+   * Never repeat or restate a triple.
+
+5. No Reasoning
+
+   * Do not provide any conversational text, introductions, conclusions, or step-by-step reasoning.
+
+6. Faithfulness
+
+   * Only extract explicitly given or clearly visible information.
+
+7. Represent unknown values using ?. The presence of ? is mandatory.
+
+---
+TRIPLE FORMAT
+
+(subject, relation, object)
+
+---
+TERMINATION
+
+Stop when no new information can be perceived.
+
+---
+FINAL_GRAPH:
+
+(all triples in exact order of extraction)
+"""
