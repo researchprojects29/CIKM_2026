@@ -1,0 +1,115 @@
+APS Answer Accuracy Summary
+=================================================================
+Accuracy calculation follows calculate_triples_aps_answer_accuracy.py:
+- denominator comes from the questions JSON
+- missing model answers are counted as incorrect
+- selected APS problem indices are used
+- standard deviation and triples-used metrics are omitted
+
+Per-model metrics:
+Model        | Avg run acc  | Pooled accuracy      | Runs | Settings
+---------------------------------------------------------------------------
+Gemma        |     30.95% |  7000/22620 =  30.95% | 3    | 60      
+Llama        |     52.95% | 11977/22620 =  52.95% | 3    | 60      
+Mistral      |     70.68% | 15988/22620 =  70.68% | 3    | 60      
+
+Per-run metrics:
+Model        | Run                  | Accuracy             | Settings
+----------------------------------------------------------------------
+Gemma        | first run            |  2292/7540  =  30.40% | 20      
+Gemma        | second run           |  2344/7540  =  31.09% | 20      
+Gemma        | third run            |  2364/7540  =  31.35% | 20      
+Llama        | run-1-llama          |  4742/7540  =  62.89% | 20      
+Llama        | run-2-llama          |  2439/7540  =  32.35% | 20      
+Llama        | run-3-llama          |  4796/7540  =  63.61% | 20      
+Mistral      | run-1-mistral        |  5329/7540  =  70.68% | 20      
+Mistral      | run-2-mistral        |  5337/7540  =  70.78% | 20      
+Mistral      | run-3-mistral        |  5322/7540  =  70.58% | 20      
+
+Case metrics combined across all runs, per model:
+Model        | Case         | Accuracy             | Result files
+------------------------------------------------------------------------
+Gemma        | FTFD         |   411/1131  =  36.34% | 3           
+Gemma        | FTNDBGC      |   335/1131  =  29.62% | 3           
+Gemma        | FTNDBLUR     |   398/1131  =  35.19% | 3           
+Gemma        | FTNDILL      |   392/1131  =  34.66% | 3           
+Gemma        | FTNDIRR      |   394/1131  =  34.84% | 3           
+Gemma        | FTNDPN       |   406/1131  =  35.90% | 3           
+Gemma        | HTHD         |   346/1131  =  30.59% | 3           
+Gemma        | HTNHBGC      |   333/1131  =  29.44% | 3           
+Gemma        | HTNHBLUR     |   322/1131  =  28.47% | 3           
+Gemma        | HTNHILL      |   289/1131  =  25.55% | 3           
+Gemma        | HTNHIRR      |   298/1131  =  26.35% | 3           
+Gemma        | HTNHPN       |   316/1131  =  27.94% | 3           
+Gemma        | NHTNHD       |   290/1131  =  25.64% | 3           
+Gemma        | NHTPHD       |   309/1131  =  27.32% | 3           
+Gemma        | NHTSHD       |   289/1131  =  25.55% | 3           
+Gemma        | NHTTHD       |   296/1131  =  26.17% | 3           
+Gemma        | NTNFD        |   376/1131  =  33.24% | 3           
+Gemma        | NTPFD        |   424/1131  =  37.49% | 3           
+Gemma        | NTSFD        |   404/1131  =  35.72% | 3           
+Gemma        | NTTFD        |   372/1131  =  32.89% | 3           
+Llama        | FTFD         |   613/1131  =  54.20% | 3           
+Llama        | FTNDBGC      |   698/1131  =  61.72% | 3           
+Llama        | FTNDBLUR     |   666/1131  =  58.89% | 3           
+Llama        | FTNDILL      |   727/1131  =  64.28% | 3           
+Llama        | FTNDIRR      |   752/1131  =  66.49% | 3           
+Llama        | FTNDPN       |   740/1131  =  65.43% | 3           
+Llama        | HTHD         |   680/1131  =  60.12% | 3           
+Llama        | HTNHBGC      |   625/1131  =  55.26% | 3           
+Llama        | HTNHBLUR     |   530/1131  =  46.86% | 3           
+Llama        | HTNHILL      |   524/1131  =  46.33% | 3           
+Llama        | HTNHIRR      |   437/1131  =  38.64% | 3           
+Llama        | HTNHPN       |   563/1131  =  49.78% | 3           
+Llama        | NHTNHD       |   553/1131  =  48.89% | 3           
+Llama        | NHTPHD       |   481/1131  =  42.53% | 3           
+Llama        | NHTSHD       |   433/1131  =  38.28% | 3           
+Llama        | NHTTHD       |   472/1131  =  41.73% | 3           
+Llama        | NTNFD        |   609/1131  =  53.85% | 3           
+Llama        | NTPFD        |   708/1131  =  62.60% | 3           
+Llama        | NTSFD        |   608/1131  =  53.76% | 3           
+Llama        | NTTFD        |   558/1131  =  49.34% | 3           
+Mistral      | FTFD         |   842/1131  =  74.45% | 3           
+Mistral      | FTNDBGC      |   820/1131  =  72.50% | 3           
+Mistral      | FTNDBLUR     |   885/1131  =  78.25% | 3           
+Mistral      | FTNDILL      |   862/1131  =  76.22% | 3           
+Mistral      | FTNDIRR      |   867/1131  =  76.66% | 3           
+Mistral      | FTNDPN       |   877/1131  =  77.54% | 3           
+Mistral      | HTHD         |   739/1131  =  65.34% | 3           
+Mistral      | HTNHBGC      |   756/1131  =  66.84% | 3           
+Mistral      | HTNHBLUR     |   736/1131  =  65.08% | 3           
+Mistral      | HTNHILL      |   741/1131  =  65.52% | 3           
+Mistral      | HTNHIRR      |   743/1131  =  65.69% | 3           
+Mistral      | HTNHPN       |   718/1131  =  63.48% | 3           
+Mistral      | NHTNHD       |   749/1131  =  66.22% | 3           
+Mistral      | NHTPHD       |   741/1131  =  65.52% | 3           
+Mistral      | NHTSHD       |   719/1131  =  63.57% | 3           
+Mistral      | NHTTHD       |   740/1131  =  65.43% | 3           
+Mistral      | NTNFD        |   885/1131  =  78.25% | 3           
+Mistral      | NTPFD        |   882/1131  =  77.98% | 3           
+Mistral      | NTSFD        |   840/1131  =  74.27% | 3           
+Mistral      | NTTFD        |   846/1131  =  74.80% | 3           
+
+Case metrics combined across all models and runs:
+Case         | Accuracy             | Result files
+----------------------------------------------------
+FTFD         |  1866/3393  =  55.00% | 9           
+FTNDBGC      |  1853/3393  =  54.61% | 9           
+FTNDBLUR     |  1949/3393  =  57.44% | 9           
+FTNDILL      |  1981/3393  =  58.38% | 9           
+FTNDIRR      |  2013/3393  =  59.33% | 9           
+FTNDPN       |  2023/3393  =  59.62% | 9           
+HTHD         |  1765/3393  =  52.02% | 9           
+HTNHBGC      |  1714/3393  =  50.52% | 9           
+HTNHBLUR     |  1588/3393  =  46.80% | 9           
+HTNHILL      |  1554/3393  =  45.80% | 9           
+HTNHIRR      |  1478/3393  =  43.56% | 9           
+HTNHPN       |  1597/3393  =  47.07% | 9           
+NHTNHD       |  1592/3393  =  46.92% | 9           
+NHTPHD       |  1531/3393  =  45.12% | 9           
+NHTSHD       |  1441/3393  =  42.47% | 9           
+NHTTHD       |  1508/3393  =  44.44% | 9           
+NTNFD        |  1870/3393  =  55.11% | 9           
+NTPFD        |  2014/3393  =  59.36% | 9           
+NTSFD        |  1852/3393  =  54.58% | 9           
+NTTFD        |  1776/3393  =  52.34% | 9           
