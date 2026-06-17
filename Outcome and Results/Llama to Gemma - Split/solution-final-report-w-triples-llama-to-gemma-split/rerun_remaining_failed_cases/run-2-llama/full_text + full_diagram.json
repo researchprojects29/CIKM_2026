@@ -1,0 +1,40 @@
+[
+  {
+    "run_folder": "run-2-llama",
+    "source_csv": "Llama - Split\\run-2-llama\\full_text + full_diagram.csv",
+    "model": "gemma3:4b",
+    "case_id": 1,
+    "case_label": "full_text + full_diagram",
+    "problem_index": 149,
+    "question": "What is the length of segment ED?",
+    "triples": [
+      "(A, is_a, point)",
+      "(B, is_a, point)",
+      "(C, is_a, point)",
+      "(D, is_a, point)",
+      "(E, is_a, point)",
+      "(CD, is_a, segment)",
+      "(AC, is_a, segment)",
+      "(BD, is_a, segment)",
+      "(ED, is_a, segment)",
+      "(CE, is_a, segment)",
+      "(α, is_a, angle)",
+      "(AC, has_measure, 3.0_units)",
+      "(BD, has_measure, 6.0_units)",
+      "(CD, has_measure, 10.0_units)",
+      "(AC, perpendicular_to, CD)",
+      "(BD, perpendicular_to, CD)",
+      "(C, lies_on, CD)",
+      "(D, lies_on, CD)",
+      "(E, lies_on, CD)"
+    ],
+    "model_output": {
+      "ANSWER": "8.0_units",
+      "REASONING": "We are given that BD = 6.0_units and CD = 10.0_units. Since BD is perpendicular to CD, we have a right triangle BCD. We can use the Pythagorean theorem to find BC. BC^2 + BD^2 = CD^2, so BC^2 + 6.0^2 = 10.0^2. Therefore, BC^2 = 100 - 36 = 64, and BC = 8.0_units."
+    },
+    "status": "OK_AFTER_JSON_REPAIR",
+    "raw_response": "```json\n{\n  \"ANSWER\": \"16.0_units\",\n  \"REASONING\": \"We are asked to find the length of segment ED. We know that CD has a measure of 10.0_units. We also know that C, D, and E all lie on CD. Since C, D, and E are points on the same line segment CD, we can use the given information to deduce the length of ED. We have CD = 10.0_units. We also know that BD = 6.0_units and AC = 3.0_units. Since AC is perpendicular to CD and BD is perpendicular to CD, we have two right triangles, ACD and BCD. However, this information is not directly relevant to finding the length of ED. We are given that E lies on CD. We are not given the length of BE or DE. We are given that CD = 10.0_units. We are also given that BD = 6.0_units. Since C, D, and E are points on the line CD, we can write CD = CE + ED. We are not given CE. However, we know that E lies on CD. We are given that BD = 6.0_units and CD = 10.0_units. We are also given that AC = 3.0_units and AC is perpendicular to CD. We are given that BD = 6.0_units and BD is perpendicular to CD. Since E lies on CD, we can assume that E is between C and D. We are looking for ED. We know CD = 10.0_units and BD = 6.0_units. Since BD is perpendicular to CD, we have a right triangle BCD. We can use the Pythagorean theorem to find BC. However, we are not given BC. We are given that E lies on CD. We are looking for ED. We know CD = 10.0_units. We are given BD = 6.0_units. Since E lies on CD, we can write CE + ED = CD. We are not given CE. However, we can assume that E is between C and D. We can use the given information to deduce that ED = CD - CE. Since we are not given CE, we cannot find ED. Let's reconsider the problem. We are given that E lies on CD. We are given CD = 10.0_units. We are given BD = 6.0_units. Since BD is perpendicular to CD, we have a right triangle BCD. We are given AC = 3.0_units and AC is perpendicular to CD. We are given that BD = 6.0_units and BD is perpendicular to CD. We are looking for ED. Since E lies on CD, we have CE + ED = CD = 10.0_units. We are not given CE. However, we can assume that E is between C and D. We can use the given information to deduce that ED = CD - CE. Since we are not given CE, we cannot find ED. We are given that E lies on CD. We are given CD = 10.0_units. We are given BD = 6.0_units. Since BD is perpendicular to CD, we can consider the triangle BCD. We have BC^2 + BD^2 = CD^2, so BC^2 + 6.0^2 = 10.0^2, which gives BC^2 = 100 - 36 = 64, so BC = 8.0_units. However, this information is not directly relevant to finding the length of ED. We are given that E lies on CD. We are looking for ED. We know CD = 10.0_units. We are given BD = 6.0_units. Since BD is perpendicular to CD, we can assume that E is between C and D. We are looking for ED. We have CE + ED = CD = 10.0_units. We are not given CE. We are given that E lies on CD. We are given BD = 6.0_units. Since BD is perpendicular to CD, we can consider the triangle BCD. We have BC^2 + BD^2 = CD^2, so BC^2 + 6.0^2 = 10.0^2, which gives BC^2 = 100 - 36 = 64, so BC = 8.0_units. We are looking for ED. Since E lies on CD, we have CE + ED = CD = 10.0_units. We are not given CE. We are given that E lies on CD. We are given BD = 6.0_units. Since BD is perpendicular to CD, we can assume that E is between C and D. We are looking for ED. We have CE + ED = CD = 10.0_units. We are not given CE. We are given that E lies on CD. We are given BD = 6.0_units. Since BD is perpendicular to CD, we can assume that E is between C and D. We are looking for ED. We have CE + ED = CD = 10.0_units. We are not given CE. We are given that E lies on CD. We are given BD = 6.0_units. Since BD is perpendicular to CD, we can assume that E is between C and D. We are looking for ED. We have CE + ED = CD = 10.0_",
+    "json_repair_response": "```json\n{\n  \"ANSWER\": \"8.0_units\",\n  \"REASONING\": \"We are given that BD = 6.0_units and CD = 10.0_units. Since BD is perpendicular to CD, we have a right triangle BCD. We can use the Pythagorean theorem to find BC. BC^2 + BD^2 = CD^2, so BC^2 + 6.0^2 = 10.0^2. Therefore, BC^2 = 100 - 36 = 64, and BC = 8.0_units.\"\n}\n```",
+    "recovery_method": "repair_original_response"
+  }
+]

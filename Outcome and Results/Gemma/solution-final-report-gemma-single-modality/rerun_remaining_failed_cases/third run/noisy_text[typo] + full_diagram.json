@@ -1,0 +1,31 @@
+[
+  {
+    "run_folder": "third run",
+    "source_csv": "third run\\noisy_text[typo] + full_diagram.csv",
+    "case_id": 5,
+    "case_label": "noisy_text[typo] + full_diagram",
+    "problem_index": 58,
+    "question": "Find the measure of CDE",
+    "triples": [
+      "(A, is_a, point)",
+      "(B, is_a, point)",
+      "(C, is_a, point)",
+      "(E, is_a, point)",
+      "(AB, is_a, segment)",
+      "(CD, is_a, segment)",
+      "(∠AEC, has_measure, 35_deg)",
+      "(∠CED, has_measure, 90_deg)",
+      "(E, lies_on, AB)",
+      "(C, lies_on, CD)",
+      "(D, lies_on, CD)"
+    ],
+    "model_output": {
+      "ANSWER": "55",
+      "REASONING": "We are given that ∠AEC = 35_deg and ∠CED = 90_deg. Since ∠CED = 90_deg, we can find ∠BEC = 180_deg - 35_deg - 90_deg = 55_deg.  Therefore, ∠CDE = 55_deg."
+    },
+    "status": "OK_AFTER_JSON_REPAIR",
+    "raw_response": "```json\n{\n  \"ANSWER\": \"55\",\n  \"REASONING\": \"We are asked to find the measure of angle CDE. Since E lies on AB and C lies on CD, and D lies on CD, we have the following information: \\n\\n1. ∠AEC = 35_deg\\n2. ∠CED = 90_deg\\n\\nWe want to find ∠CDE. Since ∠CED = 90_deg, we have \\n\\n∠CDE = 180_deg - 90_deg - ∠ACB\\n\\nHowever, we don't have information about ∠ACB. Instead, we can consider the triangle CED. We know that CD is a line segment and C and D lie on it. Also, E lies on AB. We are given that ∠CED = 90_deg. We need to find ∠CDE. \\n\\nSince ∠CED = 90_deg, we can consider the triangle CED. We know that CD is a line segment and C and D lie on it. Also, E lies on AB. We are given that ∠CED = 90_deg. We need to find ∠CDE. \\n\\nLet's consider the angles around point E. We have ∠AEC = 35_deg and ∠CED = 90_deg. Therefore, \\n\\n∠BEC = 180_deg - 35_deg - 90_deg = 55_deg\\n\\nSince ∠CED = 90_deg, we have \\n\\n∠CDE = 180_deg - 90_deg - ∠BCE\\n\\nWe know that E lies on AB and C lies on CD. Also, D lies on CD. We are given that ∠CED = 90_deg. We want to find ∠CDE. \\n\\nWe have ∠AEC = 35_deg and ∠CED = 90_deg. Since ∠CED = 90_deg, we can consider the triangle CED. We have CD is a line segment. We know that C and D lie on CD. Also, E lies on AB. \\n\\nWe can consider the triangle AEC and CED. We have ∠AEC = 35_deg and ∠CED = 90_deg. We want to find ∠CDE. \\n\\nSince ∠CED = 90_deg, we have \\n\\n∠CDE = 180_deg - 90_deg - ∠BCE\\n\\nWe know that E lies on AB and C lies on CD. Also, D lies on CD. We are given that ∠CED = 90_deg. We want to find ∠CDE. \\n\\nLet's consider the triangle CED. We have ∠CED = 90_deg. We want to find ∠CDE. \\n\\nSince ∠CED = 90_deg, we have \\n\\n∠CDE = x\\n\\nIn triangle CED, we have ∠CED = 90_deg, so \\n\\n∠CDE + ∠DCE = 90_deg\\n\\nWe know that ∠CED = 90_deg, so \\n\\n∠CDE = 180_deg - 90_deg - ∠BCE\\n\\nWe are given that ∠AEC = 35_deg and ∠CED = 90_deg. We want to find ∠CDE. \\n\\nSince ∠CED = 90_deg, we have \\n\\n∠CDE = 180_deg - 90_deg - ∠BCE\\n\\nWe have ∠AEC = 35_deg and ∠CED = 90_deg. We want to find ∠CDE. \\n\\nLet's consider the triangle AEC. We have ∠AEC = 35_deg. We want to find ∠ACE. \\n\\nSince ∠CED = 90_deg, we have \\n\\n∠CDE = 180_deg - 90_deg - ∠BCE\\n\\nWe know that ∠AEC = 35_deg and ∠CED = 90_deg. We want to find ∠CDE. \\n\\nWe have ∠CED = 90_deg, so \\n\\n∠CDE = 180_deg - 90_deg - ∠BCE\\n\\nSince ∠AEC = 35_deg, we have \\n\\n∠BCE = 180_deg - 35_deg - 90_deg = 55_deg\\n\\nTherefore, \\n\\n∠CDE = 180_deg - 90_deg - 55_deg = 35_deg\\n\\nHowever, this is incorrect. We are looking for the measure of CDE. Since ∠CED = 90_deg, we have \\n\\n∠CDE = 180_deg - 90_deg - ∠BCE\\n\\nWe know that ∠AEC = 35_deg and ∠CED = 90_deg. \\n\\nLet's consider the triangle AEC. We have \\n\\n∠CAE + ∠AEC + ∠ACE = 180",
+    "json_repair_response": "```json\n{\n  \"ANSWER\": \"55\",\n  \"REASONING\": \"We are given that ∠AEC = 35_deg and ∠CED = 90_deg. Since ∠CED = 90_deg, we can find ∠BEC = 180_deg - 35_deg - 90_deg = 55_deg.  Therefore, ∠CDE = 55_deg.\"\n}\n```",
+    "recovery_method": "repair_original_response"
+  }
+]

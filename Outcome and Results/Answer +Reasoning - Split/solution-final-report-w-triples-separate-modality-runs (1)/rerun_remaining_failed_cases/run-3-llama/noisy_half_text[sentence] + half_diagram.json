@@ -1,0 +1,50 @@
+[
+  {
+    "run_folder": "run-3-llama",
+    "source_csv": "Separate-Modality-Triples\\run-3-llama\\noisy_half_text[sentence] + half_diagram.csv",
+    "model": "meta-llama/llama-4-scout",
+    "case_id": 14,
+    "case_label": "noisy_half_text[sentence] + half_diagram",
+    "problem_index": 211,
+    "question": "What is the measure of angle RNP?",
+    "triples": [
+      "(M, is_a, point)",
+      "(N, is_a, point)",
+      "(P, is_a, point)",
+      "(R, is_a, point)",
+      "(Q, is_a, point)",
+      "(MN, is_a, segment)",
+      "(NP, is_a, segment)",
+      "(MR, is_a, segment)",
+      "(RP, is_a, segment)",
+      "(MP, is_a, segment)",
+      "(RN, is_a, segment)",
+      "(\\angle MRP, is_a, angle)",
+      "(\\angle RQP, is_a, angle)",
+      "(\\angle MNQ, is_a, angle)",
+      "(MR, has_measure, 17.9)",
+      "(RP, has_measure, 20)",
+      "(MN, has_measure, 3x - 4)",
+      "(NP, has_measure, 2y + 5)",
+      "(\\angle MRP, has_measure, 38^\\circ)",
+      "(\\angle RQP, has_measure, 83^\\circ)",
+      "(\\angle MNQ, has_measure, 33^\\circ)",
+      "(MQ, has_measure, 15.4)",
+      "(NQ, has_measure, 4w - 3)",
+      "(RQ, has_measure, 3z - 3)",
+      "(PQ, has_measure, 11.1)",
+      "(MNPR, is_a, parallelogram)",
+      "(MP, intersects, RN)",
+      "(Q, lies_on, MP)",
+      "(Q, lies_on, RN)"
+    ],
+    "model_output": {
+      "ANSWER": "38",
+      "REASONING": "Given that MNPR is a parallelogram, opposite angles are equal. Therefore, ∠MRP = ∠RNP. Since ∠MRP has a measure of 38°, ∠RNP also has a measure of 38°."
+    },
+    "status": "OK_AFTER_JSON_REPAIR",
+    "raw_response": "```json\n{\n  \"ANSWER\": \"38\",\n  \"REASONING\": \"Given that MNPR is a parallelogram, opposite angles are equal. Therefore, \\u2220MRP = \\u2220RNP. Since \\u2220MRP has a measure of 38^\\circ, \\u2220RNP also has a measure of 38^\\circ.\"\n}\n```",
+    "json_repair_response": "```json\n{\n  \"ANSWER\": \"38\",\n  \"REASONING\": \"Given that MNPR is a parallelogram, opposite angles are equal. Therefore, ∠MRP = ∠RNP. Since ∠MRP has a measure of 38°, ∠RNP also has a measure of 38°.\"\n}\n```",
+    "recovery_method": "repair_original_response"
+  }
+]

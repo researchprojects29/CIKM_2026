@@ -1,0 +1,35 @@
+[
+  {
+    "run_folder": "run-2-llama",
+    "source_csv": "Separate-Modality-Triples\\run-2-llama\\noisy_half_text[sentence] + half_diagram.csv",
+    "model": "meta-llama/llama-4-scout",
+    "case_id": 14,
+    "case_label": "noisy_half_text[sentence] + half_diagram",
+    "problem_index": 53,
+    "question": "Find BFD.",
+    "triples": [
+      "(P, is_a, point)",
+      "(Q, is_a, point)",
+      "(a, is_a, line)",
+      "(b, is_a, line)",
+      "(c, is_a, line)",
+      "(a, parallel_to, b)",
+      "(c, intersects, a)",
+      "(c, intersects, b)",
+      "(\\angle P, has_measure, 155^\\circ)",
+      "(2, is_a, angle)",
+      "(P, lies_on, a)",
+      "(P, lies_on, c)",
+      "(Q, lies_on, b)",
+      "(Q, lies_on, c)"
+    ],
+    "model_output": {
+      "ANSWER": "25",
+      "REASONING": "Given that ∠P has a measure of 155° and it is on line c which intersects lines a and b, and lines a and b are parallel, we can infer that ∠P and ∠Q are supplementary because they are on the same line c and a and b are parallel. Therefore, ∠Q has a measure of 25°. Since BFD corresponds to ∠Q, BFD is 25°."
+    },
+    "status": "OK_AFTER_JSON_REPAIR",
+    "raw_response": "```json\n{\n  \"ANSWER\": \"25\",\n  \"REASONING\": \"Given that \\u2220P has a measure of 155^\\circ and it is on line c which intersects lines a and b, and lines a and b are parallel, we can infer that \\u2220P and \\u2220Q are supplementary because they are on the same line c and a and b are parallel. Therefore, \\u2220Q has a measure of 25^\\circ. Since BFD corresponds to \\u2220Q, BFD is 25^\\circ.\"\n}\n```",
+    "json_repair_response": "{\"ANSWER\": \"25\", \"REASONING\": \"Given that ∠P has a measure of 155° and it is on line c which intersects lines a and b, and lines a and b are parallel, we can infer that ∠P and ∠Q are supplementary because they are on the same line c and a and b are parallel. Therefore, ∠Q has a measure of 25°. Since BFD corresponds to ∠Q, BFD is 25°.\"}",
+    "recovery_method": "repair_original_response"
+  }
+]

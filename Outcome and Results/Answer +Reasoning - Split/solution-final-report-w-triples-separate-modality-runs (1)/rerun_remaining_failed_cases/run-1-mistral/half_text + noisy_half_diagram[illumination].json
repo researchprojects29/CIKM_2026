@@ -1,0 +1,42 @@
+[
+  {
+    "run_folder": "run-1-mistral",
+    "source_csv": "Separate-Modality-Triples\\run-1-mistral\\half_text + noisy_half_diagram[illumination].csv",
+    "model": "mistralai/mistral-small-3.2-24b-instruct",
+    "case_id": 18,
+    "case_label": "half_text + noisy_half_diagram[illumination]",
+    "problem_index": 364,
+    "question": "What is the length of the cable h to two decimal places?",
+    "triples": [
+      "(A, is_a, point)",
+      "(B, is_a, point)",
+      "(C, is_a, point)",
+      "(AB, is_a, segment)",
+      "(AC, is_a, segment)",
+      "(BC, is_a, segment)",
+      "(A, lies_on, bridge)",
+      "(B, lies_on, tower)",
+      "(C, lies_on, bridge)",
+      "(AB, connects, A)",
+      "(AB, connects, B)",
+      "(AC, connects, A)",
+      "(AC, connects, C)",
+      "(BC, connects, B)",
+      "(BC, connects, C)",
+      "(bridge, is_a, horizontal)",
+      "(tower, is_a, vertical)",
+      "(tower, perpendicular_to, bridge)",
+      "(AB, has_measure, 35.5_units)",
+      "(BC, has_measure, 65.9_units)",
+      "(h, is_a, length)",
+      "(h, has_measure, ?)"
+    ],
+    "model_output": {
+      "ANSWER": "52.76",
+      "REASONING": "The triples describe a right triangle with AB as the vertical side (tower) and BC as the horizontal side (bridge). The length of the cable h is the hypotenuse of this right triangle. Using the Pythagorean theorem, h = sqrt(AB^2 + BC^2) = sqrt(35.5^2 + 65.9^2) = 52.76 to two decimal places."
+    },
+    "status": "OK",
+    "raw_response": "{\n  \"ANSWER\": \"52.76\",\n  \"REASONING\": \"The triples describe a right triangle with AB as the vertical side (tower) and BC as the horizontal side (bridge). The length of the cable h is the hypotenuse of this right triangle. Using the Pythagorean theorem, h = sqrt(AB^2 + BC^2) = sqrt(35.5^2 + 65.9^2) = 52.76 to two decimal places.\"\n}",
+    "recovery_method": "original_prompt"
+  }
+]

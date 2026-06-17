@@ -1,0 +1,42 @@
+[
+  {
+    "run_folder": "run-3-llama",
+    "source_csv": "Llama - Split\\run-3-llama\\half_text + noisy_half_diagram[bg_change].csv",
+    "model": "gemma3:4b",
+    "case_id": 16,
+    "case_label": "half_text + noisy_half_diagram[bg_change]",
+    "problem_index": 81,
+    "question": "Find the measure of DAE.",
+    "triples": [
+      "(A, is_a, point)",
+      "(B, is_a, point)",
+      "(C, is_a, point)",
+      "(D, is_a, point)",
+      "(E, is_a, point)",
+      "(A, lies_on, line)",
+      "(B, lies_on, line)",
+      "(C, lies_on, line)",
+      "(D, lies_on, line)",
+      "(E, lies_on, line)",
+      "(AB, is_a, segment)",
+      "(BC, is_a, segment)",
+      "(AC, is_a, segment)",
+      "(AD, is_a, segment)",
+      "(AE, is_a, segment)",
+      "(∠BAC, is_a, angle)",
+      "(∠DAE, is_a, angle)",
+      "(AD, perpendicular_to, BC)",
+      "(AE, intersects, DC)",
+      "(∠ABC, has_measure, 50_deg)",
+      "(∠BAC, has_measure, 90_deg)",
+      "(AE, is_a, bisector_of, ∠DAC)"
+    ],
+    "model_output": {
+      "ANSWER": "90",
+      "REASONING": "The triple (∠BAC, has_measure, 90_deg) states that the measure of angle BAC is 90 degrees. The triple (AD, perpendicular_to, BC) states that AD is perpendicular to BC. Therefore, angle DAE is equal to angle BAC, which is 90 degrees."
+    },
+    "status": "OK",
+    "raw_response": "```json\n{\n  \"ANSWER\": \"90\",\n  \"REASONING\": \"The triple (∠BAC, has_measure, 90_deg) states that the measure of angle BAC is 90 degrees. The triple (AD, perpendicular_to, BC) states that AD is perpendicular to BC. Therefore, angle DAE is equal to angle BAC, which is 90 degrees.\"\n}\n```",
+    "recovery_method": "original_prompt"
+  }
+]

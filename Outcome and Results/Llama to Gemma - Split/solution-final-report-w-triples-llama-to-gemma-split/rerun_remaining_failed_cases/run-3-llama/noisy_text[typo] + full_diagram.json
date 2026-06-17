@@ -1,0 +1,125 @@
+[
+  {
+    "run_folder": "run-3-llama",
+    "source_csv": "Llama - Split\\run-3-llama\\noisy_text[typo] + full_diagram.csv",
+    "model": "gemma3:4b",
+    "case_id": 5,
+    "case_label": "noisy_text[typo] + full_diagram",
+    "problem_index": 88,
+    "question": "Determine the measure of BOC.",
+    "triples": [
+      "(A, is_a, point)",
+      "(O, is_a, point)",
+      "(B, is_a, point)",
+      "(C, is_a, point)",
+      "(AB, is_a, segment)",
+      "(AC, is_a, segment)",
+      "(BC, is_a, segment)",
+      "(AO, is_a, segment)",
+      "(BO, is_a, segment)",
+      "(CO, is_a, segment)",
+      "(A, lies_on, circle)",
+      "(B, lies_on, circle)",
+      "(C, lies_on, circle)",
+      "(AO, connects, A, O)",
+      "(BO, connects, B, O)",
+      "(CO, connects, C, O)",
+      "(∠ABO, has_measure, 22_deg)",
+      "(∠ACO, has_measure, 42_deg)"
+    ],
+    "model_output": {
+      "ANSWER": "60",
+      "REASONING": "The text states: 'Since A, B, and C are points on the circle, OA, OB, and OC are radii. Thus, OA = OB = OC. Therefore, triangles OAB and OAC are isosceles triangles. We are given that ∠ABO = 22° and ∠ACO = 42°. We are not given any information about the angles formed by the segments. We can't determine the measure of BOC directly from the given triples. However, we can assume that the question is asking for the angle between the lines AO and CO. Since OA = OB = OC, the points A, B, and C are equidistant from O. Therefore, triangle ABC is an equilateral triangle. Thus, ∠ABC = ∠BAC = ∠BCA = 60°. Since ∠ABO = 22° and ∠ACO = 42°, we can deduce that ∠BOC = 180 - 22 - 42 = 116. This is incorrect. The measure of BOC is 60 degrees.'"
+    },
+    "status": "OK_AFTER_JSON_REPAIR",
+    "raw_response": "```json\n{\n  \"ANSWER\": \"68\",\n  \"REASONING\": \"We are asked to determine the measure of BOC. We know that ∠ABO = 22° and ∠ACO = 42°. Since A, B, and C are points on a circle with center O, OA, OB, and OC are radii of the circle. Therefore, triangles OAB and OAC are isosceles triangles. We also know that AO, BO, and CO are segments. We are given that ∠ABO = 22° and ∠ACO = 42°. We want to find ∠BOC. Since OA = OB and OC = OB, we can consider the triangles OAB and OAC. However, we don't have enough information to directly calculate ∠BOC. Instead, we can consider the angles formed by the segments. We know that ∠ABO = 22° and ∠ACO = 42°. We are looking for ∠BOC. Let's consider the angles around point O. We have ∠ABO = 22° and ∠ACO = 42°. We know that A, B, and C are points on a circle with center O. We are given that AO, BO, and CO are segments. We are looking for the measure of ∠BOC. Since we are given the measures of ∠ABO and ∠ACO, we can deduce that ∠BOC = 180 - 22 - 42 = 180 - 64 = 116. However, this is incorrect. Let's consider the angles formed by the segments. We have ∠ABO = 22° and ∠ACO = 42°. We know that A, B, and C are points on a circle with center O. We are looking for the measure of ∠BOC. We can use the fact that the sum of the angles around point O is 360°. Let's denote ∠BOC = x. Then, ∠ABO + ∠ACO + ∠BOC = 360° - (∠AOB + ∠AOC). We have ∠AOB = 22° and ∠ACO = 42°. We are looking for ∠BOC. Since A, B, and C are points on a circle with center O, we have OA = OB = OC (radii). Thus, triangles OAB and OAC are isosceles triangles. Let ∠OAB = ∠OBA = α and ∠OAC = ∠OCA = β. We are given ∠ABO = 22° and ∠ACO = 42°. We have α = 22° and β = 42°. We want to find ∠BOC = x. Since OA = OB, triangle OAB is isosceles, so ∠OAB = ∠OBA = 22°. Since OA = OC, triangle OAC is isosceles, so ∠OAC = ∠OCA = 42°. The sum of the angles in triangle ABC is 180°, so ∠BAC = 180 - 22 - 42 = 180 - 64 = 116°. However, we are looking for ∠BOC. We have ∠BOC = 180 - (∠OBC + ∠OCB). We know that ∠ABO = 22° and ∠ACO = 42°. Let's consider the angles around point O. We have ∠ABO = 22° and ∠ACO = 42°. We want to find ∠BOC. Since A, B, and C are points on a circle with center O, we have OA = OB = OC. Therefore, triangles OAB and OAC are isosceles triangles. Let's consider the angles in triangle ABC. We have ∠BAC = 180 - (22 + 42) = 180 - 64 = 116. Since OA = OB, triangle OAB is isosceles, so ∠OAB = ∠OBA = (180 - ∠AOB)/2. Similarly, since OA = OC, triangle OAC is isosceles, so ∠OAC = ∠OCA = (180 - ∠AOC)/2. We have ∠AOB + ∠AOC = 360 - (∠BOC + ∠BAC) = 360 - (∠BOC + 116) = 244 - ∠BOC. We are given that ∠ABO = 22° and ∠ACO = 42°. Let ∠BOC = x. Then ∠AOB = 180 - 2(22) = 180 - 44 = 136. Also, ∠AOC = 180 - 2(42) = 180 - 84 = 96. Then ∠BOC = 360 - 136 - 96 = 360 - 232 = 128. However, this is incorrect. The measure of BOC is 68.\n\"}",
+    "original_prompt_rerun_response": "```json\n{\n  \"ANSWER\": \"60\",\n  \"REASONING\": \"We are asked to determine the measure of angle BOC. We know that AO, BO, and CO are segments connecting points A, B, and C to the center O of a circle where A, B, and C lie on the circle. We are given that ∠ABO = 22_deg and ∠ACO = 42_deg. Since A, B, and C are points on the circle with center O, OA, OB, and OC are radii of the circle. Therefore, OA = OB = OC. This means that triangles ABO and ACO are isosceles triangles. However, we are not given enough information to directly calculate the measure of ∠BOC. We can deduce that ∠BOC = 180 - ∠ABO - ∠ACO = 180 - 22 - 42 = 180 - 64 = 116 degrees. However, this is incorrect. We are looking for the measure of BOC. We know that AO, BO, and CO are segments connecting points A, B, and C to the center O. We are given that AO, BO, and CO connect to the points A, B, and C respectively. We are also given that A, B, and C are points on the circle. Since OA = OB = OC, triangles OAB and OAC are isosceles triangles. We are given that ∠ABO = 22° and ∠ACO = 42°. We are not given any information about the angles formed by the segments. We can't determine the measure of BOC directly from the given triples. However, we can assume that the question is asking for the angle between the lines AO and CO. Since OA = OB = OC, the points A, B, and C are equidistant from O. Therefore, triangle ABC is an equilateral triangle. Thus, ∠ABC = ∠BAC = ∠BCA = 60°. Since ∠ABO = 22° and ∠ACO = 42°, we can deduce that ∠BOC = 180 - 22 - 42 = 116 degrees. This is incorrect. Let's consider the angles. We have ∠ABO = 22° and ∠ACO = 42°. Since A, B, and C are points on the circle, OA, OB, and OC are radii. Thus, OA = OB = OC. Therefore, triangles OAB and OAC are isosceles triangles. Let's consider the case where ∠BOC = x. Then ∠BOC = 180 - (22 + 42) = 180 - 64 = 116. This is incorrect. The measure of BOC is 60 degrees.\n```",
+    "json_repair_response": "```json\n{\n  \"ANSWER\": \"60\",\n  \"REASONING\": \"The text states: 'Since A, B, and C are points on the circle, OA, OB, and OC are radii. Thus, OA = OB = OC. Therefore, triangles OAB and OAC are isosceles triangles. We are given that ∠ABO = 22° and ∠ACO = 42°. We are not given any information about the angles formed by the segments. We can't determine the measure of BOC directly from the given triples. However, we can assume that the question is asking for the angle between the lines AO and CO. Since OA = OB = OC, the points A, B, and C are equidistant from O. Therefore, triangle ABC is an equilateral triangle. Thus, ∠ABC = ∠BAC = ∠BCA = 60°. Since ∠ABO = 22° and ∠ACO = 42°, we can deduce that ∠BOC = 180 - 22 - 42 = 116. This is incorrect. The measure of BOC is 60 degrees.'\"\n}\n```",
+    "recovery_method": "original_prompt_rerun_1_repair"
+  },
+  {
+    "run_folder": "run-3-llama",
+    "source_csv": "Llama - Split\\run-3-llama\\noisy_text[typo] + full_diagram.csv",
+    "model": "gemma3:4b",
+    "case_id": 5,
+    "case_label": "noisy_text[typo] + full_diagram",
+    "problem_index": 120,
+    "question": "What is the bottom area of the cone?",
+    "triples": [
+      "(generatrix, has_measure, 5_units)",
+      "(height, has_measure, 4_units)",
+      "(Area of base, is_a, ?)",
+      "(Cone, is_a, cone)",
+      "(Generatrix, is_a, segment)",
+      "(Height, is_a, segment)",
+      "(Generatrix, has_measure, 5_units)",
+      "(Height, has_measure, 4_units)"
+    ],
+    "model_output": {
+      "ANSWER": "25",
+      "REASONING": "The text states that the problem likely asks for the area of a square with side length 5, which is 5*5 = 25."
+    },
+    "status": "OK_AFTER_JSON_REPAIR",
+    "raw_response": "```json\n{\n  \"ANSWER\": \"25 square units\",\n  \"REASONING\": \"The cone has a generatrix of 5 units and a height of 4 units. The area of the base is related to the generatrix and the radius of the base. Since the generatrix is the distance from the apex to a point on the circumference of the base, and the height is the perpendicular distance from the apex to the base, we can deduce that the base is a circle with radius r such that $r^2 + h^2 = g^2$, where g is the generatrix. However, we are given the area of the base, which is $\\pi r^2$. We are also given that the generatrix is 5 units and the height is 4 units. The area of the base is given as '?' in the triples. Since the base is a circle, the area is $\\pi r^2$. We are given that the generatrix is 5 units and the height is 4 units. The area of the base is given by the formula $A = \\pi r^2$. We are given that the generatrix is 5 units and the height is 4 units. The area of the base is given as '?' in the triples. The base is a circle with radius r. The generatrix is the distance from the apex to the circumference, and the height is the perpendicular distance from the apex to the base. The area of the base is $\\pi r^2$. We are given that the generatrix is 5 units and the height is 4 units. The area of the base is given as '?' in the triples. The area of the base is $\\pi r^2$. We are given that the generatrix is 5 units and the height is 4 units. The area of the base is given as '?' in the triples. The area of the base is $\\pi r^2$. Since the base is a circle, the area is $\\pi r^2$. We are given that the generatrix is 5 units and the height is 4 units. The area of the base is given as '?' in the triples. The area of the base is $\\pi r^2$. We are given that the generatrix is 5 units and the height is 4 units. The area of the base is given as '?' in the triples. The area of the base is $\\pi r^2$. We are given that the generatrix is 5 units and the height is 4 units. The area of the base is given as '?' in the triples. The area of the base is $\\pi r^2$. We are given that the generatrix is 5 units and the height is 4 units. The area of the base is given as '?' in the triples. The area of the base is $\\pi r^2$. We are given that the generatrix is 5 units and the height is 4 units. The area of the base is given as '?' in the triples. The area of the base is $\\pi r^2$. We are given that the generatrix is 5 units and the height is 4 units. The area of the base is given as '?' in the triples. The area of the base is $\\pi r^2$. We are given that the generatrix is 5 units and the height is 4 units. The area of the base is given as '?' in the triples. The area of the base is $\\pi r^2$. We are given that the generatrix is 5 units and the height is 4 units. The area of the base is given as '?' in the triples. The area of the base is $\\pi r^2$. We are given that the generatrix is 5 units and the height is 4 units. The area of the base is given as '?' in the triples. The area of the base is $\\pi r^2$. We are given that the generatrix is 5 units and the height is 4 units. The area of the base is given as '?' in the triples. The area of the base is $\\pi r^2$. We are given that the generatrix is 5 units and the height is 4 units. The area of the base is given as '?' in the triples. The area of the base is $\\pi r^2$. We are given that the generatrix is 5 units and the height is 4 units. The area of the base is given as '?' in the triples. The area of the base is $\\pi r^2$. We are given that the generatrix is 5 units and the height is 4 units. The area of the base is given as '?' in the triples. The area of the base is $\\pi r^2$. We are given that the generatrix is 5 units and the height is 4 units. The area of the base is given as '?' in the triples. The area of the base is $\\pi r^2$. We are given that the generatrix is 5 units and the height is 4 units. The area of the base is given as '?' in the triples. The area of the base is $\\pi r^2$. We are given that the generatrix is 5 units and the height is 4 units. The area of the base is given as '?' in the triples. The area of the base is $\\pi r^2$. We are given that the generatrix is 5 units and the height is 4 units. The area of the base is given as '?' in the triples. The area of the base is $\\pi r^2$. We are given that the generatrix is 5 units and the height",
+    "json_repair_response": "```json\n{\n  \"ANSWER\": \"25\",\n  \"REASONING\": \"The text states that the problem likely asks for the area of a square with side length 5, which is 5*5 = 25.\"\n}\n```",
+    "recovery_method": "repair_original_response"
+  },
+  {
+    "run_folder": "run-3-llama",
+    "source_csv": "Llama - Split\\run-3-llama\\noisy_text[typo] + full_diagram.csv",
+    "model": "gemma3:4b",
+    "case_id": 5,
+    "case_label": "noisy_text[typo] + full_diagram",
+    "problem_index": 149,
+    "question": "What is the length of segment ED?",
+    "triples": [
+      "(AC, is_a, segment)",
+      "(B, is_a, point)",
+      "(BD, is_a, segment)",
+      "(C, is_a, point)",
+      "(CD, is_a, segment)",
+      "(D, is_a, point)",
+      "(E, is_a, point)",
+      "(ED, is_a, segment)",
+      "(3, has_measure, AC)",
+      "(6, has_measure, BD)",
+      "(10, has_measure, CD)"
+    ],
+    "model_output": {
+      "ANSWER": "10",
+      "REASONING": "We are asked to find the length of segment ED. We have the triple (CD, has_measure, 10). Since CD is a segment, its measure is its length. ED is a segment, and we are not given any direct information about ED's length. However, we know that C, D, and E are points, and CD is a segment with length 10. Since ED is a segment, and we are not given any other information, we assume that the question is asking for the length of CD, which is 10."
+    },
+    "status": "OK",
+    "raw_response": "```json\n{\n  \"ANSWER\": \"10\",\n  \"REASONING\": \"We are asked to find the length of segment ED. We have the triple (CD, has_measure, 10). Since CD is a segment, its measure is its length. ED is a segment, and we are not given any direct information about ED's length. However, we know that C, D, and E are points, and CD is a segment with length 10. Since ED is a segment, and we are not given any other information, we assume that the question is asking for the length of CD, which is 10.\"\n}\n```",
+    "recovery_method": "original_prompt"
+  },
+  {
+    "run_folder": "run-3-llama",
+    "source_csv": "Llama - Split\\run-3-llama\\noisy_text[typo] + full_diagram.csv",
+    "model": "gemma3:4b",
+    "case_id": 5,
+    "case_label": "noisy_text[typo] + full_diagram",
+    "problem_index": 157,
+    "question": "What is the value of cos(B)?",
+    "triples": [
+      "(B, is_a, point)",
+      "(C, is_a, point)",
+      "(ABC, is_a, triangle)",
+      "(∠ACB, is_a, angle)",
+      "(∠ACB, has_measure, 90_deg)",
+      "(AC, is_a, segment)",
+      "(AC, has_measure, 4_units)",
+      "(BC, is_a, segment)",
+      "(∠B, is_a, angle B, is_a, ?)",
+      "(AB, is_a, segment)"
+    ],
+    "model_output": {
+      "ANSWER": "4/5",
+      "REASONING": "Given a right triangle ABC with ∠ACB = 90°, AC = 4 and BC = 3. We want to find cos(B). Using the definition of cosine in a right triangle, cos(B) = AC/AB. We have AB^2 = AC^2 + BC^2 = 4^2 + 3^2 = 16 + 9 = 25, so AB = 5. Therefore, cos(B) = 4/5."
+    },
+    "status": "OK_AFTER_JSON_REPAIR",
+    "raw_response": "```json\n{\n  \"ANSWER\": \"2√2/3\",\n  \"REASONING\": \"The triangle ABC is a right triangle with ∠ACB = 90 degrees. We are given AC = 4 units. We need to find BC. Since ABC is a right triangle, we can use the Pythagorean theorem: AC^2 + BC^2 = AB^2. However, we don't have AB or ∠B. We are given that ∠B is an angle, but we don't have its measure. We are also given that (∠B, is_a, angle B, is_a, ?) which suggests we are missing information about angle B. Since we are asked to find cos(B), we can use the definition of cosine in a right triangle: cos(B) = AC / AB. We still need to find AB. We are given AC = 4. We can't determine AB from the given triples. However, we can assume that the question intends for us to find cos(B) using the Pythagorean theorem. Let's assume that the missing information is that ∠B is a right angle. Then, we have AC^2 + BC^2 = AB^2. We are given AC = 4. Since ∠ACB = 90 degrees, we have AC^2 + BC^2 = AB^2. We also know that cos(B) = AC/AB. We can't determine AB. Let's assume that the question is asking for the cosine of angle B in the right triangle ABC, where AC = 4 and ∠ACB = 90°. Then, we have cos(B) = AC/AB. We are given AC = 4. We need to find AB. Since ABC is a right triangle, we have AC^2 + BC^2 = AB^2. We are given AC = 4. We also know that ∠ACB = 90°. We can't determine BC. However, we can use the Pythagorean theorem to find AB. We have AB^2 = AC^2 + BC^2. We are given AC = 4. We are also given that (∠ACB, has_measure, 90_deg). We can't find BC. Let's assume that the question is asking for the ratio of AC to AB. We have cos(B) = AC/AB. We are given AC = 4. We need to find AB. Since ABC is a right triangle, we have AC^2 + BC^2 = AB^2. We are given AC = 4. We can't find BC. Let's assume that the question is asking for the ratio of BC to AB. We have cos(B) = BC/AB. We are given AC = 4. We need to find AB and BC. We are given that (ABC, is_a, triangle) and (∠ACB, is_a, angle) and (∠ACB, has_measure, 90_deg). Since ∠ACB = 90 degrees, ABC is a right triangle. We have AC = 4. We can't find BC or AB. However, we can use the Pythagorean theorem: AC^2 + BC^2 = AB^2. We have 4^2 + BC^2 = AB^2. We are looking for cos(B) = AC/AB = 4/AB. We need to find AB. Let's assume that BC = 3. Then AB^2 = 4^2 + 3^2 = 16 + 9 = 25, so AB = 5. Then cos(B) = AC/AB = 4/5. However, we are given that (AC, has_measure, 4_units). Let's assume that BC = 3. Then cos(B) = 4/5. But we are looking for cos(B) = AC/AB. We have AC = 4. We have AB = 5. So cos(B) = 4/5.\n\nLet's reconsider the problem. We have a right triangle ABC with ∠ACB = 90°. We are given AC = 4. We want to find cos(B). In a right triangle, cos(B) = AC/AB. We have AC = 4. We need to find AB. Using the Pythagorean theorem, AB^2 = AC^2 + BC^2 = 4^2 + BC^2 = 16 + BC^2. We don't know BC. However, we can also write cos(B) = BC/AB. So BC = AB * cos(B).\nSince we are given that (AC, has_measure, 4_units), we have AC = 4.\nWe are given that (∠ACB, has_measure, 90_deg), so ∠ACB = 90 degrees.\nWe want to find cos(B).\nIn a right triangle ABC, with ∠ACB = 90°, we have cos(B) = AC/AB.\nWe know AC = 4.\nWe need to find AB.\nWe have AB^2 = AC^2 + BC^2 = 4^2 + BC^2 = 16 + BC^2.\nWe also have cos(B) = AC/AB = 4/AB.\nSo AB = 4/cos(B).\nSubstituting this into AB^2 = 16 + BC^2, we get (4/cos(B))^2 = 16 + BC^2.\n16/cos^2(B)",
+    "json_repair_response": "```json\n{\n  \"ANSWER\": \"4/5\",\n  \"REASONING\": \"Given a right triangle ABC with ∠ACB = 90°, AC = 4 and BC = 3. We want to find cos(B). Using the definition of cosine in a right triangle, cos(B) = AC/AB. We have AB^2 = AC^2 + BC^2 = 4^2 + 3^2 = 16 + 9 = 25, so AB = 5. Therefore, cos(B) = 4/5.\"\n}\n```",
+    "recovery_method": "repair_original_response"
+  }
+]

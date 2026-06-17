@@ -1,0 +1,105 @@
+[
+  {
+    "run_folder": "run-1-llama",
+    "source_csv": "Separate-Modality-Triples\\run-1-llama\\noisy_text[typo] + full_diagram.csv",
+    "model": "meta-llama/llama-4-scout",
+    "case_id": 5,
+    "case_label": "noisy_text[typo] + full_diagram",
+    "problem_index": 7,
+    "question": "What is the degree of angle EAC?",
+    "triples": [
+      "(A, is_a, point)",
+      "(B, is_a, point)",
+      "(C, is_a, point)",
+      "(D, is_a, point)",
+      "(E, is_a, point)",
+      "(∠B, is_a, angle)",
+      "(∠C, is_a, angle)",
+      "(∠DAC, is_a, angle)",
+      "(∠EAC, is_a, angle)",
+      "(∠B, has_measure, 70_deg)",
+      "(∠C, has_measure, 30_deg)",
+      "(∠DAC, has_measure, 35_deg)",
+      "(AB, is_a, segment)",
+      "(AC, is_a, segment)",
+      "(AD, is_a, segment)",
+      "(AE, is_a, segment)",
+      "(ABC, is_a, triangle)",
+      "(AD, lies_on, ABC)",
+      "(AD, lies_on, ADE)",
+      "(ADE, is_a, triangle)",
+      "(ABC, is_congruent_to, ADE)"
+    ],
+    "model_output": {
+      "ANSWER": "35_deg",
+      "REASONING": "Since ∠DAC and ∠EAC form ∠DAE and triangle ABC is congruent to triangle ADE, the corresponding angles are equal. Given that ∠DAC has a measure of 35_deg, and it corresponds to an angle in triangle ADE, ∠EAC must also be 35_deg because of the congruence between triangles ABC and ADE, and the shared side angles."
+    },
+    "status": "OK",
+    "raw_response": "```json\n{\n  \"ANSWER\": \"35_deg\",\n  \"REASONING\": \"Since ∠DAC and ∠EAC form ∠DAE and triangle ABC is congruent to triangle ADE, the corresponding angles are equal. Given that ∠DAC has a measure of 35_deg, and it corresponds to an angle in triangle ADE, ∠EAC must also be 35_deg because of the congruence between triangles ABC and ADE, and the shared side angles.\"\n}\n```",
+    "recovery_method": "original_prompt"
+  },
+  {
+    "run_folder": "run-1-llama",
+    "source_csv": "Separate-Modality-Triples\\run-1-llama\\noisy_text[typo] + full_diagram.csv",
+    "model": "meta-llama/llama-4-scout",
+    "case_id": 5,
+    "case_label": "noisy_text[typo] + full_diagram",
+    "problem_index": 348,
+    "question": "What is the distance d between the helicopter and the landing pad? Round your answer to the nearest whole number",
+    "triples": [
+      "(Helicopter, lies_on, ?)",
+      "(1, is_a, point)",
+      "(2, is_a, point)",
+      "(Landing Pad, is_a, point)",
+      "(Helicopter, has_measure, 44_deg)",
+      "(198m, has_measure, altitude)",
+      "(d, has_measure, distance)",
+      "(Landing Pad, connected_to, Helicopter)",
+      "(Helicopter, connected_to, d)",
+      "(Landing Pad, connected_to, d)",
+      "(Altitude, has_measure, 198m)",
+      "(Depression angle, has_measure, 44_deg)",
+      "(Helicopter, is_at, altitude)",
+      "(Helicopter, has_measure, altitude of 198m)",
+      "(Helicopter, is_a, point)",
+      "(Altitude, is_a, quantitative attribute)",
+      "(Depression angle, is_a, quantitative attribute)",
+      "(Helicopter, lies_at, 198m altitude)",
+      "(Angle, has_measure, 44_deg)",
+      "(Helicopter, has_depression_angle, 44_deg)",
+      "(Helicopter, is_connected_to, Landing Pad)",
+      "(d, is_a, distance)",
+      "(Helicopter, lies_at, altitude of 198m)",
+      "(Helicopter, has_altitude, 198m)"
+    ],
+    "model_output": {
+      "ANSWER": "205",
+      "REASONING": "The provided text already contains the answer and reasoning. The answer is 205 and the reasoning involves calculating the distance using the tangent function given the depression angle and altitude of the helicopter."
+    },
+    "status": "OK_AFTER_JSON_REPAIR",
+    "raw_response": "```json\n{\n  \"ANSWER\": \"282\",\n  \"REASONING\": \"To find the distance \\(d\\) between the helicopter and the landing pad, we can use the tangent function from trigonometry since we have the depression angle and the altitude of the helicopter. The depression angle is 44 degrees, and the altitude of the helicopter is 198m. The tangent of the depression angle is equal to the opposite side (altitude) over the adjacent side (distance \\(d\\)). So, \\(\\tan(44^\\circ) = \\frac{198}{d}\\). Rearranging for \\(d\\), we get \\(d = \\frac{198}{\\tan(44^\\circ)}\\). Calculating \\(\\tan(44^\\circ)\\) gives approximately 0.9659. Therefore, \\(d = \\frac{198}{0.9659} \\approx 205.02\\)m. However, we need to round to the nearest whole number. Thus, \\(d \\approx 282\\)m is incorrect; the correct calculation yields \\(d \\approx 205\\)m.\"\n}\n```",
+    "json_repair_response": "{\n  \"ANSWER\": \"205\",\n  \"REASONING\": \"The provided text already contains the answer and reasoning. The answer is 205 and the reasoning involves calculating the distance using the tangent function given the depression angle and altitude of the helicopter.\"\n}",
+    "recovery_method": "repair_original_response"
+  },
+  {
+    "run_folder": "run-1-llama",
+    "source_csv": "Separate-Modality-Triples\\run-1-llama\\noisy_text[typo] + full_diagram.csv",
+    "model": "meta-llama/llama-4-scout",
+    "case_id": 5,
+    "case_label": "noisy_text[typo] + full_diagram",
+    "problem_index": 438,
+    "question": "What is the equation of hyperbola?",
+    "triples": [
+      "(2, -3, is_a, point)",
+      "(hyperbola, has_measure, ?)",
+      "(equation, is_a, ?)"
+    ],
+    "model_output": {
+      "ANSWER": "",
+      "REASONING": "The provided triples do not contain enough information to determine the equation of a hyperbola. The triple (hyperbola, has_measure, ?) suggests that a hyperbola has some measure, but the object is missing. Similarly, (equation, is_a, ?) indicates that an equation is something, but again, the object is missing. The triple (2, -3, is_a, point) gives a point but does not relate directly to the equation of a hyperbola. Without a direct relation or more specific information about the type of equation or the parameters of the hyperbola, it's not possible to derive the equation of a hyperbola from the given triples."
+    },
+    "status": "OK",
+    "raw_response": "```json\n{\n  \"ANSWER\": \"\",\n  \"REASONING\": \"The provided triples do not contain enough information to determine the equation of a hyperbola. The triple (hyperbola, has_measure, ?) suggests that a hyperbola has some measure, but the object is missing. Similarly, (equation, is_a, ?) indicates that an equation is something, but again, the object is missing. The triple (2, -3, is_a, point) gives a point but does not relate directly to the equation of a hyperbola. Without a direct relation or more specific information about the type of equation or the parameters of the hyperbola, it's not possible to derive the equation of a hyperbola from the given triples.\"\n}\n```",
+    "recovery_method": "original_prompt"
+  }
+]

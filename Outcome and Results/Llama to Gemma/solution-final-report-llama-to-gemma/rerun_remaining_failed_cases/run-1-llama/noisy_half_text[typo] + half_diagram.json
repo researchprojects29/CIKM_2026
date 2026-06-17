@@ -1,0 +1,162 @@
+[
+  {
+    "run_folder": "run-1-llama",
+    "source_csv": "LLAMA-Triples\\run-1-llama\\noisy_half_text[typo] + half_diagram.csv",
+    "case_id": 15,
+    "case_label": "noisy_half_text[typo] + half_diagram",
+    "problem_index": 25,
+    "question": "What is the measure of ∠C?",
+    "triples": [
+      "(E, is_a, point)",
+      "(A, is_a, point)",
+      "(C, is_a, point)",
+      "(EF, is_a, line)",
+      "(BC, is_a, line)",
+      "(AC, is_a, line)",
+      "(∠B, has_measure, 50_deg)",
+      "(EF, parallel_to, BC)",
+      "(AC, bisects, ∠BAF)"
+    ],
+    "model_output": {
+      "ANSWER": "50 degrees",
+      "REASONING": "Since AC bisects ∠BAF, it divides the angle into two equal parts. Therefore, the measure of ∠BAC is 50 degrees. Since AC is parallel to BC, and AC bisects ∠BAF, the measure of ∠C is 50 degrees."
+    },
+    "status": "OK",
+    "raw_response": "```json\n{\n  \"ANSWER\": \"50 degrees\",\n  \"REASONING\": \"Since AC bisects ∠BAF, it divides the angle into two equal parts. Therefore, the measure of ∠BAC is 50 degrees. Since AC is parallel to BC, and AC bisects ∠BAF, the measure of ∠C is 50 degrees.\"\n}\n```",
+    "recovery_method": "original_prompt"
+  },
+  {
+    "run_folder": "run-1-llama",
+    "source_csv": "LLAMA-Triples\\run-1-llama\\noisy_half_text[typo] + half_diagram.csv",
+    "case_id": 15,
+    "case_label": "noisy_half_text[typo] + half_diagram",
+    "problem_index": 72,
+    "question": "Find the perimeter of triangle DCE",
+    "triples": [
+      "(A, is_a, point)",
+      "(B, is_a, point)",
+      "(C, is_a, point)",
+      "(D, is_a, point)",
+      "(E, is_a, point)",
+      "(O, is_a, point)",
+      "(AB, is_a, segment)",
+      "(BC, is_a, segment)",
+      "(CD, is_a, segment)",
+      "(DA, is_a, segment)",
+      "(AC, is_a, segment)",
+      "(BD, is_a, segment)",
+      "(OE, is_a, segment)",
+      "(∠AOC, is_a, angle)",
+      "(ABCD, is_a, parallelogram)",
+      "(AB + BC + CD + DA, has_measure, 16)",
+      "(OE, perpendicular_to, AC)",
+      "(E, lies_on, AD)",
+      "(BD, intersects, AC)",
+      "(O, lies_on, BD)",
+      "(O, lies_on, AC)"
+    ],
+    "model_output": {
+      "ANSWER": "16",
+      "REASONING": "The problem asks for the perimeter of triangle DCE. We are given that AB + BC + CD + DA = 16, and ABCD is a parallelogram. Since ABCD is a parallelogram, AB = CD and BC = DA. Therefore, AB + BC + CD + DA = 2(AB + BC) = 16, which implies AB + BC = 8. We are also given that E lies on AD, and O lies on BD and AC. However, we are not given any information about the triangle DCE directly. Since AB + BC + CD + DA = 16, and we are looking for the perimeter of triangle DCE, and we know that ABCD is a parallelogram, we can assume that the perimeter of triangle DCE is equal to AB + BC + CD + DA, which is given as 16."
+    },
+    "status": "OK",
+    "raw_response": "```json\n{\n  \"ANSWER\": \"16\",\n  \"REASONING\": \"The problem asks for the perimeter of triangle DCE. We are given that AB + BC + CD + DA = 16, and ABCD is a parallelogram. Since ABCD is a parallelogram, AB = CD and BC = DA. Therefore, AB + BC + CD + DA = 2(AB + BC) = 16, which implies AB + BC = 8. We are also given that E lies on AD, and O lies on BD and AC. However, we are not given any information about the triangle DCE directly. Since AB + BC + CD + DA = 16, and we are looking for the perimeter of triangle DCE, and we know that ABCD is a parallelogram, we can assume that the perimeter of triangle DCE is equal to AB + BC + CD + DA, which is given as 16.\"\n}\n```",
+    "recovery_method": "original_prompt"
+  },
+  {
+    "run_folder": "run-1-llama",
+    "source_csv": "LLAMA-Triples\\run-1-llama\\noisy_half_text[typo] + half_diagram.csv",
+    "case_id": 15,
+    "case_label": "noisy_half_text[typo] + half_diagram",
+    "problem_index": 115,
+    "question": "What is the bottom perimeter of the paper cap?",
+    "triples": [
+      "(sector, has_measure, 120_deg)",
+      "(radius, has_measure, 6_units)",
+      "(sector, is_a, sector)",
+      "(radius, is_a, segment)",
+      "(bottom_perimeter, has_measure, ?)"
+    ],
+    "model_output": {
+      "ANSWER": "18 + 4 * pi",
+      "REASONING": "The bottom perimeter of the paper cap consists of three radii and the arc length of the sector. The radius is 6 units and the sector angle is 120 degrees. The arc length is (120/360) * 2 * pi * 6 = 4 * pi. Therefore, the bottom perimeter is 3 * 6 + 4 * pi = 18 + 4 * pi."
+    },
+    "status": "OK_AFTER_JSON_REPAIR",
+    "raw_response": "```json\n{\n  \"ANSWER\": \"36 units\",\n  \"REASONING\": \"The bottom perimeter of the paper cap consists of three radii and the arc length of the sector. The sector has a 120-degree angle and a radius of 6 units. The arc length of a 120-degree sector is (120/360) * 2 * pi * radius = (1/3) * 2 * pi * 6 = 4 * pi. The bottom perimeter is 3 * radius + arc length = 3 * 6 + 4 * pi = 18 + 4 * pi. However, the question asks for the bottom perimeter, and the triple (bottom_perimeter, has_measure, ?) indicates that the answer is missing. Since the cap is a sector, the bottom perimeter is equal to 3 * radius. Therefore, the bottom perimeter is 3 * 6 = 18. This is incorrect. The question asks for the bottom perimeter of the paper cap. The bottom perimeter is composed of three radii and the arc length of the sector. The radius is 6 units and the sector angle is 120 degrees. The arc length is (120/360) * 2 * pi * 6 = 0.333 * 12 * pi = 4 * pi. The bottom perimeter is 3 * 6 + 4 * pi = 18 + 4 * pi. Since the question asks for the bottom perimeter, and the triple (bottom_perimeter, has_measure, ?) indicates that the answer is missing, we can assume the question is asking for the arc length. The arc length is (120/360) * 2 * pi * 6 = 4 * pi. However, the question asks for the bottom perimeter. The bottom perimeter is 3 * radius + arc length = 3 * 6 + 4 * pi = 18 + 4 * pi. The question is asking for the bottom perimeter, which is the sum of the three radii and the arc length. The arc length is (120/360) * 2 * pi * 6 = 4 * pi. The bottom perimeter is 3 * 6 + 4 * pi = 18 + 4 * pi. The question is asking for the bottom perimeter of the paper cap. The bottom perimeter is the sum of the three radii and the arc length. The radius is 6. The arc length is (120/360) * 2 * pi * 6 = 4 * pi. The bottom perimeter is 3 * 6 + 4 * pi = 18 + 4 * pi. The question asks for the bottom perimeter. The bottom perimeter is 3 * radius + arc length. The radius is 6. The arc length is (120/360) * 2 * pi * 6 = 4 * pi. The bottom perimeter is 3 * 6 + 4 * pi = 18 + 4 * pi. The question is asking for the perimeter of the base of the cap. The base is a sector with radius 6 and central angle 120 degrees. The arc length of the sector is (120/360) * 2 * pi * 6 = 4 * pi. The perimeter of the base is the arc length plus two radii, so 4 * pi + 2 * 6 = 4 * pi + 12. However, the triple (bottom_perimeter, has_measure, ?) indicates that the answer is missing. The bottom perimeter is 3 * radius = 3 * 6 = 18. This is incorrect. The question asks for the bottom perimeter. The bottom perimeter is the arc length plus the three radii. The arc length is (120/360) * 2 * pi * 6 = 4 * pi. The three radii are 6, 6, 6. The bottom perimeter is 4 * pi + 3 * 6 = 4 * pi + 18. The question asks for the bottom perimeter. The bottom perimeter is the arc length plus the three radii. The arc length is (120/360) * 2 * pi * 6 = 4 * pi. The three radii are 6, 6, 6. The bottom perimeter is 4 * pi + 3 * 6 = 4 * pi + 18. The question asks for the bottom perimeter. The bottom perimeter is the arc length plus the three radii. The arc length is (120/360) * 2 * pi * 6 = 4 * pi. The three radii are 6, 6, 6. The bottom perimeter is 4 * pi + 3 * 6 = 4 * pi + 18. The question asks for the bottom perimeter. The bottom perimeter is the arc length plus the three radii. The arc length is (120/360) * 2 * pi * 6 = 4 * pi. The three radii are 6, 6, 6. The bottom perimeter is 4 * pi + 3 * 6 = 4 * pi + 18. The question asks for the bottom perimeter. The bottom perimeter is the arc length plus the three radii. The arc length is (120/360) * 2 * pi * 6 = 4 * pi. The three radii are 6, 6, 6.",
+    "json_repair_response": "```json\n{\n  \"ANSWER\": \"18 + 4 * pi\",\n  \"REASONING\": \"The bottom perimeter of the paper cap consists of three radii and the arc length of the sector. The radius is 6 units and the sector angle is 120 degrees. The arc length is (120/360) * 2 * pi * 6 = 4 * pi. Therefore, the bottom perimeter is 3 * 6 + 4 * pi = 18 + 4 * pi.\"\n}\n```",
+    "recovery_method": "repair_original_response"
+  },
+  {
+    "run_folder": "run-1-llama",
+    "source_csv": "LLAMA-Triples\\run-1-llama\\noisy_half_text[typo] + half_diagram.csv",
+    "case_id": 15,
+    "case_label": "noisy_half_text[typo] + half_diagram",
+    "problem_index": 149,
+    "question": "What is the length of segment ED?",
+    "triples": [
+      "(A, is_a, point)",
+      "(C, is_a, point)",
+      "(D, is_a, point)",
+      "(E, is_a, point)",
+      "(B, is_a, point)",
+      "(AC, is_a, segment)",
+      "(CD, is_a, segment)",
+      "(BD, is_a, segment)",
+      "(ED, is_a, segment)",
+      "(AC, has_measure, 3.0)",
+      "(CD, has_measure, 10.0)",
+      "(BD, has_measure, 6.0)",
+      "(AC, perpendicular_to, CD)",
+      "(BD, perpendicular_to, CD)",
+      "(CD, lies_on, plane_mirror)",
+      "(ED, has_measure, ?)"
+    ],
+    "model_output": {
+      "ANSWER": "6.71",
+      "REASONING": "We have a right triangle with AC = 3 and CD = 10. Since AC and BD are perpendicular to CD, we have a right triangle with hypotenuse ED. ED^2 = AC^2 + BD^2 = 3^2 + 6^2 = 9 + 36 = 45. ED = sqrt(45) = 3 * sqrt(5) ≈ 6.71"
+    },
+    "status": "OK_AFTER_JSON_REPAIR",
+    "raw_response": "```json\n{\n  \"ANSWER\": \"16.0\",\n  \"REASONING\": \"We are asked to find the length of segment ED. We are given that CD has a measure of 10.0 and BD has a measure of 6.0. Since AC and BD are perpendicular to CD, we can use the Pythagorean theorem on the right triangle formed by AC, BD, and CD. However, we are not given enough information to directly calculate the length of ED. We are given that ED has a measure of '?'. Since AC, CD, and BD are all segments and we know their measures, and we are looking for the length of ED, we can assume that the length of ED is the missing value. We can use the fact that AC is perpendicular to CD and BD is perpendicular to CD. We are given that CD = 10.0 and BD = 6.0. We can use the Pythagorean theorem on the triangle formed by AC, BD, and CD. However, we don't have enough information to solve this problem. Since ED has a measure of '?', and we are given that CD = 10.0 and BD = 6.0, we can assume that ED is the hypotenuse of a right triangle with legs CD and BD. However, this is not necessarily true. We are given that ED has a measure of '?'. We are given that CD = 10.0 and BD = 6.0. We can use the Pythagorean theorem to find ED. ED^2 = CD^2 + BD^2 = 10.0^2 + 6.0^2 = 100 + 36 = 136. Therefore, ED = sqrt(136) = 11.66. However, we are given that ED has a measure of '?'. Since we are given that CD has measure 10.0 and BD has measure 6.0, and ED is a segment, we can assume that ED is the hypotenuse of a right triangle with CD and BD as legs. Thus, ED = sqrt(CD^2 + BD^2) = sqrt(10^2 + 6^2) = sqrt(100 + 36) = sqrt(136) = 11.66. But we are given that ED has measure '?'. Since we are given that CD = 10.0 and BD = 6.0, and ED is a segment, we can assume that ED is the hypotenuse of a right triangle with CD and BD as legs. Thus, ED = sqrt(CD^2 + BD^2) = sqrt(10^2 + 6^2) = sqrt(100 + 36) = sqrt(136) = 11.66. However, we are given that ED has a measure of '?'. We are given that CD = 10.0 and BD = 6.0. Since AC is perpendicular to CD and BD is perpendicular to CD, we can assume that ED is the hypotenuse of a right triangle with CD and BD as legs. Thus, ED = sqrt(CD^2 + BD^2) = sqrt(10^2 + 6^2) = sqrt(100 + 36) = sqrt(136) = 11.66. But we are given that ED has a measure of '?'. We are given that CD = 10.0 and BD = 6.0. Since AC and BD are perpendicular to CD, we can assume that ED is the hypotenuse of a right triangle with CD and BD as legs. Thus, ED = sqrt(CD^2 + BD^2) = sqrt(10^2 + 6^2) = sqrt(100 + 36) = sqrt(136) = 11.66. However, we are given that ED has a measure of '?'. We are given that CD = 10.0 and BD = 6.0. Since AC and BD are perpendicular to CD, we can assume that ED is the hypotenuse of a right triangle with CD and BD as legs. Thus, ED = sqrt(CD^2 + BD^2) = sqrt(10^2 + 6^2) = sqrt(100 + 36) = sqrt(136) = 11.66. But we are given that ED has a measure of '?'. We are given that CD = 10.0 and BD = 6.0. Since AC and BD are perpendicular to CD, we can assume that ED is the hypotenuse of a right triangle with CD and BD as legs. Thus, ED = sqrt(CD^2 + BD^2) = sqrt(10^2 + 6^2) = sqrt(100 + 36) = sqrt(136) = 11.66. But we are given that ED has a measure of '?'. Since we are given that CD = 10.0 and BD = 6.0, and ED is a segment, we can assume that ED is the hypotenuse of a right triangle with CD and BD as legs. Thus, ED = sqrt(CD^2 + BD^2) = sqrt(10^2 + 6^2) = sqrt(100 + 36) = sqrt(136) = 11.66. However, we are given that ED has a measure of '?'. Since we are given that CD = 10",
+    "original_prompt_rerun_response": "```json\n{\n  \"ANSWER\": \"16.0\",\n  \"REASONING\": \"We are asked to find the length of segment ED. We are given that CD has a measure of 10.0. Since AC and BD are perpendicular to CD, and CD lies on a plane mirror, we can use the Pythagorean theorem to find the length of ED. We have AC = 3.0, CD = 10.0, and BD = 6.0. Since AC and BD are perpendicular to CD, we can form a right triangle with vertices A, B, and D. However, we are not given enough information to directly calculate the length of ED. We are given that ED has a measure of '?'. We can use the fact that AC, CD, and BD are all segments. We are given that CD = 10.0. We are also given that AC = 3.0 and BD = 6.0. Since AC and BD are perpendicular to CD, we can consider a coordinate system where CD is on the x-axis. Let C be at 0, D be at 10, and B be at x, and A be at x. Since AC = 3.0, A is at 3. Since BD = 6.0, B is at 6. Since AC is perpendicular to CD, and BD is perpendicular to CD, we have a right triangle formed by A, B, and D. However, we are not given enough information to determine the length of ED. We are given that ED has a measure of '?'. We can use the Pythagorean theorem on the triangle formed by CD, ED, and DE. Since AC and BD are perpendicular to CD, we can assume that A and B are on opposite sides of CD. We are given that CD = 10.0, AC = 3.0, and BD = 6.0. We can use the Pythagorean theorem on the triangle formed by AC and CD to find the length of AD. However, we are not given enough information to determine the length of ED. We are given that ED has a measure of '?'. Since AC and BD are perpendicular to CD, we can assume that A and B are on opposite sides of CD. We are given that CD = 10.0, AC = 3.0, and BD = 6.0. We can use the Pythagorean theorem on the triangle formed by CD and ED to find the length of DE. We have (CD)^2 + (DE)^2 = (CE)^2. We are given that CD = 10.0. We can use the Pythagorean theorem on the triangle formed by AC and CD to find the length of AD. We have (AC)^2 + (CD)^2 = (AD)^2. We have (3.0)^2 + (10.0)^2 = (AD)^2. So, (AD)^2 = 9 + 100 = 109. Therefore, AD = sqrt(109) ≈ 10.44. We can use the Pythagorean theorem on the triangle formed by BD and CD to find the length of BE. We have (BD)^2 + (CD)^2 = (BE)^2. We have (6.0)^2 + (10.0)^2 = (BE)^2. So, (BE)^2 = 36 + 100 = 136. Therefore, BE = sqrt(136) ≈ 11.66. Since AC and BD are perpendicular to CD, we can assume that A and B are on opposite sides of CD. We are given that CD = 10.0, AC = 3.0, and BD = 6.0. We can use the Pythagorean theorem on the triangle formed by ED and CD to find the length of DE. We have (ED)^2 + (CD)^2 = (CE)^2. We are given that ED has a measure of '?'. We can use the Pythagorean theorem on the triangle formed by AC and CD to find the length of AD. We have (AC)^2 + (CD)^2 = (AD)^2. We have (3.0)^2 + (10.0)^2 = (AD)^2. So, (AD)^2 = 9 + 100 = 109. Therefore, AD = sqrt(109) ≈ 10.44. We can use the Pythagorean theorem on the triangle formed by BD and CD to find the length of BE. We have (BD)^2 + (CD)^2 = (BE)^2. We have (6.0)^2 + (10.0)^2 = (BE)^2. So, (BE)^2 = 36 + 100 = 136. Therefore, BE = sqrt(136) ≈ 11.66. Since ED is a segment, we can use the Pythagorean theorem on the triangle formed by ED and CD. We have (ED)^2 + (CD)^2 = (CE)^2. We are given that ED has a measure of '?'. We are given that CD = 10.0. We can use the Pythagorean theorem on the triangle formed by AC and CD to find the length of AD. We have (AC)^2 + (CD)^2 = (AD)^2. We have (3.0)^2 + (10.0)^2 = (AD)^2. So, (AD)^2 = 9 + 100 = 109. Therefore, AD = sqrt(109) ≈ 10.4",
+    "json_repair_response": "```json\n{\n  \"ANSWER\": \"6.71\",\n  \"REASONING\": \"We have a right triangle with AC = 3 and CD = 10. Since AC and BD are perpendicular to CD, we have a right triangle with hypotenuse ED. ED^2 = AC^2 + BD^2 = 3^2 + 6^2 = 9 + 36 = 45. ED = sqrt(45) = 3 * sqrt(5) ≈ 6.71\"\n}\n```",
+    "recovery_method": "original_prompt_rerun_1_repair"
+  },
+  {
+    "run_folder": "run-1-llama",
+    "source_csv": "LLAMA-Triples\\run-1-llama\\noisy_half_text[typo] + half_diagram.csv",
+    "case_id": 15,
+    "case_label": "noisy_half_text[typo] + half_diagram",
+    "problem_index": 257,
+    "question": "What is the length of AE?",
+    "triples": [
+      "(A, is_a, point)",
+      "(B, is_a, point)",
+      "(C, is_a, point)",
+      "(D, is_a, point)",
+      "(E, is_a, point)",
+      "(AB, is_a, segment)",
+      "(ABE, is_a, triangle)",
+      "(ACD, is_a, triangle)",
+      "(AB, has_measure, 12_units)",
+      "(ED, has_measure, 5_units)",
+      "(AC, has_measure, 16_units)",
+      "(BE, parallel_to, CD)",
+      "(ABE, similar_to, ACD)",
+      "(A, lies_on, AB)",
+      "(A, lies_on, AC)",
+      "(B, lies_on, AB)",
+      "(B, lies_on, BE)",
+      "(E, lies_on, BE)",
+      "(E, lies_on, ED)",
+      "(D, lies_on, ED)"
+    ],
+    "model_output": {
+      "ANSWER": "15",
+      "REASONING": "Let AE = 3x and AD = 4x. Then ED = AD - AE = 4x - 3x = x. We are given ED = 5, so x = 5. Therefore, AE = 3x = 3(5) = 15 and AD = 4x = 4(5) = 20."
+    },
+    "status": "OK_AFTER_JSON_REPAIR",
+    "raw_response": "```json\n{\n  \"ANSWER\": \"17\",\n  \"REASONING\": \"We are asked to find the length of AE. We know that ABE is a triangle and ACD is a triangle. Also, ABE is similar to ACD. We are given that AB = 12 units and AC = 16 units. Since ABE is similar to ACD, we have the proportion AB/AC = BE/CD = AE/AD. We are given that ED = 5 units. We also know that A lies on AB and A lies on AC. Since ABE is a triangle, we can use the similarity between ABE and ACD to find AE. From the similarity, we have AE/AD = AB/AC, but we don't know AD. However, we know that E lies on BE and ED, and D lies on ED. We are given that BE is parallel to CD. We also know that ABE is a triangle and ACD is a triangle. We are given that AB = 12 and AC = 16. Since ABE is similar to ACD, we have AB/AC = BE/CD = AE/AD. We are given that ED = 5. We can use the fact that ABE is a triangle and E lies on BE. We can also use the fact that A lies on AB. We can use the triangle ABE to find AE. Since ABE is similar to ACD, we have AB/AC = BE/CD = AE/AD. We are given AB = 12 and AC = 16. We are given ED = 5. We can use the triangle ABE to find AE. Since ABE is similar to ACD, we have AB/AC = AE/AD = BE/CD. We have AB = 12 and AC = 16. We have ED = 5. We can use the triangle ABE to find AE. Since ABE is similar to ACD, we have AE/AD = AB/AC = BE/CD. We can use the fact that A lies on AB and A lies on AC. We can use the triangle ABE to find AE. Since ABE is similar to ACD, we have AE/AD = AB/AC = BE/CD. We have AB = 12 and AC = 16. We have ED = 5. We can use the triangle ABE to find AE. Since ABE is similar to ACD, we have AE/AD = AB/AC = BE/CD. We can use the fact that A lies on AB and A lies on AC. We can use the triangle ABE to find AE. Since ABE is similar to ACD, we have AE/AD = AB/AC = BE/CD. We have AB = 12 and AC = 16. We have ED = 5. We can use the triangle ABE to find AE. Since ABE is similar to ACD, we have AE/AD = AB/AC = BE/CD. We have AB = 12 and AC = 16. We have ED = 5. We can use the triangle ABE to find AE. Since ABE is similar to ACD, we have AE/AD = AB/AC = BE/CD. We have AB = 12 and AC = 16. We have ED = 5. We can use the triangle ABE to find AE. Since ABE is similar to ACD, we have AE/AD = AB/AC = BE/CD. We have AB = 12 and AC = 16. We have ED = 5. We can use the triangle ABE to find AE. Since ABE is similar to ACD, we have AE/AD = AB/AC = BE/CD. We have AB = 12 and AC = 16. We have ED = 5. We can use the triangle ABE to find AE. Since ABE is similar to ACD, we have AE/AD = AB/AC = BE/CD. We have AB = 12 and AC = 16. We have ED = 5. We can use the triangle ABE to find AE. Since ABE is similar to ACD, we have AE/AD = AB/AC = BE/CD. We have AB = 12 and AC = 16. We have ED = 5. We can use the triangle ABE to find AE. Since ABE is similar to ACD, we have AE/AD = AB/AC = BE/CD. We have AB = 12 and AC = 16. We have ED = 5. We can use the triangle ABE to find AE. Since ABE is similar to ACD, we have AE/AD = AB/AC = BE/CD. We have AB = 12 and AC = 16. We have ED = 5. We can use the triangle ABE to find AE. Since ABE is similar to ACD, we have AE/AD = AB/AC = BE/CD. We have AB = 12 and AC = 16. We have ED = 5. We can use the triangle ABE to find AE. Since ABE is similar to ACD, we have AE/AD = AB/AC = BE/CD. We have AB = 12 and AC = 16. We have ED = 5. We can use the triangle ABE to find AE. Since ABE is similar to ACD, we have AE/AD = AB/AC = BE/CD. We have AB = 12 and AC = 16. We have ED = 5. We can use the triangle ABE",
+    "json_repair_response": "```json\n{\n  \"ANSWER\": \"15\",\n  \"REASONING\": \"Let AE = 3x and AD = 4x. Then ED = AD - AE = 4x - 3x = x. We are given ED = 5, so x = 5. Therefore, AE = 3x = 3(5) = 15 and AD = 4x = 4(5) = 20.\"\n}\n```",
+    "recovery_method": "repair_original_response"
+  }
+]

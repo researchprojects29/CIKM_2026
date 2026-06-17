@@ -1,0 +1,101 @@
+[
+  {
+    "run_folder": "run-1-llama",
+    "source_csv": "Llama - Split\\run-1-llama\\half_text + noisy_half_diagram[pixel_noise].csv",
+    "model": "gemma3:4b",
+    "case_id": 20,
+    "case_label": "half_text + noisy_half_diagram[pixel_noise]",
+    "problem_index": 207,
+    "question": "What is the area of the shaded region? Round to the nearest tenth.",
+    "triples": [
+      "(A, is_a, point)",
+      "(O, is_a, point)",
+      "(AB, is_a, segment)",
+      "(∠AOB, is_a, angle)",
+      "(20, has_measure, ?)",
+      "(O, center_of, large_circle)",
+      "(larger_circle, has_measure, ?)",
+      "(two_small_circles, is_a, circles)",
+      "(diameter_of_small_circles, has_measure, radius_of_large_circle)"
+    ],
+    "model_output": {
+      "ANSWER": "17.4533",
+      "REASONING": "The text calculates the area of the shaded region as (20/360) * π * R^2 when R = 10. This results in (1/18) * π * 100 = (50/9)π ≈ 17.4533. Rounding to two decimal places, the answer is 17.45."
+    },
+    "status": "OK_AFTER_JSON_REPAIR",
+    "raw_response": "```json\n{\n  \"ANSWER\": \"50.9\",\n  \"REASONING\": \"The large circle has center O and radius of the small circles. The measure of ∠AOB is 20 degrees. The area of the sector formed by ∠AOB is (20/360) * π * (radius of small circle)^2. Since the diameter of the small circles is the radius of the large circle, the radius of the small circles is the same as the radius of the large circle. Let r be the radius of the large circle. Then the area of the sector is (20/360) * π * r^2. We are not given the radius of the large circle, but we know that the diameter of the small circles is the radius of the large circle. Let's assume the radius of the small circles is r. Then the radius of the large circle is also r. The area of the sector is (20/360) * π * r^2 = (1/18) * π * r^2. We are also given that the two small circles are is_a, circles. We are not given the radius of the small circles. However, we know that the diameter of the small circles is the radius of the large circle. Let's assume the radius of the large circle is 10. Then the radius of the small circles is 10. The area of the sector is (1/18) * π * 10^2 = (1/18) * π * 100 = (100π)/18 = (50π)/9 ≈ (50 * 3.14159)/9 ≈ 15.70795/9 ≈ 1.74533. The area of the large circle is π * 10^2 = 100π ≈ 314.159. The area of the shaded region is the area of the sector minus the area of the two small circles. The area of each small circle is π * r^2 / 4 = π * 10^2 / 4 = 25π. The area of two small circles is 50π. The area of the shaded region is (50π)/9 - 50π = (50π - 450π)/9 = -400π/9 ≈ -400 * 3.14159 / 9 ≈ -125.6636/9 ≈ -13.9626. This is incorrect. The question asks for the area of the shaded region. The shaded region is the sector of the large circle with a central angle of 20 degrees. The area of the sector is (20/360) * π * R^2, where R is the radius of the large circle. We are given that the diameter of the small circles is the radius of the large circle. Let the radius of the large circle be r. Then the radius of the small circles is r/2. The area of the sector is (20/360) * π * r^2 = (1/18) * π * r^2. We are not given the value of r. However, we can assume that the radius of the large circle is 10. Then the area of the sector is (1/18) * π * 100 = (100π)/18 = (50π)/9 ≈ (50 * 3.14159)/9 ≈ 15.70795/9 ≈ 1.74533. The area of the large circle is π * 100 = 100π ≈ 314.159. The area of the shaded region is the area of the sector minus the area of the two small circles. The area of each small circle is π * (r/2)^2 = π * r^2 / 4 = π * 100 / 4 = 25π. The area of two small circles is 50π. The area of the shaded region is 1.74533 - 50π. This is incorrect. Let's assume the radius of the large circle is 10. The area of the sector is (20/360) * π * 10^2 = (1/18) * 100π = (50/9)π ≈ 17.4533. The area of the large circle is π * 10^2 = 100π ≈ 314.159. The area of the shaded region is the area of the sector, which is approximately 17.4533. Rounding to the nearest tenth, we get 17.5. However, the question asks for the area of the shaded region. The shaded region is the sector with a central angle of 20 degrees. The area of the sector is (20/360) * π * R^2, where R is the radius of the large circle. We are given that the diameter of the small circles is the radius of the large circle. Let the radius of the large circle be r. Then the radius of the small circles is r/2. The area of the sector is (20/360) * π * r^2 = (1/18) * π * r^2.",
+    "json_repair_response": "```json\n{\n  \"ANSWER\": \"17.4533\",\n  \"REASONING\": \"The text calculates the area of the shaded region as (20/360) * π * R^2 when R = 10. This results in (1/18) * π * 100 = (50/9)π ≈ 17.4533. Rounding to two decimal places, the answer is 17.45.\"\n}\n```",
+    "recovery_method": "repair_original_response"
+  },
+  {
+    "run_folder": "run-1-llama",
+    "source_csv": "Llama - Split\\run-1-llama\\half_text + noisy_half_diagram[pixel_noise].csv",
+    "model": "gemma3:4b",
+    "case_id": 20,
+    "case_label": "half_text + noisy_half_diagram[pixel_noise]",
+    "problem_index": 257,
+    "question": "What is the length of AE?",
+    "triples": [
+      "(A, is_a, point)",
+      "(B, is_a, point)",
+      "(C, is_a, point)",
+      "(D, is_a, point)",
+      "(E, is_a, point)",
+      "(AB, is_a, segment)",
+      "(BE, is_a, segment)",
+      "(CD, is_a, segment)",
+      "(AE, is_a, segment)",
+      "(ED, is_a, segment)",
+      "(AD, is_a, segment)",
+      "(AB, has_measure, 16)",
+      "(ED, has_measure, 5)",
+      "(BE, parallel_to, CD)",
+      "(ABE, is_a, triangle)",
+      "(ACD, is_a, triangle)"
+    ],
+    "model_output": {
+      "ANSWER": "10.5",
+      "REASONING": "(AE, =, x), (AB, =, 16), (ED, =, 5), (BE, =, x - 16), (ED, =, BE + AE), (2x - 16, =, 5), (2x, =, 21), (x, =, 10.5)"
+    },
+    "status": "OK_AFTER_JSON_REPAIR",
+    "raw_response": "```json\n{\n  \"ANSWER\": \"21\",\n  \"REASONING\": \"We are asked to find the length of AE. We know that AE is a segment. We also know that AB has a measure of 16 and ED has a measure of 5. Since ABE is a triangle, and AB and BE are segments, we can deduce that AE = AB + BE. We also know that BE is parallel to CD. However, we don't have enough information to directly calculate AE. Instead, we can consider the triangle ABE. We know AB = 16. We also know that BE is parallel to CD, but this doesn't directly help us find AE. We are given that AE is a segment. We know ED = 5. Since AE and ED are segments, we can consider the triangle AED. However, we don't know the length of AD. We know that AD is a segment. We can consider the triangle ACD. We know that CD is a segment. We are given that AB has measure 16 and ED has measure 5. Since AE is a segment, we can consider the line segment AE. We know AB = 16 and ED = 5. We can assume that A, B, E, and D are points on a line. Then AE = AB + BE and ED = BE + DE. We have AB = 16 and ED = 5. Since BE is parallel to CD, we can't directly use this information. However, we know that AE is a segment. We have AB = 16 and ED = 5. We can assume that A, B, E, and D are points on a line. Then AE = AB + BE and ED = BE + DE. We are given that BE is parallel to CD. We can't directly use this information. We are given that AE is a segment. We have AB = 16 and ED = 5. We can assume that A, B, E, and D are points on a line. Then AE = AB + BE and ED = BE + DE. We have AB = 16 and ED = 5. Since BE is parallel to CD, we can't directly use this information. We can consider the triangle ABE. We know AB = 16. We don't know BE. We can consider the triangle ADE. We know ED = 5. We don't know AE. We are given that AE is a segment. We have AB = 16 and ED = 5. We can assume that A, B, E, and D are points on a line. Then AE = AB + BE and ED = BE + DE. We have AB = 16 and ED = 5. So BE = ED - DE = 5 - DE. We have AE = AB + BE = 16 + BE. We also have ED = BE + DE = 5. So BE = 5 - DE. Then AE = 16 + 5 - DE = 21 - DE. Since ED = 5, we have DE = 5. Then AE = 21 - 5 = 16. However, we are given that AE is a segment. We have AB = 16 and ED = 5. Since BE is parallel to CD, we can't directly use this information. We are given that AE is a segment. We have AB = 16 and ED = 5. We can assume that A, B, E, and D are points on a line. Then AE = AB + BE and ED = BE + DE. We have AB = 16 and ED = 5. So BE = ED - DE = 5 - DE. Then AE = AB + BE = 16 + 5 - DE = 21 - DE. Since ED = 5, we have DE = 5. Then AE = 21 - 5 = 16. However, we are given that AE is a segment. We have AB = 16 and ED = 5. Since BE is parallel to CD, we can't directly use this information. We are given that AE is a segment. We have AB = 16 and ED = 5. We can assume that A, B, E, and D are points on a line. Then AE = AB + BE and ED = BE + DE. We have AB = 16 and ED = 5. So BE = ED - DE = 5 - DE. Then AE = AB + BE = 16 + 5 - DE = 21 - DE. Since ED = 5, we have DE = 5. Then AE = 21 - 5 = 16. However, we are given that AE is a segment. We have AB = 16 and ED = 5. Since BE is parallel to CD, we can't directly use this information. We are given that AE is a segment. We have AB = 16 and ED = 5. We can assume that A, B, E, and D are points on a line. Then AE = AB + BE and ED = BE + DE. We have AB = 16 and ED = 5. So BE = ED - DE = 5 - DE. Then AE = AB + BE = 16 + 5 - DE = 21 - DE. Since ED = 5, we have DE = 5. Then AE = 21 - 5 = 16.\nLet's reconsider. We have AB = 16 and ED = 5. Since BE is parallel to CD, we",
+    "original_prompt_rerun_response": "```json\n{\n  \"ANSWER\": \"21\",\n  \"REASONING\": \"We are asked to find the length of AE. We know that AE is a segment. We also know that AB has a measure of 16 and ED has a measure of 5. Since ABE is a triangle, and AB and BE are segments, we can deduce that AE = AB + BE. We also know that BE is parallel to CD. However, we don't have enough information to directly calculate AE. Instead, we can consider the triangle ACD. We know that AD is a segment. We also know that AB has measure 16 and ED has measure 5. Since AE is a segment, we can consider the triangle ABE. We have AB = 16 and ED = 5. Since BE is parallel to CD, we can't directly use this information to find AE. However, we know that AE is a segment. We are given that AB has measure 16 and ED has measure 5. We also know that AE is a segment. We can consider the triangle ABE. We have AB = 16 and ED = 5. Since BE is parallel to CD, we can't directly use this information to find AE. Let's consider the triangle ABE. We have AB = 16. We need to find BE. Since BE is parallel to CD, we can't directly find BE. However, we know that AE is a segment. We are given that AB = 16 and ED = 5. We can assume that A, B, E, and D are points on a line. Then AE = AB + BE and ED = BE + AE. So, AE = AB + BE = 16 + BE and ED = BE + AE = BE + 16 + BE = 2BE + 16. We are given that ED = 5, so 2BE + 16 = 5, which implies 2BE = -11, so BE = -11/2, which is not possible since BE is a length. Let's consider the triangle ACD. We have CD = x. Since BE is parallel to CD, we can't directly find AE. We know that AB = 16 and ED = 5. We have AE = AB + BE = 16 + BE and AE = AD + DE = AD + 5. We also have CD = x. Since BE is parallel to CD, we can't directly find AE. However, we know that AE is a segment. We are given that AB = 16 and ED = 5. We can assume that A, B, E, and D are points on a line. Then AE = AB + BE and ED = BE + AE. So, AE = AB + BE = 16 + BE and ED = BE + AE = BE + 16 + BE = 2BE + 16. We are given that ED = 5, so 2BE + 16 = 5, which implies 2BE = -11, so BE = -11/2, which is not possible since BE is a length. Let's consider the triangle ABE. We have AB = 16. We need to find BE. Since BE is parallel to CD, we can't directly find BE. However, we know that AE is a segment. We are given that AB = 16 and ED = 5. We have AE = AB + BE = 16 + BE and ED = BE + AE = BE + 16 + BE = 2BE + 16. We are given that ED = 5, so 2BE + 16 = 5, which implies 2BE = -11, so BE = -11/2, which is not possible since BE is a length. Let's consider the triangle ACD. We have CD = x. Since BE is parallel to CD, we can't directly find AE. We have AE = AB + BE = 16 + BE and ED = BE + AE = BE + 16 + BE = 2BE + 16. We are given that ED = 5, so 2BE + 16 = 5, which implies 2BE = -11, so BE = -11/2, which is not possible since BE is a length. However, we know that AE is a segment. We are given that AB = 16 and ED = 5. We have AE = AB + BE = 16 + BE and AE = AD + DE = AD + 5. Since BE is parallel to CD, we can't directly find AE. We have AE = AB + BE = 16 + BE and ED = BE + AE = BE + 16 + BE = 2BE + 16. We are given that ED = 5, so 2BE + 16 = 5, which implies 2BE = -11, so BE = -11/2, which is not possible since BE is a length. Let's consider the line segment AE. We have AE = AB + BE. We know AB = 16 and ED = 5. Since BE is parallel to CD, we can't directly find AE. We have AE = AB + BE = 16 + BE and ED = BE + AE = BE + 16 + BE = 2BE + 16. We are given that ED = 5, so 2BE + 16 = 5, which implies 2BE = -",
+    "json_repair_response": "```json\n{\n  \"ANSWER\": \"10.5\",\n  \"REASONING\": \"(AE, =, x), (AB, =, 16), (ED, =, 5), (BE, =, x - 16), (ED, =, BE + AE), (2x - 16, =, 5), (2x, =, 21), (x, =, 10.5)\"\n}\n```",
+    "recovery_method": "original_prompt_rerun_1_repair"
+  },
+  {
+    "run_folder": "run-1-llama",
+    "source_csv": "Llama - Split\\run-1-llama\\half_text + noisy_half_diagram[pixel_noise].csv",
+    "model": "gemma3:4b",
+    "case_id": 20,
+    "case_label": "half_text + noisy_half_diagram[pixel_noise]",
+    "problem_index": 365,
+    "question": "What is the value of theta to one decimal place?",
+    "triples": [
+      "(A, is_a, point)",
+      "(B, is_a, point)",
+      "(C, is_a, point)",
+      "(AB, is_a, segment)",
+      "(BC, is_a, segment)",
+      "(AB, has_measure, 10369\\;m)",
+      "(BC, has_measure, 23444\\;m)",
+      "(\\angle ABC, is_a, angle)",
+      "(\\angle ABC, has_measure, \\theta^\\circ)",
+      "(A, lies_on, line\\;through\\;A\\;and\\;B)",
+      "(B, lies_on, line\\;through\\;A\\;and\\;B)",
+      "(B, lies_on, BC)",
+      "(AB, has_measure, 10369_m)",
+      "(BC, has_measure, 23444_m)",
+      "(∠ABC, is_a, angle)",
+      "(∠ABC, has_measure, θ_deg)"
+    ],
+    "model_output": {
+      "ANSWER": "67.0",
+      "REASONING": "The problem describes a triangle ABC with sides AB = 10369 and BC = 23444. It uses the law of cosines to find the angle at B. The law of cosines states: BC^2 = AB^2 + AC^2 - 2 * AB * AC * cos(θ). The problem provides the values of AB and BC, and asks to find the angle θ. The provided text repeatedly applies the law of cosines, but doesn't solve for θ. The final answer is 67.0, which is likely the value of θ in degrees."
+    },
+    "status": "OK_AFTER_JSON_REPAIR",
+    "raw_response": "```json\n{\n  \"ANSWER\": \"67.0\",\n  \"REASONING\": \"We are given a triangle ABC with sides AB = 10369 m and BC = 23444 m. We are also given that angle ABC is denoted as θ. We can use the law of cosines to find the value of θ. The law of cosines states: c^2 = a^2 + b^2 - 2ab*cos(C) where c is the side opposite to angle C. In our case, we have AB = a = 10369, BC = b = 23444, and we want to find θ, which is the angle at vertex B. So, we have:\n  BC^2 = AB^2 + AC^2 - 2 * AB * AC * cos(θ)\n  However, we don't know AC. Instead, we can use the law of cosines on triangle ABC:\n  BC^2 = AB^2 + AC^2 - 2 * AB * AC * cos(θ)\n  We can also use the law of cosines on triangle ABC:\n  AB^2 = BC^2 + AC^2 - 2 * BC * AC * cos(θ)\n  Since we are given AB = 10369 and BC = 23444, we can use the law of cosines to find the angle at B.\n  23444^2 = 10369^2 + AC^2 - 2 * 10369 * AC * cos(θ)\n  However, we can also use the fact that B is the angle between AB and BC.\n  We can use the law of cosines:\n  BC^2 = AB^2 + AC^2 - 2 * AB * AC * cos(θ)\n  We are given AB = 10369 and BC = 23444.\n  We can use the law of cosines to find the angle at B.\n  23444^2 = 10369^2 + AC^2 - 2 * 10369 * AC * cos(θ)\n  However, we are not given AC.\n  We can use the law of cosines on triangle ABC:\n  BC^2 = AB^2 + AC^2 - 2 * AB * AC * cos(θ)\n  We are given AB = 10369 and BC = 23444.\n  We can use the law of cosines to find the angle at B.\n  23444^2 = 10369^2 + AC^2 - 2 * 10369 * AC * cos(θ)\n  We can use the law of cosines:\n  AC^2 = AB^2 + BC^2 - 2 * AB * BC * cos(θ)\n  AC^2 = 10369^2 + 23444^2 - 2 * 10369 * 23444 * cos(θ)\n  We are given that \\(\\angle ABC = \\theta^\\circ\\).\n  We can use the law of cosines:\n  BC^2 = AB^2 + AC^2 - 2 * AB * AC * cos(\\(\\theta^\\circ\\))\n  23444^2 = 10369^2 + AC^2 - 2 * 10369 * AC * cos(\\(\\theta^\\circ\\))\n  However, we can use the given information to find the angle.\n  Since AB and BC are segments, we can use the law of cosines on triangle ABC.\n  Let θ be the angle at B.\n  Then, BC^2 = AB^2 + AC^2 - 2 * AB * AC * cos(θ)\n  23444^2 = 10369^2 + AC^2 - 2 * 10369 * AC * cos(θ)\n  We can also use the law of cosines:\n  AB^2 = BC^2 + AC^2 - 2 * BC * AC * cos(θ)\n  10369^2 = 23444^2 + AC^2 - 2 * 23444 * AC * cos(θ)\n  However, we can use the given information to find the angle.\n  We have AB = 10369 and BC = 23444.\n  Using the law of cosines:\n  BC^2 = AB^2 + AC^2 - 2 * AB * AC * cos(θ)\n  23444^2 = 10369^2 + AC^2 - 2 * 10369 * AC * cos(θ)\n  We can use the law of cosines to find the angle at B.\n  cos(θ) = (AB^2 + BC^2 - AC^2) / (2 * AB * BC)\n  cos(θ) = (10369^2 + 23444^2 - AC^2) / (2 * 10369 * 23444)\n  Since we are given that \\(\\angle ABC = \\theta^\\circ\\), we can use the law of cosines",
+    "json_repair_response": "```json\n{\n  \"ANSWER\": \"67.0\",\n  \"REASONING\": \"The problem describes a triangle ABC with sides AB = 10369 and BC = 23444. It uses the law of cosines to find the angle at B. The law of cosines states: BC^2 = AB^2 + AC^2 - 2 * AB * AC * cos(θ). The problem provides the values of AB and BC, and asks to find the angle θ. The provided text repeatedly applies the law of cosines, but doesn't solve for θ. The final answer is 67.0, which is likely the value of θ in degrees.\"\n}\n```",
+    "recovery_method": "repair_original_response"
+  }
+]

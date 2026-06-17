@@ -1,0 +1,42 @@
+[
+  {
+    "run_folder": "run-1-mistral",
+    "source_csv": "run-1-mistral\\noisy_half_text[sentence] + half_diagram.csv",
+    "case_id": 14,
+    "case_label": "noisy_half_text[sentence] + half_diagram",
+    "problem_index": 348,
+    "question": "What is the distance d between the helicopter and the landing pad? Round your answer to the nearest whole number",
+    "triples": [
+      "(helicopter_altitude, is_a, 198_m)",
+      "(angle_of_depression, is_a, 44_deg)",
+      "(helicopter_altitude, connects, landing_pad)",
+      "(angle_of_depression, connects, landing_pad)",
+      "(d, is_a, distance)",
+      "(d, connects, landing_pad)",
+      "(landing_pad, is_a, point)",
+      "(bicycle, is_a, object)",
+      "(bicycle, leaning_against, wall)",
+      "(room, is_a, space)",
+      "(room, smelled_of, rain)",
+      "(helicopter_altitude, is_a, segment)",
+      "(angle_of_depression, is_a, angle)",
+      "(d, is_a, segment)",
+      "(wall, is_a, surface)",
+      "(rain, is_a, weather_condition)",
+      "(helicopter_altitude, has_measure, 198_m)",
+      "(angle_of_depression, has_measure, 44_deg)",
+      "(d, has_measure, ?)",
+      "(room, has_measure, ?)",
+      "(bicycle, has_measure, ?)",
+      "(wall, has_measure, ?)",
+      "(rain, has_measure, ?)"
+    ],
+    "model_output": {
+      "ANSWER": "144",
+      "REASONING": "The helicopter's altitude is 198 meters, and the angle of depression to the landing pad is 44 degrees. The distance (d) between the helicopter and the landing pad can be calculated using trigonometry. Specifically, d = helicopter_altitude / tan(angle_of_depression). Using the provided values, d = 198 / tan(44) ≈ 144 meters (rounded to the nearest whole number)."
+    },
+    "status": "OK",
+    "raw_response": "{\n  \"ANSWER\": 144,\n  \"REASONING\": \"The helicopter's altitude is 198 meters, and the angle of depression to the landing pad is 44 degrees. The distance (d) between the helicopter and the landing pad can be calculated using trigonometry. Specifically, d = helicopter_altitude / tan(angle_of_depression). Using the provided values, d = 198 / tan(44) ≈ 144 meters (rounded to the nearest whole number).\"\n}",
+    "recovery_method": "original_prompt"
+  }
+]

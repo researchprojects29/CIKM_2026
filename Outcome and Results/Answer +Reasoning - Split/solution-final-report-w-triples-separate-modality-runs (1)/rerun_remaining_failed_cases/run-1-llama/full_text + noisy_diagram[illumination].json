@@ -1,0 +1,30 @@
+[
+  {
+    "run_folder": "run-1-llama",
+    "source_csv": "Separate-Modality-Triples\\run-1-llama\\full_text + noisy_diagram[illumination].csv",
+    "model": "meta-llama/llama-4-scout",
+    "case_id": 8,
+    "case_label": "full_text + noisy_diagram[illumination]",
+    "problem_index": 115,
+    "question": "What is the bottom perimeter of the paper cap?",
+    "triples": [
+      "(sector, is_a, geometric_shape)",
+      "(sector, has_measure, 120_deg)",
+      "(sector, has_radius, 6_units)",
+      "(sector, is_rolled_into, conical_cap)",
+      "(conical_cap, is_a, geometric_shape)",
+      "(conical_cap, has_bottom, ?)",
+      "(bottom, is_part_of, conical_cap)",
+      "(bottom, has_attribute, perimeter)",
+      "(perimeter, is_a, quantitative_attribute)",
+      "(query, is_about, bottom_perimeter)"
+    ],
+    "model_output": {
+      "ANSWER": "12.57_units",
+      "REASONING": "To find the bottom perimeter of the paper cap, we first need to understand that the cap is formed by rolling a sector. The sector has a radius of 6_units and a measure of 120_deg. When rolled into a conical_cap, the arc length of the sector becomes the perimeter of the bottom of the cap. The arc length of the sector can be calculated using the formula: arc length = (angle / 360) * 2 * π * radius. Substituting the given values: arc length = (120 / 360) * 2 * π * 6 = (1/3) * 12 * π ≈ 12.57_units. Therefore, the bottom perimeter of the paper cap is approximately 12.57_units."
+    },
+    "status": "OK",
+    "raw_response": "```json\n{\n  \"ANSWER\": \"12.57_units\",\n  \"REASONING\": \"To find the bottom perimeter of the paper cap, we first need to understand that the cap is formed by rolling a sector. The sector has a radius of 6_units and a measure of 120_deg. When rolled into a conical_cap, the arc length of the sector becomes the perimeter of the bottom of the cap. The arc length of the sector can be calculated using the formula: arc length = (angle / 360) * 2 * π * radius. Substituting the given values: arc length = (120 / 360) * 2 * π * 6 = (1/3) * 12 * π ≈ 12.57_units. Therefore, the bottom perimeter of the paper cap is approximately 12.57_units.\"\n}\n```",
+    "recovery_method": "original_prompt"
+  }
+]

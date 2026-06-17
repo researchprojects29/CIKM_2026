@@ -1,0 +1,78 @@
+[
+  {
+    "run_folder": "run-3-llama",
+    "source_csv": "Llama - Split\\run-3-llama\\full_text + noisy_diagram[pixel_noise].csv",
+    "model": "gemma3:4b",
+    "case_id": 10,
+    "case_label": "full_text + noisy_diagram[pixel_noise]",
+    "problem_index": 17,
+    "question": "What is the measure of angle COD?",
+    "triples": [
+      "(A, is_a, point)",
+      "(B, is_a, point)",
+      "(C, is_a, point)",
+      "(D, is_a, point)",
+      "(O, is_a, point)",
+      "(ABCD, is_a, parallelogram)",
+      "(AC, is_a, segment)",
+      "(BD, is_a, segment)",
+      "(AC, intersects, BD)",
+      "(A, lies_on, AC)",
+      "(C, lies_on, AC)",
+      "(B, lies_on, BD)",
+      "(D, lies_on, BD)",
+      "(O, lies_on, AC)",
+      "(O, lies_on, BD)",
+      "(∠DAC, has_measure, 42_deg)",
+      "(∠CBD, has_measure, 23_deg)"
+    ],
+    "model_output": {
+      "ANSWER": "65_deg",
+      "REASONING": "The text states that ∠AOB = 180_deg - (42_deg + 23_deg) = 180_deg - 65_deg = 115_deg. Also, the text states that ∠AOB = ∠COD. Therefore, ∠COD = 115_deg. However, the text then states that ∠AOB = 42_deg + 23_deg = 65_deg. Thus, ∠COD = 65_deg."
+    },
+    "status": "OK_AFTER_JSON_REPAIR",
+    "raw_response": "```json\n{\n  \"ANSWER\": \"65_deg\",\n  \"REASONING\": \"Since ABCD is a parallelogram, AC and BD are diagonals that intersect. The intersection of the diagonals of a parallelogram bisects each other. Also, AC and BD intersect at O. We are given that ∠DAC = 42_deg and ∠CBD = 23_deg. Since AC and BD intersect at O, we have ∠OAC = ∠DAC = 42_deg and ∠OBC = ∠CBD = 23_deg. Therefore, ∠AOB = 180_deg - (42_deg + 23_deg) = 180_deg - 65_deg = 115_deg. Since ∠AOB and ∠COD are vertical angles, they are equal. Thus, ∠COD = 115_deg. However, this is incorrect. Let's reconsider. Since ABCD is a parallelogram, AC and BD bisect each other. Let the intersection of AC and BD be O. We are given that ∠DAC = 42_deg and ∠CBD = 23_deg. Since AC and BD intersect at O, we have ∠OAC = 42_deg and ∠OBC = 23_deg. Also, since ABCD is a parallelogram, opposite angles are equal. We want to find the measure of angle COD. Since AC and BD intersect at O, we have ∠COD = ∠AOB. We know that ∠AOB + ∠BOC + ∠COA + ∠AOD = 360_deg. We also know that ∠AOB = ∠COD. Let's consider the angles around point O. We have ∠OAC = 42_deg and ∠OBC = 23_deg. Since AC and BD intersect at O, we have ∠AOB = 180_deg - (42_deg + 23_deg) = 180_deg - 65_deg = 115_deg. Therefore, ∠COD = 115_deg. However, this is incorrect. Since AC and BD intersect at O, we have ∠AOB = ∠COD. We are given that ∠DAC = 42_deg and ∠CBD = 23_deg. Since ABCD is a parallelogram, adjacent angles are supplementary. Therefore, ∠ABC = 180_deg - 42_deg = 138_deg. Also, ∠ADC = 180_deg - 23_deg = 157_deg. Since ∠ABC = ∠ABD + ∠CBD = ∠ABD + 23_deg = 138_deg, we have ∠ABD = 138_deg - 23_deg = 115_deg. Similarly, ∠ADC = ∠ADB + ∠BDC = ∠ADB + ∠BDC = 157_deg. Since ∠ABD = 115_deg, we have ∠ADB = 115_deg - ∠BDC. Since ∠CBD = 23_deg, we have ∠BDC = 157_deg - 115_deg = 42_deg. Therefore, ∠COD = ∠AOB. We have ∠AOB = ∠AOC + ∠COB. Since ∠AOC = 42_deg and ∠COB = 23_deg, we have ∠AOB = 42_deg + 23_deg = 65_deg. Thus, ∠COD = 65_deg.\"",
+    "json_repair_response": "```json\n{\n  \"ANSWER\": \"65_deg\",\n  \"REASONING\": \"The text states that ∠AOB = 180_deg - (42_deg + 23_deg) = 180_deg - 65_deg = 115_deg. Also, the text states that ∠AOB = ∠COD. Therefore, ∠COD = 115_deg. However, the text then states that ∠AOB = 42_deg + 23_deg = 65_deg. Thus, ∠COD = 65_deg.\"\n}\n```",
+    "recovery_method": "repair_original_response"
+  },
+  {
+    "run_folder": "run-3-llama",
+    "source_csv": "Llama - Split\\run-3-llama\\full_text + noisy_diagram[pixel_noise].csv",
+    "model": "gemma3:4b",
+    "case_id": 10,
+    "case_label": "full_text + noisy_diagram[pixel_noise]",
+    "problem_index": 152,
+    "question": "What is the total length of the ladder AB?",
+    "triples": [
+      "(A, is_a, point)",
+      "(B, is_a, point)",
+      "(C, is_a, point)",
+      "(D, is_a, point)",
+      "(E, is_a, point)",
+      "(AB, is_a, segment)",
+      "(BC, is_a, segment)",
+      "(BD, is_a, segment)",
+      "(DE, is_a, segment)",
+      "(EC, is_a, segment)",
+      "(∠BEC, is_a, angle)",
+      "(B, lies_on, BC)",
+      "(C, lies_on, BC)",
+      "(D, lies_on, AB)",
+      "(E, lies_on, AC)",
+      "(BC, has_measure, 1.6_units)",
+      "(BD, has_measure, 0.5_units)",
+      "(DE, has_measure, 1.4_units)",
+      "(AB, intersects, EC)",
+      "(BD, intersects, EC)",
+      "(EC, perpendicular_to, BC)"
+    ],
+    "model_output": {
+      "ANSWER": "1.9",
+      "REASONING": "AB = BD + DE = 0.5 + 1.4 = 1.9"
+    },
+    "status": "OK_AFTER_JSON_REPAIR",
+    "raw_response": "```json\n{\n  \"ANSWER\": \"3.5 units\",\n  \"REASONING\": \"We are asked to find the total length of the ladder AB. We know that AB is a segment. We also know that BD has a measure of 0.5 units and D lies on AB. Therefore, AB = BD + AD. We also know that D lies on AB, and BC has a measure of 1.6 units. Since BC is a segment, we can deduce that BC = BD + DC. We are given that BD = 0.5 units. We also know that EC is perpendicular to BC, and EC intersects AB at some point. We are given that DE has a measure of 1.4 units. We are given that AB intersects EC. We are given that BD intersects EC. We are given that BC has a measure of 1.6 units. We are given that BD has a measure of 0.5 units. We are given that DE has a measure of 1.4 units. We can deduce that AB = BD + AD. Since AB intersects EC, and BD intersects EC, we can assume that AB is the length of the ladder. We have AB = BD + AD. We know BD = 0.5. We also know that AB intersects EC. We are given that EC is perpendicular to BC. We are given that BC = 1.6. We are given that BD = 0.5. We are given that DE = 1.4. We can calculate AB as BD + DE = 0.5 + 1.4 = 1.9. However, we are looking for the total length of the ladder AB. We know that AB intersects EC. We know that BD intersects EC. We are given that BC = 1.6 and BD = 0.5. We are given that DE = 1.4. We can calculate AB as BD + DE = 0.5 + 1.4 = 1.9. But we are looking for the length of AB. Since AB intersects EC, we can assume that AB is the length of the segment AB. We have AB = BD + DE = 0.5 + 1.4 = 1.9. However, this is incorrect. We are looking for the total length of the ladder AB. We know that AB is a segment. We have AB = BD + DE = 0.5 + 1.4 = 1.9. We are given that AB intersects EC. We are given that BD intersects EC. We are given that BC = 1.6. We are given that BD = 0.5. We are given that DE = 1.4. We are given that EC is perpendicular to BC. We can calculate AB as BD + DE = 0.5 + 1.4 = 1.9. But we are looking for the total length of the ladder AB. We are given that AB intersects EC. We are given that BD intersects EC. We are given that BC = 1.6. We are given that BD = 0.5. We are given that DE = 1.4. We are given that EC is perpendicular to BC. We can calculate AB as BD + DE = 0.5 + 1.4 = 1.9. However, this is incorrect. We are looking for the total length of the ladder AB. We have AB = BD + DE = 0.5 + 1.4 = 1.9. We are given that AB intersects EC. We are given that BD intersects EC. We are given that BC = 1.6. We are given that BD = 0.5. We are given that DE = 1.4. We are given that EC is perpendicular to BC. We can calculate AB as BD + DE = 0.5 + 1.4 = 1.9. However, this is incorrect. We are looking for the total length of the ladder AB. We have AB = BD + DE = 0.5 + 1.4 = 1.9. We are given that AB intersects EC. We are given that BD intersects EC. We are given that BC = 1.6. We are given that BD = 0.5. We are given that DE = 1.4. We are given that EC is perpendicular to BC. We can calculate AB as BD + DE = 0.5 + 1.4 = 1.9. However, this is incorrect. We are looking for the total length of the ladder AB. We have AB = BD + DE = 0.5 + 1.4 = 1.9. We are given that AB intersects EC. We are given that BD intersects EC. We are given that BC = 1.6. We are given that BD = 0.5. We are given that DE = 1.4. We are given that EC is perpendicular to BC. We can calculate AB as BD + DE = 0.5 + 1.4 = 1.9. However, this is incorrect. We are looking for the total length of the ladder AB. We have AB = BD + DE = 0.5 + 1.4 = 1.9. We are given that AB intersects EC. We are given that BD intersects EC. We are given that BC = 1.6. We are given that BD = 0.5. We are given that DE = 1.4. We are given that EC is perpendicular to BC. We can calculate AB as BD + DE = 0.5 + 1.4 = 1.9. However, this is incorrect",
+    "json_repair_response": "```json\n{\n  \"ANSWER\": \"1.9\",\n  \"REASONING\": \"AB = BD + DE = 0.5 + 1.4 = 1.9\"\n}\n```",
+    "recovery_method": "repair_original_response"
+  }
+]

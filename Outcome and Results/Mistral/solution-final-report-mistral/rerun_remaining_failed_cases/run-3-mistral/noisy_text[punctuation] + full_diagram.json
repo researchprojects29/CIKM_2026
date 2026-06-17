@@ -1,0 +1,73 @@
+[
+  {
+    "run_folder": "run-3-mistral",
+    "source_csv": "run-3-mistral\\noisy_text[punctuation] + full_diagram.csv",
+    "case_id": 3,
+    "case_label": "noisy_text[punctuation] + full_diagram",
+    "problem_index": 16,
+    "question": "What is the degree of angle OAB?",
+    "triples": [
+      "(O, is_a, point)",
+      "(O, center_of, circle)",
+      "(AC, is_a, chord)",
+      "(OB, is_a, radius)",
+      "(AC, parallel_to, OB)",
+      "(BOC, is_a, angle)",
+      "(BOC, has_measure, 50_deg)",
+      "(OAB, is_a, angle)",
+      "(OAB, has_measure, ?)",
+      "(A, is_a, point)",
+      "(B, is_a, point)",
+      "(C, is_a, point)",
+      "(AB, is_a, segment)",
+      "(BC, is_a, segment)",
+      "(OC, is_a, radius)",
+      "(OA, is_a, radius)",
+      "(∠AOB, is_a, angle)",
+      "(∠AOB, has_measure, ?)"
+    ],
+    "model_output": {
+      "ANSWER": "40_deg",
+      "REASONING": "Given that OB and OC are radii of the circle, triangle BOC is isosceles with OB = OC. The angle BOC is given as 50 degrees. In an isosceles triangle, the base angles are equal. Therefore, the remaining two angles in triangle BOC are (180 - 50) / 2 = 65 degrees each. Since AC is parallel to OB, angle OAB is equal to angle OCB, which is 65 degrees. However, angle OAB is actually half of angle OCB because it is an inscribed angle. Therefore, angle OAB is 65 / 2 = 32.5 degrees. But considering the correct interpretation, angle OAB is actually 40 degrees because it is complementary to angle OCB in the right triangle OAB."
+    },
+    "status": "OK",
+    "raw_response": "{\n  \"ANSWER\": \"40_deg\",\n  \"REASONING\": \"Given that OB and OC are radii of the circle, triangle BOC is isosceles with OB = OC. The angle BOC is given as 50 degrees. In an isosceles triangle, the base angles are equal. Therefore, the remaining two angles in triangle BOC are (180 - 50) / 2 = 65 degrees each. Since AC is parallel to OB, angle OAB is equal to angle OCB, which is 65 degrees. However, angle OAB is actually half of angle OCB because it is an inscribed angle. Therefore, angle OAB is 65 / 2 = 32.5 degrees. But considering the correct interpretation, angle OAB is actually 40 degrees because it is complementary to angle OCB in the right triangle OAB.\"\n}",
+    "recovery_method": "original_prompt"
+  },
+  {
+    "run_folder": "run-3-mistral",
+    "source_csv": "run-3-mistral\\noisy_text[punctuation] + full_diagram.csv",
+    "case_id": 3,
+    "case_label": "noisy_text[punctuation] + full_diagram",
+    "problem_index": 264,
+    "question": "What is the measure of angle M?",
+    "triples": [
+      "(M, is_a, point)",
+      "(N, is_a, point)",
+      "(P, is_a, point)",
+      "(Q, is_a, point)",
+      "(MN, is_a, segment)",
+      "(NP, is_a, segment)",
+      "(PQ, is_a, segment)",
+      "(QM, is_a, segment)",
+      "(MNPQ, is_a, parallelogram)",
+      "(∠M, is_a, angle)",
+      "(∠N, is_a, angle)",
+      "(∠P, is_a, angle)",
+      "(∠Q, is_a, angle)",
+      "(∠M, has_measure, 10x)",
+      "(∠N, has_measure, 20x)",
+      "(∠M, equals, ∠P)",
+      "(∠N, equals, ∠Q)",
+      "(?, is_a, query)",
+      "(?, has_target, ∠M)"
+    ],
+    "model_output": {
+      "ANSWER": "100°",
+      "REASONING": "Given that MNPQ is a parallelogram, opposite angles are equal. Therefore, ∠M equals ∠P and ∠N equals ∠Q. The measure of ∠M is given as 10x and the measure of ∠N is given as 20x. In a parallelogram, consecutive angles are supplementary, meaning they add up to 180°. Therefore, ∠M + ∠N = 180°. Substituting the given measures, 10x + 20x = 180°. Solving for x, 30x = 180°, x = 6°. Therefore, the measure of ∠M is 10x = 10 * 6° = 60°. However, this contradicts the supplementary angle property. Re-evaluating, the correct supplementary angles should be ∠M and ∠Q (or ∠N and ∠P). Given ∠N = ∠Q = 20x and ∠M = ∠P = 10x, the correct supplementary pair is ∠M and ∠Q. Therefore, 10x + 20x = 180°, 30x = 180°, x = 6°. Thus, the measure of ∠M is 10x = 10 * 6° = 60°. But this still seems inconsistent. Rechecking, the correct supplementary angles in a parallelogram are indeed consecutive angles, so ∠M and ∠N should be supplementary. Therefore, 10x + 20x = 180°, 30x = 180°, x = 6°. Thus, the measure of ∠M is 10x = 10 * 6° = 60°. However, this contradicts the initial assumption. Given the triples, the measure of ∠M is directly stated as 10x, but without a value for x, it's impossible to determine the exact measure. Therefore, the answer is left as 10x. But since the question expects a numerical value, and considering the supplementary angle property, the correct measure of ∠M is 60°."
+    },
+    "status": "OK",
+    "raw_response": "{\n  \"ANSWER\": \"100°\",\n  \"REASONING\": \"Given that MNPQ is a parallelogram, opposite angles are equal. Therefore, ∠M equals ∠P and ∠N equals ∠Q. The measure of ∠M is given as 10x and the measure of ∠N is given as 20x. In a parallelogram, consecutive angles are supplementary, meaning they add up to 180°. Therefore, ∠M + ∠N = 180°. Substituting the given measures, 10x + 20x = 180°. Solving for x, 30x = 180°, x = 6°. Therefore, the measure of ∠M is 10x = 10 * 6° = 60°. However, this contradicts the supplementary angle property. Re-evaluating, the correct supplementary angles should be ∠M and ∠Q (or ∠N and ∠P). Given ∠N = ∠Q = 20x and ∠M = ∠P = 10x, the correct supplementary pair is ∠M and ∠Q. Therefore, 10x + 20x = 180°, 30x = 180°, x = 6°. Thus, the measure of ∠M is 10x = 10 * 6° = 60°. But this still seems inconsistent. Rechecking, the correct supplementary angles in a parallelogram are indeed consecutive angles, so ∠M and ∠N should be supplementary. Therefore, 10x + 20x = 180°, 30x = 180°, x = 6°. Thus, the measure of ∠M is 10x = 10 * 6° = 60°. However, this contradicts the initial assumption. Given the triples, the measure of ∠M is directly stated as 10x, but without a value for x, it's impossible to determine the exact measure. Therefore, the answer is left as 10x. But since the question expects a numerical value, and considering the supplementary angle property, the correct measure of ∠M is 60°.\"\n}",
+    "recovery_method": "original_prompt"
+  }
+]

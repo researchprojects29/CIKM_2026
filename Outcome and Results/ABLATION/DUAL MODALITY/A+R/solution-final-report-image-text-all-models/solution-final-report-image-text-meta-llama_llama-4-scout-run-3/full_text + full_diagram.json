@@ -1,0 +1,1534 @@
+[
+  {
+    "case_id": 1,
+    "case_label": "full_text + full_diagram",
+    "run_folder": "Dataset_split\\diagrams\\Setting_1&2\\FTFD",
+    "source_image": "Dataset_split\\diagrams\\Setting_1&2\\FTFD\\1.png",
+    "image_path": "C:\\Users\\arpit.chabbra\\Downloads\\noise_injection\\DATASET\\Dataset_split\\diagrams\\Setting_1&2\\FTFD\\1.png",
+    "question_text": "In triangle ABC, angle A = 80°, angle B = 60°, point D is on AB and\npoint E is on AC, DE parallel BC. What is the size of angle CED?",
+    "problem_index": 1,
+    "model": "meta-llama/llama-4-scout",
+    "run_number": 3,
+    "model_output": {
+      "ANSWER": "80",
+      "REASONING": "Given triangle ABC with angle A = 80° and angle B = 60°, and DE parallel to BC. We find angle C = 40°. Since DE || BC, angle CED = 80° because of corresponding angles and the sum of angles in triangle CED."
+    },
+    "status": "OK"
+  },
+  {
+    "case_id": 1,
+    "case_label": "full_text + full_diagram",
+    "run_folder": "Dataset_split\\diagrams\\Setting_1&2\\FTFD",
+    "source_image": "Dataset_split\\diagrams\\Setting_1&2\\FTFD\\2.jpg",
+    "image_path": "C:\\Users\\arpit.chabbra\\Downloads\\noise_injection\\DATASET\\Dataset_split\\diagrams\\Setting_1&2\\FTFD\\2.jpg",
+    "question_text": "AB parallel CD, straight line EF intersects AB at point E and\nintersects CD at point F, EG bisects angle BEF and intersects CD at\nat point G, angle EFG = 50°. What is the measure of angle EGF?",
+    "problem_index": 2,
+    "model": "meta-llama/llama-4-scout",
+    "run_number": 3,
+    "model_output": {
+      "ANSWER": "65",
+      "REASONING": "Given AB parallel to CD and EF intersecting them, angle BEF and EFG are supplementary. With angle EFG = 50 degrees, angle BEF = 130 degrees. Since EG bisects angle BEF, angle BEG = 65 degrees. In triangle EGF, with angle GEF = 65 degrees and angle EFG = 50 degrees, angle EGF = 180 - 65 - 50 = 65 degrees."
+    },
+    "status": "OK_AFTER_JSON_REPAIR",
+    "raw_response": "## Step 1\nGiven that $AB$ is parallel to $CD$, and straight line $EF$ intersects $AB$ at point $E$ and intersects $CD$ at point $F$, we know that $\\angle BEF$ and $\\angle EFG$ are supplementary because $AB$ and $CD$ are parallel lines cut by a transversal.\n\n## 2\nSince $\\angle EFG = 50^\\circ$, we can find $\\angle BEF$ as $180^\\circ - 50^\\circ = 130^\\circ$ because $\\angle BEF$ and $\\angle EFG$ are same-side interior angles.\n\n## 3\nIt is given that $EG$ bisects $\\angle BEF$, so $\\angle BEG = \\frac{1}{2} \\angle BEF = \\frac{1}{2} \\times 130^\\circ = 65^\\circ$.\n\n## 4\nSince $AB$ is parallel to $CD$, $\\angle BEG$ and $\\angle EGF$ are corresponding angles, but to find $\\angle EGF$, we should consider the triangle $\\triangle EGF$. We already know $\\angle EGF$'s exterior angle is $50^\\circ$, but we need the angle at $E$ in $\\triangle EGF$.\n\n## 5\n$\\angle GEF = 65^\\circ$ because $EG$ bisects $\\angle BEF$.\n\n## 6\nIn $\\triangle EGF$, the sum of angles is $180^\\circ$. Let $\\angle EGF = x$. We know $\\angle EFG = 50^\\circ$ and $\\angle GEF = 65^\\circ$.\n\n## 7\nSo, $x + 50^\\circ + 65^\\circ = 180^\\circ$.\n\n## 8\nSolving for $x$, we get $x = 180^\\circ - 50^\\circ - 65^\\circ = 65^\\circ$.\n\nThe final answer is:\n```json\n{\n  \"ANSWER\": \"65\",\n  \"REASONING\": \"Since AB is parallel to CD, and EG bisects angle BEF, we use properties of parallel lines and angle bisectors to find angle EGF.\"\n}\n```",
+    "json_repair_response": "```json\n{\n  \"ANSWER\": \"65\",\n  \"REASONING\": \"Given AB parallel to CD and EF intersecting them, angle BEF and EFG are supplementary. With angle EFG = 50 degrees, angle BEF = 130 degrees. Since EG bisects angle BEF, angle BEG = 65 degrees. In triangle EGF, with angle GEF = 65 degrees and angle EFG = 50 degrees, angle EGF = 180 - 65 - 50 = 65 degrees.\"\n}\n```"
+  },
+  {
+    "case_id": 1,
+    "case_label": "full_text + full_diagram",
+    "run_folder": "Dataset_split\\diagrams\\Setting_1&2\\FTFD",
+    "source_image": "Dataset_split\\diagrams\\Setting_1&2\\FTFD\\3.jpg",
+    "image_path": "C:\\Users\\arpit.chabbra\\Downloads\\noise_injection\\DATASET\\Dataset_split\\diagrams\\Setting_1&2\\FTFD\\3.jpg",
+    "question_text": "BC and BA intersect at point B, BD bisects angle ABC, CD\nparallel AB, angle BCD = 70°. What is the degree of angle CDB?",
+    "problem_index": 3,
+    "model": "meta-llama/llama-4-scout",
+    "run_number": 3,
+    "model_output": {
+      "ANSWER": "35",
+      "REASONING": "Since CD is parallel to AB, angle BCD and angle ABC are corresponding angles, but here angle BCD = 70° is given and it is an exterior angle to triangle BCD. Angle CBD = angle ABD because BD bisects angle ABC. Since CD is parallel to AB, angle ABC + angle BCD = 180°. However, we know angle BCD = 70°, so angle ABC = 110°. Because BD bisects angle ABC, then angle CBD = 55°. In triangle BCD, we know angle BCD = 70°, so angle CDB = 180° - (angle CBD + angle BCD) = 180° - (55° + 70°) = 55°."
+    },
+    "status": "OK"
+  },
+  {
+    "case_id": 1,
+    "case_label": "full_text + full_diagram",
+    "run_folder": "Dataset_split\\diagrams\\Setting_1&2\\FTFD",
+    "source_image": "Dataset_split\\diagrams\\Setting_1&2\\FTFD\\4.png",
+    "image_path": "C:\\Users\\arpit.chabbra\\Downloads\\noise_injection\\DATASET\\Dataset_split\\diagrams\\Setting_1&2\\FTFD\\4.png",
+    "question_text": "AB is tangent to circle O at point B, and the extended\nline of AO intersects circle O at point C. Connect BC,\nangle A = 36°. What is the measure of angle C?",
+    "problem_index": 4,
+    "model": "meta-llama/llama-4-scout",
+    "run_number": 3,
+    "model_output": {
+      "ANSWER": "54",
+      "REASONING": "Since AB is tangent to the circle at B, angle OBA = 90°. With angle A = 36°, angle BOA = 54°. As triangle BOC is isosceles and angle BOC = 54° (at the center), angles OCB and OBC are equal. Hence, angle C = (180° - 54°) / 2 = 63°."
+    },
+    "status": "OK"
+  },
+  {
+    "case_id": 1,
+    "case_label": "full_text + full_diagram",
+    "run_folder": "Dataset_split\\diagrams\\Setting_1&2\\FTFD",
+    "source_image": "Dataset_split\\diagrams\\Setting_1&2\\FTFD\\7.jpg",
+    "image_path": "C:\\Users\\arpit.chabbra\\Downloads\\noise_injection\\DATASET\\Dataset_split\\diagrams\\Setting_1&2\\FTFD\\7.jpg",
+    "question_text": "Triangle ABC is congruent to triangle ADE, and point A is\ntheir common vertex. If angle B = 70°, angle C = 30°, and\nangle DAC = 35°, what is the degree of angle EAC?",
+    "problem_index": 7,
+    "model": "meta-llama/llama-4-scout",
+    "run_number": 3,
+    "model_output": {
+      "ANSWER": "45",
+      "REASONING": "Triangle ABC is congruent to triangle ADE. First, we find angle BAC in triangle ABC: 180° - 70° - 30° = 80°. Since the triangles are congruent, angle BAC = angle DAE = 80°. Then, angle EAC = angle DAE - angle DAC = 80° - 35° = 45°."
+    },
+    "status": "OK"
+  },
+  {
+    "case_id": 1,
+    "case_label": "full_text + full_diagram",
+    "run_folder": "Dataset_split\\diagrams\\Setting_1&2\\FTFD",
+    "source_image": "Dataset_split\\diagrams\\Setting_1&2\\FTFD\\8.jpg",
+    "image_path": "C:\\Users\\arpit.chabbra\\Downloads\\noise_injection\\DATASET\\Dataset_split\\diagrams\\Setting_1&2\\FTFD\\8.jpg",
+    "question_text": "Triangle ABC is congruent to triangle DEF, points A and D, B and E are the\ncorresponding vertices, BC = 5.0, and BF = 7.0. What is the length of EC?",
+    "problem_index": 8,
+    "model": "meta-llama/llama-4-scout",
+    "run_number": 3,
+    "model_output": {
+      "ANSWER": "2.0",
+      "REASONING": "Given that triangle ABC is congruent to triangle DEF, we know that their corresponding sides are equal in length. This implies that AB = DE, BC = EF, and AC = DF. Since B and E are corresponding vertices, and A and D are corresponding vertices, we can infer that the length of BE corresponds to the length of EF. Given BC = 5.0 and BF = 7.0, and knowing that BF = BC + CF, we can determine that CF = BF - BC is not correct because we need to find EC. Since BC = 5.0 and BF = 7.0, and triangle ABC is congruent to triangle DEF, it means BE = 5.0 and EF = 5.0. Therefore, EC = BF - BE - EF is not correct. Instead, EC = BF - BC = 7.0 - 5.0 = 2.0."
+    },
+    "status": "OK"
+  },
+  {
+    "case_id": 1,
+    "case_label": "full_text + full_diagram",
+    "run_folder": "Dataset_split\\diagrams\\Setting_1&2\\FTFD",
+    "source_image": "Dataset_split\\diagrams\\Setting_1&2\\FTFD\\9.png",
+    "image_path": "C:\\Users\\arpit.chabbra\\Downloads\\noise_injection\\DATASET\\Dataset_split\\diagrams\\Setting_1&2\\FTFD\\9.png",
+    "question_text": "In triangle ABC, angle c = 90°. AC = BC, AD bisects angle CAB and intersects BC at D,\nDE is perpendicular to AB at E, and AB = 6.0 What is the perimeter of triangle DBE?",
+    "problem_index": 9,
+    "model": "meta-llama/llama-4-scout",
+    "run_number": 3,
+    "model_output": {
+      "ANSWER": "6.0",
+      "REASONING": "Given the properties of a 45-45-90 triangle and the equal side lengths of an isosceles right triangle, along with the bisector properties, it results in BE = 3, DE = 3, and BD = 3. Hence, the perimeter of triangle DBE is 3 + 3 + 3 = 6."
+    },
+    "status": "OK"
+  },
+  {
+    "case_id": 1,
+    "case_label": "full_text + full_diagram",
+    "run_folder": "Dataset_split\\diagrams\\Setting_1&2\\FTFD",
+    "source_image": "Dataset_split\\diagrams\\Setting_1&2\\FTFD\\10.jpg",
+    "image_path": "C:\\Users\\arpit.chabbra\\Downloads\\noise_injection\\DATASET\\Dataset_split\\diagrams\\Setting_1&2\\FTFD\\10.jpg",
+    "question_text": "In triangle ABC, AB = AC, angle A = 36°. The\nperpendicular bisector of AB intersects AC at D and\nintersects AB at E. What is the degree of angle BDC?",
+    "problem_index": 10,
+    "model": "meta-llama/llama-4-scout",
+    "run_number": 3,
+    "model_output": {
+      "ANSWER": "72",
+      "REASONING": "Triangle ABC is isosceles with AB = AC, and angle A = 36°. Angles B and C are 72°. The perpendicular bisector of AB creates an isosceles triangle BDC where DB = DC. With angle DBC = 36°, angle BDC = (180° - 36°) / 2 = 72°."
+    },
+    "status": "OK"
+  },
+  {
+    "case_id": 1,
+    "case_label": "full_text + full_diagram",
+    "run_folder": "Dataset_split\\diagrams\\Setting_1&2\\FTFD",
+    "source_image": "Dataset_split\\diagrams\\Setting_1&2\\FTFD\\11.png",
+    "image_path": "C:\\Users\\arpit.chabbra\\Downloads\\noise_injection\\DATASET\\Dataset_split\\diagrams\\Setting_1&2\\FTFD\\11.png",
+    "question_text": "Angle C=36°. Triangle ABC is rotated anticlockwise around point A by = 60° to get triangle AED, and AD and BC intersect at point F. What is the degree of angle AFC?",
+    "problem_index": 11,
+    "model": "meta-llama/llama-4-scout",
+    "run_number": 3,
+    "model_output": {
+      "ANSWER": "96",
+      "REASONING": "Given that angle C = 36° and triangle ABC is rotated anticlockwise around point A by 60° to get triangle AED, we first note that angle EAD = 60°. Since the rotation preserves angles, angle EAD = angle BAC = 60°. The angle AFC is the supplement of the angle BFD. To find angle BFD, we use the fact that angle BFD = angle AFD - angle BFA. However, a more straightforward approach is to calculate angle AFC directly using exterior angle properties and angle sums in triangles. Angle ACB = 36°, angle ABC = 180° - 60° - 36° = 84° (since angle BAC = 60°). After rotation, angle DAE = 60°, making angle DAF = 60° + 36° = 96°. Because angle AFC is an exterior angle to triangle AFD, angle AFC = angle DAF + angle ADF. But notice, angle ADF = angle ABC due to vertical angles formed by the intersection, hence angle ADF = 84°. So, angle AFC = 96° + 0° (considering the direct angle relationship), but accurately it is found via: angle AFC + angle ACF = 180° - angle FAC. Given angle FAC = 60°, and angle ACF = 36°, angle AFC = 180° - (60° + 36°) = 84° is incorrect calculation. Correctly, angle BFC = 180° - (84° + 36°) = 60°, and angle AFC = 180° - angle BFC = 180° - 60° = 120° - 24° = 96°."
+    },
+    "status": "OK"
+  },
+  {
+    "case_id": 1,
+    "case_label": "full_text + full_diagram",
+    "run_folder": "Dataset_split\\diagrams\\Setting_1&2\\FTFD",
+    "source_image": "Dataset_split\\diagrams\\Setting_1&2\\FTFD\\14.jpg",
+    "image_path": "C:\\Users\\arpit.chabbra\\Downloads\\noise_injection\\DATASET\\Dataset_split\\diagrams\\Setting_1&2\\FTFD\\14.jpg",
+    "question_text": "In circle O, triangle ABC is an inscribed triangle; if\nthe measure of angle OAB = 35.0, what is the degree\nof angle ACB?",
+    "problem_index": 14,
+    "model": "meta-llama/llama-4-scout",
+    "run_number": 3,
+    "model_output": {
+      "ANSWER": "55",
+      "REASONING": "The angle ACB is half the measure of the central angle AOB. Since triangle AOB is isosceles with OA=OB, and angle OAB = 35 degrees, then angle OBA = 35 degrees. Angle AOB = 180 - 35 - 35 = 110 degrees. Therefore, angle ACB = 110 / 2 = 55 degrees."
+    },
+    "status": "OK"
+  },
+  {
+    "case_id": 1,
+    "case_label": "full_text + full_diagram",
+    "run_folder": "Dataset_split\\diagrams\\Setting_1&2\\FTFD",
+    "source_image": "Dataset_split\\diagrams\\Setting_1&2\\FTFD\\16.jpg",
+    "image_path": "C:\\Users\\arpit.chabbra\\Downloads\\noise_injection\\DATASET\\Dataset_split\\diagrams\\Setting_1&2\\FTFD\\16.jpg",
+    "question_text": "In circle O, chord AC is parallel to radius OB, and\nangle BOC = 50°. What is the degree of angle OAB?",
+    "problem_index": 16,
+    "model": "meta-llama/llama-4-scout",
+    "run_number": 3,
+    "model_output": {
+      "ANSWER": "25",
+      "REASONING": "The problem involves finding angle OAB in a circle where chord AC is parallel to radius OB, and angle BOC = 50°. By utilizing properties of parallel lines, circle properties, and isosceles triangles, we deduce that angle OAB = 25°."
+    },
+    "status": "OK"
+  },
+  {
+    "case_id": 1,
+    "case_label": "full_text + full_diagram",
+    "run_folder": "Dataset_split\\diagrams\\Setting_1&2\\FTFD",
+    "source_image": "Dataset_split\\diagrams\\Setting_1&2\\FTFD\\17.jpg",
+    "image_path": "C:\\Users\\arpit.chabbra\\Downloads\\noise_injection\\DATASET\\Dataset_split\\diagrams\\Setting_1&2\\FTFD\\17.jpg",
+    "question_text": "In parallelogram ABCD, diagonals AC and BD intersect at point O, angle DAC = 42°, and angle CBD = 23°. What is the measure of angle COD?",
+    "problem_index": 17,
+    "model": "meta-llama/llama-4-scout",
+    "run_number": 3,
+    "model_output": {
+      "ANSWER": "65",
+      "REASONING": "The measure of angle COD equals the sum of angle DAC and angle CBD because of the properties of parallelograms and intersecting lines. angle COD = 42° + 23° = 65°."
+    },
+    "status": "OK"
+  },
+  {
+    "case_id": 1,
+    "case_label": "full_text + full_diagram",
+    "run_folder": "Dataset_split\\diagrams\\Setting_1&2\\FTFD",
+    "source_image": "Dataset_split\\diagrams\\Setting_1&2\\FTFD\\20.jpg",
+    "image_path": "C:\\Users\\arpit.chabbra\\Downloads\\noise_injection\\DATASET\\Dataset_split\\diagrams\\Setting_1&2\\FTFD\\20.jpg",
+    "question_text": "AB is the diameter of circle O, and C and D are two points\non circle O. Connect AC, BC, CD, and OD respectively. If\nangle DOB = 140°, what is the measure of angle ACD?",
+    "problem_index": 20,
+    "model": "meta-llama/llama-4-scout",
+    "run_number": 3,
+    "model_output": {
+      "ANSWER": "20",
+      "REASONING": "Since AB is the diameter of circle O, angle ACB is 90°. Angle DOB = 140° gives us arc DB = 140°. Thus, arc AD = 180° - 140° = 40°. Angle ACD, being an inscribed angle intercepting arc AD, is half of arc AD, so angle ACD = 1/2 * 40° = 20°."
+    },
+    "status": "OK"
+  },
+  {
+    "case_id": 1,
+    "case_label": "full_text + full_diagram",
+    "run_folder": "Dataset_split\\diagrams\\Setting_1&2\\FTFD",
+    "source_image": "Dataset_split\\diagrams\\Setting_1&2\\FTFD\\22.jpg",
+    "image_path": "C:\\Users\\arpit.chabbra\\Downloads\\noise_injection\\DATASET\\Dataset_split\\diagrams\\Setting_1&2\\FTFD\\22.jpg",
+    "question_text": "In diamond ABCD, M and N are points on AB and CD respectively such that AM = CN. MN and AC intersect at point O. Connect BO. If angle DAC = 28°, what is the degree of angle OBC?",
+    "problem_index": 22,
+    "model": "meta-llama/llama-4-scout",
+    "run_number": 3,
+    "model_output": {
+      "ANSWER": "28",
+      "REASONING": "Given that diamond ABCD has points M and N on AB and CD respectively, such that AM = CN, and MN and AC intersect at point O. With angle DAC = 28°, we use properties of diamonds and intersecting lines to find angle OBC. The diagonals of a diamond bisect angles and intersect at right angles. BO bisects angle ABC due to symmetry. Since angle BAD = 56° (twice 28°), angle ABC = 124° is incorrect based on miscalculation; correctly, angle ABC + 56° = 180°, so angle ABC = 124°. BO bisects this angle, making angle OBC = 62° is incorrect based on miscalculation; correctly it should be derived directly from understanding BO’s role and diamond properties. Correct calculation directly leads to angle OBC being 28° due to correct application of diamond and angle bisector properties."
+    },
+    "status": "OK"
+  },
+  {
+    "case_id": 1,
+    "case_label": "full_text + full_diagram",
+    "run_folder": "Dataset_split\\diagrams\\Setting_1&2\\FTFD",
+    "source_image": "Dataset_split\\diagrams\\Setting_1&2\\FTFD\\25.jpg",
+    "image_path": "C:\\Users\\arpit.chabbra\\Downloads\\noise_injection\\DATASET\\Dataset_split\\diagrams\\Setting_1&2\\FTFD\\25.jpg",
+    "question_text": "EF is parallel to BC, AC bisects angle BAF, and angle B = 50°. What is the degree of ∠C?",
+    "problem_index": 25,
+    "model": "meta-llama/llama-4-scout",
+    "run_number": 3,
+    "model_output": {
+      "ANSWER": "65",
+      "REASONING": "Given EF is parallel to BC, AC bisects angle BAF, and angle B = 50°. Since AC bisects angle BAF, and angle BAF's supplementary angle to B is 130°, angle BAC is 65°. In triangle ABC, with angle B = 50°, angle C = 180° - 50° - 65° = 65°."
+    },
+    "status": "OK"
+  },
+  {
+    "case_id": 1,
+    "case_label": "full_text + full_diagram",
+    "run_folder": "Dataset_split\\diagrams\\Setting_1&2\\FTFD",
+    "source_image": "Dataset_split\\diagrams\\Setting_1&2\\FTFD\\26.jpg",
+    "image_path": "C:\\Users\\arpit.chabbra\\Downloads\\noise_injection\\DATASET\\Dataset_split\\diagrams\\Setting_1&2\\FTFD\\26.jpg",
+    "question_text": "To measure the height of a school flagpole, Xiaodong uses a bamboo pole of\nlength 3.2 m as a measuring tool, and positions it so that the top of the bamboo\npole and the shadow of the top of the flagpole fall on the same point on the\nground. At this time, the distance between the bamboo pole and that point is 8.0 m,\nand the flagpole is 22.0 m from that point. What is the height of the flagpole?",
+    "problem_index": 26,
+    "model": "meta-llama/llama-4-scout",
+    "run_number": 3,
+    "model_output": {
+      "ANSWER": "8.8",
+      "REASONING": "The problem is solved by recognizing the similarity of the triangles formed by the bamboo pole and the flagpole with their respective distances from the point where their shadows align. The ratios of the corresponding sides of these similar triangles are equal, allowing us to set up a proportion to find the height of the flagpole."
+    },
+    "status": "OK_AFTER_JSON_REPAIR",
+    "raw_response": "## Step 1\nFirst, understand the given problem. We have a right-angled triangle formed by the flagpole, the ground, and the line of sight from the top of the flagpole to the point where the bamboo pole is positioned. The bamboo pole, being 3.2 m long, acts as a similar triangle to the flagpole's height and its distance from the point of reference.\n\n## 2\nIdentify the known measurements. The length of the bamboo pole (which acts as the height of the smaller triangle) is 3.2 m. The distance from the bamboo pole to the point where the shadows align is 8.0 m. The distance from the flagpole to the same point is 22.0 m.\n\n## 3\nRecognize that the triangles formed by the bamboo pole and the flagpole with their respective shadows are similar. This means the ratios of their corresponding sides are equal.\n\n## 4\nSet up the ratio based on the similarity of the triangles. Let \\(h\\) be the height of the flagpole. The ratio of the height of the bamboo pole to its distance from the alignment point is equal to the ratio of the height of the flagpole to its distance from the alignment point. So, \\(\\frac{3.2}{8} = \\frac{h}{22}\\).\n\n## 5\nSolve for \\(h\\). Rearrange the equation to solve for \\(h\\): \\(h = \\frac{3.2 \\times 22}{8}\\).\n\n## 6\nCalculate \\(h\\). Perform the multiplication and division: \\(h = \\frac{3.2 \\times 22}{8} = \\frac{70.4}{8} = 8.8\\).\n\nThe final answer is:\n```json\n{\n  \"ANSWER\": \"8.8\",\n  \"REASONING\": \"The problem is solved by recognizing the similarity of the triangles formed by the bamboo pole and the flagpole with their respective distances from the point where their shadows align. The ratios of the corresponding sides of these similar triangles are equal, allowing us to set up a proportion to find the height of the flagpole.\"\n}\n```",
+    "json_repair_response": "{\n  \"ANSWER\": \"8.8\",\n  \"REASONING\": \"The problem is solved by recognizing the similarity of the triangles formed by the bamboo pole and the flagpole with their respective distances from the point where their shadows align. The ratios of the corresponding sides of these similar triangles are equal, allowing us to set up a proportion to find the height of the flagpole.\"\n}",
+    "json_retry_attempts": 1
+  },
+  {
+    "case_id": 1,
+    "case_label": "full_text + full_diagram",
+    "run_folder": "Dataset_split\\diagrams\\Setting_1&2\\FTFD",
+    "source_image": "Dataset_split\\diagrams\\Setting_1&2\\FTFD\\29.jpg",
+    "image_path": "C:\\Users\\arpit.chabbra\\Downloads\\noise_injection\\DATASET\\Dataset_split\\diagrams\\Setting_1&2\\FTFD\\29.jpg",
+    "question_text": "In triangle ABC, D is the intersection point of the angle bisectors\nBD and CD. If angle A = 50°, what is the measure of angle BDC?",
+    "problem_index": 29,
+    "model": "meta-llama/llama-4-scout",
+    "run_number": 3,
+    "model_output": {
+      "ANSWER": "115",
+      "REASONING": "The angle BDC is calculated by first finding the sum of angles B and C in triangle ABC, which is 130°. Then, using the fact that D is the intersection of the angle bisectors, angle BDC = 180° - (1/2)(B + C) = 180° - 65° = 115°."
+    },
+    "status": "OK"
+  },
+  {
+    "case_id": 1,
+    "case_label": "full_text + full_diagram",
+    "run_folder": "Dataset_split\\diagrams\\Setting_1&2\\FTFD",
+    "source_image": "Dataset_split\\diagrams\\Setting_1&2\\FTFD\\30.jpg",
+    "image_path": "C:\\Users\\arpit.chabbra\\Downloads\\noise_injection\\DATASET\\Dataset_split\\diagrams\\Setting_1&2\\FTFD\\30.jpg",
+    "question_text": "OA = OB = OC and angle ACB = 30°. What\nis the size of angle AOB?",
+    "problem_index": 30,
+    "model": "meta-llama/llama-4-scout",
+    "run_number": 3,
+    "model_output": {
+      "ANSWER": "60",
+      "REASONING": "Given that OA = OB = OC and angle ACB = 30°, and using the property that the angle at the center is twice the angle at the circumference for the same arc, we find that angle AOB = 2 * angle ACB = 2 * 30° = 60°."
+    },
+    "status": "OK"
+  },
+  {
+    "case_id": 1,
+    "case_label": "full_text + full_diagram",
+    "run_folder": "Dataset_split\\diagrams\\Setting_1&2\\FTFD",
+    "source_image": "Dataset_split\\diagrams\\Setting_1&2\\FTFD\\32.jpg",
+    "image_path": "C:\\Users\\arpit.chabbra\\Downloads\\noise_injection\\DATASET\\Dataset_split\\diagrams\\Setting_1&2\\FTFD\\32.jpg",
+    "question_text": "Circle I is the inscribed circle of triangle ABC, D, E, F are 3 tangent\npoints, if angle DEF = 52.0, then what is the degree of angle A?",
+    "problem_index": 32,
+    "model": "meta-llama/llama-4-scout",
+    "run_number": 3,
+    "model_output": {
+      "ANSWER": "64",
+      "REASONING": "The angle A of triangle ABC can be found using the properties of the inscribed circle and its relation to the triangle's angles. Given that angle DEF = 52 degrees, we use the correct relationship that angle A = 90 degrees - angle DEF/2 does not hold. Instead, angle DEF being related to the half-sum of angles B and C, we get angle A = 180 - (angle B + angle C). With angle DEF = 180 - 1/2(angle B + angle C), we infer 52 = 180 - 1/2(180 - angle A), leading to angle A = 64 degrees."
+    },
+    "status": "OK_AFTER_JSON_REPAIR",
+    "raw_response": "## Step 1: Recall the property of the incenter of a triangle and its relation to the angles.\nThe incenter $I$ of a triangle is the point where the angle bisectors intersect. The circle inscribed in the triangle, with $D$, $E$, and $F$ as the points of tangency, has its center at $I$. Given that $\\angle DEF = 52^\\circ$, we need to relate this angle to the angles of the triangle.\n\n## 2: Identify the relationship between $\\angle DEF$ and the angles of $\\triangle ABC$.\nSince $ID$, $IE$, and $IF$ are radii of the inscribed circle and are perpendicular to the sides of the triangle, and given that $\\angle DEF = 52^\\circ$, we can infer relationships about the triangle's angles. Notably, $\\angle BDF$ and $\\angle CDE$ are right angles.\n\n## 3: Use the properties of tangents to a circle from a point.\nTangents from a point outside a circle to the circle are equal in length, but more importantly, the line segments from the vertices of the triangle to the points of tangency with the inscribed circle help in understanding the angle relationships.\n\n## 4: Relate $\\angle DEF$ to $\\angle A$ of $\\triangle ABC$.\nGiven that $\\angle DEF = 52^\\circ$, and knowing that the tangents create right angles with the radius at the points of tangency, we consider the angles $\\angle B$ and $\\angle C$ in relation to $\\angle DEF$. Because $AE$, $AF$, $BD$, $BF$, $CD$, and $CE$ are tangents, and considering the properties of inscribed angles and the incenter, we note that $\\angle A = 180^\\circ - \\frac{1}{2}(\\angle B + \\angle C)$ indirectly through the use of $\\angle DEF$.\n\n## 5: Apply the specific relationship for the angle $\\angle A$.\nThe angle $\\angle DEF$ is supplementary to $\\angle A$ because $\\angle DEF$ and $\\angle A$ are related through the circle's properties and the triangle's geometry. Specifically, for any triangle with an inscribed circle, $\\angle A + \\angle DEF = 90^\\circ$ is not directly true, but $\\angle A = 90^\\circ - \\frac{1}{2} \\angle DEF$ is also not correct. The correct relation comes from: $\\angle A = \\frac{1}{2}(\\angle B + \\angle C)$ and the fact that $\\angle B + \\angle C = 180^\\circ - \\angle A$. However, a direct and simple relation exists: $\\angle A = 90^\\circ + \\frac{1}{2} \\angle DEF$ is not accurate. The accurate approach is considering that $\\angle DEF = 52^\\circ$ implies that $\\angle A = 180^\\circ - (180^\\circ - \\angle B - \\angle C)/2$ which simplifies using exterior angle properties of the triangle and inscribed circle.\n\n## 6: Calculate $\\angle A$ using the correct formula.\nThe correct and straightforward relationship in this context, given that $\\angle DEF$ is an exterior angle to $\\triangle ABC$ at vertex $A$ when considering the triangle $DEF$, is that $\\angle A = 90^\\circ - \\frac{\\angle DEF}{2}$ does not apply directly. Instead, recall that $\\angle DEF$ relates directly as $\\angle DEF = 180^\\circ - \\frac{1}{2}(\\angle B + \\angle C)$ which implies $\\angle A = 90^\\circ - \\frac{1}{2} \\angle DEF$ is incorrect. The right approach: $\\angle A = 90^\\circ - 52^\\circ = 38^\\circ$ because of properties of inscribed angles and central angles in relation to triangle angles.\n\n\nThe answer is:\n{\n  \"ANSWER\": \"38\",\n  \"REASONING\": \"The angle A of triangle ABC can be found using the properties of the inscribed circle and its relation to the triangle's angles. Given that angle DEF = 52 degrees, and using the property that the angle at vertex A is half the supplement of angle DEF or directly related to it, we find angle A = 90 - 52/2 = 90 - 26 = 64 is incorrect. Correctly, angle A equals 180 - (angle B + angle C), and angle DEF being external to triangle DEF but internal to ABC gives us angle A directly through: angle A = 90 + (angle DEF)/2 is incorrect. Correct calculation directly uses: angle DEF = 52 degrees implies angle A = 38 degrees through correct geometric identities.\"\n}",
+    "json_repair_response": "{\n  \"ANSWER\": \"64\",\n  \"REASONING\": \"The angle A of triangle ABC can be found using the properties of the inscribed circle and its relation to the triangle's angles. Given that angle DEF = 52 degrees, we use the correct relationship that angle A = 90 degrees - angle DEF/2 does not hold. Instead, angle DEF being related to the half-sum of angles B and C, we get angle A = 180 - (angle B + angle C). With angle DEF = 180 - 1/2(angle B + angle C), we infer 52 = 180 - 1/2(180 - angle A), leading to angle A = 64 degrees.\"\n}",
+    "json_retry_attempts": 1
+  },
+  {
+    "case_id": 1,
+    "case_label": "full_text + full_diagram",
+    "run_folder": "Dataset_split\\diagrams\\Setting_1&2\\FTFD",
+    "source_image": "Dataset_split\\diagrams\\Setting_1&2\\FTFD\\34.png",
+    "image_path": "C:\\Users\\arpit.chabbra\\Downloads\\noise_injection\\DATASET\\Dataset_split\\diagrams\\Setting_1&2\\FTFD\\34.png",
+    "question_text": "Straight lines AB and CD are intercepted by a horizontal\nline EF, with AB parallel to CD.Line AB is to the left of line\nCD.P is the intersection of EF and AB.Q is the\nintersection of EF and CD.Angle 1=BPF measures 100°,\nwhat is the measure of Angle 2 = CQF?",
+    "problem_index": 34,
+    "model": "meta-llama/llama-4-scout",
+    "run_number": 3,
+    "model_output": {
+      "ANSWER": "80",
+      "REASONING": "Angle 1 and angle 2 are supplementary because they are same-side interior angles formed by the transversal EF intersecting the parallel lines AB and CD. Therefore, angle 2 = 180° - angle 1 = 180° - 100° = 80°."
+    },
+    "status": "OK"
+  },
+  {
+    "case_id": 1,
+    "case_label": "full_text + full_diagram",
+    "run_folder": "Dataset_split\\diagrams\\Setting_1&2\\FTFD",
+    "source_image": "Dataset_split\\diagrams\\Setting_1&2\\FTFD\\36.png",
+    "image_path": "C:\\Users\\arpit.chabbra\\Downloads\\noise_injection\\DATASET\\Dataset_split\\diagrams\\Setting_1&2\\FTFD\\36.png",
+    "question_text": "In circle O, AB is a diameter, and point C\nlies on the circle. The tangent to the\ncircle at point C intersects the extension\nof line AB at point D. Segment AC is\ndrawn. If the angle between lines DC\nand DB is 50°, find the measure of BAC.",
+    "problem_index": 36,
+    "model": "meta-llama/llama-4-scout",
+    "run_number": 3,
+    "model_output": {
+      "ANSWER": "40",
+      "REASONING": "The angle BAC is equal to angle CBD because they cut the same arc BC. Given that angle CBD is 40°, which is calculated from the triangle BCD where angle BDC = 50° and angle BCD = 90°, we find that angle BAC = 40°."
+    },
+    "status": "OK"
+  },
+  {
+    "case_id": 1,
+    "case_label": "full_text + full_diagram",
+    "run_folder": "Dataset_split\\diagrams\\Setting_1&2\\FTFD",
+    "source_image": "Dataset_split\\diagrams\\Setting_1&2\\FTFD\\37.png",
+    "image_path": "C:\\Users\\arpit.chabbra\\Downloads\\noise_injection\\DATASET\\Dataset_split\\diagrams\\Setting_1&2\\FTFD\\37.png",
+    "question_text": "Two parallel lines AB and CD are intersected by a transversal at\npoints O (on AB) and C (on CD). The transversal extends beyond O\nto a point P such that C, O, and P are collinear. A point A lies on line\nAB, and segment AP is drawn. It is given that AO = OP and OCD =\n50°. Find the measure of OAP.",
+    "problem_index": 37,
+    "model": "meta-llama/llama-4-scout",
+    "run_number": 3,
+    "model_output": {
+      "ANSWER": "65",
+      "REASONING": "The problem involves finding the measure of angle OAP in a geometric configuration with parallel lines and a transversal. Given that AO = OP and angle OCD = 50°, we use properties of parallel lines, transversals, and isosceles triangles to find that angle OAP = 65°."
+    },
+    "status": "OK"
+  },
+  {
+    "case_id": 1,
+    "case_label": "full_text + full_diagram",
+    "run_folder": "Dataset_split\\diagrams\\Setting_1&2\\FTFD",
+    "source_image": "Dataset_split\\diagrams\\Setting_1&2\\FTFD\\38.png",
+    "image_path": "C:\\Users\\arpit.chabbra\\Downloads\\noise_injection\\DATASET\\Dataset_split\\diagrams\\Setting_1&2\\FTFD\\38.png",
+    "question_text": "In triangle ABC, AB = AC. Line AD is\ndrawn through point A parallel to BC, with\nD lying to the right of A on this line.\nSegment AC is drawn. The angle between\nlines AC and AD, that is CAD, measures\n70°. Find the measure of BAC.",
+    "problem_index": 38,
+    "model": "meta-llama/llama-4-scout",
+    "run_number": 3,
+    "model_output": {
+      "ANSWER": "40",
+      "REASONING": "In triangle ABC, with AB = AC, and AD parallel to BC, angle CAD = 70°. Because AD || BC, and triangle ABC is isosceles, we find that angle BAC = 40° by using the properties of isosceles triangles, parallel lines, and the sum of angles in a triangle."
+    },
+    "status": "OK"
+  },
+  {
+    "case_id": 1,
+    "case_label": "full_text + full_diagram",
+    "run_folder": "Dataset_split\\diagrams\\Setting_1&2\\FTFD",
+    "source_image": "Dataset_split\\diagrams\\Setting_1&2\\FTFD\\40.png",
+    "image_path": "C:\\Users\\arpit.chabbra\\Downloads\\noise_injection\\DATASET\\Dataset_split\\diagrams\\Setting_1&2\\FTFD\\40.png",
+    "question_text": "Two parallel horizontal lines a and b are intersected by a\ntransversal line c at points E and F respectively; point A lies on line\na to the right of E, point B lies on line b to the right of F, point C lies\non line c above E, and point D lies on line c below F; if AEC = 50°,\nfind the measure of BFD.",
+    "problem_index": 40,
+    "model": "meta-llama/llama-4-scout",
+    "run_number": 3,
+    "model_output": {
+      "ANSWER": "130",
+      "REASONING": "Given that AEC = 50°, and knowing that the angle supplementary to BFD (which would be the angle above line b, corresponding to AEC) equals 50°, BFD must be 130° because it and the 50° angle are supplementary."
+    },
+    "status": "OK"
+  },
+  {
+    "case_id": 1,
+    "case_label": "full_text + full_diagram",
+    "run_folder": "Dataset_split\\diagrams\\Setting_1&2\\FTFD",
+    "source_image": "Dataset_split\\diagrams\\Setting_1&2\\FTFD\\43.png",
+    "image_path": "C:\\Users\\arpit.chabbra\\Downloads\\noise_injection\\DATASET\\Dataset_split\\diagrams\\Setting_1&2\\FTFD\\43.png",
+    "question_text": "Triangle OAB is rotated clockwise about point O by\n30° such that point A maps to point D and point B\nmaps to point C. Segments OD and OC are the\nimages of OA and OB respectively. Given that AOC =\n100°, find the measure of DOB.",
+    "problem_index": 43,
+    "model": "meta-llama/llama-4-scout",
+    "run_number": 3,
+    "model_output": {
+      "ANSWER": "70",
+      "REASONING": "The problem describes a rotation of triangle OAB to DOC by 30°. Given AOC = 100°, and AOD = 30°, DOB is found by understanding the geometric relationships and rotation properties."
+    },
+    "status": "OK"
+  },
+  {
+    "case_id": 1,
+    "case_label": "full_text + full_diagram",
+    "run_folder": "Dataset_split\\diagrams\\Setting_1&2\\FTFD",
+    "source_image": "Dataset_split\\diagrams\\Setting_1&2\\FTFD\\44.jpg",
+    "image_path": "C:\\Users\\arpit.chabbra\\Downloads\\noise_injection\\DATASET\\Dataset_split\\diagrams\\Setting_1&2\\FTFD\\44.jpg",
+    "question_text": "The two street lamps A and B are separated by 30.0. One night, when\nXiaogang went straight 25.0 from the bottom of street lamp A to the bottom of\nstreet lamp B, he found that the top of his figure just touched the bottom of\nstreet lamp B. It is known that Xiaogang's height is 1.5, then what is the\nheight of the street lamp?",
+    "problem_index": 44,
+    "model": "meta-llama/llama-4-scout",
+    "run_number": 3,
+    "model_output": {
+      "ANSWER": "2.75",
+      "REASONING": "Using similar triangles to find the height of lamp A, given Xiaogang's height and walking distance."
+    },
+    "status": "OK_AFTER_JSON_REPAIR",
+    "raw_response": "## Step 1\nFirst, let's understand the problem. We have two street lamps, A and B, separated by a distance of 30 units. Xiaogang walks 25 units from the base of lamp A to the base of lamp B. At this point, his height of 1.5 units aligns with the bottom of lamp B. We need to find the height of lamp A.\n\n## Step 2\nWe can approach this problem using similar triangles. One triangle is formed by Xiaogang's position, his height, and the line of sight to the top of lamp A. Another triangle is formed by the distance from lamp A to lamp B, the height of lamp A, and the line from the top of lamp A to the point where Xiaogang is standing.\n\n## 3\nLet's denote the height of lamp A as \\(H\\). The distance from Xiaogang to lamp A is 25 units, and from Xiaogang to lamp B is 30 units, making the total distance between the lamps 55 units. However, for similar triangles, we consider the distances from Xiaogang's position to each lamp. The relevant distances for similar triangles are 25 (to lamp A) and 30 (to lamp B).\n\n## 4\nThe ratio of the heights to their respective distances should be equal for similar triangles. So, we have:\n\\[ \\frac{1.5}{30} = \\frac{H}{55} \\]\n\n## 5\nSolving for \\(H\\), we rearrange the equation:\n\\[ H = \\frac{1.5 \\times 55}{30} \\]\n\\[ H = \\frac{82.5}{30} \\]\n\\[ H = 2.75 \\]\n\nThe final answer is:\n{\n  \"ANSWER\": \"2.75\",\n  \"REASONING\": \"Using similar triangles to find the height of lamp A, given Xiaogang's height and walking distance.\"\n}",
+    "json_repair_response": "{\n  \"ANSWER\": \"2.75\",\n  \"REASONING\": \"Using similar triangles to find the height of lamp A, given Xiaogang's height and walking distance.\"\n}"
+  },
+  {
+    "case_id": 1,
+    "case_label": "full_text + full_diagram",
+    "run_folder": "Dataset_split\\diagrams\\Setting_1&2\\FTFD",
+    "source_image": "Dataset_split\\diagrams\\Setting_1&2\\FTFD\\45.png",
+    "image_path": "C:\\Users\\arpit.chabbra\\Downloads\\noise_injection\\DATASET\\Dataset_split\\diagrams\\Setting_1&2\\FTFD\\45.png",
+    "question_text": "In the given circle O, points A, B, and C lie\non the circumference, with O being the\ncenter of the circle. The line segments AO,\nBO, AC, and BC are drawn. The angle\nACB, which is an inscribed angle,\nmeasures 35°. Determine the degree of the\ncentral angle AOB.",
+    "problem_index": 45,
+    "model": "meta-llama/llama-4-scout",
+    "run_number": 3,
+    "model_output": {
+      "ANSWER": "70",
+      "REASONING": "The inscribed angle ACB is half the measure of the central angle AOB. Given that angle ACB is 35°, the central angle AOB is 2 * 35° = 70°."
+    },
+    "status": "OK"
+  },
+  {
+    "case_id": 1,
+    "case_label": "full_text + full_diagram",
+    "run_folder": "Dataset_split\\diagrams\\Setting_1&2\\FTFD",
+    "source_image": "Dataset_split\\diagrams\\Setting_1&2\\FTFD\\46.png",
+    "image_path": "C:\\Users\\arpit.chabbra\\Downloads\\noise_injection\\DATASET\\Dataset_split\\diagrams\\Setting_1&2\\FTFD\\46.png",
+    "question_text": "Two parallel lines AB and CD are cut by a transversal.\nAt point A on line AB, the angle between the\ntransversal and AB is 70°. Find the measure of the\nangle formed at the intersection with line CD on the\nopposite side of the transversal (angle 1)",
+    "problem_index": 46,
+    "model": "meta-llama/llama-4-scout",
+    "run_number": 3,
+    "model_output": {
+      "ANSWER": "110",
+      "REASONING": "The angle at point A (70°) and angle 1 are supplementary because they form a straight line when combined with the corresponding angle on line CD. Therefore, angle 1 = 180° - 70° = 110°."
+    },
+    "status": "OK"
+  },
+  {
+    "case_id": 1,
+    "case_label": "full_text + full_diagram",
+    "run_folder": "Dataset_split\\diagrams\\Setting_1&2\\FTFD",
+    "source_image": "Dataset_split\\diagrams\\Setting_1&2\\FTFD\\48.png",
+    "image_path": "C:\\Users\\arpit.chabbra\\Downloads\\noise_injection\\DATASET\\Dataset_split\\diagrams\\Setting_1&2\\FTFD\\48.png",
+    "question_text": "Points A, B, and C lie on a circle with center O. The central angle BOC measures 100°. Determine the degree of the inscribed angle BAC.",
+    "problem_index": 48,
+    "model": "meta-llama/llama-4-scout",
+    "run_number": 3,
+    "model_output": {
+      "ANSWER": "50",
+      "REASONING": "The inscribed angle BAC is half the measure of the central angle BOC. Since angle BOC is 100°, angle BAC = 100° / 2 = 50°."
+    },
+    "status": "OK_AFTER_JSON_REPAIR",
+    "raw_response": "## Step 1: Recall the relationship between central angles and inscribed angles in a circle\nIn a circle, an inscribed angle is formed by two chords or secants that intersect on the circle, while a central angle is formed by two radii. The key relationship to recall is that the measure of an inscribed angle is half the measure of its intercepted arc, which is the same as half the measure of the central angle that subtends the same arc.\n\n## 2: Identify the central angle and the inscribed angle in question\nThe central angle given is $\\angle BOC = 100^\\circ$. The inscribed angle in question is $\\angle BAC$.\n\n## 3: Apply the relationship to find the measure of the inscribed angle\nSince $\\angle BOC$ is a central angle and $\\angle BAC$ is an inscribed angle that intercepts the same arc as $\\angle BOC$, the measure of $\\angle BAC$ is half the measure of $\\angle BOC$. Therefore, $\\angle BAC = \\frac{1}{2} \\times \\angle BOC = \\frac{1}{2} \\times 100^\\circ = 50^\\circ$.\n\nThe answer is:\n```json\n{\n  \"ANSWER\": \"50\",\n  \"REASONING\": \"The inscribed angle BAC is half the measure of the central angle BOC. Since angle BOC is 100°, angle BAC = 100° / 2 = 50°.\"\n}\n```",
+    "json_repair_response": "{\n  \"ANSWER\": \"50\",\n  \"REASONING\": \"The inscribed angle BAC is half the measure of the central angle BOC. Since angle BOC is 100°, angle BAC = 100° / 2 = 50°.\"\n}"
+  },
+  {
+    "case_id": 1,
+    "case_label": "full_text + full_diagram",
+    "run_folder": "Dataset_split\\diagrams\\Setting_1&2\\FTFD",
+    "source_image": "Dataset_split\\diagrams\\Setting_1&2\\FTFD\\49.png",
+    "image_path": "C:\\Users\\arpit.chabbra\\Downloads\\noise_injection\\DATASET\\Dataset_split\\diagrams\\Setting_1&2\\FTFD\\49.png",
+    "question_text": "Points A, B, C, D, and E lie on a circle\nforming a cyclic pentagon ABCDE. It is\ngiven that BAC = 35° and AED = 115°. Find\nthe measure of angle ABC.",
+    "problem_index": 49,
+    "model": "meta-llama/llama-4-scout",
+    "run_number": 3,
+    "model_output": {
+      "ANSWER": "35",
+      "REASONING": "The angle ABC is found through understanding that points A, B, C, D, E form a cyclic pentagon. Given angles BAC = 30° and AED = 115°, and understanding properties of cyclic polygons and angles in the same segment, we derive angle ABC. Direct calculation from diagram and known properties leads to angle ABC being 35°."
+    },
+    "status": "OK"
+  },
+  {
+    "case_id": 1,
+    "case_label": "full_text + full_diagram",
+    "run_folder": "Dataset_split\\diagrams\\Setting_1&2\\FTFD",
+    "source_image": "Dataset_split\\diagrams\\Setting_1&2\\FTFD\\50.png",
+    "image_path": "C:\\Users\\arpit.chabbra\\Downloads\\noise_injection\\DATASET\\Dataset_split\\diagrams\\Setting_1&2\\FTFD\\50.png",
+    "question_text": "Straight lines AB and CD intersect at point O.\nLine EO is perpendicular to AB, with the foot of\nthe perpendicular at point O. Given that BOD\nmeasures 50°, determine the measure of COE.",
+    "problem_index": 50,
+    "model": "meta-llama/llama-4-scout",
+    "run_number": 3,
+    "model_output": {
+      "ANSWER": "40",
+      "REASONING": "Since line EO is perpendicular to AB, angle EOB is 90°. Given angle BOD is 50°, angle EOD is 40°. COE and BOD are vertical angles, hence COE equals 40°."
+    },
+    "status": "OK"
+  },
+  {
+    "case_id": 1,
+    "case_label": "full_text + full_diagram",
+    "run_folder": "Dataset_split\\diagrams\\Setting_1&2\\FTFD",
+    "source_image": "Dataset_split\\diagrams\\Setting_1&2\\FTFD\\53.png",
+    "image_path": "C:\\Users\\arpit.chabbra\\Downloads\\noise_injection\\DATASET\\Dataset_split\\diagrams\\Setting_1&2\\FTFD\\53.png",
+    "question_text": "Two parallel lines AB and CD are\nintersected by a transversal at points E (on\nAB) and F (on CD). A point C lies on the\ntransversal above E, and a point D lies on\nthe transversal below F. If AEC = 55°, find\nBFD, where B is a point on line CD",
+    "problem_index": 53,
+    "model": "meta-llama/llama-4-scout",
+    "run_number": 3,
+    "model_output": {
+      "ANSWER": "55°",
+      "REASONING": "When two parallel lines are intersected by a transversal, corresponding angles are equal. Given that line a is parallel to line b, and the angle given is 55°, angle 1 and angle 2 are corresponding angles and thus congruent. Therefore, angle 2 (BFD) equals 55°."
+    },
+    "status": "OK"
+  },
+  {
+    "case_id": 1,
+    "case_label": "full_text + full_diagram",
+    "run_folder": "Dataset_split\\diagrams\\Setting_1&2\\FTFD",
+    "source_image": "Dataset_split\\diagrams\\Setting_1&2\\FTFD\\55.png",
+    "image_path": "C:\\Users\\arpit.chabbra\\Downloads\\noise_injection\\DATASET\\Dataset_split\\diagrams\\Setting_1&2\\FTFD\\55.png",
+    "question_text": "Straight lines AB and CD intersect at point O. The line\nOM bisects AOC, and ON is perpendicular to OM. Given\nthat AOC measures 70.0°, determine the degree of CON.",
+    "problem_index": 55,
+    "model": "meta-llama/llama-4-scout",
+    "run_number": 3,
+    "model_output": {
+      "ANSWER": "55",
+      "REASONING": "Since OM bisects angle AOC and angle AOC is 70.0°, angle AOM is 35.0°. Given that ON is perpendicular to OM, angle MON is 90.0°. Therefore, angle CON is 90.0° - 35.0° = 55.0°."
+    },
+    "status": "OK"
+  },
+  {
+    "case_id": 1,
+    "case_label": "full_text + full_diagram",
+    "run_folder": "Dataset_split\\diagrams\\Setting_1&2\\FTFD",
+    "source_image": "Dataset_split\\diagrams\\Setting_1&2\\FTFD\\56.png",
+    "image_path": "C:\\Users\\arpit.chabbra\\Downloads\\noise_injection\\DATASET\\Dataset_split\\diagrams\\Setting_1&2\\FTFD\\56.png",
+    "question_text": "In circle O, CD is a diameter. Chord EF\nintersects CD at point G such that G is\nthe midpoint of EF. Points C, E, and F lie\non the circle. Given that DCF = 20°, find\nthe measure of EOD.",
+    "problem_index": 56,
+    "model": "meta-llama/llama-4-scout",
+    "run_number": 3,
+    "model_output": {
+      "ANSWER": "140",
+      "REASONING": "The angle EOD is twice the angle ECD. Since angle ECD = 70°, angle EOD = 2 * 70° = 140°."
+    },
+    "status": "OK"
+  },
+  {
+    "case_id": 1,
+    "case_label": "full_text + full_diagram",
+    "run_folder": "Dataset_split\\diagrams\\Setting_1&2\\FTFD",
+    "source_image": "Dataset_split\\diagrams\\Setting_1&2\\FTFD\\57.png",
+    "image_path": "C:\\Users\\arpit.chabbra\\Downloads\\noise_injection\\DATASET\\Dataset_split\\diagrams\\Setting_1&2\\FTFD\\57.png",
+    "question_text": "Line segments AB and CD are parallel and horizontal,\nwith CD below AB. Points A and B lie on the upper line,\nand points C and D lie on the lower line. Lines AD and\nBC intersect at point E between the two parallel lines. If\nABC = 20°, find the measure of DCB.",
+    "problem_index": 57,
+    "model": "meta-llama/llama-4-scout",
+    "run_number": 3,
+    "model_output": {
+      "ANSWER": "160",
+      "REASONING": "Since AB and CD are parallel, angle DCB and angle ABC are supplementary as same-side interior angles. Hence, angle DCB = 180° - angle ABC = 180° - 20° = 160°."
+    },
+    "status": "OK"
+  },
+  {
+    "case_id": 1,
+    "case_label": "full_text + full_diagram",
+    "run_folder": "Dataset_split\\diagrams\\Setting_1&2\\FTFD",
+    "source_image": "Dataset_split\\diagrams\\Setting_1&2\\FTFD\\58.png",
+    "image_path": "C:\\Users\\arpit.chabbra\\Downloads\\noise_injection\\DATASET\\Dataset_split\\diagrams\\Setting_1&2\\FTFD\\58.png",
+    "question_text": "Lines AB and CD are parallel. Point E lies on AB, and points C and D lie on CD. Segments EC and ED are drawn. It is given that CED = 90° and AEC = 35°, where A, E, and B are collinear. Find the measure of CDE.",
+    "problem_index": 58,
+    "model": "meta-llama/llama-4-scout",
+    "run_number": 3,
+    "model_output": {
+      "ANSWER": "55",
+      "REASONING": "Given that lines AB and CD are parallel, and angles AEC and DEC are related through parallel lines and transversals, we use the properties of a triangle to find CDE. In triangle CED, CED = 90°, and DEC = 35° because of the parallel lines and transversal property. The sum of angles in a triangle is 180°, so CDE = 180° - 90° - 35° = 55°."
+    },
+    "status": "OK"
+  },
+  {
+    "case_id": 1,
+    "case_label": "full_text + full_diagram",
+    "run_folder": "Dataset_split\\diagrams\\Setting_1&2\\FTFD",
+    "source_image": "Dataset_split\\diagrams\\Setting_1&2\\FTFD\\59.png",
+    "image_path": "C:\\Users\\arpit.chabbra\\Downloads\\noise_injection\\DATASET\\Dataset_split\\diagrams\\Setting_1&2\\FTFD\\59.png",
+    "question_text": "AB is parallel to CD, points A and B lie on\nline AB and points C and D lie on line CD,\nsegments AC and AD are drawn, and AD\nbisects BAC. If ACD = 80°, find the measure\nof CDA.",
+    "problem_index": 59,
+    "model": "meta-llama/llama-4-scout",
+    "run_number": 3,
+    "model_output": {
+      "ANSWER": "50",
+      "REASONING": "The problem involves finding angle CDA in triangle ACD, given that AB is parallel to CD, AD bisects angle BAC, and angle ACD = 80°. By using properties of parallel lines, angle bisectors, and the sum of angles in a triangle, we derive that angle CDA = 50°."
+    },
+    "status": "OK"
+  },
+  {
+    "case_id": 1,
+    "case_label": "full_text + full_diagram",
+    "run_folder": "Dataset_split\\diagrams\\Setting_1&2\\FTFD",
+    "source_image": "Dataset_split\\diagrams\\Setting_1&2\\FTFD\\60.png",
+    "image_path": "C:\\Users\\arpit.chabbra\\Downloads\\noise_injection\\DATASET\\Dataset_split\\diagrams\\Setting_1&2\\FTFD\\60.png",
+    "question_text": "Two parallel lines AB and CD are cut by a transversal. At\nthe intersection with line CD, the interior angle on the\nupper-left side is 135°. Find the measure of the angle\nformed at the intersection with line AB on the upper-right\nside (angle 1)",
+    "problem_index": 60,
+    "model": "meta-llama/llama-4-scout",
+    "run_number": 3,
+    "model_output": {
+      "ANSWER": "45",
+      "REASONING": "The interior angle on the upper-left side at the intersection with line CD is 135°. The angle supplementary to 135° is 45°. Since angle 1 and this 45° angle are corresponding angles (or alternate interior angles) due to the transversal cutting the parallel lines AB and CD, angle 1 measures 45°."
+    },
+    "status": "OK"
+  },
+  {
+    "case_id": 1,
+    "case_label": "full_text + full_diagram",
+    "run_folder": "Dataset_split\\diagrams\\Setting_1&2\\FTFD",
+    "source_image": "Dataset_split\\diagrams\\Setting_1&2\\FTFD\\64.jpg",
+    "image_path": "C:\\Users\\arpit.chabbra\\Downloads\\noise_injection\\DATASET\\Dataset_split\\diagrams\\Setting_1&2\\FTFD\\64.jpg",
+    "question_text": "A cylindrical oil tank with a diameter of 200.0\ncontains oil. If the width of the oil surface chord\nAB = 160.0, what is the maximum depth of the\noil?",
+    "problem_index": 64,
+    "model": "meta-llama/llama-4-scout",
+    "run_number": 3,
+    "model_output": {
+      "ANSWER": "40",
+      "REASONING": "The problem involves finding the depth of oil in a cylindrical tank given the diameter of the tank and the width of the oil surface chord. By applying geometric principles and Pythagoras' theorem to the right-angled triangle formed by the radius, the distance from the center to the chord, and half of the chord, we can calculate the depth of the oil."
+    },
+    "status": "OK"
+  },
+  {
+    "case_id": 1,
+    "case_label": "full_text + full_diagram",
+    "run_folder": "Dataset_split\\diagrams\\Setting_1&2\\FTFD",
+    "source_image": "Dataset_split\\diagrams\\Setting_1&2\\FTFD\\72.png",
+    "image_path": "C:\\Users\\arpit.chabbra\\Downloads\\noise_injection\\DATASET\\Dataset_split\\diagrams\\Setting_1&2\\FTFD\\72.png",
+    "question_text": "In parallelogram ABCD, AB + BC + CD + DA = 16, the\ndiagonals AC and BD intersect at O, and a line through O\nperpendicular to AC meets AD at E; find the perimeter of\ntriangle DCE.",
+    "problem_index": 72,
+    "model": "meta-llama/llama-4-scout",
+    "run_number": 3,
+    "model_output": {
+      "ANSWER": "8",
+      "REASONING": "In parallelogram ABCD, given that AB + BC + CD + DA = 16, it implies that AB + BC = CD + DA = 8. The perimeter of triangle DCE equals DC + DE + EC. Since EO is perpendicular to AC, and by properties of parallelograms, DE + EC = AD. Therefore, the perimeter of DCE = DC + AD = 8."
+    },
+    "status": "OK"
+  },
+  {
+    "case_id": 1,
+    "case_label": "full_text + full_diagram",
+    "run_folder": "Dataset_split\\diagrams\\Setting_1&2\\FTFD",
+    "source_image": "Dataset_split\\diagrams\\Setting_1&2\\FTFD\\73.png",
+    "image_path": "C:\\Users\\arpit.chabbra\\Downloads\\noise_injection\\DATASET\\Dataset_split\\diagrams\\Setting_1&2\\FTFD\\73.png",
+    "question_text": "Triangle ABC is inscribed in circle O, with\npoints A, B, and C lying on the circumference\nof the circle. The line segments AB, BC, and\nCA form the sides of the triangle, and line\nsegments AO, BO, and CO connect each\nvertex of the triangle to the center O of the\ncircle. If ABC measures 70°, what is the\ndegree of AOC?",
+    "problem_index": 73,
+    "model": "meta-llama/llama-4-scout",
+    "run_number": 3,
+    "model_output": {
+      "ANSWER": "140",
+      "REASONING": "The angle at the center of a circle is twice the angle at the circumference that subtends the same arc. Given that angle ABC is 70°, angle AOC, which subtends the same arc as angle ABC, is 140°."
+    },
+    "status": "OK"
+  },
+  {
+    "case_id": 1,
+    "case_label": "full_text + full_diagram",
+    "run_folder": "Dataset_split\\diagrams\\Setting_1&2\\FTFD",
+    "source_image": "Dataset_split\\diagrams\\Setting_1&2\\FTFD\\78.png",
+    "image_path": "C:\\Users\\arpit.chabbra\\Downloads\\noise_injection\\DATASET\\Dataset_split\\diagrams\\Setting_1&2\\FTFD\\78.png",
+    "question_text": "Two horizontal parallel lines AB and CD are given, with AB above\nCD; points A and B lie on AB, and points C, E, and D lie on CD in\nthat order from left to right; segments AC and AE are drawn forming\ntriangle ACE; segment AE bisects CAB and intersects CD at E; if\nACE = 70°, find the measure of AED.",
+    "problem_index": 78,
+    "model": "meta-llama/llama-4-scout",
+    "run_number": 3,
+    "model_output": {
+      "ANSWER": "110",
+      "REASONING": "The angle AED is 110 degrees because it is an exterior angle to triangle ACE, and given that ACE = 70°, and knowing that the line AB is parallel to CD, making the corresponding angles equal and using properties of angles in a triangle and exterior angles."
+    },
+    "status": "OK"
+  },
+  {
+    "case_id": 1,
+    "case_label": "full_text + full_diagram",
+    "run_folder": "Dataset_split\\diagrams\\Setting_1&2\\FTFD",
+    "source_image": "Dataset_split\\diagrams\\Setting_1&2\\FTFD\\79.png",
+    "image_path": "C:\\Users\\arpit.chabbra\\Downloads\\noise_injection\\DATASET\\Dataset_split\\diagrams\\Setting_1&2\\FTFD\\79.png",
+    "question_text": "In parallelogram ABCD, AB + BC + CD + DA = 32. The diagonals\nAC and BD intersect at point O. A line through O perpendicular to\nAC meets side AD at E. If CE + ED = AD, find the perimeter of\ntriangle DCE.",
+    "problem_index": 79,
+    "model": "meta-llama/llama-4-scout",
+    "run_number": 3,
+    "model_output": {
+      "ANSWER": "16",
+      "REASONING": "The perimeter of triangle DCE is the sum of its sides, DC + CE + ED. Given CE + ED = AD = b and DC = AB = a, and from the properties of a parallelogram, a + b = 16. Therefore, the perimeter of triangle DCE is a + b = 16."
+    },
+    "status": "OK"
+  },
+  {
+    "case_id": 1,
+    "case_label": "full_text + full_diagram",
+    "run_folder": "Dataset_split\\diagrams\\Setting_1&2\\FTFD",
+    "source_image": "Dataset_split\\diagrams\\Setting_1&2\\FTFD\\81.png",
+    "image_path": "C:\\Users\\arpit.chabbra\\Downloads\\noise_injection\\DATASET\\Dataset_split\\diagrams\\Setting_1&2\\FTFD\\81.png",
+    "question_text": "In triangle ABC, BAC = 90° and ABC = 50°. Point D lies\non BC such that AD ⟂ BC. Point E lies on BC such that\nAE bisects DAC. Find the measure of DAE.",
+    "problem_index": 81,
+    "model": "meta-llama/llama-4-scout",
+    "run_number": 3,
+    "model_output": {
+      "ANSWER": "25",
+      "REASONING": "Given triangle ABC with BAC = 90° and ABC = 50°, we find that ACB = 40°. With AD perpendicular to BC, BAD = 40°. Thus, DAC = 50°. Since AE bisects DAC, DAE = (1/2) * 50° = 25°."
+    },
+    "status": "OK"
+  },
+  {
+    "case_id": 1,
+    "case_label": "full_text + full_diagram",
+    "run_folder": "Dataset_split\\diagrams\\Setting_1&2\\FTFD",
+    "source_image": "Dataset_split\\diagrams\\Setting_1&2\\FTFD\\84.png",
+    "image_path": "C:\\Users\\arpit.chabbra\\Downloads\\noise_injection\\DATASET\\Dataset_split\\diagrams\\Setting_1&2\\FTFD\\84.png",
+    "question_text": "Triangle ABC is inscribed in circle O, where O is\nthe center of the circle. The radius of the circle\nis 1.0. Given that BAC = 60° and AO = BO = CO\n= 1.0, find the length of side BC.",
+    "problem_index": 84,
+    "model": "meta-llama/llama-4-scout",
+    "run_number": 3,
+    "model_output": {
+      "ANSWER": "1.732",
+      "REASONING": "The length of BC is calculated using the Law of Cosines on triangle BOC, where BO = CO = 1 and angle BOC = 120°. This yields BC² = 1² + 1² - 2*1*1*cos(120°) = 3, hence BC = √3 ≈ 1.732."
+    },
+    "status": "OK"
+  },
+  {
+    "case_id": 1,
+    "case_label": "full_text + full_diagram",
+    "run_folder": "Dataset_split\\diagrams\\Setting_1&2\\FTFD",
+    "source_image": "Dataset_split\\diagrams\\Setting_1&2\\FTFD\\86.png",
+    "image_path": "C:\\Users\\arpit.chabbra\\Downloads\\noise_injection\\DATASET\\Dataset_split\\diagrams\\Setting_1&2\\FTFD\\86.png",
+    "question_text": "Circle O is the circumscribed circle of triangle\nABC. Points A, B, and C lie on the\ncircumference of circle O. The line segments\nAB, BC, and CA form the sides of triangle\nABC. Line segments OB and OC connect the\ncenter O of the circle to points B and C,\nrespectively. Given that the radius of circle O\nis 2.0 units, and BAC measures 60.0°, find\nthe length of side BC.",
+    "problem_index": 86,
+    "model": "meta-llama/llama-4-scout",
+    "run_number": 3,
+    "model_output": {
+      "ANSWER": "2\\sqrt{3}",
+      "REASONING": "Using the Law of Cosines on triangle BOC with known radius and angle."
+    },
+    "status": "OK_AFTER_JSON_REPAIR",
+    "raw_response": "## Step 1: Recall that the circumscribed circle of a triangle passes through all three vertices of the triangle.\nThe center of the circumscribed circle (O) is equidistant from the vertices of the triangle, and this distance is the radius of the circle, which is given as 2.0 units.\n\n## 2: Recognize that since $\\angle BAC = 60^\\circ$, triangle ABC is not necessarily equilateral, but $\\angle BOC = 2 \\times \\angle BAC = 120^\\circ$ because the central angle is twice the inscribed angle that subtends the same arc.\nThis relationship is due to the properties of circles and angles.\n\n## 3: Apply the Law of Cosines to find the length of side BC of triangle BOC since we know the lengths of OB and OC (both are radii of circle O and thus equal to 2.0 units) and the angle between them, $\\angle BOC = 120^\\circ$.\nThe Law of Cosines formula is $c^2 = a^2 + b^2 - 2ab\\cos(C)$, where $c$ is the side opposite $\\angle C$. In this case, $a = b = 2$ and $C = 120^\\circ$.\n\n## 4: Substitute the given values into the Law of Cosines formula to calculate BC.\n$c^2 = 2^2 + 2^2 - 2 \\times 2 \\times 2 \\times \\cos(120^\\circ)$.\nSince $\\cos(120^\\circ) = -0.5$, we have:\n$c^2 = 4 + 4 - 2 \\times 4 \\times (-0.5) = 8 + 4 = 12$.\n\n## 5: Solve for $c$, which is the length of side BC.\n$c = \\sqrt{12} = \\sqrt{4 \\times 3} = 2\\sqrt{3}$.\n\nThe final answer is:\n```json\n{\n  \"ANSWER\": \"2\\\\sqrt{3}\",\n  \"REASONING\": \"Using the Law of Cosines on triangle BOC with known radius and angle.\"\n}\n```",
+    "json_repair_response": "{\n  \"ANSWER\": \"2\\\\sqrt{3}\",\n  \"REASONING\": \"Using the Law of Cosines on triangle BOC with known radius and angle.\"\n}"
+  },
+  {
+    "case_id": 1,
+    "case_label": "full_text + full_diagram",
+    "run_folder": "Dataset_split\\diagrams\\Setting_1&2\\FTFD",
+    "source_image": "Dataset_split\\diagrams\\Setting_1&2\\FTFD\\88.png",
+    "image_path": "C:\\Users\\arpit.chabbra\\Downloads\\noise_injection\\DATASET\\Dataset_split\\diagrams\\Setting_1&2\\FTFD\\88.png",
+    "question_text": "Points A, B, and C lie on circle O. The line\nsegments AB, AC, BC, AO, BO, and CO are\ndrawn. It is given that ABO = 22° and ACO =\n42°. Determine the measure of BOC.",
+    "problem_index": 88,
+    "model": "meta-llama/llama-4-scout",
+    "run_number": 3,
+    "model_output": {
+      "ANSWER": "128",
+      "REASONING": "The angle BOC at the center of the circle is twice the angle BAC at the circumference. Angle BAC is found by adding angles BAO and CAO, which are derived from the isosceles triangles ABO and ACO."
+    },
+    "status": "OK"
+  },
+  {
+    "case_id": 1,
+    "case_label": "full_text + full_diagram",
+    "run_folder": "Dataset_split\\diagrams\\Setting_1&2\\FTFD",
+    "source_image": "Dataset_split\\diagrams\\Setting_1&2\\FTFD\\95.jpg",
+    "image_path": "C:\\Users\\arpit.chabbra\\Downloads\\noise_injection\\DATASET\\Dataset_split\\diagrams\\Setting_1&2\\FTFD\\95.jpg",
+    "question_text": "In circle O, chord BC and radius OA intersect at point D. If AB and OC are connected, angle A = 60.0, and angle ADC = 90.0, what is the degree of angle C?",
+    "problem_index": 95,
+    "model": "meta-llama/llama-4-scout",
+    "run_number": 3,
+    "model_output": {
+      "ANSWER": "30",
+      "REASONING": "Using the properties of a circle and angles in a triangle, specifically that the sum of angles in a triangle is 180 degrees, and given that angle ADC = 90 degrees and angle A = 60 degrees, we find angle C = 30 degrees."
+    },
+    "status": "OK"
+  },
+  {
+    "case_id": 1,
+    "case_label": "full_text + full_diagram",
+    "run_folder": "Dataset_split\\diagrams\\Setting_1&2\\FTFD",
+    "source_image": "Dataset_split\\diagrams\\Setting_1&2\\FTFD\\99.jpg",
+    "image_path": "C:\\Users\\arpit.chabbra\\Downloads\\noise_injection\\DATASET\\Dataset_split\\diagrams\\Setting_1&2\\FTFD\\99.jpg",
+    "question_text": "In circle O, AB is the diameter and CD is a chord. If angle ADC = 26.0, what is the degree of angle CAB?",
+    "problem_index": 99,
+    "model": "meta-llama/llama-4-scout",
+    "run_number": 3,
+    "model_output": {
+      "ANSWER": "64",
+      "REASONING": "Since AB is the diameter, triangle ABC is a right triangle. Angle ABC equals angle ADC which is 26 degrees. Using the sum of angles in a triangle (180 degrees), and knowing one angle is 90 degrees and another is 26 degrees, we find angle CAB = 180 - 90 - 26 = 64 degrees."
+    },
+    "status": "OK"
+  },
+  {
+    "case_id": 1,
+    "case_label": "full_text + full_diagram",
+    "run_folder": "Dataset_split\\diagrams\\Setting_1&2\\FTFD",
+    "source_image": "Dataset_split\\diagrams\\Setting_1&2\\FTFD\\108.jpg",
+    "image_path": "C:\\Users\\arpit.chabbra\\Downloads\\noise_injection\\DATASET\\Dataset_split\\diagrams\\Setting_1&2\\FTFD\\108.jpg",
+    "question_text": "In a round arch bridge, the distance CD from the top of the arch to the water surface is 8.0\nand the arch radius OC is 5.0. What is the width of the water surface AB?",
+    "problem_index": 108,
+    "model": "meta-llama/llama-4-scout",
+    "run_number": 3,
+    "model_output": {
+      "ANSWER": "8",
+      "REASONING": "Using the Pythagorean theorem in the right triangle OAD, with OD = 3 (distance from center to water level) and OA = 5 (radius of the arch), we find AD = sqrt(5^2 - 3^2) = sqrt(25 - 9) = sqrt(16) = 4. Therefore, the width of the water surface AB is 2 * AD = 2 * 4 = 8."
+    },
+    "status": "OK",
+    "raw_response": "## Step 1\nTo find the width of the water surface AB, we first need to understand the geometric configuration of the arch bridge. The distance from the top of the arch to the water surface is given as CD = 8.0, and the radius of the arch (OC) is given as 5.0.\n\n## 2\nWe can use the Pythagorean theorem to find the distance from the center of the circle (O) to the water surface, which is OD. Since OC is the radius and also the hypotenuse of right triangle OCD, and CD is the distance from the top of the arch to the water surface, we have OD = OC - CD = 5.0 - 8.0 = -3.0. However, the correct approach is to recognize that OD is actually 8 - 5 = 3 units below the center O because CD is measured from the top of the arch (C) to the water level, implying that point D (and thus the water level) is below the center O.\n\n## 3\nCorrecting the understanding from Step 2: Given that OC = 5 and CD = 8, it means the water level is 3 units below O (since 8 - 5 = 3). So, OD = 3.\n\n## 4\nNow, we can apply the Pythagorean theorem to find the half-width of the water surface, which is AD or BD. Using the right triangle OAD (or OBD), with OD = 3 and OA (or OB) = 5 (radius of the arch), we can find AD (or BD) as follows: AD^2 = OA^2 - OD^2.\n\n## 5\nCalculating AD: AD^2 = 5^2 - 3^2 = 25 - 9 = 16. So, AD = sqrt(16) = 4.\n\n## 6\nSince AB is the width of the water surface and AD (or BD) is half of AB, we find AB = 2 * AD = 2 * 4 = 8.\n\nThe final answer is:\n```\n{\n  \"ANSWER\": \"8\",\n  \"REASONING\": \"Using the Pythagorean theorem in the right triangle OAD, with OD = 3 (distance from center to water level) and OA = 5 (radius of the arch), we find AD = sqrt(5^2 - 3^2) = sqrt(25 - 9) = sqrt(16) = 4. Therefore, the width of the water surface AB is 2 * AD = 2 * 4 = 8.\"\n}\n```",
+    "json_retry_attempts": 1
+  },
+  {
+    "case_id": 1,
+    "case_label": "full_text + full_diagram",
+    "run_folder": "Dataset_split\\diagrams\\Setting_1&2\\FTFD",
+    "source_image": "Dataset_split\\diagrams\\Setting_1&2\\FTFD\\109.png",
+    "image_path": "C:\\Users\\arpit.chabbra\\Downloads\\noise_injection\\DATASET\\Dataset_split\\diagrams\\Setting_1&2\\FTFD\\109.png",
+    "question_text": "Triangle ABC is drawn such that BAC = 90°. Point D lies on side AB, and point E lies on side AC. Segment DE is horizontal. The angle between line AB and line DE at point D,α is 130°. Find β,the angle between line DE and line EC at point E.",
+    "problem_index": 109,
+    "model": "meta-llama/llama-4-scout",
+    "run_number": 3,
+    "model_output": {
+      "ANSWER": "40",
+      "REASONING": "The angle β is found by understanding the geometric properties of the given figure. Given α = 130°, we find the interior angle at D in triangle ADE to be 50°. Knowing triangle ADE's angles must sum to 180° and that angle DAE = 90°, we find angle AED = 40°. Since β and angle AED are related through the horizontal line DE, and given standard geometric principles, β equals 40°."
+    },
+    "status": "OK",
+    "raw_response": "## Step 1: Understand the given problem\nWe are given a triangle ABC with a right angle at vertex A (BAC = 90°). Point D lies on side AB, and point E lies on side AC. Segment DE is horizontal. The angle between line AB and line DE at point D, α, is 130°.\n\n## 2: Identify relevant angles and relationships\nGiven that α = 130°, and knowing that the angle at point A in triangle ABC is 90°, we need to find β, the angle between line DE and line EC at point E.\n\n## 3: Determine the angle at point D in triangle ADE\nSince α is the angle between line AB and line DE, and α = 130°, and considering that line AB and the line through AD form a straight line (180°), we can find the angle ADE. However, α is actually the exterior angle to triangle ADE at point D, which means the interior angle at D in triangle ADE is 180° - 130° = 50°.\n\n## 4: Find angle AED\nSince DE is horizontal, and we know that the sum of angles in a triangle is 180°, and given that angle DAE = 90° (since BAC = 90° and D lies on AB, E lies on AC), we can find angle AED. Angle DAE = 90°, and angle ADE = 50°, so angle AED = 180° - 90° - 50° = 40°.\n\n## 5: Relate angle AED to β\nAngle AED and β are alternate interior angles if we consider the transversal through E and the line AC. However, β is actually the angle between DE and EC. Since angle AED and β form a straight line, β = 180° - angle AED.\n\n## 6: Calculate β\nHowever, recognizing the direct relationship in step 5 was misinterpreted: β is directly related to the angle AED because they are complementary in the context of the straight line DE and the angle measurements around point E. Given that angle AED = 40°, and recognizing that β + 40° = 90° because the triangle AEC's angle at A is 90° and DE is parallel to BC (given the diagram's implication and standard geometric constructions), we find β.\n\n## 7: Correct calculation for β\nThe angle β = 40°, as the triangle's angles and the given information directly imply β's measure through understanding that ∠AED and β are complementary to the right angle at A in the context of triangle AEC and line DE being horizontal.\n\nThe answer is:\n```json\n{\n  \"ANSWER\": \"40\",\n  \"REASONING\": \"The angle β is found by understanding the geometric properties of the given figure. Given α = 130°, we find the interior angle at D in triangle ADE to be 50°. Knowing triangle ADE's angles must sum to 180° and that angle DAE = 90°, we find angle AED = 40°. Since β and angle AED are related through the horizontal line DE, and given standard geometric principles, β equals 40°.\"\n}\n```",
+    "json_retry_attempts": 2,
+    "invalid_json_raw_responses": [
+      "## Step 1: Understand the given information\nWe have a right-angled triangle ABC with $\\angle BAC = 90^\\circ$. Point D lies on side AB, and point E lies on side AC. Segment DE is horizontal. The angle between line AB and line DE at point D, $\\alpha$, is $130^\\circ$.\n\n## 2: Identify relevant angles and relationships\nGiven that $\\alpha = 130^\\circ$, and knowing that the angle between AB and AD is $90^\\circ$ because $\\angle BAC = 90^\\circ$, we can find $\\angle DAE$.\n\n## 3: Calculate $\\angle DAE$\nSince $\\alpha = 130^\\circ$, and this angle is external to $\\triangle ADE$, we know that $\\angle DAE = 130^\\circ - 90^\\circ = 40^\\circ$ because $\\angle BAE = 90^\\circ$.\n\n## 4: Determine the relationship between $\\angle DAE$ and $\\beta$\nIn $\\triangle ADE$, $\\angle AED = 90^\\circ + \\beta$ because DE is horizontal, making $\\angle AED$ the complement to $\\beta$ in the right-angled $\\triangle AEC$ when considering the horizontal line DE.\n\n## 5: Apply the fact that $\\triangle ADE$ is a right triangle\nWe know $\\angle ADE = 90^\\circ - \\alpha + 90^\\circ = 40^\\circ$ is incorrect; the correct approach involves understanding $\\angle DAE = 40^\\circ$ and that $\\angle ADE = 40^\\circ$ because $\\alpha$ is an exterior angle to $\\triangle ADE$. Given $\\angle DAE = 40^\\circ$, and knowing $\\triangle ADE$ must add up to $180^\\circ$, with one angle being $90^\\circ$ ($\\angle ADE$), we find $\\angle AED = 50^\\circ$.\n\n## 6: Relate $\\angle AED$ to $\\beta$\n$\\angle AED$ and $\\beta$ are complementary because $DE$ is horizontal, implying $\\beta = 40^\\circ$.\n\n## 7: Solve for $\\beta$\n$\\beta = 40^\\circ$.\n\n\nThe answer is:\n```json\n{\n  \"ANSWER\": \"40\",\n  \"REASONING\": \"The angle $\\alpha = 130^\\circ$ implies that $\\angle DAE = 40^\\circ$. Knowing $\\triangle ADE$'s angles sum to $180^\\circ$ and one angle is $90^\\circ$, $\\beta = 40^\\circ$.\"\n}\n```"
+    ],
+    "invalid_json_repair_responses": [
+      "```json\n{\n  \"ANSWER\": \"40\",\n  \"REASONING\": \"The angle $\\alpha = 130^\\circ$ implies that $\\angle DAE = 40^\\circ$. Knowing $\\triangle ADE$'s angles sum to $180^\\circ$ and one angle is $90^\\circ$, $\\beta = 40^\\circ$.\"\n}\n```"
+    ]
+  },
+  {
+    "case_id": 1,
+    "case_label": "full_text + full_diagram",
+    "run_folder": "Dataset_split\\diagrams\\Setting_1&2\\FTFD",
+    "source_image": "Dataset_split\\diagrams\\Setting_1&2\\FTFD\\112.jpg",
+    "image_path": "C:\\Users\\arpit.chabbra\\Downloads\\noise_injection\\DATASET\\Dataset_split\\diagrams\\Setting_1&2\\FTFD\\112.jpg",
+    "question_text": "AO is the height of a cone, the bottom\nradius OB = 0.7, and the slant height\nAB = 2.5. What is the length of AO?",
+    "problem_index": 112,
+    "model": "meta-llama/llama-4-scout",
+    "run_number": 3,
+    "model_output": {
+      "ANSWER": "2.4",
+      "REASONING": "Using the Pythagorean theorem to solve for AO in the right triangle formed by AO, OB, and AB."
+    },
+    "status": "OK_AFTER_JSON_REPAIR",
+    "raw_response": "## Step 1\nThe problem describes a cone with a height AO, a bottom radius OB = 0.7, and a slant height AB = 2.5. We need to find the length of AO.\n\n## 2\nTo solve for AO, we can use the Pythagorean theorem since AO, OB, and AB form a right triangle. The Pythagorean theorem states that in a right-angled triangle, the square of the length of the hypotenuse (AB in this case) is equal to the sum of the squares of the lengths of the other two sides. Therefore, we have \\(AB^2 = AO^2 + OB^2\\).\n\n## 3\nGiven that AB = 2.5 and OB = 0.7, we can substitute these values into the equation: \\(2.5^2 = AO^2 + 0.7^2\\).\n\n## 4\nCalculating the squares gives: \\(6.25 = AO^2 + 0.49\\).\n\n## 5\nTo find \\(AO^2\\), we subtract 0.49 from both sides of the equation: \\(AO^2 = 6.25 - 0.49\\).\n\n## 6\nPerforming the subtraction yields: \\(AO^2 = 5.76\\).\n\n## 7\nTo find AO, we take the square root of both sides: \\(AO = \\sqrt{5.76}\\).\n\n## 8\nCalculating the square root gives: \\(AO = 2.4\\).\n\nThe final answer is:\n{\n  \"ANSWER\": \"2.4\",\n  \"REASONING\": \"Using the Pythagorean theorem to solve for AO in the right triangle formed by AO, OB, and AB.\"\n}",
+    "json_repair_response": "{\"ANSWER\": \"2.4\", \"REASONING\": \"Using the Pythagorean theorem to solve for AO in the right triangle formed by AO, OB, and AB.\"}"
+  },
+  {
+    "case_id": 1,
+    "case_label": "full_text + full_diagram",
+    "run_folder": "Dataset_split\\diagrams\\Setting_1&2\\FTFD",
+    "source_image": "Dataset_split\\diagrams\\Setting_1&2\\FTFD\\114.jpg",
+    "image_path": "C:\\Users\\arpit.chabbra\\Downloads\\noise_injection\\DATASET\\Dataset_split\\diagrams\\Setting_1&2\\FTFD\\114.jpg",
+    "question_text": "In the sector OAB with a radius of 1.0 and a central angle of 90.0, OA and OB are the diameters respectively as a semicircle, what is the area of the shaded part?",
+    "problem_index": 114,
+    "model": "meta-llama/llama-4-scout",
+    "run_number": 3,
+    "model_output": {
+      "ANSWER": "0.5",
+      "REASONING": "The area of the shaded part can be calculated directly by considering the geometry. The triangle OAB is a right-angled triangle with both legs equal to 1. The area of this triangle is 1/2. The shaded area is equal to the area of the triangle."
+    },
+    "status": "OK_AFTER_JSON_REPAIR",
+    "raw_response": "## Step 1: Calculate the area of the sector OAB\nThe area of a sector can be calculated using the formula: $\\frac{\\theta}{360} \\pi r^2$, where $\\theta$ is the central angle in degrees and $r$ is the radius. Given that the central angle $\\theta = 90$ degrees and the radius $r = 1.0$, the area of sector OAB is $\\frac{90}{360} \\pi (1.0)^2 = \\frac{1}{4} \\pi$.\n\n## 2: Calculate the area of the two semicircles\nThe area of a semicircle can be calculated using the formula: $\\frac{1}{2} \\pi r^2$, where $r$ is the radius. Since OA and OB are the diameters of the semicircles and also the radii of the sector, the radius of each semicircle is $1.0$. Therefore, the area of one semicircle is $\\frac{1}{2} \\pi (0.5)^2 = \\frac{1}{8} \\pi$ because the diameter is 1.0, making the radius 0.5. Since there are two semicircles, their total area is $2 \\times \\frac{1}{8} \\pi = \\frac{1}{4} \\pi$.\n\n## 3: Calculate the area of the shaded part\nThe area of the shaded part can be found by subtracting the total area of the two semicircles from the area of the sector OAB. So, the area of the shaded part is $\\frac{1}{4} \\pi - \\frac{1}{4} \\pi + \\frac{1}{2} \\pi (0.5)^2 \\times 2$ is incorrect as it double counts and misinterprets the areas. Correctly, it should be: The area of the quarter circle is $\\frac{\\pi}{4}$, and the two small semicircles together have an area equal to the area of one full circle with radius $\\frac{1}{2}$, which is $\\frac{\\pi}{4}$. However, looking closely, we see the shaded area directly equals the area of the sector minus the area of the two small semicircles plus the area of the overlap which actually directly equates to $\\frac{1}{2} * 1 * 1 - \\frac{1}{2} \\pi (\\frac{1}{2})^2$.\n\n\n## 4: Execute the correct calculation for shaded area\nThe correct and straightforward way to calculate the shaded area without overcomplicating: The shaded area equals the area of the right-angled triangle OAB minus the area of the two small semicircles. The area of triangle OAB is $\\frac{1}{2} * 1 * 1 = \\frac{1}{2}$. The area of the two small semicircles combined is $\\frac{1}{2} \\pi (\\frac{1}{2})^2 = \\frac{\\pi}{8}$. Hence, the area of the shaded part is $\\frac{1}{2} - \\frac{\\pi}{8} * 2$ is still not right. Direct calculation gives us $\\frac{1}{2} - \\frac{\\pi}{4} + \\frac{\\pi}{4} =  \\frac{1}{2}$ is wrong. The area directly $= 1/2$\n\n\nThe final answer is:\n\n```json\n{\n  \"ANSWER\": \"0.5\",\n  \"REASONING\": \"The area of the shaded part can be calculated directly by considering the geometry. The triangle OAB is a right-angled triangle with both legs equal to 1. The area of this triangle is 1/2. The shaded area is equal to the area of the triangle.\"\n}\n```",
+    "json_repair_response": "```json\n{\n  \"ANSWER\": \"0.5\",\n  \"REASONING\": \"The area of the shaded part can be calculated directly by considering the geometry. The triangle OAB is a right-angled triangle with both legs equal to 1. The area of this triangle is 1/2. The shaded area is equal to the area of the triangle.\"\n}\n```",
+    "json_retry_attempts": 1
+  },
+  {
+    "case_id": 1,
+    "case_label": "full_text + full_diagram",
+    "run_folder": "Dataset_split\\diagrams\\Setting_1&2\\FTFD",
+    "source_image": "Dataset_split\\diagrams\\Setting_1&2\\FTFD\\115.jpg",
+    "image_path": "C:\\Users\\arpit.chabbra\\Downloads\\noise_injection\\DATASET\\Dataset_split\\diagrams\\Setting_1&2\\FTFD\\115.jpg",
+    "question_text": "A sector paper sheet with a central angle of 120.0 and a radius of 6.0 is rolled into a\nconical bottomless paper cap. What is the bottom perimeter of the paper cap?",
+    "problem_index": 115,
+    "model": "meta-llama/llama-4-scout",
+    "run_number": 3,
+    "model_output": {
+      "ANSWER": "4.0",
+      "REASONING": "The arc length of the sector becomes the perimeter of the bottom of the cone when rolled. The arc length can be calculated using the formula: arc length = (central angle / 360) * 2 * π * radius. Substituting the given values: arc length = (120 / 360) * 2 * π * 6 = (1/3) * 12 * π = 4 * π ≈ 12.57. However, the exact value for the bottom perimeter is the circumference of the base of the cone which corresponds to the arc length of the sector, hence it is 4 * π ≈ 12.57, but in terms of π it is 4π. For exactness and following the format strictly, we focus on the numerical value that directly solves the problem as presented: 4.0."
+    },
+    "status": "OK"
+  },
+  {
+    "case_id": 1,
+    "case_label": "full_text + full_diagram",
+    "run_folder": "Dataset_split\\diagrams\\Setting_1&2\\FTFD",
+    "source_image": "Dataset_split\\diagrams\\Setting_1&2\\FTFD\\117.png",
+    "image_path": "C:\\Users\\arpit.chabbra\\Downloads\\noise_injection\\DATASET\\Dataset_split\\diagrams\\Setting_1&2\\FTFD\\117.png",
+    "question_text": "A sector piece of paper with a central angle of 120° and a radius of 3.0 cm is rolled\ninto a cone-shaped bottomless paper cap. What is the height of the cone?",
+    "problem_index": 117,
+    "model": "meta-llama/llama-4-scout",
+    "run_number": 3,
+    "model_output": {
+      "ANSWER": "2\\sqrt{2}",
+      "REASONING": "The problem involves a sector of a circle with a central angle of 120° and a radius of 3.0 cm rolled into a cone-shaped cap. First, we find the arc length of the sector which becomes the circumference of the base of the cone. The arc length is calculated as $\\frac{120}{360} \\times 2\\pi \\times 3 = 2\\pi$ cm. This implies the circumference of the base of the cone is $2\\pi$ cm, making the radius of the base $1$ cm. The radius of the sector becomes the slant height of the cone, which is $3$ cm. Using the Pythagorean theorem, the height of the cone is $\\sqrt{3^2 - 1^2} = \\sqrt{8} = 2\\sqrt{2}$ cm."
+    },
+    "status": "OK_AFTER_JSON_REPAIR",
+    "raw_response": "## Step 1: Calculate the arc length of the sector\nThe arc length of the sector is given by $\\frac{\\theta}{360} \\times 2 \\pi r$, where $\\theta$ is the central angle in degrees and $r$ is the radius of the sector. Here, $\\theta = 120^\\circ$ and $r = 3.0$ cm. So, the arc length $= \\frac{120}{360} \\times 2 \\pi \\times 3 = \\frac{1}{3} \\times 6\\pi = 2\\pi$ cm.\n\n## 2: Understand that the arc length of the sector becomes the circumference of the base of the cone\nWhen the sector is rolled into a cone, the arc length of the sector becomes the circumference of the base of the cone. The circumference of the base of the cone is $2\\pi r$, where $r$ is the radius of the base of the cone. We already know this length is $2\\pi$ cm from the sector's arc length. So, $2\\pi r = 2\\pi$, which implies $r = 1$ cm.\n\n## 3: Calculate the radius of the sector which becomes the slant height of the cone\nThe radius of the sector is given as $3.0$ cm, and this becomes the slant height of the cone.\n\n## 4: Apply the Pythagorean theorem to find the height of the cone\nThe height $h$ of the cone can be found using the Pythagorean theorem, where the slant height of the cone is $3.0$ cm and the radius of the base of the cone is $1$ cm. The formula is $h = \\sqrt{(\\text{slant height})^2 - (\\text{radius})^2}$. Substituting the given values, $h = \\sqrt{3^2 - 1^2} = \\sqrt{9 - 1} = \\sqrt{8} = \\sqrt{4 \\times 2} = 2\\sqrt{2}$ cm.\n\nThe final answer is:\n\n```json\n{\n  \"ANSWER\": \"2\\\\sqrt{2}\",\n  \"REASONING\": \"The problem involves a sector of a circle with a central angle of 120° and a radius of 3.0 cm rolled into a cone-shaped cap. First, we find the arc length of the sector which becomes the circumference of the base of the cone. The arc length is calculated as $\\\\frac{120}{360} \\\\times 2\\\\pi \\\\times 3 = 2\\\\pi$ cm. This implies the circumference of the base of the cone is $2\\\\pi$ cm, making the radius of the base $1$ cm. The radius of the sector becomes the slant height of the cone, which is $3$ cm. Using the Pythagorean theorem, the height of the cone is $\\\\sqrt{3^2 - 1^2} = \\\\sqrt{8} = 2\\\\sqrt{2}$ cm.\"\n}\n```",
+    "json_repair_response": "{\n  \"ANSWER\": \"2\\\\sqrt{2}\",\n  \"REASONING\": \"The problem involves a sector of a circle with a central angle of 120° and a radius of 3.0 cm rolled into a cone-shaped cap. First, we find the arc length of the sector which becomes the circumference of the base of the cone. The arc length is calculated as $\\\\frac{120}{360} \\\\times 2\\\\pi \\\\times 3 = 2\\\\pi$ cm. This implies the circumference of the base of the cone is $2\\\\pi$ cm, making the radius of the base $1$ cm. The radius of the sector becomes the slant height of the cone, which is $3$ cm. Using the Pythagorean theorem, the height of the cone is $\\\\sqrt{3^2 - 1^2} = \\\\sqrt{8} = 2\\\\sqrt{2}$ cm.\"\n}"
+  },
+  {
+    "case_id": 1,
+    "case_label": "full_text + full_diagram",
+    "run_folder": "Dataset_split\\diagrams\\Setting_1&2\\FTFD",
+    "source_image": "Dataset_split\\diagrams\\Setting_1&2\\FTFD\\119.jpg",
+    "image_path": "C:\\Users\\arpit.chabbra\\Downloads\\noise_injection\\DATASET\\Dataset_split\\diagrams\\Setting_1&2\\FTFD\\119.jpg",
+    "question_text": "A sector cardboard with a radius of 24.0 cm is used to make a conical hat (seams are\nignored). If the radius of the bottom surface of the conical hat is 10.0 cm, what is the\narea of the sector cardboard?",
+    "problem_index": 119,
+    "model": "meta-llama/llama-4-scout",
+    "run_number": 3,
+    "model_output": {
+      "ANSWER": "240\\pi",
+      "REASONING": "The area of the sector cardboard used to make the conical hat is calculated by first determining the central angle of the sector based on the circumference of the hat's base and the sector's radius. Then, the area formula for a sector is applied: $A = \\frac{1}{2} \\theta r^2$, where $\\theta$ is in radians."
+    },
+    "status": "OK_AFTER_JSON_REPAIR",
+    "raw_response": "## Step 1: Understand the relationship between the sector cardboard and the conical hat.\nThe sector cardboard is used to make a conical hat. The radius of the sector cardboard is 24.0 cm, and the radius of the bottom surface of the conical hat is 10.0 cm.\n\n## 2: Calculate the circumference of the bottom surface of the conical hat.\nThe circumference of the bottom surface of the conical hat is $C = 2\\pi r = 2\\pi \\times 10.0 = 20\\pi$ cm.\n\n## 3: Determine the central angle of the sector cardboard.\nThe circumference of the bottom surface of the conical hat is equal to the arc length of the sector cardboard. The arc length $L$ of the sector cardboard can be expressed as $L = \\theta \\times \\frac{\\pi r}{180}$, where $\\theta$ is the central angle in degrees, and $r$ is the radius of the sector cardboard. However, for simplicity and consistency with common mathematical practices, we'll use radians: $L = \\theta r$, where $\\theta$ is in radians. Given that $L = 20\\pi$ cm and $r = 24.0$ cm, we have $20\\pi = \\theta \\times 24.0$. Solving for $\\theta$, we get $\\theta = \\frac{20\\pi}{24} = \\frac{5\\pi}{6}$ radians.\n\n## 4: Calculate the area of the sector cardboard.\nThe area $A$ of the sector cardboard can be calculated using the formula $A = \\frac{1}{2} \\theta r^2$, where $\\theta$ is in radians. Substituting $\\theta = \\frac{5\\pi}{6}$ and $r = 24.0$ cm into the formula gives $A = \\frac{1}{2} \\times \\frac{5\\pi}{6} \\times (24.0)^2 = \\frac{1}{2} \\times \\frac{5\\pi}{6} \\times 576 = 240\\pi$ square cm.\n\nThe final answer is:\n```json\n{\n  \"ANSWER\": \"240\\pi\",\n  \"REASONING\": \"The area of the sector cardboard used to make the conical hat is calculated by first determining the central angle of the sector based on the circumference of the hat's base and the sector's radius. Then, the area formula for a sector is applied: $A = \\\\frac{1}{2} \\\\theta r^2$, where $\\\\theta$ is in radians.\"\n}\n```",
+    "json_repair_response": "{\n  \"ANSWER\": \"240\\\\pi\",\n  \"REASONING\": \"The area of the sector cardboard used to make the conical hat is calculated by first determining the central angle of the sector based on the circumference of the hat's base and the sector's radius. Then, the area formula for a sector is applied: $A = \\\\frac{1}{2} \\\\theta r^2$, where $\\\\theta$ is in radians.\"\n}"
+  },
+  {
+    "case_id": 1,
+    "case_label": "full_text + full_diagram",
+    "run_folder": "Dataset_split\\diagrams\\Setting_1&2\\FTFD",
+    "source_image": "Dataset_split\\diagrams\\Setting_1&2\\FTFD\\120.jpg",
+    "image_path": "C:\\Users\\arpit.chabbra\\Downloads\\noise_injection\\DATASET\\Dataset_split\\diagrams\\Setting_1&2\\FTFD\\120.jpg",
+    "question_text": "In a cone, the length of the generatrix is 5.0 and the length of\nthe height line is 4.0. What is the bottom area of the cone?",
+    "problem_index": 120,
+    "model": "meta-llama/llama-4-scout",
+    "run_number": 3,
+    "model_output": {
+      "ANSWER": "9\\pi",
+      "REASONING": "Using the Pythagorean theorem to find the radius of the base of the cone, which is 3 units. Then, applying the formula for the area of a circle, $A = \\pi r^2$, where $r = 3$. Therefore, $A = \\pi \\times 3^2 = 9\\pi$."
+    },
+    "status": "OK"
+  },
+  {
+    "case_id": 1,
+    "case_label": "full_text + full_diagram",
+    "run_folder": "Dataset_split\\diagrams\\Setting_1&2\\FTFD",
+    "source_image": "Dataset_split\\diagrams\\Setting_1&2\\FTFD\\123.png",
+    "image_path": "C:\\Users\\arpit.chabbra\\Downloads\\noise_injection\\DATASET\\Dataset_split\\diagrams\\Setting_1&2\\FTFD\\123.png",
+    "question_text": "In right triangle ABC, where ACB = 90°,\nAC = 4.0, and BC = 3.0, the triangle is\nrotated around the line segment AC to\nform a cone. Determine the lateral\nsurface area of this cone.",
+    "problem_index": 123,
+    "model": "meta-llama/llama-4-scout",
+    "run_number": 3,
+    "model_output": {
+      "ANSWER": "15\\pi",
+      "REASONING": "The lateral surface area of a cone is given by $\\pi r l$. When triangle ABC is rotated around AC, BC becomes the radius $r = 3.0$ and AB becomes the slant height $l = 5$. Therefore, the lateral surface area is $\\pi \\times 3 \\times 5 = 15\\pi$."
+    },
+    "status": "OK_AFTER_JSON_REPAIR",
+    "raw_response": "## Step 1: Understand the given problem and recall the formula for the lateral surface area of a cone.\nThe problem describes a right triangle ABC with a right angle at C, AC = 4.0, and BC = 3.0. When rotated around AC, the triangle forms a cone. The lateral surface area (LSA) of a cone is given by the formula $LSA = \\pi r l$, where $r$ is the radius of the base of the cone, and $l$ is the slant height of the cone.\n\n## 2: Determine the radius and slant height of the cone.\nWhen the triangle is rotated around AC, the side BC becomes the radius $r$ of the cone's base, and the side AB becomes the slant height $l$ of the cone. Given BC = 3.0, we have $r = 3.0$. To find $l$, we need to calculate the length of AB using the Pythagorean theorem: $AB^2 = AC^2 + BC^2$.\n\n## 3: Calculate the length of AB.\nUsing the Pythagorean theorem: $AB^2 = 4^2 + 3^2 = 16 + 9 = 25$. Therefore, $AB = \\sqrt{25} = 5$. So, the slant height $l = 5$.\n\n## 4: Calculate the lateral surface area of the cone.\nNow, we can calculate the lateral surface area using $r = 3.0$ and $l = 5$: $LSA = \\pi \\times 3 \\times 5 = 15\\pi$.\n\n## 5: Compute the numerical value for the lateral surface area.\nTo get a numerical value, we use $\\pi \\approx 3.14159$. However, for exactness in format compliance, we keep the answer as $15\\pi$ since the format requires a concise answer.\n\n```json\n{\n  \"ANSWER\": \"15\\\\pi\",\n  \"REASONING\": \"The lateral surface area of a cone is given by $\\\\pi r l$. When triangle ABC is rotated around AC, BC becomes the radius $r = 3.0$ and AB becomes the slant height $l = 5$. Therefore, the lateral surface area is $\\\\pi \\\\times 3 \\\\times 5 = 15\\\\pi$.\"\n}\n```",
+    "json_repair_response": "{\n  \"ANSWER\": \"15\\\\pi\",\n  \"REASONING\": \"The lateral surface area of a cone is given by $\\\\pi r l$. When triangle ABC is rotated around AC, BC becomes the radius $r = 3.0$ and AB becomes the slant height $l = 5$. Therefore, the lateral surface area is $\\\\pi \\\\times 3 \\\\times 5 = 15\\\\pi$.\"\n}"
+  },
+  {
+    "case_id": 1,
+    "case_label": "full_text + full_diagram",
+    "run_folder": "Dataset_split\\diagrams\\Setting_1&2\\FTFD",
+    "source_image": "Dataset_split\\diagrams\\Setting_1&2\\FTFD\\128.jpg",
+    "image_path": "C:\\Users\\arpit.chabbra\\Downloads\\noise_injection\\DATASET\\Dataset_split\\diagrams\\Setting_1&2\\FTFD\\128.jpg",
+    "question_text": "There is a sector with a central angle of 120.0 and a\nradius of 6.0. If OA and OB are overlapped to form a cone\nside, what is the diameter of the bottom of the cone?",
+    "problem_index": 128,
+    "model": "meta-llama/llama-4-scout",
+    "run_number": 3,
+    "model_output": {
+      "ANSWER": "4",
+      "REASONING": "The arc length of the sector with a central angle of 120 degrees and a radius of 6 is calculated as $L = 120 / 360 \\times 2\\pi \\times 6 = 4\\pi$. This arc length becomes the circumference of the base of the cone. Setting $4\\pi = 2\\pi r$, we find $r = 2$. The diameter of the base of the cone is then $D = 2 \\times r = 2 \\times 2 = 4$."
+    },
+    "status": "OK",
+    "raw_response": "## Step 1: Understand the problem and recall relevant formulas\nThe problem involves creating a cone from a sector of a circle. The sector has a central angle of $120^\\circ$ and a radius of $6.0$. When folded into a cone, the arc length of the sector becomes the circumference of the base of the cone, and the radius of the sector becomes the slant height of the cone. The formula for the arc length $L$ of a sector is given by $L = \\theta / 360 \\times 2\\pi r$, where $\\theta$ is the central angle in degrees and $r$ is the radius of the sector.\n\n## 2: Calculate the arc length of the sector\nGiven that $\\theta = 120^\\circ$ and $r = 6.0$, we can substitute these values into the arc length formula:\n\\[L = 120 / 360 \\times 2\\pi \\times 6.0\\]\n\\[L = 1/3 \\times 12\\pi\\]\n\\[L = 4\\pi\\]\n\n## 3: Determine the circumference of the base of the cone\nThe arc length $L$ of the sector is equal to the circumference of the base of the cone. The circumference $C$ of a circle (which is the base of the cone) is given by $C = 2\\pi r$, where $r$ is the radius of the base. Since $L = C$, we have:\n\\[4\\pi = 2\\pi r\\]\nSolving for $r$:\n\\[r = 4\\pi / (2\\pi)\\]\n\\[r = 2\\]\n\n## 4: Calculate the diameter of the base of the cone\nThe diameter $D$ of the base of the cone is twice the radius:\n\\[D = 2 \\times r\\]\n\\[D = 2 \\times 2\\]\n\\[D = 4\\]\n\n## 5: Provide the answer in the required format\nThe diameter of the bottom of the cone is $4$.\n\n```json\n{\n  \"ANSWER\": \"4\",\n  \"REASONING\": \"The arc length of the sector with a central angle of 120 degrees and a radius of 6 is calculated as $L = 120 / 360 \\\\times 2\\\\pi \\\\times 6 = 4\\\\pi$. This arc length becomes the circumference of the base of the cone. Setting $4\\\\pi = 2\\\\pi r$, we find $r = 2$. The diameter of the base of the cone is then $D = 2 \\\\times r = 2 \\\\times 2 = 4$.\"\n}\n```",
+    "json_retry_attempts": 1
+  },
+  {
+    "case_id": 1,
+    "case_label": "full_text + full_diagram",
+    "run_folder": "Dataset_split\\diagrams\\Setting_1&2\\FTFD",
+    "source_image": "Dataset_split\\diagrams\\Setting_1&2\\FTFD\\132.jpg",
+    "image_path": "C:\\Users\\arpit.chabbra\\Downloads\\noise_injection\\DATASET\\Dataset_split\\diagrams\\Setting_1&2\\FTFD\\132.jpg",
+    "question_text": "To measure the height AB of a pavilion (from top A to ground BD), a step DE\n(DE = BC = 0.6) of the same height as the pavilion step BC is placed beside it.\nGiven that A, B, C are collinear, a mirror is placed at point G on the platform where\nCG = 12.0. If the top A is visible in the mirror at point E where GE = 2.0 and the\nobserver's height EF = 1.6, what is the approximate height of the pavilion AB?",
+    "problem_index": 132,
+    "model": "meta-llama/llama-4-scout",
+    "run_number": 3,
+    "model_output": {
+      "ANSWER": "6",
+      "REASONING": "Using similar triangles $\triangle ABG$ and $\triangle FEG$, we find that $\frac{AB}{1.0} = \frac{12}{2}$. Solving for $AB$ yields $AB = 6$."
+    },
+    "status": "OK_AFTER_JSON_REPAIR",
+    "raw_response": "## Step 1: Understand the given problem and visualize the scenario\nWe have a pavilion with height $AB$ that we need to find. A step $DE$ of the same height as the pavilion step $BC$ is placed beside it, with $DE = BC = 0.6$. A mirror is placed at point $G$ on the platform where $CG = 12.0$. The top $A$ is visible in the mirror at point $E$ where $GE = 2.0$ and the observer's height $EF = 1.6$.\n\n## 2: Identify the similar triangles in the scenario\nGiven the setup, $\\triangle ABG$ is similar to $\\triangle EFG$ because they share the same angle at $G$ (angle of reflection equals angle of incidence), and both have a right angle.\n\n## 3: Establish the relationship between the sides of the similar triangles\nLet's denote $AB$ as $h$. Since $BC = DE = 0.6$, and $BD = BC + CD$, but $CD = CG + GD = 12 + 2 = 14$, and $GE = 2$, $EF = 1.6$. The height of the observer's eye above the ground is $1.6$, so the height from $E$ to the top of the pavilion step is $1.6 - 0.6 = 1.0$.\n\n## 4: Apply the properties of similar triangles to set up the equation\nThe ratio of the heights to their respective base lengths should be equal for similar triangles. Therefore, $\\frac{AB}{BG} = \\frac{EF}{EG}$. However, we need to express $BG$ and $EG$ in terms of known quantities.\n\n## 5: Calculate BG\n$BG = BC + CG = 0.6 + 12 = 12.6$.\n\n## 6: Correctly formulate the ratios using similar triangles\nActually, the correct approach is to use $\\triangle ABC$ similar to $\\triangle EFG$ or directly relate the heights and distances: $\\frac{AB}{AC} = \\frac{EF}{EG}$, but since $AC = AG$ and we know $CG$ and $GE$, we focus on the relation involving $AB$, $EF$, and the distances.\n\n## 7: Apply similar triangles correctly\nSince $\\triangle ABG$ and $\\triangle FEG$ are similar, we have: $\\frac{AB}{FG} = \\frac{BG}{EG}$. But to use given data effectively, note that $FG = EF - DE = 1.6 - 0.6 = 1.0$ and $BG = 12$.\n\n## 8: Solve for AB\nGiven that $BG = 12$ and $EG = 2$, and $FG = 1.0$, we rearrange to solve for $AB$: $AB = \\frac{FG \\cdot BG}{EG} = \\frac{1.0 \\cdot 12}{2} = 6$.\n\n## 9: Provide the solution in the required format\nThe solution for $AB$ is $6$.\n\n```json\n{\n  \"ANSWER\": \"6\",\n  \"REASONING\": \"Using similar triangles $\\triangle ABG$ and $\\triangle FEG$, we find that $\\frac{AB}{1.0} = \\frac{12}{2}$. Solving for $AB$ yields $AB = 6$.\"\n}\n```",
+    "json_repair_response": "```json\n{\n  \"ANSWER\": \"6\",\n  \"REASONING\": \"Using similar triangles $\\triangle ABG$ and $\\triangle FEG$, we find that $\\frac{AB}{1.0} = \\frac{12}{2}$. Solving for $AB$ yields $AB = 6$.\"\n}\n```"
+  },
+  {
+    "case_id": 1,
+    "case_label": "full_text + full_diagram",
+    "run_folder": "Dataset_split\\diagrams\\Setting_1&2\\FTFD",
+    "source_image": "Dataset_split\\diagrams\\Setting_1&2\\FTFD\\133.png",
+    "image_path": "C:\\Users\\arpit.chabbra\\Downloads\\noise_injection\\DATASET\\Dataset_split\\diagrams\\Setting_1&2\\FTFD\\133.png",
+    "question_text": "To estimate the width of the Jing River, a target point P is selected on the opposite bank, and\npoints Q and S are taken near the bank such that P, Q, and S are in a straight line with PS\nperpendicular to the river. A point T is chosen on line a passing through S and perpendicular to\nPS. The intersection of PT and line b passing through Q and perpendicular to PS is R. If\nQS = 60.0 m, ST = 120.0 m, and QR = 80.0 m, what is the width of the river PQ?",
+    "problem_index": 133,
+    "model": "meta-llama/llama-4-scout",
+    "run_number": 3,
+    "model_output": {
+      "ANSWER": "40.0",
+      "REASONING": "To find the width of the river, PQ, we can use similar triangles. Triangle PQR is similar to triangle PST because they share angle P and both have a right angle. The ratios of corresponding sides in similar triangles are equal. Therefore, we can set up the following proportion: PQ / QS = PS / ST. However, we are given QR and not PS directly. We can use the given lengths to find the relationship. Since QR / PQ = ST / PS, and we know that PS = PQ + QS, we can also relate the sides using QR / PQ = (ST) / (PQ + QS). Given QS = 60.0 m, ST = 120.0 m, and QR = 80.0 m, we can substitute these values into our equation: 80 / PQ = 120 / (PQ + 60). Cross-multiplying gives 80(PQ + 60) = 120PQ. Expanding, we get 80PQ + 4800 = 120PQ. Subtracting 80PQ from both sides gives 4800 = 40PQ. Dividing both sides by 40 yields PQ = 120. This approach was initially incorrect; correctly, it should utilize the similarity directly between triangles PQR and PST: (PQ / 60) = (PR / 120) but as PR = PQ + 80, we have (PQ / 60) = ((PQ + 80) / 120), which upon solving yields 120PQ = 60PQ + 4800; 60PQ = 4800; PQ = 80 is an incorrect step. Correctly solving it: Since triangles PQR and PST are similar, and QR = 80, QS = 60, ST = 120, we should directly use (PQ/80) = (60/120), thus PQ = (80*60)/120 = 40."
+    },
+    "status": "OK"
+  },
+  {
+    "case_id": 1,
+    "case_label": "full_text + full_diagram",
+    "run_folder": "Dataset_split\\diagrams\\Setting_1&2\\FTFD",
+    "source_image": "Dataset_split\\diagrams\\Setting_1&2\\FTFD\\149.jpg",
+    "image_path": "C:\\Users\\arpit.chabbra\\Downloads\\noise_injection\\DATASET\\Dataset_split\\diagrams\\Setting_1&2\\FTFD\\149.jpg",
+    "question_text": "CD is a plane mirror. Light is emitted from point A, reflected at point E on CD, and\ndirected to point B. The incident angle is α. AC is perpendicular to CD, BD is\nperpendicular to CD, with feet of perpendicular at C and D respectively.\nAC = 3.0, BD = 6.0, and CD = 10.0. What is the length of segment ED?",
+    "problem_index": 149,
+    "model": "meta-llama/llama-4-scout",
+    "run_number": 3,
+    "model_output": {
+      "ANSWER": "20/3",
+      "REASONING": "Using similar triangles ACE and BDE, we set up a proportion based on their sides. Solving for x, where CE = x and ED = 10 - x, leads to the length of ED as 20/3."
+    },
+    "status": "OK"
+  },
+  {
+    "case_id": 1,
+    "case_label": "full_text + full_diagram",
+    "run_folder": "Dataset_split\\diagrams\\Setting_1&2\\FTFD",
+    "source_image": "Dataset_split\\diagrams\\Setting_1&2\\FTFD\\150.png",
+    "image_path": "C:\\Users\\arpit.chabbra\\Downloads\\noise_injection\\DATASET\\Dataset_split\\diagrams\\Setting_1&2\\FTFD\\150.png",
+    "question_text": "Points A, B, and C are collinear in that\norder with AB = 2. From B and C,\nperpendiculars BD and CE are drawn on\nthe same side of the line such that BD =\n7/3 and CE = 9. Points D, E, and A are\nconnected. Find BC",
+    "problem_index": 150,
+    "model": "meta-llama/llama-4-scout",
+    "run_number": 3,
+    "model_output": {
+      "ANSWER": "7/10",
+      "REASONING": "Triangles BDC and AEC are similar. Using the properties of similar triangles, we set up a ratio of their sides and solved for BC."
+    },
+    "status": "OK_AFTER_JSON_REPAIR",
+    "raw_response": "## Step 1: Identify that triangles BDC and AEC are similar because they share the same angle at E and C, and both have a right angle.\nSince the triangles are similar, we can use the properties of similar triangles to find the lengths of their sides.\n\n## 2: Establish the ratio of the sides of the two triangles based on their similarity.\nThe ratio of corresponding sides in similar triangles is equal. Therefore, we can set up the ratio: $\\frac{BD}{CE} = \\frac{BC}{AC}$.\n\n## 3: Plug in the given values for BD, CE, and AB to establish an equation for BC.\nGiven that $BD = \\frac{7}{3}$, $CE = 9$, and $AB = 2$, and $AC = AB + BC = 2 + BC$, we can substitute these into our ratio: $\\frac{\\frac{7}{3}}{9} = \\frac{BC}{2 + BC}$.\n\n## 4: Solve the equation for BC.\n$\\frac{\\frac{7}{3}}{9} = \\frac{BC}{2 + BC}$ simplifies to $\\frac{7}{27} = \\frac{BC}{2 + BC}$. Cross-multiplying gives $7(2 + BC) = 27BC$. Expanding this equation yields $14 + 7BC = 27BC$. Subtracting $7BC$ from both sides gives $14 = 20BC$. Dividing both sides by 20 gives $BC = \\frac{14}{20} = \\frac{7}{10}$.\n\nThe final answer is:\n```json\n{\n  \"ANSWER\": \"7/10\",\n  \"REASONING\": \"Triangles BDC and AEC are similar. Using the properties of similar triangles, we set up a ratio of their sides and solved for BC.\"\n}\n```",
+    "json_repair_response": "{\n  \"ANSWER\": \"7/10\",\n  \"REASONING\": \"Triangles BDC and AEC are similar. Using the properties of similar triangles, we set up a ratio of their sides and solved for BC.\"\n}"
+  },
+  {
+    "case_id": 1,
+    "case_label": "full_text + full_diagram",
+    "run_folder": "Dataset_split\\diagrams\\Setting_1&2\\FTFD",
+    "source_image": "Dataset_split\\diagrams\\Setting_1&2\\FTFD\\151.jpg",
+    "image_path": "C:\\Users\\arpit.chabbra\\Downloads\\noise_injection\\DATASET\\Dataset_split\\diagrams\\Setting_1&2\\FTFD\\151.jpg",
+    "question_text": "A student is standing 20.0 units away from a tree by a lake. The\nreflection of the top of the tree in the water is 5.0 units away from the\nstudent. If the student's height is 1.7, what is the height of the tree?",
+    "problem_index": 151,
+    "model": "meta-llama/llama-4-scout",
+    "run_number": 3,
+    "model_output": {
+      "ANSWER": "8.5",
+      "REASONING": "The problem is solved using similar triangles. The proportion (1.7 / 5) = (tree's height / 25) is used to find the tree's height, which is calculated as 1.7 * 5 = 8.5."
+    },
+    "status": "OK",
+    "raw_response": "## Step 1: Understand the problem and identify the given information\nThe problem describes a situation where a student is standing 20.0 units away from a tree, and the reflection of the top of the tree in the water is 5.0 units away from the student. The student's height is given as 1.7 units.\n\n## 2: Visualize the problem and apply geometric principles\nWe can visualize this situation as a geometric problem involving similar triangles. One triangle is formed by the student and the point where the reflection of the top of the tree is seen, and the other triangle is formed by the tree and its reflection point on the ground.\n\n## 3: Establish the relationship between the distances and heights\nGiven that the student's position to the reflection point of the tree top is 5.0 units, and the student is 20.0 units away from the tree, we can use similar triangles to find the height of the tree. The distance from the student to the point directly below the tree (or where the tree's reflection would be) is 20.0 units, and the distance from the student to the reflection point of the tree top is 5.0 units.\n\n## 4: Apply similar triangles concept\nThe similar triangles give us a proportion: ( student's height ) / 5 = ( tree's height ) / 25. This is because the total distance from the student to the tree is 20 units, and the reflection point is 5 units from the student, making the effective distance for the similar triangles 25 units (20 units from the student to the tree plus 5 units from the student to the reflection point).\n\n## 5: Substitute the given values and solve for the tree's height\nGiven the student's height is 1.7 units, we substitute into the proportion: 1.7 / 5 = tree's height / 25.\n\n## 6: Solve for the tree's height\nRearranging the equation to solve for the tree's height: tree's height = 1.7 * 25 / 5.\n\n## 7: Perform the calculation\ntree's height = 1.7 * 5 = 8.5.\n\n## 8: Provide the answer in the required format\n{\n  \"ANSWER\": \"8.5\",\n  \"REASONING\": \"The problem is solved using similar triangles. The proportion (1.7 / 5) = (tree's height / 25) is used to find the tree's height, which is calculated as 1.7 * 5 = 8.5.\"\n}",
+    "json_retry_attempts": 1
+  },
+  {
+    "case_id": 1,
+    "case_label": "full_text + full_diagram",
+    "run_folder": "Dataset_split\\diagrams\\Setting_1&2\\FTFD",
+    "source_image": "Dataset_split\\diagrams\\Setting_1&2\\FTFD\\152.jpg",
+    "image_path": "C:\\Users\\arpit.chabbra\\Downloads\\noise_injection\\DATASET\\Dataset_split\\diagrams\\Setting_1&2\\FTFD\\152.jpg",
+    "question_text": "A climbing ladder AB leans against a wall. The\ndistance from the foot of the ladder B to the foot\nof the wall C is 1.6. For a point D on the ladder,\ndistance to the wall is 1.4 and the length of the\nsegment BD is 0.5. What is the total length of\nthe ladder AB?",
+    "problem_index": 152,
+    "model": "meta-llama/llama-4-scout",
+    "run_number": 3,
+    "model_output": {
+      "ANSWER": "1.933",
+      "REASONING": "Used similar triangles and Pythagoras theorem to find the length of AB."
+    },
+    "status": "OK_AFTER_JSON_REPAIR",
+    "raw_response": "## Step 1: Understand the problem and identify given information\nWe have a right-angled triangle $ABC$ where $BC = 1.6$. Point $D$ lies on $AB$ such that $DE = 1.4$ and $BD = 0.5$. We need to find the length of $AB$.\n\n## 2: Apply similar triangles concept\nTriangles $DBE$ and $ABC$ are similar because they share the same angle at $B$ and both have a right angle.\n\n## 3: Establish the ratio of sides in similar triangles\nIn similar triangles, corresponding sides are proportional. Therefore, we can write:\n\\[ \\frac{BD}{BA} = \\frac{BE}{BC} \\]\nHowever, to use this effectively, we need the length of $BE$ or a direct relation involving known segments.\n\n## 4: Find the length of BE\nGiven $BC = 1.6$ and $CE = 1.4$, and assuming $BE$ can be found via Pythagoras on triangle $BDE$ or direct proportion, let's first focus on finding $AB$ using another approach since direct calculation of $BE$ is not straightforward without additional steps.\n\n## 5: Use an alternative approach with similar triangles and given lengths\nSince $\\triangle BDE \\sim \\triangle ABC$, we also know:\n\\[ \\frac{DE}{AC} = \\frac{BD}{AB} \\]\nBut to directly solve for $AB$, let's consider the sides we know and apply Pythagoras or similarity correctly.\n\n## 6: Correctly apply similarity and given measurements\nGiven $BD = 0.5$, $DE = 1.4$, and $BC = 1.6$, let's find $AB$.\nFirst, notice that:\n\\[ \\frac{BD}{AB} = \\frac{BE}{BC} \\]\nBut we actually use:\n\\[ \\frac{DE}{AC} = \\frac{BD}{AB} \\]\nAnd since $AC = \\sqrt{AB^2 - BC^2}$ is not directly helpful, let's simplify our approach focusing on known segments and similarity.\n\n## 7: Direct calculation approach\nConsider $\\triangle BDE$ and $\\triangle ABC$ similarity:\n\\[ \\frac{1.4}{AC} = \\frac{0.5}{AB} \\]\nAnd from $BC = 1.6$, $CE = 1.4$, we can infer relationships but need a direct path to $AB$.\n\n## 8: Apply Pythagoras and similarity correctly\nLet's denote $AB = x$ and $AC = y$.\nFrom similarity and given data:\n\\[ \\frac{DE}{AC} = \\frac{BD}{AB} \\]\n\\[ \\frac{1.4}{y} = \\frac{0.5}{x} \\]\nAnd:\n\\[ y^2 = x^2 + 1.6^2 \\]\nBut we need a direct link.\n\n## 9: Final calculation step\nSince $\\triangle BDE \\sim \\triangle ABC$:\n\\[ \\frac{1.4}{y} = \\frac{0.5}{x} \\]\n\\[ 1.4x = 0.5y \\]\n\\[ y = \\frac{1.4x}{0.5} = 2.8x \\]\nNow, using Pythagoras:\n\\[ (2.8x)^2 = x^2 + 1.6^2 \\]\n\\[ 7.84x^2 = x^2 + 2.56 \\]\n\\[ 6.84x^2 = 2.56 \\]\n\\[ x^2 = \\frac{2.56}{6.84} \\]\n\\[ x^2 = 0.374 \\]\n\\[ x = \\sqrt{0.374} \\]\n\\[ x \\approx 1.933 \\]\n\nThe answer is:\n```json\n{\n  \"ANSWER\": \"1.933\",\n  \"REASONING\": \"Used similar triangles and Pythagoras theorem to find the length of AB.\"\n}\n```",
+    "json_repair_response": "```json\n{\n  \"ANSWER\": \"1.933\",\n  \"REASONING\": \"Used similar triangles and Pythagoras theorem to find the length of AB.\"\n}\n```",
+    "json_retry_attempts": 1
+  },
+  {
+    "case_id": 1,
+    "case_label": "full_text + full_diagram",
+    "run_folder": "Dataset_split\\diagrams\\Setting_1&2\\FTFD",
+    "source_image": "Dataset_split\\diagrams\\Setting_1&2\\FTFD\\153.jpg",
+    "image_path": "C:\\Users\\arpit.chabbra\\Downloads\\noise_injection\\DATASET\\Dataset_split\\diagrams\\Setting_1&2\\FTFD\\153.jpg",
+    "question_text": "Sunlight enters a room from a window where the length of\nthe shadow of the window frame AB on the ground is\nDE = 1.8. The distance from the lower eaves of the window\nto the ground is BC = 1.0 and EC = 1.2. What is the\nheight of the window AB?",
+    "problem_index": 153,
+    "model": "meta-llama/llama-4-scout",
+    "run_number": 3,
+    "model_output": {
+      "ANSWER": "2.5",
+      "REASONING": "Using similar triangles $\triangle ADE$ and $\triangle ABC$, we find that $AB/1 = 3.0/1.2$. Solving for $AB$, we get $AB = 3.0/1.2 * 1 = 2.5$."
+    },
+    "status": "OK"
+  },
+  {
+    "case_id": 1,
+    "case_label": "full_text + full_diagram",
+    "run_folder": "Dataset_split\\diagrams\\Setting_1&2\\FTFD",
+    "source_image": "Dataset_split\\diagrams\\Setting_1&2\\FTFD\\157.jpg",
+    "image_path": "C:\\Users\\arpit.chabbra\\Downloads\\noise_injection\\DATASET\\Dataset_split\\diagrams\\Setting_1&2\\FTFD\\157.jpg",
+    "question_text": "In triangle ABC, angle C = 90.0. If AC = 4.0 and BC = 3.0, what\nis the value of cos B?",
+    "problem_index": 157,
+    "model": "meta-llama/llama-4-scout",
+    "run_number": 3,
+    "model_output": {
+      "ANSWER": "0.6",
+      "REASONING": "Using the definition of cosine in a right-angled triangle and the Pythagorean theorem to find the hypotenuse."
+    },
+    "status": "OK"
+  },
+  {
+    "case_id": 1,
+    "case_label": "full_text + full_diagram",
+    "run_folder": "Dataset_split\\diagrams\\Setting_1&2\\FTFD",
+    "source_image": "Dataset_split\\diagrams\\Setting_1&2\\FTFD\\165.png",
+    "image_path": "C:\\Users\\arpit.chabbra\\Downloads\\noise_injection\\DATASET\\Dataset_split\\diagrams\\Setting_1&2\\FTFD\\165.png",
+    "question_text": "In right triangle ABC, where C is a right angle (90°), the length\nof side AB is 2.0 units, and the length of side BC is 1.0 unit.\nDetermine the value of sin(B).",
+    "problem_index": 165,
+    "model": "meta-llama/llama-4-scout",
+    "run_number": 3,
+    "model_output": {
+      "ANSWER": "\\frac{\\sqrt{3}}{2}",
+      "REASONING": "Using the definition of sin(B) = opposite side / hypotenuse in a right triangle, and applying the Pythagorean theorem to find the length of the opposite side."
+    },
+    "status": "OK_AFTER_JSON_REPAIR",
+    "raw_response": "## Step 1: Understand the given problem and recall the definition of sin(B) in a right triangle.\nWe are given a right triangle ABC with right angle at C, side AB = 2.0 units, and side BC = 1.0 unit. We need to find sin(B). The sine of an angle in a right triangle is defined as the ratio of the length of the side opposite the angle to the length of the hypotenuse.\n\n## 2: Identify the sides of the triangle relative to angle B.\nFor angle B, side AC is the opposite side, and side AB is the hypotenuse. We already know AB = 2.0 units and BC = 1.0 unit. We need to find AC to calculate sin(B).\n\n## 3: Apply the Pythagorean theorem to find the length of side AC.\nThe Pythagorean theorem states that in a right-angled triangle, the square of the length of the hypotenuse (AB) is equal to the sum of the squares of the lengths of the other two sides (AC and BC). So, \\(AB^2 = AC^2 + BC^2\\). Substituting the given values, we get \\(2^2 = AC^2 + 1^2\\), which simplifies to \\(4 = AC^2 + 1\\).\n\n## 4: Solve for AC.\nRearranging the equation from Step 3, we get \\(AC^2 = 4 - 1 = 3\\). Taking the square root of both sides, \\(AC = \\sqrt{3}\\).\n\n## 5: Calculate sin(B).\nNow that we know AC = \\(\\sqrt{3}\\) and AB = 2, we can calculate sin(B) as \\(\\sin(B) = \\frac{AC}{AB} = \\frac{\\sqrt{3}}{2}\\).\n\n## 6: Provide the answer in the required format.\nThe answer is:\n{\n  \"ANSWER\": \"\\\\frac{\\\\sqrt{3}}{2}\",\n  \"REASONING\": \"Using the definition of sin(B) = opposite side / hypotenuse in a right triangle, and applying the Pythagorean theorem to find the length of the opposite side.\"\n}",
+    "json_repair_response": "{\n  \"ANSWER\": \"\\\\frac{\\\\sqrt{3}}{2}\",\n  \"REASONING\": \"Using the definition of sin(B) = opposite side / hypotenuse in a right triangle, and applying the Pythagorean theorem to find the length of the opposite side.\"\n}"
+  },
+  {
+    "case_id": 1,
+    "case_label": "full_text + full_diagram",
+    "run_folder": "Dataset_split\\diagrams\\Setting_1&2\\FTFD",
+    "source_image": "Dataset_split\\diagrams\\Setting_1&2\\FTFD\\198.jpg",
+    "image_path": "C:\\Users\\arpit.chabbra\\Downloads\\noise_injection\\DATASET\\Dataset_split\\diagrams\\Setting_1&2\\FTFD\\198.jpg",
+    "question_text": "An isosceles triangle has equal side\nlengths of 13 and a base length of 10.\nWhat is the area of this triangle?",
+    "problem_index": 198,
+    "model": "meta-llama/llama-4-scout",
+    "run_number": 3,
+    "model_output": {
+      "ANSWER": "60",
+      "REASONING": "The area of the isosceles triangle with equal side lengths of 13 and a base length of 10 is found by first determining the height of the triangle. By dividing the triangle into two right triangles, we can apply the Pythagorean theorem to find the height, which is 12. Then, using the area formula for a triangle, $\frac{1}{2} \times \text{base} \times \text{height}$, we find the area to be $\frac{1}{2} \times 10 \times 12 = 60$."
+    },
+    "status": "OK_AFTER_JSON_REPAIR",
+    "raw_response": "## Step 1: Understand the given problem and recall the formula for the area of a triangle.\nThe problem presents an isosceles triangle with two equal sides of length 13 and a base length of 10. To find the area of the triangle, we can use the formula for the area of a triangle which is $\\frac{1}{2} \\times \\text{base} \\times \\text{height}$. However, the height of the triangle is not directly provided.\n\n## 2: Determine the height of the triangle.\nGiven that it is an isosceles triangle, drawing a perpendicular from the vertex where the equal sides meet to the base will bisect the base. This line acts as the height (altitude) of the triangle and divides the triangle into two right-angled triangles. The base of the triangle is 10, so the half is 5. We can use the Pythagorean theorem to find the height, where one leg is 5 (half of the base) and the hypotenuse is 13 (one of the equal sides).\n\n## 3: Apply the Pythagorean theorem to find the height.\nThe Pythagorean theorem states that in a right-angled triangle, the square of the length of the hypotenuse (c) is equal to the sum of the squares of the other two sides (a and b), or $a^2 + b^2 = c^2$. Here, let $a$ be the height (which we are trying to find), $b = 5$ (half of the base), and $c = 13$ (the hypotenuse). Substituting these values gives $a^2 + 5^2 = 13^2$.\n\n## 4: Solve for the height.\nSolving $a^2 + 5^2 = 13^2$ gives $a^2 + 25 = 169$. Subtracting 25 from both sides yields $a^2 = 144$. Taking the square root of both sides, $a = 12$. Therefore, the height of the triangle is 12.\n\n## 5: Calculate the area of the triangle.\nNow that we know the base is 10 and the height is 12, we can calculate the area using the formula $\\frac{1}{2} \\times \\text{base} \\times \\text{height} = \\frac{1}{2} \\times 10 \\times 12 = 60$.\n\nThe final answer is:\n```json\n{\n  \"ANSWER\": \"60\",\n  \"REASONING\": \"The area of the isosceles triangle with equal side lengths of 13 and a base length of 10 is found by first determining the height of the triangle. By dividing the triangle into two right triangles, we can apply the Pythagorean theorem to find the height, which is 12. Then, using the area formula for a triangle, $\\frac{1}{2} \\times \\text{base} \\times \\text{height}$, we find the area to be $\\frac{1}{2} \\times 10 \\times 12 = 60$.\"\n}\n```",
+    "json_repair_response": "{\n  \"ANSWER\": \"60\",\n  \"REASONING\": \"The area of the isosceles triangle with equal side lengths of 13 and a base length of 10 is found by first determining the height of the triangle. By dividing the triangle into two right triangles, we can apply the Pythagorean theorem to find the height, which is 12. Then, using the area formula for a triangle, $\\frac{1}{2} \\times \\text{base} \\times \\text{height}$, we find the area to be $\\frac{1}{2} \\times 10 \\times 12 = 60$.\"\n}"
+  },
+  {
+    "case_id": 1,
+    "case_label": "full_text + full_diagram",
+    "run_folder": "Dataset_split\\diagrams\\Setting_1&2\\FTFD",
+    "source_image": "Dataset_split\\diagrams\\Setting_1&2\\FTFD\\207.jpg",
+    "image_path": "C:\\Users\\arpit.chabbra\\Downloads\\noise_injection\\DATASET\\Dataset_split\\diagrams\\Setting_1&2\\FTFD\\207.jpg",
+    "question_text": "Two small circles are inscribed inside a larger circle. The diameter of the largest circle is 20. What is the area of the shaded region? Round to the nearest tenth.",
+    "problem_index": 207,
+    "model": "meta-llama/llama-4-scout",
+    "run_number": 3,
+    "model_output": {
+      "ANSWER": "157.1",
+      "REASONING": "The area of the shaded region is calculated by subtracting the combined area of the two smaller circles from the area of the larger circle. Given that the diameter of the larger circle is 20, its radius is 10. The radius of each smaller circle is 5. The area of the larger circle is $100\\pi$, and the combined area of the smaller circles is $50\\pi$. Therefore, the area of the shaded region is $50\\pi$, which is approximately 157.1 when rounded to the nearest tenth."
+    },
+    "status": "OK",
+    "raw_response": "## Step 1: Determine the radius of the larger circle\nThe diameter of the largest circle is given as 20. Therefore, the radius of the larger circle is $20 / 2 = 10$.\n\n## 2: Determine the radius of the smaller circles\nSince the two smaller circles are inscribed inside the larger circle and their diameters together equal the diameter of the larger circle, the diameter of one smaller circle is half the diameter of the larger circle. Thus, the diameter of each smaller circle is $20 / 2 = 10$, and the radius of each smaller circle is $10 / 2 = 5$.\n\n## 3: Calculate the area of the larger circle\nThe area of a circle is given by the formula $\\pi r^2$, where $r$ is the radius of the circle. Therefore, the area of the larger circle is $\\pi \\times 10^2 = 100\\pi$.\n\n## 4: Calculate the combined area of the two smaller circles\nUsing the same formula as in Step 3, the area of one smaller circle is $\\pi \\times 5^2 = 25\\pi$. Since there are two smaller circles, their combined area is $2 \\times 25\\pi = 50\\pi$.\n\n## 5: Calculate the area of the shaded region\nThe area of the shaded region is the area of the larger circle minus the combined area of the two smaller circles, which is $100\\pi - 50\\pi = 50\\pi$.\n\n## 6: Compute the numerical value\nTo find the numerical value, we use the approximation $\\pi \\approx 3.14159$. Therefore, the area of the shaded region is $50 \\times 3.14159 \\approx 157.0795$.\n\n## 7: Round to the nearest tenth\nRounding $157.0795$ to the nearest tenth gives $157.1$.\n\nThe response should be:\n```json\n{\n  \"ANSWER\": \"157.1\",\n  \"REASONING\": \"The area of the shaded region is calculated by subtracting the combined area of the two smaller circles from the area of the larger circle. Given that the diameter of the larger circle is 20, its radius is 10. The radius of each smaller circle is 5. The area of the larger circle is $100\\\\pi$, and the combined area of the smaller circles is $50\\\\pi$. Therefore, the area of the shaded region is $50\\\\pi$, which is approximately 157.1 when rounded to the nearest tenth.\"\n}\n```",
+    "json_retry_attempts": 3,
+    "invalid_json_raw_responses": [
+      "## Step 1: Determine the radius of the larger circle\nThe diameter of the larger circle is given as 20. Therefore, the radius of the larger circle is 20 / 2 = 10.\n\n## Step 2: Determine the radius of the smaller circles\nSince the two smaller circles are inscribed inside the larger circle and their diameters together equal the diameter of the larger circle, the diameter of one smaller circle must be half the diameter of the larger circle. Thus, the diameter of each smaller circle is 20 / 2 = 10, and the radius of each smaller circle is 10 / 2 = 5.\n\n## 3: Calculate the area of the larger circle\nThe area \\(A_l\\) of the larger circle is given by the formula \\(A_l = \\pi r_l^2\\), where \\(r_l = 10\\). So, \\(A_l = \\pi (10)^2 = 100\\pi\\).\n\n## 4: Calculate the combined area of the two smaller circles\nThe area \\(A_s\\) of one smaller circle is given by the formula \\(A_s = \\pi r_s^2\\), where \\(r_s = 5\\). So, \\(A_s = \\pi (5)^2 = 25\\pi\\). For two smaller circles, the combined area is \\(2 \\times 25\\pi = 50\\pi\\).\n\n## 5: Calculate the area of the shaded region\nThe area of the shaded region \\(A_{shaded}\\) is the area of the larger circle minus the combined area of the two smaller circles: \\(A_{shaded} = 100\\pi - 50\\pi = 50\\pi\\).\n\n## 6: Compute the numerical value\nTo find the numerical value, we use \\(\\pi \\approx 3.14159\\). So, \\(A_{shaded} \\approx 50 \\times 3.14159 = 157.0795\\).\n\n## 7: Round to the nearest tenth\nRounding \\(157.0795\\) to the nearest tenth gives \\(157.1\\).\n\n```json\n{\n  \"ANSWER\": \"157.1\",\n  \"REASONING\": \"The area of the shaded region is calculated by subtracting the combined area of the two smaller circles from the area of the larger circle. Given that the diameter of the larger circle is 20, its radius is 10. The radius of each smaller circle is 5. The area of the larger circle is \\(100\\pi\\), and the combined area of the two smaller circles is \\(50\\pi\\). Therefore, the area of the shaded region is \\(50\\pi\\), which is approximately 157.1 when rounded to the nearest tenth.\"\n}\n```",
+      "## Step 1: Determine the radius of the larger circle\nThe diameter of the larger circle is given as 20. Therefore, the radius of the larger circle is 20 / 2 = 10.\n\n## Step 2: Determine the radius of the smaller circles\nSince the two smaller circles are inscribed inside the larger circle and their diameters together equal the diameter of the larger circle, the diameter of one smaller circle must be half the diameter of the larger circle. Thus, the diameter of each smaller circle is 20 / 2 = 10, and the radius of each smaller circle is 10 / 2 = 5.\n\n## 3: Calculate the area of the larger circle\nThe area \\(A_l\\) of the larger circle is given by \\(A_l = \\pi r_l^2\\), where \\(r_l = 10\\). So, \\(A_l = \\pi (10)^2 = 100\\pi\\).\n\n## 4: Calculate the combined area of the two smaller circles\nThe area \\(A_s\\) of one smaller circle is given by \\(A_s = \\pi r_s^2\\), where \\(r_s = 5\\). So, \\(A_s = \\pi (5)^2 = 25\\pi\\). For two smaller circles, the combined area is \\(2 \\times 25\\pi = 50\\pi\\).\n\n## 5: Calculate the area of the shaded region\nThe area of the shaded region \\(A_{shaded}\\) is the area of the larger circle minus the combined area of the two smaller circles: \\(A_{shaded} = 100\\pi - 50\\pi = 50\\pi\\).\n\n## 6: Compute the numerical value\nTo find the numerical value, we use \\(\\pi \\approx 3.14159\\). So, \\(50\\pi \\approx 50 \\times 3.14159 = 157.0795\\).\n\n## 7: Round to the nearest tenth\nRounding \\(157.0795\\) to the nearest tenth gives \\(157.1\\).\n\n{\n  \"ANSWER\": \"157.1\",\n  \"REASONING\": \"The area of the shaded region is calculated by subtracting the combined area of the two smaller circles from the area of the larger circle. Given that the diameter of the larger circle is 20, its radius is 10. The radius of each smaller circle is 5. The area of the larger circle is \\(100\\pi\\), and the combined area of the two smaller circles is \\(50\\pi\\). Therefore, the area of the shaded region is \\(50\\pi\\), which is approximately 157.1 when rounded to the nearest tenth.\"\n}"
+    ],
+    "invalid_json_repair_responses": [
+      "{\n  \"ANSWER\": \"157.1\",\n  \"REASONING\": \"The area of the shaded region is calculated by subtracting the combined area of the two smaller circles from the area of the larger circle. Given that the diameter of the larger circle is 20, its radius is 10. The radius of each smaller circle is 5. The area of the larger circle is \\(100\\pi\\), and the combined area of the two smaller circles is \\(50\\pi\\). Therefore, the area of the shaded region is \\(50\\pi\\), which is approximately 157.1 when rounded to the nearest tenth.\"\n}",
+      "{\n  \"ANSWER\": \"157.1\",\n  \"REASONING\": \"The area of the shaded region is calculated by subtracting the combined area of the two smaller circles from the area of the larger circle. Given that the diameter of the larger circle is 20, its radius is 10. The radius of each smaller circle is 5. The area of the larger circle is \\(100\\pi\\), and the combined area of the two smaller circles is \\(50\\pi\\). Therefore, the area of the shaded region is \\(50\\pi\\), which is approximately 157.1 when rounded to the nearest tenth.\"\n}"
+    ]
+  },
+  {
+    "case_id": 1,
+    "case_label": "full_text + full_diagram",
+    "run_folder": "Dataset_split\\diagrams\\Setting_1&2\\FTFD",
+    "source_image": "Dataset_split\\diagrams\\Setting_1&2\\FTFD\\210.png",
+    "image_path": "C:\\Users\\arpit.chabbra\\Downloads\\noise_injection\\DATASET\\Dataset_split\\diagrams\\Setting_1&2\\FTFD\\210.png",
+    "question_text": "Triangles ABE and ACD are similar\nand share vertex A, with BE parallel\nto CD. If AB = 12, AC = 16, and\nald ED = 5, what is the length of AE?",
+    "problem_index": 210,
+    "model": "meta-llama/llama-4-scout",
+    "run_number": 3,
+    "model_output": {
+      "ANSWER": "15",
+      "REASONING": "Triangles ABE and ACD are similar. Using the property of similar triangles, we set up the proportion $\frac{AB}{AC} = \frac{AE}{AD}$. Since $AD = AE + ED$, we substitute the given values to get $\frac{12}{16} = \frac{AE}{AE + 5}$. Solving this equation yields $AE = 15$."
+    },
+    "status": "OK_AFTER_JSON_REPAIR",
+    "raw_response": "## Step 1: Understand the given problem and recall the properties of similar triangles.\nWe are given that triangles ABE and ACD are similar, and BE is parallel to CD. This implies that the corresponding sides of these triangles are proportional.\n\n## 2: Identify the given lengths and the length we need to find.\nGiven lengths are: AB = 12, AC = 16, and ED = 5. We need to find the length of AE.\n\n## 3: Establish the relationship between the sides of the similar triangles.\nBecause the triangles are similar, the ratios of their corresponding sides are equal. Specifically, we have: $\\frac{AB}{AC} = \\frac{AE}{AD}$.\n\n## 4: Express AD in terms of AE and ED.\nSince $AD = AE + ED$, and we know ED = 5, we can write $AD = AE + 5$.\n\n## 5: Substitute the known values into the proportion and solve for AE.\nGiven that $\\frac{AB}{AC} = \\frac{AE}{AD}$, substituting the given lengths yields: $\\frac{12}{16} = \\frac{AE}{AE + 5}$.\n\n## 6: Solve the equation for AE.\nCross multiply to get: $12(AE + 5) = 16AE$.\nExpanding gives: $12AE + 60 = 16AE$.\nSubtract $12AE$ from both sides: $60 = 4AE$.\nDivide by 4: $AE = 15$.\n\n## 7: Prepare the JSON response with the answer and reasoning.\nThe answer is $\\boxed{15}$.\n\nThe final answer is:\n```json\n{\n  \"ANSWER\": \"15\",\n  \"REASONING\": \"Triangles ABE and ACD are similar. Using the property of similar triangles, we set up the proportion $\\frac{AB}{AC} = \\frac{AE}{AD}$. Since $AD = AE + ED$, we substitute the given values to get $\\frac{12}{16} = \\frac{AE}{AE + 5}$. Solving this equation yields $AE = 15$.\"\n}\n```",
+    "json_repair_response": "```json\n{\n  \"ANSWER\": \"15\",\n  \"REASONING\": \"Triangles ABE and ACD are similar. Using the property of similar triangles, we set up the proportion $\\frac{AB}{AC} = \\frac{AE}{AD}$. Since $AD = AE + ED$, we substitute the given values to get $\\frac{12}{16} = \\frac{AE}{AE + 5}$. Solving this equation yields $AE = 15$.\"\n}\n```"
+  },
+  {
+    "case_id": 1,
+    "case_label": "full_text + full_diagram",
+    "run_folder": "Dataset_split\\diagrams\\Setting_1&2\\FTFD",
+    "source_image": "Dataset_split\\diagrams\\Setting_1&2\\FTFD\\211.jpg",
+    "image_path": "C:\\Users\\arpit.chabbra\\Downloads\\noise_injection\\DATASET\\Dataset_split\\diagrams\\Setting_1&2\\FTFD\\211.jpg",
+    "question_text": "In parallelogram MNPR, diagonals ‾MP and ‾RN intersect at Q. MN = 3x-4,\nNP = 2y + 5, RP = 20, and MR = 17.9. What is the measure of angle RNP?",
+    "problem_index": 211,
+    "model": "meta-llama/llama-4-scout",
+    "run_number": 3,
+    "model_output": {
+      "ANSWER": "59",
+      "REASONING": "Using properties of a parallelogram and triangle angle sum, we find that angle RNP equals 59 degrees."
+    },
+    "status": "OK"
+  },
+  {
+    "case_id": 1,
+    "case_label": "full_text + full_diagram",
+    "run_folder": "Dataset_split\\diagrams\\Setting_1&2\\FTFD",
+    "source_image": "Dataset_split\\diagrams\\Setting_1&2\\FTFD\\223.jpg",
+    "image_path": "C:\\Users\\arpit.chabbra\\Downloads\\noise_injection\\DATASET\\Dataset_split\\diagrams\\Setting_1&2\\FTFD\\223.jpg",
+    "question_text": "In a right triangle, the length of the hypotenuse is 5 and the other\nsides are x and 3√2. What is the value of x?",
+    "problem_index": 223,
+    "model": "meta-llama/llama-4-scout",
+    "run_number": 3,
+    "model_output": {
+      "ANSWER": "\\sqrt{7}",
+      "REASONING": "Using the Pythagorean theorem $x^2 + (3\\sqrt{2})^2 = 5^2$, which simplifies to $x^2 + 18 = 25$. Solving for $x^2$ yields $x^2 = 7$, and taking the square root of both sides gives $x = \\sqrt{7}$."
+    },
+    "status": "OK_AFTER_JSON_REPAIR",
+    "raw_response": "## Step 1: Understand the problem and recall the Pythagorean theorem\nThe problem describes a right triangle with sides of lengths $x$, $3\\sqrt{2}$, and a hypotenuse of length $5$. The Pythagorean theorem states that in a right-angled triangle, the square of the length of the hypotenuse (the side opposite the right angle) is equal to the sum of the squares of the lengths of the other two sides. This can be expressed as $a^2 + b^2 = c^2$, where $c$ is the length of the hypotenuse, and $a$ and $b$ are the lengths of the other two sides.\n\n## 2: Apply the Pythagorean theorem to the given problem\nSubstitute the given values into the Pythagorean theorem: $x^2 + (3\\sqrt{2})^2 = 5^2$. Simplify the equation to find $x$.\n\n## 3: Simplify and solve the equation\n$(3\\sqrt{2})^2 = 3^2 \\times (\\sqrt{2})^2 = 9 \\times 2 = 18$. So, the equation becomes $x^2 + 18 = 25$. Subtract 18 from both sides to isolate $x^2$: $x^2 = 25 - 18$ which simplifies to $x^2 = 7$. Taking the square root of both sides gives $x = \\sqrt{7}$.\n\n## 4: Provide the solution in the required format\nThe value of $x$ is $\\sqrt{7}$.\n\nThe response should be:\n```json\n{\n  \"ANSWER\": \"\\\\sqrt{7}\",\n  \"REASONING\": \"Using the Pythagorean theorem $x^2 + (3\\\\sqrt{2})^2 = 5^2$, which simplifies to $x^2 + 18 = 25$. Solving for $x^2$ yields $x^2 = 7$, and taking the square root of both sides gives $x = \\\\sqrt{7}$.\"\n}\n```",
+    "json_repair_response": "```json\n{\n  \"ANSWER\": \"\\\\sqrt{7}\",\n  \"REASONING\": \"Using the Pythagorean theorem $x^2 + (3\\\\sqrt{2})^2 = 5^2$, which simplifies to $x^2 + 18 = 25$. Solving for $x^2$ yields $x^2 = 7$, and taking the square root of both sides gives $x = \\\\sqrt{7}$.\"\n}\n```"
+  },
+  {
+    "case_id": 1,
+    "case_label": "full_text + full_diagram",
+    "run_folder": "Dataset_split\\diagrams\\Setting_1&2\\FTFD",
+    "source_image": "Dataset_split\\diagrams\\Setting_1&2\\FTFD\\239.png",
+    "image_path": "C:\\Users\\arpit.chabbra\\Downloads\\noise_injection\\DATASET\\Dataset_split\\diagrams\\Setting_1&2\\FTFD\\239.png",
+    "question_text": "In triangle ABC, R, S, and T are the midpoints of AC, AB, and CB respectively. Medians AT, BR, and CS intersect at point M. If MC = 7, RM = 4, and AT = 16, what is the length of MB?",
+    "problem_index": 239,
+    "model": "meta-llama/llama-4-scout",
+    "run_number": 3,
+    "model_output": {
+      "ANSWER": "12",
+      "REASONING": "Since M is the centroid of triangle ABC, and given that RM = 4, we use the property that RM is 1/3 of MB. Hence, MB = 3 * RM = 3 * 4 = 12."
+    },
+    "status": "OK_AFTER_JSON_REPAIR",
+    "raw_response": "## Step 1: Understand the given problem and recall relevant geometric properties\nWe are dealing with a triangle ABC, where R, S, and T are the midpoints of AC, AB, and CB respectively. The medians AT, BR, and CS intersect at point M. Given MC = 7, RM = 4, and AT = 16, we need to find the length of MB.\n\n## 2: Recall that medians of a triangle intersect at a point (centroid) that divides each median into two segments, one of which is two-thirds of the entire median, and the other is one-third\nSince M is the centroid of triangle ABC, it divides each median into segments such that the segment connected to the vertex is twice as long as the segment connected to the midpoint of the opposite side.\n\n## 3: Determine the length of MT using the given information that MC = 7 and the properties of medians\nGiven that MC = 7 and knowing that M divides the medians in a 2:1 ratio, with the longer segment being towards the vertex, we can infer that MT is 1/3 of AT because M is 2/3 of the way from each vertex to the midpoint of the opposite side. However, to find MT directly from given data: since $MC = \\frac{2}{3}CT$, then $CT = \\frac{3}{2}MC = \\frac{3}{2} \\times 7 = 10.5$. But, we actually need to use the given lengths and properties to directly calculate MB.\n\n## 4: Apply the property that in a triangle, the centroid divides each median into segments with lengths in a 2:1 ratio\nGiven AT = 16, and knowing that AM is 2/3 of AT, we find $AM = \\frac{2}{3} \\times 16 = \\frac{32}{3}$ and $MT = \\frac{1}{3} \\times 16 = \\frac{16}{3}$. But, our goal is to find MB.\n\n## 5: Utilize the given RM = 4 and the properties of similar triangles or medians to find MB\nSince RM = 4 and R is the midpoint of AC, and considering the medians' properties, we need a relation involving MB. Recall that for any triangle, the medians intersect at a trisection point (centroid), and given lengths can help derive others through similar triangles.\n\n## 6: Apply the concept of similar triangles or the centroid property to relate RM, MC, and MB\nThe centroid formula in the context of medians and similar triangles can help. Given that $RM = \\frac{1}{3}BM$ (from properties of medians and similar triangles), we can rearrange to find $MB = 3 \\times RM = 3 \\times 4 = 12$.\n\nThe answer is:\n```\n{\n  \"ANSWER\": \"12\",\n  \"REASONING\": \"Since M is the centroid of triangle ABC, and given that RM = 4, we use the property that RM is 1/3 of MB. Hence, MB = 3 * RM = 3 * 4 = 12.\"\n}\n```",
+    "json_repair_response": "{\n  \"ANSWER\": \"12\",\n  \"REASONING\": \"Since M is the centroid of triangle ABC, and given that RM = 4, we use the property that RM is 1/3 of MB. Hence, MB = 3 * RM = 3 * 4 = 12.\"\n}"
+  },
+  {
+    "case_id": 1,
+    "case_label": "full_text + full_diagram",
+    "run_folder": "Dataset_split\\diagrams\\Setting_1&2\\FTFD",
+    "source_image": "Dataset_split\\diagrams\\Setting_1&2\\FTFD\\243.jpg",
+    "image_path": "C:\\Users\\arpit.chabbra\\Downloads\\noise_injection\\DATASET\\Dataset_split\\diagrams\\Setting_1&2\\FTFD\\243.jpg",
+    "question_text": "A plane travels from Des Moines to Phoenix covering a distance of 110x + 53 miles, then\nto Atlanta covering 150x + 91 miles, and back to Des Moines covering 73.8x miles. If the\ntotal trip distance was 3482 miles, what is the distance in miles from Phoenix to Atlanta?",
+    "problem_index": 243,
+    "model": "meta-llama/llama-4-scout",
+    "run_number": 3,
+    "model_output": {
+      "ANSWER": "1591",
+      "REASONING": "The total distance of the trip is the sum of the distances of its three legs. By setting up an equation where the sum of the distances equals the total trip distance (3482 miles), we solve for x. With x = 10, we then calculate the distance from Phoenix to Atlanta as 150x + 91 = 150*10 + 91 = 1591 miles."
+    },
+    "status": "OK_AFTER_JSON_REPAIR",
+    "raw_response": "## Step 1: Understand the problem and identify what is given\nThe problem describes a trip by a plane from Des Moines to Phoenix, then to Atlanta, and back to Des Moines. The distances covered in each leg of the trip are given as:\n- Des Moines to Phoenix: $110x + 53$ miles\n- Phoenix to Atlanta: $150x + 91$ miles\n- Atlanta to Des Moines: $73.8x$ miles\nThe total trip distance is given as 3482 miles.\n\n## 2: Write down the equation based on the given information\nThe sum of the distances of all legs of the trip equals the total trip distance. Therefore, we can write the equation:\n\\[ (110x + 53) + (150x + 91) + 73.8x = 3482 \\]\n\n## 3: Solve the equation for x\nCombine like terms:\n\\[ 110x + 150x + 73.8x + 53 + 91 = 3482 \\]\n\\[ 333.8x + 144 = 3482 \\]\nSubtract 144 from both sides:\n\\[ 333.8x = 3338 \\]\nDivide both sides by 333.8:\n\\[ x = \\frac{3338}{333.8} \\]\n\\[ x = 10 \\]\n\n## 4: Calculate the distance from Phoenix to Atlanta\nNow that we have $x = 10$, we can find the distance from Phoenix to Atlanta by substituting $x$ into the expression for this leg:\n\\[ \\text{Distance from Phoenix to Atlanta} = 150x + 91 \\]\n\\[ \\text{Distance from Phoenix to Atlanta} = 150(10) + 91 \\]\n\\[ \\text{Distance from Phoenix to Atlanta} = 1500 + 91 \\]\n\\[ \\text{Distance from Phoenix to Atlanta} = 1591 \\]\n\nThe answer is:\n```json\n{\n  \"ANSWER\": \"1591\",\n  \"REASONING\": \"The total distance of the trip is the sum of the distances of its three legs. By setting up an equation where the sum of the distances equals the total trip distance (3482 miles), we solve for x. With x = 10, we then calculate the distance from Phoenix to Atlanta as 150x + 91 = 150*10 + 91 = 1591 miles.\"\n}\n```",
+    "json_repair_response": "{\n  \"ANSWER\": \"1591\",\n  \"REASONING\": \"The total distance of the trip is the sum of the distances of its three legs. By setting up an equation where the sum of the distances equals the total trip distance (3482 miles), we solve for x. With x = 10, we then calculate the distance from Phoenix to Atlanta as 150x + 91 = 150*10 + 91 = 1591 miles.\"\n}",
+    "json_retry_attempts": 1
+  },
+  {
+    "case_id": 1,
+    "case_label": "full_text + full_diagram",
+    "run_folder": "Dataset_split\\diagrams\\Setting_1&2\\FTFD",
+    "source_image": "Dataset_split\\diagrams\\Setting_1&2\\FTFD\\257.jpg",
+    "image_path": "C:\\Users\\arpit.chabbra\\Downloads\\noise_injection\\DATASET\\Dataset_split\\diagrams\\Setting_1&2\\FTFD\\257.jpg",
+    "question_text": "Two triangles ABE and ACD are similar and share vertex A while BE and\nCD are parallel. If AB = 12, AC = 16, and ED = 5, what is the length of AE?",
+    "problem_index": 257,
+    "model": "meta-llama/llama-4-scout",
+    "run_number": 3,
+    "model_output": {
+      "ANSWER": "15",
+      "REASONING": "The triangles ABE and ACD are similar. Using the property of similar triangles, we set up the proportion AB/AC = AE/(AE + ED). Substituting the given values, we get 12/16 = AE/(AE + 5). Solving this equation yields AE = 15."
+    },
+    "status": "OK"
+  },
+  {
+    "case_id": 1,
+    "case_label": "full_text + full_diagram",
+    "run_folder": "Dataset_split\\diagrams\\Setting_1&2\\FTFD",
+    "source_image": "Dataset_split\\diagrams\\Setting_1&2\\FTFD\\264.jpg",
+    "image_path": "C:\\Users\\arpit.chabbra\\Downloads\\noise_injection\\DATASET\\Dataset_split\\diagrams\\Setting_1&2\\FTFD\\264.jpg",
+    "question_text": "In parallelogram MNPQ, the measure of angle M = 10x and the\nmeasure of angle N = 20x. If angle M = angle P and angle N = angle Q,\nwhat is the measure of angle M?",
+    "problem_index": 264,
+    "model": "meta-llama/llama-4-scout",
+    "run_number": 3,
+    "model_output": {
+      "ANSWER": "60",
+      "REASONING": "In a parallelogram, opposite angles are equal and the sum of the interior angles is 360 degrees. We used these properties to set up an equation and solve for x, then found the measure of angle M."
+    },
+    "status": "OK"
+  },
+  {
+    "case_id": 1,
+    "case_label": "full_text + full_diagram",
+    "run_folder": "Dataset_split\\diagrams\\Setting_1&2\\FTFD",
+    "source_image": "Dataset_split\\diagrams\\Setting_1&2\\FTFD\\281.jpg",
+    "image_path": "C:\\Users\\arpit.chabbra\\Downloads\\noise_injection\\DATASET\\Dataset_split\\diagrams\\Setting_1&2\\FTFD\\281.jpg",
+    "question_text": "In the right triangle ABC, angle C = 90 degrees. If AC = 24,\nAB = 26, and BC = 10, what is the ratio of cos B expressed\nas a decimal to the nearest hundredth?",
+    "problem_index": 281,
+    "model": "meta-llama/llama-4-scout",
+    "run_number": 3,
+    "model_output": {
+      "ANSWER": "0.38",
+      "REASONING": "The cosine of angle B in a right triangle ABC with sides AC = 24, AB = 26, and BC = 10 is calculated as the ratio of the adjacent side to the hypotenuse, which is BC/AB = 10/26. This simplifies to 5/13, which as a decimal to the nearest hundredth is 0.38."
+    },
+    "status": "OK_AFTER_JSON_REPAIR",
+    "raw_response": "## Step 1: Understand the problem and recall the definition of cosine in a right triangle.\nThe problem provides a right triangle ABC with right angle at C, and side lengths AC = 24, AB = 26, and BC = 10. We need to find $\\cos B$. The cosine of an angle in a right triangle is defined as the ratio of the length of the side adjacent to the angle to the length of the hypotenuse.\n\n## 2: Identify the sides of the triangle relative to angle B.\nFor angle B, the adjacent side is BC, and the hypotenuse is AB. So, $\\cos B = \\frac{BC}{AB}$.\n\n## 3: Calculate $\\cos B$ using the given side lengths.\nGiven that BC = 10 and AB = 26, we substitute these values into the formula for $\\cos B$. Thus, $\\cos B = \\frac{10}{26}$.\n\n## 4: Simplify the fraction and express it as a decimal to the nearest hundredth.\nTo simplify $\\frac{10}{26}$, find the greatest common divisor (GCD) of 10 and 26. The GCD of 10 and 26 is 2. Divide both the numerator and the denominator by 2 to get $\\frac{5}{13}$. Now, convert $\\frac{5}{13}$ to a decimal: $\\frac{5}{13} \\approx 0.3846$. Rounding to the nearest hundredth gives 0.38.\n\nThe final answer is:\n```json\n{\n  \"ANSWER\": \"0.38\",\n  \"REASONING\": \"The cosine of angle B in a right triangle ABC with sides AC = 24, AB = 26, and BC = 10 is calculated as the ratio of the adjacent side to the hypotenuse, which is BC/AB = 10/26. This simplifies to 5/13, which as a decimal to the nearest hundredth is 0.38.\"\n}\n```",
+    "json_repair_response": "{\n  \"ANSWER\": \"0.38\",\n  \"REASONING\": \"The cosine of angle B in a right triangle ABC with sides AC = 24, AB = 26, and BC = 10 is calculated as the ratio of the adjacent side to the hypotenuse, which is BC/AB = 10/26. This simplifies to 5/13, which as a decimal to the nearest hundredth is 0.38.\"\n}"
+  },
+  {
+    "case_id": 1,
+    "case_label": "full_text + full_diagram",
+    "run_folder": "Dataset_split\\diagrams\\Setting_1&2\\FTFD",
+    "source_image": "Dataset_split\\diagrams\\Setting_1&2\\FTFD\\327.jpg",
+    "image_path": "C:\\Users\\arpit.chabbra\\Downloads\\noise_injection\\DATASET\\Dataset_split\\diagrams\\Setting_1&2\\FTFD\\327.jpg",
+    "question_text": "During a rescue search, a helicopter flew b kilometres\nwest from point X to point Y, then changed course\nand flew 10.7 kilometres north to point Z. If point Z\nis on a bearing of 335° T from point X:\nNow, if the distance that the helicopter must fly\nbetween point Z and point X is d kilometres,\ncalculate d to one decimal place.",
+    "problem_index": 327,
+    "model": "meta-llama/llama-4-scout",
+    "run_number": 3,
+    "model_output": {
+      "ANSWER": "11.8",
+      "REASONING": "Using Pythagoras' theorem after finding b with trigonometric ratios."
+    },
+    "status": "OK_AFTER_JSON_REPAIR",
+    "raw_response": "## Step 1: Understand the problem and visualize the situation\nThe helicopter flies from point X to point Y, a distance of $b$ kilometers west, then from point Y to point Z, a distance of 10.7 kilometers north. Point Z is on a bearing of 335° from point X.\n\n## 2: Determine the angle and sides of the triangle\nGiven that the bearing of point Z from point X is 335°, and assuming north is 0° or 360°, the angle $ZXN$ (where $N$ is directly north of $X$) is $335° - 270° = 65°$ because west is 270° and the bearing given is in a clockwise direction from north.\n\n## 3: Apply trigonometric principles to solve for d\nWe can use the cosine rule or recognize that the triangle $XYZ$ can be solved using basic trigonometry since we know one side (10.7 km) and the angle between the north line and the line $XZ$. However, given $b$ is west and 10.7 km is north, we can directly apply trigonometric ratios.\n\n## 4: Calculate b\nFirst, let's find $b$. Since $\\tan(65°) = \\frac{10.7}{b}$, rearranging gives $b = \\frac{10.7}{\\tan(65°)}$. Calculating, $\\tan(65°) \\approx 2.145$, so $b \\approx \\frac{10.7}{2.145} \\approx 5.0$ km.\n\n## 5: Apply Pythagoras' theorem to find d\nNow, we can find $d$ using Pythagoras' theorem: $d^2 = b^2 + 10.7^2$. Substituting $b \\approx 5.0$ km, we get $d^2 = 5.0^2 + 10.7^2 = 25 + 114.49 = 139.49$. So, $d = \\sqrt{139.49} \\approx 11.8$ km.\n\n## 6: Verify with cosine rule for confirmation (optional)\nFor confirmation, we could use the cosine rule: $d^2 = b^2 + 10.7^2 - 2 \\cdot b \\cdot 10.7 \\cdot \\cos(90° - 65°)$, but since $\\cos(25°) = \\cos(90°-65°)$ and we know $b$ and the angle, let's focus on the direct calculation which matches our needs.\n\nThe final answer is:\n```json\n{\n  \"ANSWER\": \"11.8\",\n  \"REASONING\": \"Using Pythagoras' theorem after finding b with trigonometric ratios.\"\n}\n```",
+    "json_repair_response": "{\n  \"ANSWER\": \"11.8\",\n  \"REASONING\": \"Using Pythagoras' theorem after finding b with trigonometric ratios.\"\n}"
+  },
+  {
+    "case_id": 1,
+    "case_label": "full_text + full_diagram",
+    "run_folder": "Dataset_split\\diagrams\\Setting_1&2\\FTFD",
+    "source_image": "Dataset_split\\diagrams\\Setting_1&2\\FTFD\\348.png",
+    "image_path": "C:\\Users\\arpit.chabbra\\Downloads\\noise_injection\\DATASET\\Dataset_split\\diagrams\\Setting_1&2\\FTFD\\348.png",
+    "question_text": "A helicopter is flying at an altitude of 198\nmetres, at an angle of depression of 44° to its\nlanding pad. What is the distance d between the\nhelicopter and the landing pad? Round your\nanswer to the nearest whole number.",
+    "problem_index": 348,
+    "model": "meta-llama/llama-4-scout",
+    "run_number": 3,
+    "model_output": {
+      "ANSWER": "285",
+      "REASONING": "The problem is solved using the sine function since we know the angle of depression and the altitude of the helicopter. The sine of 44° is used to find the distance d, which is then rounded to the nearest whole number."
+    },
+    "status": "OK"
+  },
+  {
+    "case_id": 1,
+    "case_label": "full_text + full_diagram",
+    "run_folder": "Dataset_split\\diagrams\\Setting_1&2\\FTFD",
+    "source_image": "Dataset_split\\diagrams\\Setting_1&2\\FTFD\\364.jpg",
+    "image_path": "C:\\Users\\arpit.chabbra\\Downloads\\noise_injection\\DATASET\\Dataset_split\\diagrams\\Setting_1&2\\FTFD\\364.jpg",
+    "question_text": "On a suspension bridge, the top of a concrete tower is 35.5\nmetres above the bridge and the connection point for the\nmain cable is 65.9 metres from the tower. Assuming\nthe tower and bridge are perpendicular, what is the length\nof the cable h to two decimal places?",
+    "problem_index": 364,
+    "model": "meta-llama/llama-4-scout",
+    "run_number": 3,
+    "model_output": {
+      "ANSWER": "74.83",
+      "REASONING": "The problem forms a right-angled triangle with the tower's height as one leg (35.5 meters), the distance from the tower to the cable connection point as the other leg (65.9 meters), and the cable length as the hypotenuse. Using the Pythagorean theorem, we calculate the hypotenuse: $h = \\sqrt{35.5^2 + 65.9^2} = \\sqrt{1260.25 + 4338.81} = \\sqrt{5599.06} \\approx 74.83$ meters."
+    },
+    "status": "OK_AFTER_JSON_REPAIR",
+    "raw_response": "## Step 1: Understand the problem and identify the relevant information\nThe problem describes a suspension bridge with a concrete tower and a main cable. The top of the tower is 35.5 meters above the bridge, and the connection point for the main cable is 65.9 meters from the tower. We need to find the length of the cable, denoted as \\(h\\), to two decimal places.\n\n## 2: Recognize the geometric configuration\nThe situation described forms a right-angled triangle, where the height of the tower (35.5 meters) is one leg, the distance from the tower to the connection point of the cable (65.9 meters) is the other leg, and the length of the cable \\(h\\) is the hypotenuse.\n\n## 3: Apply the Pythagorean theorem\nThe Pythagorean theorem states that in a right-angled triangle, the square of the length of the hypotenuse (\\(c\\)) is equal to the sum of the squares of the lengths of the other two sides (\\(a\\) and \\(b\\)). This can be expressed as:\n\\[c^2 = a^2 + b^2\\]\nHere, \\(a = 35.5\\) meters and \\(b = 65.9\\) meters. We need to find \\(c\\), which is \\(h\\).\n\n## 4: Calculate the length of the cable \\(h\\)\nSubstitute the given values into the Pythagorean theorem:\n\\[h^2 = 35.5^2 + 65.9^2\\]\n\\[h^2 = 1260.25 + 4338.81\\]\n\\[h^2 = 5599.06\\]\nNow, take the square root of both sides to solve for \\(h\\):\n\\[h = \\sqrt{5599.06}\\]\n\\[h \\approx 74.83\\]\n\n## 5: Round the answer to two decimal places\nThe calculated value of \\(h\\) is already precise to two decimal places.\n\nThe final answer is:\n{\n  \"ANSWER\": \"74.83\",\n  \"REASONING\": \"The problem forms a right-angled triangle with the tower's height as one leg (35.5 meters), the distance from the tower to the cable connection point as the other leg (65.9 meters), and the cable length as the hypotenuse. Using the Pythagorean theorem, we calculate the hypotenuse: $h = \\\\sqrt{35.5^2 + 65.9^2} = \\\\sqrt{1260.25 + 4338.81} = \\\\sqrt{5599.06} \\\\approx 74.83$ meters.\"\n}",
+    "json_repair_response": "{\n  \"ANSWER\": \"74.83\",\n  \"REASONING\": \"The problem forms a right-angled triangle with the tower's height as one leg (35.5 meters), the distance from the tower to the cable connection point as the other leg (65.9 meters), and the cable length as the hypotenuse. Using the Pythagorean theorem, we calculate the hypotenuse: $h = \\\\sqrt{35.5^2 + 65.9^2} = \\\\sqrt{1260.25 + 4338.81} = \\\\sqrt{5599.06} \\\\approx 74.83$ meters.\"\n}"
+  },
+  {
+    "case_id": 1,
+    "case_label": "full_text + full_diagram",
+    "run_folder": "Dataset_split\\diagrams\\Setting_1&2\\FTFD",
+    "source_image": "Dataset_split\\diagrams\\Setting_1&2\\FTFD\\365.jpg",
+    "image_path": "C:\\Users\\arpit.chabbra\\Downloads\\noise_injection\\DATASET\\Dataset_split\\diagrams\\Setting_1&2\\FTFD\\365.jpg",
+    "question_text": "A plane is 10369 metres above the ground and 23444 metres from the airport runway. If\ntheta degrees is the angle of approach, what is the value of theta to one decimal place?",
+    "problem_index": 365,
+    "model": "meta-llama/llama-4-scout",
+    "run_number": 3,
+    "model_output": {
+      "ANSWER": "23.9",
+      "REASONING": "To find the angle of approach, theta, we can use the tangent function from trigonometry. The tangent of theta is equal to the opposite side (the height of the plane) divided by the adjacent side (the distance from the plane to the airport runway). So, tan(theta) = 10369 / 23444. Using a calculator to find the inverse tangent (arctangent) of both sides gives us theta = arctan(10369 / 23444). Calculating this gives theta ≈ 23.9 degrees to one decimal place."
+    },
+    "status": "OK"
+  },
+  {
+    "case_id": 1,
+    "case_label": "full_text + full_diagram",
+    "run_folder": "Dataset_split\\diagrams\\Setting_1&2\\FTFD",
+    "source_image": "Dataset_split\\diagrams\\Setting_1&2\\FTFD\\420.jpg",
+    "image_path": "C:\\Users\\arpit.chabbra\\Downloads\\noise_injection\\DATASET\\Dataset_split\\diagrams\\Setting_1&2\\FTFD\\420.jpg",
+    "question_text": "A trapezium ABCD has AB||CD. The right side BC has length\n10 cm. From vertex B, a perpendicular segment of length 6 cm\nis drawn to the line containing side AD (outside the\ntrapezium). The top side AB has length x. Determine the value\nof x.",
+    "problem_index": 420,
+    "model": "meta-llama/llama-4-scout",
+    "run_number": 3,
+    "model_output": {
+      "ANSWER": "8",
+      "REASONING": "Using Pythagoras theorem on the right triangle formed by the height of the trapezium (6 cm), and the difference in lengths of the bases, we found EC = 8 cm. This implies the difference between the bases is 8 cm. For a trapezium with these properties and given the right triangle with sides 6, 8, 10, the top side AB (x) must be equal to the bottom side minus 8 cm. Given a standard Pythagorean triple (6,8,10), and assuming standard properties of such geometric figures, AB = 8."
+    },
+    "status": "OK_AFTER_JSON_REPAIR",
+    "raw_response": "## Step 1: Understand the given problem and recall the properties of a trapezium.\nA trapezium is a quadrilateral with one pair of parallel sides. In this case, we have trapezium ABCD with AB||CD. We are given that the length of BC is 10 cm, and a perpendicular segment from vertex B to the line containing side AD has a length of 6 cm.\n\n## 2: Identify the geometric relationship.\nSince the segment from B is perpendicular to line AD, it forms a right-angled triangle with the extension of AB and the line AD. Let's denote the point where this perpendicular meets line AD as E. The length of BE is given as 6 cm.\n\n## 3: Apply geometric principles to find the relationship between the sides.\nGiven that AB is parallel to CD, and BE is perpendicular to AD, triangle BEC is a right triangle because BE is perpendicular to line AD, and by extension, to line DC since DC is parallel to AB.\n\n## 4: Determine the relevant triangle and apply Pythagoras theorem.\nHowever, to directly solve for x (the length of AB), we need to consider the right triangle formed by the height of the trapezium (6 cm), and the difference in lengths of the bases (CD - AB) which would form one leg of a larger right triangle with hypotenuse BC = 10 cm.\n\n## 5: Apply Pythagoras theorem to find the difference in bases.\nUsing Pythagoras theorem in triangle BEC: $BC^2 = BE^2 + EC^2$. Here, $BC = 10$ cm and $BE = 6$ cm. So, $10^2 = 6^2 + EC^2$.\n\n## 6: Solve for EC.\n$100 = 36 + EC^2$. Therefore, $EC^2 = 100 - 36 = 64$. So, $EC = \\sqrt{64} = 8$ cm.\n\n## 7: Understand the significance of EC in relation to AB and CD.\nEC represents the difference in lengths between the parallel sides CD and AB because it is the projection of BC on the line AD (or its extension), and since AB||CD, this difference directly relates to the lengths of AB and CD.\n\n## 8: Establish the relationship between AB, CD, and EC.\nHowever, to find AB (denoted as x), we need to consider that EC is the difference between CD and AB, i.e., $CD - AB = 8$ cm.\n\n## 9: Consider similar triangles or additional properties.\nSince we're looking for AB and we know that $CD = AB + 8$, without a direct value for CD or AB, we recall that in similar triangles or specific trapezium properties, direct calculation from given data is needed.\n\n## 10: Solve for x using given and derived information.\nGiven that $BC = 10$ cm, $BE = 6$ cm, and thus $EC = 8$ cm, and considering the right triangle that would be formed with AB, we actually look at the direct relation: if we consider the triangle that has a base equal to the difference between the parallel sides (which we found to be 8 cm) and height 6 cm, and hypotenuse 10 cm, we see that AB (x) directly relates to maintaining the trapezium's properties.\n\n## 11: Realize the direct calculation approach.\nThe direct calculation from previous steps leads to understanding that $x = CD - 8$. But to find x directly from given data without additional relationships, recall that for the triangle with sides 6, 8, and 10, it's a Pythagorean triple.\n\n## 12: Apply the correct formula or principle to solve for x.\nSince the triangle formed by the height (6 cm), the base difference (8 cm), and BC (10 cm) uses the Pythagorean triple (6, 8, 10), and given that this setup directly informs us about the side lengths' relationship, we note that to directly compute x without overcomplicating: if the bottom side were equal to top side, the right triangle's base would be 0. The 8 cm difference allows a direct computation considering similar figures or proportions.\n\nThe answer is:\n```json\n{\n  \"ANSWER\": \"8\",\n  \"REASONING\": \"Using Pythagoras theorem on the right triangle formed by the height of the trapezium (6 cm), and the difference in lengths of the bases, we found EC = 8 cm. This implies the difference between the bases is 8 cm. For a trapezium with these properties and given the right triangle with sides 6, 8, 10, the top side AB (x) must be equal to the bottom side minus 8 cm. Given a standard Pythagorean triple (6,8,10), and assuming standard properties of such geometric figures, AB = 8.\"\n}\n```",
+    "json_repair_response": "```json\n{\n  \"ANSWER\": \"8\",\n  \"REASONING\": \"Using Pythagoras theorem on the right triangle formed by the height of the trapezium (6 cm), and the difference in lengths of the bases, we found EC = 8 cm. This implies the difference between the bases is 8 cm. For a trapezium with these properties and given the right triangle with sides 6, 8, 10, the top side AB (x) must be equal to the bottom side minus 8 cm. Given a standard Pythagorean triple (6,8,10), and assuming standard properties of such geometric figures, AB = 8.\"\n}\n```"
+  },
+  {
+    "case_id": 1,
+    "case_label": "full_text + full_diagram",
+    "run_folder": "Dataset_split\\diagrams\\Setting_1&2\\FTFD",
+    "source_image": "Dataset_split\\diagrams\\Setting_1&2\\FTFD\\432.jpg",
+    "image_path": "C:\\Users\\arpit.chabbra\\Downloads\\noise_injection\\DATASET\\Dataset_split\\diagrams\\Setting_1&2\\FTFD\\432.jpg",
+    "question_text": "Find the distance between the two endpoints using the distance formula. The two endpoints of the line are (-3, 4) and (5, 2), respectively. Round to three decimal places.",
+    "problem_index": 432,
+    "model": "meta-llama/llama-4-scout",
+    "run_number": 3,
+    "model_output": {
+      "ANSWER": "8.246",
+      "REASONING": "Using the distance formula with the given endpoints (-3, 4) and (5, 2), we calculated the distance to be approximately 8.246 after rounding to three decimal places."
+    },
+    "status": "OK_AFTER_JSON_REPAIR",
+    "raw_response": "## Step 1: Identify the coordinates of the two endpoints\nThe coordinates of the two endpoints are given as $(-3, 4)$ and $(5, 2)$.\n\n## Step 2: Recall the distance formula\nThe distance formula between two points $(x_1, y_1)$ and $(x_2, y_2)$ is given by:\n\\[d = \\sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2}\\]\n\n## Step 3: Substitute the given coordinates into the distance formula\nSubstitute $(-3, 4)$ for $(x_1, y_1)$ and $(5, 2)$ for $(x_2, y_2)$:\n\\[d = \\sqrt{(5 - (-3))^2 + (2 - 4)^2}\\]\n\n## 4: Perform the arithmetic operations inside the square root\n\\[d = \\sqrt{(5 + 3)^2 + (-2)^2}\\]\n\\[d = \\sqrt{(8)^2 + (-2)^2}\\]\n\\[d = \\sqrt{64 + 4}\\]\n\\[d = \\sqrt{68}\\]\n\n## 5: Calculate the square root and round to three decimal places\n\\[d = \\sqrt{68}\\]\n\\[d \\approx 8.246...\\]\n\n## 6: Round the result to three decimal places\n\\[d \\approx 8.246\\]\n\nThe final answer is:\n{\n  \"ANSWER\": \"8.246\",\n  \"REASONING\": \"Using the distance formula with the given endpoints (-3, 4) and (5, 2), we calculated the distance to be approximately 8.246 after rounding to three decimal places.\"\n}",
+    "json_repair_response": "{\"ANSWER\": \"8.246\", \"REASONING\": \"Using the distance formula with the given endpoints (-3, 4) and (5, 2), we calculated the distance to be approximately 8.246 after rounding to three decimal places.\"}",
+    "json_retry_attempts": 1
+  },
+  {
+    "case_id": 1,
+    "case_label": "full_text + full_diagram",
+    "run_folder": "Dataset_split\\diagrams\\Setting_1&2\\FTFD",
+    "source_image": "Dataset_split\\diagrams\\Setting_1&2\\FTFD\\438.jpg",
+    "image_path": "C:\\Users\\arpit.chabbra\\Downloads\\noise_injection\\DATASET\\Dataset_split\\diagrams\\Setting_1&2\\FTFD\\438.jpg",
+    "question_text": "A hyperbola has two vertices at (2, −3) and (–8, –3), a center at (−3, –3), and foci\nat (-3-5√2, -3) and (−3+5√2, –3). What is the equation of the hyperbola?",
+    "problem_index": 438,
+    "model": "meta-llama/llama-4-scout",
+    "run_number": 3,
+    "model_output": {
+      "ANSWER": "\\frac{(x+3)^2}{25} - \\frac{(y+3)^2}{25} = 1",
+      "REASONING": "The hyperbola has a horizontal transverse axis. The center is at $(-3, -3)$, $a = 5$, and $b = 5$. Using the standard form for a hyperbola with a horizontal transverse axis, we get the equation as \\frac{(x+3)^2}{25} - \\frac{(y+3)^2}{25} = 1."
+    },
+    "status": "OK_AFTER_JSON_REPAIR",
+    "raw_response": "## Step 1: Identify the key components of the hyperbola\nThe vertices are at $(2, -3)$ and $(-8, -3)$, the center is at $(-3, -3)$, and the foci are at $(-3-5\\sqrt{2}, -3)$ and $(-3+5\\sqrt{2}, -3)$. The center, vertices, and foci all lie on the line $y = -3$, which is horizontal.\n\n## Step 2: Determine the orientation of the hyperbola\nSince the vertices and foci share the same $y$-coordinate, the transverse axis of the hyperbola is horizontal.\n\n## 3: Calculate the distance between the vertices and the center\nThe distance from the center $(-3, -3)$ to one of the vertices $(2, -3)$ is $a = |2 - (-3)| = 5$.\n\n## 4: Calculate the distance between the foci and the center\nThe distance from the center $(-3, -3)$ to one of the foci $(-3+5\\sqrt{2}, -3)$ is $c = |-3+5\\sqrt{2} - (-3)| = 5\\sqrt{2}$.\n\n## 5: Calculate $b^2$\nFor a hyperbola, $c^2 = a^2 + b^2$. We know $c = 5\\sqrt{2}$ and $a = 5$. So, $c^2 = (5\\sqrt{2})^2 = 50$ and $a^2 = 5^2 = 25$. Therefore, $b^2 = c^2 - a^2 = 50 - 25 = 25$.\n\n## 6: Write the equation of the hyperbola\nThe standard form of the equation for a hyperbola with a horizontal transverse axis is $\\frac{(x-h)^2}{a^2} - \\frac{(y-k)^2}{b^2} = 1$, where $(h, k)$ is the center of the hyperbola. Given the center $(-3, -3)$, $a^2 = 25$, and $b^2 = 25$, the equation becomes $\\frac{(x-(-3))^2}{25} - \\frac{(y-(-3))^2}{25} = 1$.\n\n## 7: Simplify the equation\n$\\frac{(x+3)^2}{25} - \\frac{(y+3)^2}{25} = 1$.\n\nThe final answer is:\n\n```json\n{\n  \"ANSWER\": \"\\\\frac{(x+3)^2}{25} - \\\\frac{(y+3)^2}{25} = 1\",\n  \"REASONING\": \"The hyperbola has a horizontal transverse axis. The center is at $(-3, -3)$, $a = 5$, and $b = 5$. Using the standard form for a hyperbola with a horizontal transverse axis, we get the equation as \\\\frac{(x+3)^2}{25} - \\\\frac{(y+3)^2}{25} = 1.\"\n}\n```",
+    "json_repair_response": "{\n  \"ANSWER\": \"\\\\frac{(x+3)^2}{25} - \\\\frac{(y+3)^2}{25} = 1\",\n  \"REASONING\": \"The hyperbola has a horizontal transverse axis. The center is at $(-3, -3)$, $a = 5$, and $b = 5$. Using the standard form for a hyperbola with a horizontal transverse axis, we get the equation as \\\\frac{(x+3)^2}{25} - \\\\frac{(y+3)^2}{25} = 1.\"\n}"
+  },
+  {
+    "case_id": 1,
+    "case_label": "full_text + full_diagram",
+    "run_folder": "Dataset_split\\diagrams\\Setting_1&2\\FTFD",
+    "source_image": "Dataset_split\\diagrams\\Setting_1&2\\FTFD\\441.jpg",
+    "image_path": "C:\\Users\\arpit.chabbra\\Downloads\\noise_injection\\DATASET\\Dataset_split\\diagrams\\Setting_1&2\\FTFD\\441.jpg",
+    "question_text": "An angle a is in standard position with its terminal side intersecting\na unit circle at P(3/5, 4/5). What is the value of sin a?",
+    "problem_index": 441,
+    "model": "meta-llama/llama-4-scout",
+    "run_number": 3,
+    "model_output": {
+      "ANSWER": "\\frac{4}{5}",
+      "REASONING": "The sine of an angle in standard position is the y-coordinate of the point where the terminal side of the angle intersects a unit circle. Given point P is (3/5, 4/5), the y-coordinate is 4/5."
+    },
+    "status": "OK_AFTER_JSON_REPAIR",
+    "raw_response": "## Step 1: Understand the problem\nThe problem provides a point $P\\left(\\frac{3}{5}, \\frac{4}{5}\\right)$ on a unit circle, which is the intersection point of the terminal side of an angle $a$ in standard position. We need to find the value of $\\sin(a)$.\n\n## 2: Recall the definition of sine in a unit circle\nIn a unit circle, the sine of an angle $a$ is defined as the $y$-coordinate of the point where the terminal side of angle $a$ intersects the unit circle.\n\n## 3: Identify the y-coordinate of point P\nThe $y$-coordinate of point $P$ is given as $\\frac{4}{5}$.\n\n## 4: Determine the value of sin(a)\nSince the $y$-coordinate of point $P$ represents $\\sin(a)$, we have $\\sin(a) = \\frac{4}{5}$.\n\nThe final answer is:\n```json\n{\n  \"ANSWER\": \"\\\\frac{4}{5}\",\n  \"REASONING\": \"The sine of an angle in standard position is the y-coordinate of the point where the terminal side of the angle intersects a unit circle. Given point P is (3/5, 4/5), the y-coordinate is 4/5.\"\n}\n```",
+    "json_repair_response": "{\n  \"ANSWER\": \"\\\\frac{4}{5}\",\n  \"REASONING\": \"The sine of an angle in standard position is the y-coordinate of the point where the terminal side of the angle intersects a unit circle. Given point P is (3/5, 4/5), the y-coordinate is 4/5.\"\n}"
+  },
+  {
+    "case_id": 1,
+    "case_label": "full_text + full_diagram",
+    "run_folder": "Dataset_split\\diagrams\\Setting_1&2\\FTFD",
+    "source_image": "Dataset_split\\diagrams\\Setting_1&2\\FTFD\\447.jpg",
+    "image_path": "C:\\Users\\arpit.chabbra\\Downloads\\noise_injection\\DATASET\\Dataset_split\\diagrams\\Setting_1&2\\FTFD\\447.jpg",
+    "question_text": "An angle a is in standard position with its terminal side intersecting a unit circle at\nP(20/29, -21/29). What is the value of cos a?",
+    "problem_index": 447,
+    "model": "meta-llama/llama-4-scout",
+    "run_number": 3,
+    "model_output": {
+      "ANSWER": "20/29",
+      "REASONING": "The cosine of an angle in standard position is the x-coordinate of the point where the terminal side of the angle intersects the unit circle. Given that point P has coordinates (20/29, -21/29), the x-coordinate is 20/29, which directly gives us the value of cos(a)."
+    },
+    "status": "OK_AFTER_JSON_REPAIR",
+    "raw_response": "## Step 1: Recall the definition of cosine in the context of the unit circle.\nIn the unit circle, the cosine of an angle $a$ is defined as the $x$-coordinate of the point where the terminal side of angle $a$ intersects the unit circle.\n\n## 2: Identify the x-coordinate of point P.\nThe $x$-coordinate of point $P$ is given as $\\frac{20}{29}$.\n\n## 3: Determine the value of $\\cos(a)$.\nSince $\\cos(a)$ is the $x$-coordinate of the point where the terminal side of angle $a$ intersects the unit circle, $\\cos(a) = \\frac{20}{29}$.\n\n## 4: Provide the reasoning and answer in the required format.\nThe value of $\\cos(a)$ is directly obtained from the $x$-coordinate of point $P$.\n\n```json\n{\n  \"ANSWER\": \"20/29\",\n  \"REASONING\": \"The cosine of an angle in standard position is the x-coordinate of the point where the terminal side of the angle intersects the unit circle. Given that point P has coordinates (20/29, -21/29), the x-coordinate is 20/29, which directly gives us the value of cos(a).\"\n}\n```",
+    "json_repair_response": "{\n  \"ANSWER\": \"20/29\",\n  \"REASONING\": \"The cosine of an angle in standard position is the x-coordinate of the point where the terminal side of the angle intersects the unit circle. Given that point P has coordinates (20/29, -21/29), the x-coordinate is 20/29, which directly gives us the value of cos(a).\"\n}"
+  },
+  {
+    "case_id": 1,
+    "case_label": "full_text + full_diagram",
+    "run_folder": "Dataset_split\\diagrams\\Setting_1&2\\FTFD",
+    "source_image": "Dataset_split\\diagrams\\Setting_1&2\\FTFD\\449.jpg",
+    "image_path": "C:\\Users\\arpit.chabbra\\Downloads\\noise_injection\\DATASET\\Dataset_split\\diagrams\\Setting_1&2\\FTFD\\449.jpg",
+    "question_text": "For a unit circle centered at the origin, a point P on the circle has coordinates (x, y). What is the value of sec theta at this point?",
+    "problem_index": 449,
+    "model": "meta-llama/llama-4-scout",
+    "run_number": 3,
+    "model_output": {
+      "ANSWER": "2",
+      "REASONING": "For a unit circle, the secant of an angle theta is the reciprocal of the x-coordinate of the point on the circle. Given that the x-coordinate of point P is 1/2, sec theta = 1 / (1/2) = 2."
+    },
+    "status": "OK_AFTER_JSON_REPAIR",
+    "raw_response": "## Step 1: Understand the problem and recall relevant trigonometric definitions\nThe problem involves a unit circle centered at the origin with a point $P(x, y)$ on the circle. We are asked to find the value of $\\sec \\theta$ for the angle $\\theta$ formed by the line connecting the origin to point $P$ and the positive x-axis. Recall that $\\sec \\theta = \\frac{1}{\\cos \\theta}$ and for a unit circle, $\\cos \\theta = x$.\n\n## 2: Determine the coordinates of point P\nAlthough the exact coordinates of $P(x, y)$ are not given, we know that for a unit circle, $x^2 + y^2 = 1$. However, to find $\\sec \\theta$, we specifically need the value of $x$ because $\\sec \\theta = \\frac{1}{x}$.\n\n## 3: Identify the value of x for point P\nThe image shows that point $P$ is located at $(\\frac{1}{2}, \\frac{\\sqrt{3}}{2})$. Thus, $x = \\frac{1}{2}$.\n\n## 4: Calculate $\\sec \\theta$\nGiven that $\\sec \\theta = \\frac{1}{\\cos \\theta}$ and $\\cos \\theta = x = \\frac{1}{2}$, we can calculate $\\sec \\theta = \\frac{1}{\\frac{1}{2}} = 2$.\n\n## 5: Provide the solution in the required format\nThe solution to the problem is as follows:\n\n```json\n{\n  \"ANSWER\": \"2\",\n  \"REASONING\": \"For a unit circle, the secant of an angle theta is the reciprocal of the x-coordinate of the point on the circle. Given that the x-coordinate of point P is 1/2, sec theta = 1 / (1/2) = 2.\"\n}\n```",
+    "json_repair_response": "{\n  \"ANSWER\": \"2\",\n  \"REASONING\": \"For a unit circle, the secant of an angle theta is the reciprocal of the x-coordinate of the point on the circle. Given that the x-coordinate of point P is 1/2, sec theta = 1 / (1/2) = 2.\"\n}"
+  },
+  {
+    "case_id": 1,
+    "case_label": "full_text + full_diagram",
+    "run_folder": "Dataset_split\\diagrams\\Setting_1&2\\FTFD",
+    "source_image": "Dataset_split\\diagrams\\Setting_1&2\\FTFD\\457.png",
+    "image_path": "C:\\Users\\arpit.chabbra\\Downloads\\noise_injection\\DATASET\\Dataset_split\\diagrams\\Setting_1&2\\FTFD\\457.png",
+    "question_text": "A circle has its center at (1, 3) and a radius of 6.\nWhat is the equation of the circle in standard form?",
+    "problem_index": 457,
+    "model": "meta-llama/llama-4-scout",
+    "run_number": 3,
+    "model_output": {
+      "ANSWER": "(x - 1)^2 + (y - 3)^2 = 36",
+      "REASONING": "The standard form of the equation of a circle is $(x - h)^2 + (y - k)^2 = r^2$, where $(h, k)$ is the center of the circle and $r$ is the radius. Given the center $(1, 3)$ and radius $6$, substituting these values into the standard form yields $(x - 1)^2 + (y - 3)^2 = 6^2$, which simplifies to $(x - 1)^2 + (y - 3)^2 = 36$."
+    },
+    "status": "OK",
+    "raw_response": "## Step 1: Recall the standard form of the equation of a circle\nThe standard form of the equation of a circle is given by $(x - h)^2 + (y - k)^2 = r^2$, where $(h, k)$ is the center of the circle and $r$ is the radius.\n\n## Step 2: Identify the center and radius of the circle\nThe center of the circle is given as $(1, 3)$, which means $h = 1$ and $k = 3$. The radius of the circle is given as $6$, so $r = 6$.\n\n## 3: Substitute the values into the standard form of the equation\nSubstitute $h = 1$, $k = 3$, and $r = 6$ into the equation $(x - h)^2 + (y - k)^2 = r^2$ to get the equation of the circle.\n\n## 4: Write the equation with the given values\n$(x - 1)^2 + (y - 3)^2 = 6^2$\n\n## 5: Simplify the equation\n$(x - 1)^2 + (y - 3)^2 = 36$\n\nThe final answer is:\n```json\n{\n  \"ANSWER\": \"(x - 1)^2 + (y - 3)^2 = 36\",\n  \"REASONING\": \"The standard form of the equation of a circle is $(x - h)^2 + (y - k)^2 = r^2$, where $(h, k)$ is the center of the circle and $r$ is the radius. Given the center $(1, 3)$ and radius $6$, substituting these values into the standard form yields $(x - 1)^2 + (y - 3)^2 = 6^2$, which simplifies to $(x - 1)^2 + (y - 3)^2 = 36$.\"\n}\n```",
+    "json_retry_attempts": 1
+  },
+  {
+    "case_id": 1,
+    "case_label": "full_text + full_diagram",
+    "run_folder": "Dataset_split\\diagrams\\Setting_1&2\\FTFD",
+    "source_image": "Dataset_split\\diagrams\\Setting_1&2\\FTFD\\472.jpg",
+    "image_path": "C:\\Users\\arpit.chabbra\\Downloads\\noise_injection\\DATASET\\Dataset_split\\diagrams\\Setting_1&2\\FTFD\\472.jpg",
+    "question_text": "A semicircle passes through the points\n(-7,0), (-5, -5), (0,7), (5, -5), and (7,0).\nWhat is the center of the semicircle?",
+    "problem_index": 472,
+    "model": "meta-llama/llama-4-scout",
+    "run_number": 3,
+    "model_output": {
+      "ANSWER": "(0, -\\frac{1}{10})",
+      "REASONING": "The center of the semicircle is found by using the symmetry of the given points and solving for the center and radius of the circle that passes through these points."
+    },
+    "status": "OK_AFTER_JSON_REPAIR",
+    "raw_response": "## Step 1: Understand the properties of a semicircle\nA semicircle is half of a circle and is defined by its center and radius. All points on the semicircle are equidistant from the center.\n\n## 2: Recall the general equation of a circle\nThe general equation of a circle is \\((x-h)^2 + (y-k)^2 = r^2\\), where \\((h,k)\\) is the center of the circle, and \\(r\\) is the radius.\n\n## 3: Consider the characteristics of the given points\nThe points given are \\((-7,0), (-5, -5), (0,7), (5, -5),\\) and \\((7,0)\\). Since these points lie on a semicircle, they must satisfy the equation of a circle.\n\n## 4: Notice the symmetry of the points\nThe points \\((-7,0)\\) and \\((7,0)\\) are symmetric about the y-axis, and the points \\((-5, -5)\\) and \\((5, -5)\\) are also symmetric about the y-axis. This symmetry suggests that the center of the semicircle (and thus the circle) lies on the y-axis.\n\n## 5: Deduce the x-coordinate of the center\nGiven the symmetry about the y-axis, the x-coordinate of the center of the semicircle must be \\(0\\). Thus, \\(h = 0\\).\n\n## 6: Use the given points to find the center and radius\nSubstitute \\(h = 0\\) into the circle equation: \\(x^2 + (y-k)^2 = r^2\\). We can use any of the given points to solve for \\(k\\) and \\(r\\). Let's use \\((-7,0)\\): \\((-7)^2 + (0-k)^2 = r^2\\), which simplifies to \\(49 + k^2 = r^2\\).\n\n## 7: Use another point to create a second equation\nUsing \\((-5, -5)\\): \\((-5)^2 + (-5-k)^2 = r^2\\), which simplifies to \\(25 + 25 + 10k + k^2 = r^2\\) or \\(50 + 10k + k^2 = r^2\\).\n\n## 8: Equate the two expressions for \\(r^2\\)\nSetting the two expressions for \\(r^2\\) equal to each other: \\(49 + k^2 = 50 + 10k + k^2\\).\n\n## 9: Solve for \\(k\\)\nSimplifying the equation by canceling \\(k^2\\) on both sides gives \\(49 = 50 + 10k\\). Solving for \\(k\\): \\(10k = -1\\), so \\(k = -\\frac{1}{10}\\).\n\n## 10: Determine the center of the semicircle\nThe center of the semicircle (and circle) is \\((h, k) = (0, -\\frac{1}{10})\\).\n\nThe final answer is:\n```\n{\n  \"ANSWER\": \"(0, -\\\\frac{1}{10})\",\n  \"REASONING\": \"The center of the semicircle is found by using the symmetry of the given points and solving for the center and radius of the circle that passes through these points.\"\n}\n```",
+    "json_repair_response": "{\n  \"ANSWER\": \"(0, -\\\\frac{1}{10})\",\n  \"REASONING\": \"The center of the semicircle is found by using the symmetry of the given points and solving for the center and radius of the circle that passes through these points.\"\n}"
+  }
+]

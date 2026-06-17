@@ -1,0 +1,33 @@
+[
+  {
+    "run_folder": "run-2-mistral",
+    "source_csv": "Separate-Modality-Triples\\run-2-mistral\\half_text + noisy_half_diagram[illumination].csv",
+    "model": "mistralai/mistral-small-3.2-24b-instruct",
+    "case_id": 18,
+    "case_label": "half_text + noisy_half_diagram[illumination]",
+    "problem_index": 420,
+    "question": "Determine the value of x",
+    "triples": [
+      "(A, is_a, point)",
+      "(B, is_a, point)",
+      "(C, is_a, point)",
+      "(D, is_a, point)",
+      "(AB, is_a, segment)",
+      "(BC, is_a, segment)",
+      "(CD, is_a, segment)",
+      "(DA, is_a, segment)",
+      "(ABCD, is_a, trapezium)",
+      "(AB, has_measure, 6_cm)",
+      "(CD, has_measure, 10_cm)",
+      "(AB, perpendicular_to, CD)",
+      "(AB, is_a, height)"
+    ],
+    "model_output": {
+      "ANSWER": "30 cm²",
+      "REASONING": "The given triples describe a trapezium ABCD with AB and CD as the two parallel sides (AB perpendicular_to CD). AB is the height of the trapezium, and its measure is 6 cm. CD has a measure of 10 cm. The area of a trapezium is calculated as (1/2) * (sum of the lengths of the parallel sides) * height. Here, the parallel sides are AB and CD, so the area is (1/2) * (6 cm + 10 cm) * 6 cm = 30 cm²."
+    },
+    "status": "OK",
+    "raw_response": "{\n  \"ANSWER\": \"30 cm²\",\n  \"REASONING\": \"The given triples describe a trapezium ABCD with AB and CD as the two parallel sides (AB perpendicular_to CD). AB is the height of the trapezium, and its measure is 6 cm. CD has a measure of 10 cm. The area of a trapezium is calculated as (1/2) * (sum of the lengths of the parallel sides) * height. Here, the parallel sides are AB and CD, so the area is (1/2) * (6 cm + 10 cm) * 6 cm = 30 cm².\"\n}",
+    "recovery_method": "original_prompt"
+  }
+]

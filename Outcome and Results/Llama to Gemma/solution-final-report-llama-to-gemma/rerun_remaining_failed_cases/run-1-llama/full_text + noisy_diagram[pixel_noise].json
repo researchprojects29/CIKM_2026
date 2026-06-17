@@ -1,0 +1,64 @@
+[
+  {
+    "run_folder": "run-1-llama",
+    "source_csv": "LLAMA-Triples\\run-1-llama\\full_text + noisy_diagram[pixel_noise].csv",
+    "case_id": 10,
+    "case_label": "full_text + noisy_diagram[pixel_noise]",
+    "problem_index": 17,
+    "question": "What is the measure of angle COD?",
+    "triples": [
+      "(A, is_a, point)",
+      "(B, is_a, point)",
+      "(C, is_a, point)",
+      "(D, is_a, point)",
+      "(O, is_a, point)",
+      "(ABCD, is_a, parallelogram)",
+      "(AC, is_a, diagonal)",
+      "(BD, is_a, diagonal)",
+      "(AC, intersects, BD)",
+      "(AC, intersects, BD, O)",
+      "(angle DAC, has_measure, 42_deg)",
+      "(angle CBD, has_measure, 23_deg)"
+    ],
+    "model_output": {
+      "ANSWER": "65_deg",
+      "REASONING": "The intersection of diagonals AC and BD in a parallelogram forms four angles. Since ABCD is a parallelogram, AC and BD intersect at O. We know that angle DAC is 42_deg and angle CBD is 23_deg. Angle COD is equal to angle AOB. Also, angle CAB = angle ACD and angle CBA = angle BDA. Since ABCD is a parallelogram, AC and BD bisect each other. Therefore, angle CAD = angle BAD and angle CBD = angle ABD. We have angle DAC = 42_deg and angle CBD = 23_deg. Since AC and BD intersect at O, angle COD = angle AOB. Also, angle AOB + angle BOC + angle COD + angle DOA = 360_deg. Since AC and BD intersect at O, we can deduce that angle COD = angle AOB. Let's consider the angles around point O. We know that angle CAD = 42_deg and angle CBD = 23_deg. Since ABCD is a parallelogram, opposite angles are equal. Also, adjacent angles are supplementary. Therefore, angle CAB + angle ABC = 180_deg. We have angle CAB = angle CAD = 42_deg and angle ABC = angle CBD = 23_deg. So, angle CAB + angle ABC = 42_deg + 23_deg = 65_deg. Thus, angle COD = 65_deg."
+    },
+    "status": "OK",
+    "raw_response": "```json\n{\n  \"ANSWER\": \"65_deg\",\n  \"REASONING\": \"The intersection of diagonals AC and BD in a parallelogram forms four angles. Since ABCD is a parallelogram, AC and BD intersect at O. We know that angle DAC is 42_deg and angle CBD is 23_deg. Angle COD is equal to angle AOB. Also, angle CAB = angle ACD and angle CBA = angle BDA. Since ABCD is a parallelogram, AC and BD bisect each other. Therefore, angle CAD = angle BAD and angle CBD = angle ABD. We have angle DAC = 42_deg and angle CBD = 23_deg. Since AC and BD intersect at O, angle COD = angle AOB. Also, angle AOB + angle BOC + angle COD + angle DOA = 360_deg. Since AC and BD intersect at O, we can deduce that angle COD = angle AOB. Let's consider the angles around point O. We know that angle CAD = 42_deg and angle CBD = 23_deg. Since ABCD is a parallelogram, opposite angles are equal. Also, adjacent angles are supplementary. Therefore, angle CAB + angle ABC = 180_deg. We have angle CAB = angle CAD = 42_deg and angle ABC = angle CBD = 23_deg. So, angle CAB + angle ABC = 42_deg + 23_deg = 65_deg. Thus, angle COD = 65_deg.\"\n}\n```",
+    "recovery_method": "original_prompt"
+  },
+  {
+    "run_folder": "run-1-llama",
+    "source_csv": "LLAMA-Triples\\run-1-llama\\full_text + noisy_diagram[pixel_noise].csv",
+    "case_id": 10,
+    "case_label": "full_text + noisy_diagram[pixel_noise]",
+    "problem_index": 210,
+    "question": "What is the length of AE?",
+    "triples": [
+      "(A, is_a, point)",
+      "(B, is_a, point)",
+      "(C, is_a, point)",
+      "(D, is_a, point)",
+      "(E, is_a, point)",
+      "(AB, is_a, segment)",
+      "(AC, is_a, segment)",
+      "(AE, is_a, segment)",
+      "(ED, is_a, segment)",
+      "(ABE, is_a, triangle)",
+      "(ACD, is_a, triangle)",
+      "(BE, parallel_to, CD)",
+      "(AB, has_measure, 12_units)",
+      "(AC, has_measure, 16_units)",
+      "(ED, has_measure, 5_units)"
+    ],
+    "model_output": {
+      "ANSWER": "15",
+      "REASONING": "The provided text states that AE = 15."
+    },
+    "status": "OK_AFTER_JSON_REPAIR",
+    "raw_response": "```json\n{\n  \"ANSWER\": \"17\",\n  \"REASONING\": \"We are asked to find the length of AE. We know AB has a measure of 12 units and AC has a measure of 16 units. Also, AC = AE + EC. We are given that AB = 12 and AC = 16. Since AC = AE + EC, we can write 16 = AE + EC. We also know that ED = 5. We are not given the length of EC, but we can deduce it. Since BE is parallel to CD, we have that triangle ABE is similar to triangle ACD. However, this information doesn't directly help us find AE. Instead, we can consider the triangle ACD. We know AC = 16 and ED = 5. We also know that AC = AE + EC, so EC = AC - AE = 16 - AE. We can't directly use the similarity of triangles to solve this.\n\nLet's reconsider the given information. We have AB = 12 and AC = 16. We want to find AE. Since AE is a segment, we can consider the triangle ABE. We are given that ABE is a triangle. However, we don't have enough information to determine AE directly.\n\nWe are given AB = 12 and AC = 16. We also know that AE is a segment. We can assume that A, B, C, and E are points on a line. Then AE = AC - EC. We are given ED = 5. We can't directly relate these lengths.\n\nHowever, we can consider the triangle ACD. We have AC = 16 and ED = 5. We are looking for AE. Since BE is parallel to CD, we have that triangle ABE is similar to triangle ACD. This means that $\\frac{AB}{AC} = \\frac{AE}{AD}$. We don't know AD.\n\nLet's assume that A, B, C, and E are points such that AE is a segment. We have AB = 12 and AC = 16. We also have ED = 5. We want to find AE. Since BE is parallel to CD, we can't directly use this information.\n\nWe are given AB = 12 and AC = 16. We want to find AE. We can assume that A, B, C, and E are points such that AE is a segment. Since AC = AE + EC, we have 16 = AE + EC. We are given ED = 5. We can't directly relate these lengths.\n\nLet's consider the triangle ACD. We have AC = 16 and ED = 5. We want to find AE. Since BE is parallel to CD, we can't directly use this information.\n\nHowever, we can consider the triangle ABE and ACD. Since BE is parallel to CD, we have $\\angle ABE = \\angle ACD$ and $\\angle BAE = \\angle CAD$. Thus, $\\triangle ABE \\sim \\triangle ACD$.\nTherefore, $\\frac{AB}{AC} = \\frac{AE}{AD} = \\frac{BE}{CD}$.\nWe have $\\frac{AB}{AC} = \\frac{12}{16} = \\frac{3}{4}$.\nSo $\\frac{AE}{AD} = \\frac{3}{4}$.\nWe also have ED = 5.\nWe are looking for AE.\nSince AC = AE + EC, we have EC = AC - AE = 16 - AE.\nWe have $\\frac{AE}{AD} = \\frac{3}{4}$, so $AD = \\frac{4}{3} AE$.\nAlso, $AD = AE + ED = AE + 5$.\nSo $\\frac{4}{3} AE = AE + 5$.\nMultiplying by 3, we get $4 AE = 3 AE + 15$, so $AE = 15$.\n\nHowever, this is incorrect.\nWe have AB = 12 and AC = 16. We want to find AE.\nSince BE is parallel to CD, we have $\\triangle ABE \\sim \\triangle ACD$.\nThus, $\\frac{AB}{AC} = \\frac{AE}{AD} = \\frac{BE}{CD}$.\nWe have $\\frac{AB}{AC} = \\frac{12}{16} = \\frac{3}{4}$.\nSo $\\frac{AE}{AD} = \\frac{3}{4}$.\nWe also have ED = 5.\nWe have AD = AE + ED = AE + 5.\nSo $\\frac{AE}{AE+5} = \\frac{3}{4}$.\n$4 AE = 3(AE+5)$\n$4 AE = 3 AE + 15$\n$AE = 15$.\n\nLet's reconsider. We have AB = 12 and AC = 16. We want to find AE.\nSince BE is parallel to CD, we have $\\triangle ABE \\sim \\triangle ACD$.\nThus, $\\frac{AB}{AC} = \\frac{AE}{AD} = \\frac{BE}{CD}$.\nWe have $\\frac{AB}{AC} = \\frac{12}{16} = \\frac{3}{4}$.\nSo $\\frac{AE}{AD} = \\frac{3}{4}$.\nWe have AD = AE + ED = AE + 5.\nSo $\\frac{AE}{AE+5} = \\frac{3",
+    "json_repair_response": "```json\n{\n  \"ANSWER\": \"15\",\n  \"REASONING\": \"The provided text states that AE = 15.\"\n}\n```",
+    "recovery_method": "repair_original_response"
+  }
+]

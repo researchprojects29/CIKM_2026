@@ -1,0 +1,59 @@
+[
+  {
+    "run_folder": "first run",
+    "source_csv": "first run\\noisy_half_text[numeric] + half_diagram.csv",
+    "case_id": 12,
+    "case_label": "noisy_half_text[numeric] + half_diagram",
+    "problem_index": 157,
+    "question": "What is the value of cos(B)?",
+    "triples": [
+      "(A, is_a, point)",
+      "(B, is_a, point)",
+      "(C, is_a, point)",
+      "(AB, is_a, segment)",
+      "(AC, is_a, segment)",
+      "(BC, is_a, segment)",
+      "(∠BAC, is_a, angle)",
+      "(∠ABC, is_a, angle)",
+      "(∠ACB, is_a, angle)",
+      "(AC, has_measure, 4.0)",
+      "(BC, has_measure, 3.0)",
+      "(∠BAC, has_measure, 90.0)"
+    ],
+    "model_output": {
+      "ANSWER": "0.8",
+      "REASONING": "The provided text describes a right triangle ABC with AC = 4.0 and BC = 3.0, and ∠BAC = 90.0. Using the Pythagorean theorem, AB^2 = AC^2 + BC^2 = 4.0^2 + 3.0^2 = 16 + 9 = 25, so AB = 5.0. Then cos(B) = AC/AB = 4.0/5.0 = 0.8."
+    },
+    "status": "OK_AFTER_JSON_REPAIR",
+    "raw_response": "```json\n{\n  \"ANSWER\": \"sqrt(2)\",\n  \"REASONING\": \"We are given a triangle ABC with AC = 4.0 and BC = 3.0, and ∠BAC = 90.0. We want to find cos(B). Since ∠BAC = 90.0, triangle ABC is a right triangle with right angle at A. We can use the Pythagorean theorem to find AB: AB^2 + AC^2 = BC^2, so AB^2 + 4.0^2 = 3.0^2, which is AB^2 + 16 = 9. This is impossible since AB^2 must be positive. However, we are given AC = 4.0 and BC = 3.0, and ∠BAC = 90.0. This means AB is the hypotenuse. So, AB^2 = AC^2 + BC^2 = 4.0^2 + 3.0^2 = 16 + 9 = 25. Therefore, AB = 5.0. Now we can find cos(B) using the definition of cosine in a right triangle: cos(B) = adjacent/hypotenuse = AC/AB = 4.0/5.0 = 0.8. However, the problem asks for cos(B), and we have a right triangle with AC = 4.0 and BC = 3.0, and ∠BAC = 90.0. Thus, AB is the hypotenuse. We can use the Pythagorean theorem: AB^2 = AC^2 + BC^2 = 4.0^2 + 3.0^2 = 16 + 9 = 25, so AB = 5.0. Then cos(B) = AC/AB = 4.0/5.0 = 0.8. Alternatively, we can use the definition of cosine in a right triangle: cos(B) = BC/AB = 3.0/5.0 = 0.6. Since we are given that AC = 4.0 and BC = 3.0, and ∠BAC = 90.0, we have a right triangle. We can use the Pythagorean theorem to find AB: AB^2 = AC^2 + BC^2 = 4.0^2 + 3.0^2 = 16 + 9 = 25, so AB = 5.0. Then cos(B) = AB/BC = 5.0/3.0 = 5/3. This is incorrect. We are looking for cos(B), where B is the angle at vertex B. We have AC = 4.0 and BC = 3.0. Using the law of cosines: BC^2 = AB^2 + AC^2 - 2 * AB * AC * cos(A) and AC^2 = AB^2 + BC^2 - 2 * AB * BC * cos(B). We know that ∠BAC = 90.0, so A = 90.0. Then AC^2 = AB^2 + BC^2, so 4.0^2 = AB^2 + 3.0^2, which gives AB^2 = 16 - 9 = 7, so AB = sqrt(7). cos(B) = AC/BC = 4.0/3.0 = 4/3. This is incorrect. Let's reconsider the problem. We have a right triangle ABC with ∠BAC = 90.0. We are given AC = 4.0 and BC = 3.0. Then AB is the hypotenuse. By the Pythagorean theorem, AB^2 = AC^2 + BC^2 = 4.0^2 + 3.0^2 = 16 + 9 = 25, so AB = 5.0. Then cos(B) = AC/AB = 4.0/5.0 = 0.8.\n}\n```",
+    "json_repair_response": "```json\n{\n  \"ANSWER\": \"0.8\",\n  \"REASONING\": \"The provided text describes a right triangle ABC with AC = 4.0 and BC = 3.0, and ∠BAC = 90.0. Using the Pythagorean theorem, AB^2 = AC^2 + BC^2 = 4.0^2 + 3.0^2 = 16 + 9 = 25, so AB = 5.0. Then cos(B) = AC/AB = 4.0/5.0 = 0.8.\"\n}\n```",
+    "recovery_method": "repair_original_response"
+  },
+  {
+    "run_folder": "first run",
+    "source_csv": "first run\\noisy_half_text[numeric] + half_diagram.csv",
+    "case_id": 12,
+    "case_label": "noisy_half_text[numeric] + half_diagram",
+    "problem_index": 281,
+    "question": "What is the ratio of cos(B) expressed as a decimal to the nearest hundredth?",
+    "triples": [
+      "(A, is_a, point)",
+      "(B, is_a, point)",
+      "(C, is_a, point)",
+      "(AB, is_a, segment)",
+      "(AC, is_a, segment)",
+      "(BC, is_a, segment)",
+      "(∠AOB, has_measure, 90_deg)",
+      "(AC, has_measure, 24)",
+      "(BC, has_measure, 10)"
+    ],
+    "model_output": {
+      "ANSWER": "0.38",
+      "REASONING": "The assistant calculates cos(B) as 10/26 = 5/13 ≈ 0.3846. Rounding to the nearest hundredth, cos(B) is 0.38."
+    },
+    "status": "OK_AFTER_JSON_REPAIR",
+    "raw_response": "```json\n{\n  \"ANSWER\": \"0.99\",\n  \"REASONING\": \"We are asked to find the ratio of cos(B) to the nearest hundredth. We have a triangle ABC with AC = 24 and BC = 10. We can use the Pythagorean theorem to find AB. AB^2 = AC^2 + BC^2 = 24^2 + 10^2 = 576 + 100 = 676. Therefore, AB = sqrt(676) = 26. Now we can find cos(B) using the cosine formula: cos(B) = (AB^2 + BC^2 - AC^2) / (2 * AB * BC) = (26^2 + 10^2 - 24^2) / (2 * 26 * 10) = (676 + 100 - 576) / 520 = (100) / 520 = 1/5.2 = 0.1923... Rounding to the nearest hundredth, cos(B) ≈ 0.19. However, the question asks for the ratio of cos(B) to the nearest hundredth. Since cos(B) is approximately 0.1923, the ratio is 0.1923 / 0.19 = 10.11. This is incorrect. Let's re-evaluate. We want the ratio of cos(B) to the nearest hundredth. cos(B) = adjacent/hypotenuse = BC/AB = 10/26 = 5/13 ≈ 0.3846. The ratio is 0.3846 / 0.38 = 1.01. This is also incorrect. We are asked for the ratio of cos(B) to the nearest hundredth. We have cos(B) = BC/AB = 10/26 = 5/13 ≈ 0.3846. The ratio is cos(B) = 5/13 ≈ 0.3846. To the nearest hundredth, this is 0.38. The question asks for the ratio of cos(B) to the nearest hundredth. We have cos(B) = 10/26 = 5/13 ≈ 0.3846. The ratio is 0.3846/0.38 = 1.01. This is still incorrect. Let's reconsider the question. We are asked for the ratio of cos(B) to the nearest hundredth. We have cos(B) = BC/AB = 10/26 = 5/13 ≈ 0.3846. The ratio is cos(B) = 5/13 ≈ 0.3846. To the nearest hundredth, this is 0.38. The question asks for the ratio of cos(B) to the nearest hundredth. We are looking for cos(B) / (cos(B) to the nearest hundredth). This is not a valid question. We are looking for the value of cos(B) to the nearest hundredth. cos(B) = 10/26 = 5/13 ≈ 0.3846 ≈ 0.38.\n}",
+    "json_repair_response": "```json\n{\n  \"ANSWER\": \"0.38\",\n  \"REASONING\": \"The assistant calculates cos(B) as 10/26 = 5/13 ≈ 0.3846. Rounding to the nearest hundredth, cos(B) is 0.38.\"\n}\n```",
+    "recovery_method": "repair_original_response"
+  }
+]

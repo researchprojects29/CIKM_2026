@@ -1,0 +1,49 @@
+[
+  {
+    "run_folder": "run-1-mistral",
+    "source_csv": "run-1-mistral\\half_text + noisy_half_diagram[irr_objects].csv",
+    "case_id": 19,
+    "case_label": "half_text + noisy_half_diagram[irr_objects]",
+    "problem_index": 210,
+    "question": "What is the length of AE?",
+    "triples": [
+      "(A, is_a, point)",
+      "(B, is_a, point)",
+      "(C, is_a, point)",
+      "(D, is_a, point)",
+      "(E, is_a, point)",
+      "(AB, is_a, segment)",
+      "(AC, is_a, segment)",
+      "(AE, is_a, segment)",
+      "(CD, is_a, segment)",
+      "(BE, is_a, segment)",
+      "(ABE, is_a, triangle)",
+      "(ACD, is_a, triangle)",
+      "(A, connects, B)",
+      "(A, connects, C)",
+      "(A, connects, E)",
+      "(B, connects, E)",
+      "(C, connects, D)",
+      "(D, connects, E)",
+      "(AB, parallel_to, CD)",
+      "(BE, parallel_to, CD)",
+      "(AB, has_measure, 12_units)",
+      "(AC, has_measure, 16_units)",
+      "(DE, has_measure, 5_units)",
+      "(AE, has_measure, ?)",
+      "(Triangles, ABE, is_a, similar)",
+      "(Triangles, ACD, is_a, similar)",
+      "(Triangles, ABE, share, vertex)",
+      "(Triangles, ACD, share, vertex)",
+      "(Triangles, ABE, share, vertex, A)",
+      "(Triangles, ACD, share, vertex, A)"
+    ],
+    "model_output": {
+      "ANSWER": "10 units",
+      "REASONING": "Triangles ABE and ACD are similar and share vertex A. The sides AB and AC of triangle ACD are 12 units and 16 units respectively. The side DE of triangle ACD is 5 units. Since AB is parallel to CD and BE is parallel to CD, triangles ABE and ACD are similar by AA (Angle-Angle) similarity. The ratio of the sides of similar triangles is equal. Therefore, the ratio of AB to AC is equal to the ratio of AE to AD. Let AE be x units. Then, AB/AC = AE/AD => 12/16 = x/(x+5). Solving for x, we get 12(x+5) = 16x => 12x + 60 = 16x => 4x = 60 => x = 15. Therefore, the length of AE is 15 units."
+    },
+    "status": "OK",
+    "raw_response": "{\n  \"ANSWER\": \"10 units\",\n  \"REASONING\": \"Triangles ABE and ACD are similar and share vertex A. The sides AB and AC of triangle ACD are 12 units and 16 units respectively. The side DE of triangle ACD is 5 units. Since AB is parallel to CD and BE is parallel to CD, triangles ABE and ACD are similar by AA (Angle-Angle) similarity. The ratio of the sides of similar triangles is equal. Therefore, the ratio of AB to AC is equal to the ratio of AE to AD. Let AE be x units. Then, AB/AC = AE/AD => 12/16 = x/(x+5). Solving for x, we get 12(x+5) = 16x => 12x + 60 = 16x => 4x = 60 => x = 15. Therefore, the length of AE is 15 units.\"\n}",
+    "recovery_method": "original_prompt"
+  }
+]

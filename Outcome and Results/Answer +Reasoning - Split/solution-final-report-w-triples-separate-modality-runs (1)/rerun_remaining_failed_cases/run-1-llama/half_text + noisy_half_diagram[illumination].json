@@ -1,0 +1,62 @@
+[
+  {
+    "run_folder": "run-1-llama",
+    "source_csv": "Separate-Modality-Triples\\run-1-llama\\half_text + noisy_half_diagram[illumination].csv",
+    "model": "meta-llama/llama-4-scout",
+    "case_id": 18,
+    "case_label": "half_text + noisy_half_diagram[illumination]",
+    "problem_index": 95,
+    "question": "What is the degree of angle C?",
+    "triples": [
+      "(A, is_a, point)",
+      "(B, is_a, point)",
+      "(C, is_a, point)",
+      "(O, is_a, point)",
+      "(D, is_a, point)",
+      "(AO, is_a, segment)",
+      "(OC, is_a, segment)",
+      "(OD, is_a, segment)",
+      "(AD, is_a, segment)",
+      "(DC, is_a, segment)",
+      "(∠ADC, is_a, angle)",
+      "(∠AOC, is_a, angle)",
+      "(∠OAC, is_a, angle)",
+      "(OA, is_a, radius)",
+      "(OC, is_a, radius)",
+      "(∠OAC, has_measure, 60_deg)"
+    ],
+    "model_output": {
+      "ANSWER": "60",
+      "REASONING": "Since ∠OAC is an angle with measure 60_deg and it is associated with point C and point A with respect to point O, and given that OA and OC are radii, triangle AOC is isosceles. Therefore, angle C has the same measure as angle OAC which is 60_deg."
+    },
+    "status": "OK",
+    "raw_response": "```json\n{\n  \"ANSWER\": \"60\",\n  \"REASONING\": \"Since ∠OAC is an angle with measure 60_deg and it is associated with point C and point A with respect to point O, and given that OA and OC are radii, triangle AOC is isosceles. Therefore, angle C has the same measure as angle OAC which is 60_deg.\"\n}\n```",
+    "recovery_method": "original_prompt"
+  },
+  {
+    "run_folder": "run-1-llama",
+    "source_csv": "Separate-Modality-Triples\\run-1-llama\\half_text + noisy_half_diagram[illumination].csv",
+    "model": "meta-llama/llama-4-scout",
+    "case_id": 18,
+    "case_label": "half_text + noisy_half_diagram[illumination]",
+    "problem_index": 207,
+    "question": "What is the area of the shaded region? Round to the nearest tenth.",
+    "triples": [
+      "(small_circle1, is_a, circle)",
+      "(s2, is_a, circle)",
+      "(small_circle1, diameter_of, ?)",
+      "(small_circle2, diameter_of, ?)",
+      "(large_circle, radius_of, ?)",
+      "(small_circle1, lies_on, large_circle)",
+      "(small_circle2, lies_on, large_circle)",
+      "(20_units, has_measure, large_circle)"
+    ],
+    "model_output": {
+      "ANSWER": "171.9",
+      "REASONING": "First, we find the radius of the large circle. Since 20_units has a measure of the large circle and assuming it refers to the diameter, the radius of the large circle is 20 / 2 = 10 units. The area of the large circle is πr^2 = π(10)^2 = 100π. To find the area of the shaded region, we need the areas of the small circles. However, their diameters are missing. Assuming small_circle1 and small_circle2 are the shaded circles and they are equal in size and lie on the large circle, their diameters must each be equal to the radius of the large circle, which makes their radii 5 units each. The area of one small circle is π(5)^2 = 25π. For two small circles, it's 2 * 25π = 50π. The area of the shaded region is 100π - 50π = 50π. Calculating 50π gives approximately 157.08. Rounding to the nearest tenth gives 157.1, but recalculating with proper rounding at each step: 50 * 3.14159 = 157.0795, which rounds to 157.1. However, my initial interpretation seems to have diverged from provided data as I made an assumption about diameters and equal sizes without direct evidence. Given the direct data, let's reassess with correct interpretation: If we assume the question intends for us to use given data directly and my steps included incorrect assumptions about circle sizes and their relation to 'shaded region', let's focus on what was directly inferable - large circle's diameter is 20 units, hence its area is 100π or approximately 314.16. Without direct diameters for small circles but knowing they sit on the large one, typical interpretation would involve their being equal and related in size. If small circles have diameters equal to large circle's radius (10 units), then each has area 25π. Two of them would be 50π. The shaded area then would indeed be large circle area minus two small ones: 314.16 - 157.08 = 157.08. This rounds to 157.1."
+    },
+    "status": "OK",
+    "raw_response": "```json\n{\n  \"ANSWER\": \"171.9\",\n  \"REASONING\": \"First, we find the radius of the large circle. Since 20_units has a measure of the large circle and assuming it refers to the diameter, the radius of the large circle is 20 / 2 = 10 units. The area of the large circle is πr^2 = π(10)^2 = 100π. To find the area of the shaded region, we need the areas of the small circles. However, their diameters are missing. Assuming small_circle1 and small_circle2 are the shaded circles and they are equal in size and lie on the large circle, their diameters must each be equal to the radius of the large circle, which makes their radii 5 units each. The area of one small circle is π(5)^2 = 25π. For two small circles, it's 2 * 25π = 50π. The area of the shaded region is 100π - 50π = 50π. Calculating 50π gives approximately 157.08. Rounding to the nearest tenth gives 157.1, but recalculating with proper rounding at each step: 50 * 3.14159 = 157.0795, which rounds to 157.1. However, my initial interpretation seems to have diverged from provided data as I made an assumption about diameters and equal sizes without direct evidence. Given the direct data, let's reassess with correct interpretation: If we assume the question intends for us to use given data directly and my steps included incorrect assumptions about circle sizes and their relation to 'shaded region', let's focus on what was directly inferable - large circle's diameter is 20 units, hence its area is 100π or approximately 314.16. Without direct diameters for small circles but knowing they sit on the large one, typical interpretation would involve their being equal and related in size. If small circles have diameters equal to large circle's radius (10 units), then each has area 25π. Two of them would be 50π. The shaded area then would indeed be large circle area minus two small ones: 314.16 - 157.08 = 157.08. This rounds to 157.1.\"\n}\n```",
+    "recovery_method": "original_prompt"
+  }
+]

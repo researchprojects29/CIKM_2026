@@ -1,0 +1,29 @@
+[
+  {
+    "run_folder": "run-3-mistral",
+    "source_csv": "Separate-Modality-Triples\\run-3-mistral\\noisy_text[numeric] + full_diagram.csv",
+    "model": "mistralai/mistral-small-3.2-24b-instruct",
+    "case_id": 2,
+    "case_label": "noisy_text[numeric] + full_diagram",
+    "problem_index": 115,
+    "question": "What is the bottom perimeter of the paper cap?",
+    "triples": [
+      "(A, is_a, sector)",
+      "(A, has_measure, 120_deg)",
+      "(A, radius_of, 6_units)",
+      "(A, is_a, paper_sheet)",
+      "(B, is_a, cone)",
+      "(B, is_a, paper_cap)",
+      "(B, is_a, bottomless)",
+      "(A, mapped_to, B)",
+      "(B, has_measure, ?)"
+    ],
+    "model_output": {
+      "ANSWER": "12π units",
+      "REASONING": "The paper cap (B) is mapped from a paper sheet (A) which is a sector with a radius of 6 units and a measure of 120 degrees. The circumference of the base of the cone (which is the bottom perimeter of the paper cap) can be calculated using the formula for the arc length of a sector: (θ/360) * 2πr. Substituting the given values: (120/360) * 2π * 6 = (1/3) * 12π = 4π units. However, the circumference of the base of the cone is the same as the arc length of the sector, so the bottom perimeter of the paper cap is 12π units."
+    },
+    "status": "OK",
+    "raw_response": "{\n  \"ANSWER\": \"12π units\",\n  \"REASONING\": \"The paper cap (B) is mapped from a paper sheet (A) which is a sector with a radius of 6 units and a measure of 120 degrees. The circumference of the base of the cone (which is the bottom perimeter of the paper cap) can be calculated using the formula for the arc length of a sector: (θ/360) * 2πr. Substituting the given values: (120/360) * 2π * 6 = (1/3) * 12π = 4π units. However, the circumference of the base of the cone is the same as the arc length of the sector, so the bottom perimeter of the paper cap is 12π units.\"\n}",
+    "recovery_method": "original_prompt"
+  }
+]

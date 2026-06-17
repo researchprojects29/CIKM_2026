@@ -1,0 +1,37 @@
+[
+  {
+    "run_folder": "run-2-mistral",
+    "source_csv": "Separate-Modality-Triples\\run-2-mistral\\noisy_half_text[sentence] + half_diagram.csv",
+    "model": "mistralai/mistral-small-3.2-24b-instruct",
+    "case_id": 14,
+    "case_label": "noisy_half_text[sentence] + half_diagram",
+    "problem_index": 88,
+    "question": "Determine the measure of BOC.",
+    "triples": [
+      "(A, is_a, point)",
+      "(B, is_a, point)",
+      "(C, is_a, point)",
+      "(O, is_a, point)",
+      "(A, lies_on, circle)",
+      "(B, lies_on, circle)",
+      "(C, lies_on, circle)",
+      "(O, center_of, circle)",
+      "(AB, is_a, segment)",
+      "(BO, is_a, segment)",
+      "(CO, is_a, segment)",
+      "(∠ABO, is_a, angle)",
+      "(∠BOC, is_a, angle)",
+      "(∠ACB, is_a, angle)",
+      "(∠ACB, has_measure, 42_deg)",
+      "(∠ABO, has_measure, 22_deg)",
+      "(∠BOC, has_measure, ?)"
+    ],
+    "model_output": {
+      "ANSWER": "64_deg",
+      "REASONING": "Points A, B, and C lie on a circle with center O. Angle ACB is an inscribed angle with a measure of 42 degrees. The corresponding central angle AOB is twice the measure of the inscribed angle, so it is 84 degrees. Angle ABO is given as 22 degrees. In triangle ABO, the sum of the angles is 180 degrees. Therefore, angle OAB is 180 - 84 - 22 = 74 degrees. Angle BOC is the remaining angle in the triangle BOC, which is 180 - 22 - 74 = 64 degrees."
+    },
+    "status": "OK",
+    "raw_response": "{\n  \"ANSWER\": \"64_deg\",\n  \"REASONING\": \"Points A, B, and C lie on a circle with center O. Angle ACB is an inscribed angle with a measure of 42 degrees. The corresponding central angle AOB is twice the measure of the inscribed angle, so it is 84 degrees. Angle ABO is given as 22 degrees. In triangle ABO, the sum of the angles is 180 degrees. Therefore, angle OAB is 180 - 84 - 22 = 74 degrees. Angle BOC is the remaining angle in the triangle BOC, which is 180 - 22 - 74 = 64 degrees.\"\n}",
+    "recovery_method": "original_prompt"
+  }
+]

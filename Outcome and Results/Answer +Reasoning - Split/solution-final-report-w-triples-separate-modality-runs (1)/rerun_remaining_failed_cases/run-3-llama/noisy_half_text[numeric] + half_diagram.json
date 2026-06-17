@@ -1,0 +1,66 @@
+[
+  {
+    "run_folder": "run-3-llama",
+    "source_csv": "Separate-Modality-Triples\\run-3-llama\\noisy_half_text[numeric] + half_diagram.csv",
+    "model": "meta-llama/llama-4-scout",
+    "case_id": 12,
+    "case_label": "noisy_half_text[numeric] + half_diagram",
+    "problem_index": 44,
+    "question": "What is the height of the street lamp?",
+    "triples": [
+      "(A, is_a, point)",
+      "(B, is_a, point)",
+      "(AB, is_a, segment)",
+      "(AB, has_measure, 30_units)",
+      "(Xiaogang, is_a, person)",
+      "(Xiaogang, has_measure, 1.5_units)"
+    ],
+    "model_output": {
+      "ANSWER": "30_units",
+      "REASONING": "The height of the street lamp is not directly provided in the triples. However, we can infer that the height is related to the measure of segment AB, which is 30_units. Since a street lamp is typically considered a vertical structure and its height can be represented as the length of a segment, we can deduce that the height of the street lamp is the measure of segment AB, which is 30_units."
+    },
+    "status": "OK",
+    "raw_response": "```json\n{\n  \"ANSWER\": \"30_units\",\n  \"REASONING\": \"The height of the street lamp is not directly provided in the triples. However, we can infer that the height is related to the measure of segment AB, which is 30_units. Since a street lamp is typically considered a vertical structure and its height can be represented as the length of a segment, we can deduce that the height of the street lamp is the measure of segment AB, which is 30_units.\"\n}\n```",
+    "recovery_method": "original_prompt"
+  },
+  {
+    "run_folder": "run-3-llama",
+    "source_csv": "Separate-Modality-Triples\\run-3-llama\\noisy_half_text[numeric] + half_diagram.csv",
+    "model": "meta-llama/llama-4-scout",
+    "case_id": 12,
+    "case_label": "noisy_half_text[numeric] + half_diagram",
+    "problem_index": 73,
+    "question": "What is the degree of AOC?",
+    "triples": [
+      "(A, is_a, point)",
+      "(B, is_a, point)",
+      "(C, is_a, point)",
+      "(O, is_a, point)",
+      "(AB, is_a, segment)",
+      "(BC, is_a, segment)",
+      "(AC, is_a, segment)",
+      "(A, lies_on, circle)",
+      "(B, lies_on, circle)",
+      "(C, lies_on, circle)",
+      "(O, center_of, circle)",
+      "(∠ABC, has_measure, 70_deg)",
+      "(O, connects, A)",
+      "(O, connects, B)",
+      "(O, connects, C)",
+      "(A, connects, B)",
+      "(B, connects, C)",
+      "(C, connects, A)",
+      "(A, lies_on, ?)",
+      "(B, lies_on, ?)",
+      "(C, lies_on, ?)",
+      "(O, center_of, ?)"
+    ],
+    "model_output": {
+      "ANSWER": "120_deg",
+      "REASONING": "Since ∠ABC has a measure of 70_deg and the points A, B, and C lie on a circle with center O, we can use the properties of angles in a circle. The angle subtended by an arc at the center of the circle is twice the angle it subtends at any point on the circle's circumference. However, to find the degree of AOC, we should note that ∠AOC is a central angle. Given that ∠ABC is an inscribed angle of 70_deg, the arc AC subtends an angle of 140_deg at the center O (since 70_deg * 2 = 140_deg). Therefore, ∠AOC = 140_deg is incorrect because we actually need to look at the entire setup differently: ∠AOC is the angle at the center of the circle subtended by arc AC. The inscribed angle ∠ABC = 70_deg means the arc AC subtends 140_deg at O. But, we know that AOC is actually 120_deg from understanding that in an equilateral triangle or by given information that could lead to such conclusion, but here we derive it from understanding central angles and given data indirectly."
+    },
+    "status": "OK",
+    "raw_response": "```json\n{\n  \"ANSWER\": \"120_deg\",\n  \"REASONING\": \"Since ∠ABC has a measure of 70_deg and the points A, B, and C lie on a circle with center O, we can use the properties of angles in a circle. The angle subtended by an arc at the center of the circle is twice the angle it subtends at any point on the circle's circumference. However, to find the degree of AOC, we should note that ∠AOC is a central angle. Given that ∠ABC is an inscribed angle of 70_deg, the arc AC subtends an angle of 140_deg at the center O (since 70_deg * 2 = 140_deg). Therefore, ∠AOC = 140_deg is incorrect because we actually need to look at the entire setup differently: ∠AOC is the angle at the center of the circle subtended by arc AC. The inscribed angle ∠ABC = 70_deg means the arc AC subtends 140_deg at O. But, we know that AOC is actually 120_deg from understanding that in an equilateral triangle or by given information that could lead to such conclusion, but here we derive it from understanding central angles and given data indirectly.\"\n}\n```",
+    "recovery_method": "original_prompt"
+  }
+]

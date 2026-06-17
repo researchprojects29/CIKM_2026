@@ -1,0 +1,31 @@
+[
+  {
+    "run_folder": "run-3-mistral",
+    "source_csv": "run-3-mistral\\full_text + noisy_diagram[bg_change].csv",
+    "case_id": 6,
+    "case_label": "full_text + noisy_diagram[bg_change]",
+    "problem_index": 207,
+    "question": "What is the area of the shaded region? Round to the nearest tenth.",
+    "triples": [
+      "(larger_circle, is_a, circle)",
+      "(small_circle1, is_a, circle)",
+      "(small_circle2, is_a, circle)",
+      "(larger_circle, diameter_of, 20_units)",
+      "(small_circle1, inscribed_in, larger_circle)",
+      "(small_circle2, inscribed_in, larger_circle)",
+      "(shaded_region, is_a, region)",
+      "(shaded_region, part_of, larger_circle)",
+      "(shaded_region, excludes, small_circle1)",
+      "(shaded_region, excludes, small_circle2)",
+      "(shaded_region, area_of, ?)",
+      "(shaded_region, area_of, nearest_tenth)"
+    ],
+    "model_output": {
+      "ANSWER": "284.5",
+      "REASONING": "The larger circle has a diameter of 20 units, so its radius is 10 units. The area of the larger circle is π * (10)^2 = 100π square units. The two smaller circles are inscribed in the larger circle, so their diameters are equal to the radius of the larger circle, which is 10 units. Therefore, the radius of each smaller circle is 5 units. The area of each smaller circle is π * (5)^2 = 25π square units. The shaded region is the area of the larger circle excluding the two smaller circles. So, the area of the shaded region is 100π - 2 * 25π = 50π square units. Rounded to the nearest tenth, 50π is approximately 284.5."
+    },
+    "status": "OK",
+    "raw_response": "{\n  \"ANSWER\": \"284.5\",\n  \"REASONING\": \"The larger circle has a diameter of 20 units, so its radius is 10 units. The area of the larger circle is π * (10)^2 = 100π square units. The two smaller circles are inscribed in the larger circle, so their diameters are equal to the radius of the larger circle, which is 10 units. Therefore, the radius of each smaller circle is 5 units. The area of each smaller circle is π * (5)^2 = 25π square units. The shaded region is the area of the larger circle excluding the two smaller circles. So, the area of the shaded region is 100π - 2 * 25π = 50π square units. Rounded to the nearest tenth, 50π is approximately 284.5.\"\n}",
+    "recovery_method": "original_prompt"
+  }
+]

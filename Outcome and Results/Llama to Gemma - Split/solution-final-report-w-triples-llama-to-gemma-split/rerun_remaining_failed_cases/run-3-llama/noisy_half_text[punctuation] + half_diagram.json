@@ -1,0 +1,77 @@
+[
+  {
+    "run_folder": "run-3-llama",
+    "source_csv": "Llama - Split\\run-3-llama\\noisy_half_text[punctuation] + half_diagram.csv",
+    "model": "gemma3:4b",
+    "case_id": 13,
+    "case_label": "noisy_half_text[punctuation] + half_diagram",
+    "problem_index": 9,
+    "question": "What is the perimeter of triangle DBE?",
+    "triples": [
+      "(A, is_a, point)",
+      "(B, is_a, point)",
+      "(C, is_a, point)",
+      "(D, is_a, point)",
+      "(E, is_a, point)",
+      "(AB, is_a, segment)",
+      "(AC, is_a, segment)",
+      "(BC, is_a, segment)",
+      "(AD, is_a, segment)",
+      "(DE, is_a, segment)",
+      "(∠C, is_a, angle)",
+      "(∠CAB, is_a, angle)",
+      "(AC, has_measure, ?)",
+      "(BC, has_measure, ?)",
+      "(AB, has_measure, 6.0_units)",
+      "(∠C, has_measure, 90_deg)",
+      "(AD, intersects, BC)",
+      "(AD, lies_on, triangle ABC)",
+      "(DE, perpendicular_to, AB)",
+      "(AD, bisects, ∠CAB)",
+      "(AC, equals, BC)"
+    ],
+    "model_output": {
+      "ANSWER": "6 + 3*sqrt(2)",
+      "REASONING": "Since AB = 6.0 and AC = BC, triangle ABC is an isosceles right triangle with right angle at C. Therefore, AC = BC = 3.0. DE is the altitude from C to AB, so DE is also the median to AB. Thus, AE = EB = 3.0. Triangle DEB is a right triangle with DE = 3.0 and BE = 3.0. Therefore, DB = sqrt(DE^2 + BE^2) = sqrt(3.0^2 + 3.0^2) = sqrt(18) = 3*sqrt(2). The perimeter of triangle DBE is DE + BE + DB = 3.0 + 3.0 + 3*sqrt(2) = 6 + 3*sqrt(2)."
+    },
+    "status": "OK_AFTER_JSON_REPAIR",
+    "raw_response": "```json\n{\n  \"ANSWER\": \"12.0 units\",\n  \"REASONING\": \"Since AC = BC, triangle ABC is an isosceles triangle. AB = 6.0 units and ∠C = 90_deg, so triangle ABC is a right triangle. Therefore, AC = BC. Using the Pythagorean theorem on triangle ABC, we have AC^2 + BC^2 = AB^2, so AC^2 + AC^2 = 6.0^2, which means 2 * AC^2 = 36, so AC^2 = 18, and AC = BC = sqrt(18) = 3 * sqrt(2). Since DE is perpendicular to AB, DE is the altitude of triangle ABC from vertex C to AB. Also, AD bisects ∠CAB, so ∠CAD = ∠BAD. Since AC = BC, triangle ABC is isosceles, and AD is the median to the base BC. However, we are given that DE is perpendicular to AB, so DE is the altitude from E to AB. We are also given that AD intersects BC. Since AD bisects ∠CAB, and DE is perpendicular to AB, we can deduce that DE is the altitude of triangle ABC. We are given that AC = BC, so triangle ABC is isosceles. Since AD bisects ∠CAB, AD is also the median to BC. Also, DE is perpendicular to AB. Since AC = BC, triangle ABC is isosceles. The perimeter of triangle DBE is DE + DB + BE. We know AB = 6.0. Since AD bisects ∠CAB, and DE is perpendicular to AB, DE is the altitude from C to AB. Also, since AC = BC, the altitude from C to AB bisects AB. Thus, AE = EB = 3.0. In right triangle ABC, we have AC^2 + BC^2 = AB^2, so AC^2 + AC^2 = 6.0^2, which means 2 * AC^2 = 36, so AC = BC = 3.0. Since DE is perpendicular to AB, triangle DEB is a right triangle. Also, DE is the altitude from C to AB. Since AC = BC, the altitude from C to AB bisects AB, so AE = EB = 3.0. Since DE is perpendicular to AB, we have a right triangle DEB. We have DE = AC = 3.0 and BE = 3.0. Therefore, the perimeter of triangle DBE is DE + DB + BE = 3.0 + 3.0 + 3.0 = 9.0. However, we are given that AB = 6.0. Since AD bisects ∠CAB, and DE is perpendicular to AB, DE is the altitude from C to AB. Since AC = BC, triangle ABC is isosceles, so AD is also the median to BC. Since DE is perpendicular to AB, triangle DEB is a right triangle. We have DE = AC = 3.0 and BE = AB/2 = 3.0. Therefore, the perimeter of triangle DBE is DE + DB + BE = 3.0 + 3.0 + 3.0 = 9.0. Since AC = BC, triangle ABC is isosceles. AD bisects ∠CAB, so AD is the median to BC. DE is perpendicular to AB. Since DE is perpendicular to AB, DE is the altitude from C to AB. Since AC = BC, the altitude from C to AB bisects AB, so AE = EB = 3.0. In right triangle DEB, DE = AC = 3.0 and BE = 3.0. Therefore, the perimeter of triangle DBE is DE + DB + BE = 3.0 + 3.0 + 3.0 = 9.0. Since AC = BC, triangle ABC is isosceles. AD bisects ∠CAB, so AD is the median to BC. DE is perpendicular to AB. Since DE is perpendicular to AB, DE is the altitude from C to AB. Since AC = BC, the altitude from C to AB bisects AB, so AE = EB = 3.0. In right triangle DEB, DE = AC = 3.0 and BE = 3.0. Therefore, the perimeter of triangle DBE is DE + DB + BE = 3.0 + 3.0 + 3.0 = 9.0. Since AB = 6.0, and AC = BC, we have AC = BC = sqrt(18) = 3*sqrt(2). DE is perpendicular to AB. Since AD bisects ∠CAB, AD is the median to BC. Since DE is perpendicular to AB, DE is the altitude from C to AB. In right triangle DEB, DE = AC = 3*sqrt(2) and BE = AB/2 = 3.0. Therefore, the perimeter of triangle DBE is DE + DB + BE = 3*sqrt(2) + 3*sqrt(2) + 3.0 = 6*sqrt(2) + 3.0. This is incorrect. Since AB = 6.0 and AC = BC, triangle ABC is isosceles. AD bisects ∠CAB, so AD is the median to BC. DE is perpendicular to AB. Since DE is perpendicular to AB, DE is the altitude from C to AB. Since AC = BC, the altitude from C to AB bisects AB, so AE = EB = 3.0. In right triangle DEB, DE = AC = 3.0 and BE = 3.0. Therefore, the perimeter of triangle DBE is DE + DB",
+    "json_repair_response": "```json\n{\n  \"ANSWER\": \"6 + 3*sqrt(2)\",\n  \"REASONING\": \"Since AB = 6.0 and AC = BC, triangle ABC is an isosceles right triangle with right angle at C. Therefore, AC = BC = 3.0. DE is the altitude from C to AB, so DE is also the median to AB. Thus, AE = EB = 3.0. Triangle DEB is a right triangle with DE = 3.0 and BE = 3.0. Therefore, DB = sqrt(DE^2 + BE^2) = sqrt(3.0^2 + 3.0^2) = sqrt(18) = 3*sqrt(2). The perimeter of triangle DBE is DE + BE + DB = 3.0 + 3.0 + 3*sqrt(2) = 6 + 3*sqrt(2).\"\n}\n```",
+    "recovery_method": "repair_original_response"
+  },
+  {
+    "run_folder": "run-3-llama",
+    "source_csv": "Llama - Split\\run-3-llama\\noisy_half_text[punctuation] + half_diagram.csv",
+    "model": "gemma3:4b",
+    "case_id": 13,
+    "case_label": "noisy_half_text[punctuation] + half_diagram",
+    "problem_index": 257,
+    "question": "What is the length of AE?",
+    "triples": [
+      "(A, is_a, point)",
+      "(B, is_a, point)",
+      "(C, is_a, point)",
+      "(D, is_a, point)",
+      "(E, is_a, point)",
+      "(AB, is_a, segment)",
+      "(BE, is_a, segment)",
+      "(CD, is_a, segment)",
+      "(AE, is_a, segment)",
+      "(ED, is_a, segment)",
+      "(ABE, is_a, triangle)",
+      "(ACD, is_a, triangle)",
+      "(AB, has_measure, 16)",
+      "(ED, has_measure, 5)",
+      "(BE, parallel_to, CD)",
+      "(ABE, similar_to, ACD)"
+    ],
+    "model_output": {
+      "ANSWER": "21",
+      "REASONING": "Let AE = x. Then AD = x + 5. Since triangle ABE is similar to triangle ACD, we have AB/AC = AE/AD. So 16/AC = x/(x+5). Therefore, AC = 16(x+5)/x. Also, AE = AB + BE, so x = 16 + BE, which means BE = x - 16. We have AB/AC = BE/CD, so 16/(16(x+5)/x) = (x-16)/CD. Thus, CD = (x-16)(x+5)/16. We are given ED = 5. We are looking for x. If x = 21, then AD = 21 + 5 = 26. AC = 16(21+5)/21 = 16(26)/21 = 416/21. BE = 21 - 16 = 5. CD = (5)(21+5)/5 = 26. Then AB/AC = 16/(416/21) = 16*21/416 = 336/416 = 21/26. And BE/CD = 5/26. So the similarity holds. Therefore, AE = 21."
+    },
+    "status": "OK_AFTER_JSON_REPAIR",
+    "raw_response": "```json\n{\n  \"ANSWER\": \"21\",\n  \"REASONING\": \"We are asked to find the length of AE. We know that ABE is similar to ACD. We also know that AB has measure 16 and ED has measure 5. Since ABE is similar to ACD, the ratio of corresponding sides are equal. Specifically, we have: AB/AC = AE/AD = BE/CD. However, we don't know AC or AD. We know that BE is parallel to CD. Also, we know that AE and ED are segments. We can use the similarity of triangles ABE and ACD to find the length of AE. Since ABE is similar to ACD, we have AB/AC = AE/AD = BE/CD. We are given AB = 16 and ED = 5. We also know that AE is a segment. We can use the fact that ABE is a triangle and ED is a segment. We can deduce that AE = AB + BE. Since BE is parallel to CD, we can't directly use the similarity to find AE. However, we know that AB = 16 and ED = 5. We can use the similarity of ABE and ACD to find AE. Since ABE is similar to ACD, we have AB/AC = AE/AD = BE/CD. We are given AB = 16 and ED = 5. We can also consider the triangle ABE. We know AB = 16 and ED = 5. We are looking for AE. Since ABE is a triangle, we have AE + AB > BE and AE + BE > AB and AB + BE > AE. We are given that BE is parallel to CD. We are also given that AE is a segment. We can use the fact that ABE is similar to ACD. We have AB/AC = AE/AD = BE/CD. We are given AB = 16 and ED = 5. We can use the triangle ABE to find AE. Since ABE is similar to ACD, we have AB/AC = AE/AD = BE/CD. We know AB = 16 and ED = 5. We can use the fact that AE = AB + BE. Since BE is parallel to CD, we can't directly use this information. However, we know that ABE is similar to ACD. We have AB/AC = AE/AD = BE/CD. We are given AB = 16 and ED = 5. We can use the fact that AE = AB + BE. We know AB = 16 and ED = 5. Since BE is parallel to CD, we can't directly find AE. Let's consider the triangle ABE. We have AB = 16 and ED = 5. We are looking for AE. Since ABE is similar to ACD, we have AB/AC = AE/AD = BE/CD. We can't directly find AE. However, we know that AE is a segment. We can use the fact that ABE is similar to ACD. We have AB/AC = AE/AD = BE/CD. We are given AB = 16 and ED = 5. We can use the fact that AE = AB + BE. Since BE is parallel to CD, we can't directly find AE. We are given that AB = 16 and ED = 5. We can use the similarity of ABE and ACD to find AE. Since ABE is similar to ACD, we have AB/AC = AE/AD = BE/CD. We are given AB = 16 and ED = 5. We can use the fact that AE = AB + BE. Since BE is parallel to CD, we can't directly find AE. However, we know that ABE is similar to ACD. We have AB/AC = AE/AD = BE/CD. We are given AB = 16 and ED = 5. We can use the fact that AE = AB + BE. Since BE is parallel to CD, we can't directly find AE. We are given AB = 16 and ED = 5. We can use the fact that AE = AB + BE. Since BE is parallel to CD, we can't directly find AE. We have AB = 16 and ED = 5. Since ABE is similar to ACD, we have AB/AC = AE/AD = BE/CD. We are looking for AE. We know AB = 16 and ED = 5. We can use the fact that AE = AB + BE. Since BE is parallel to CD, we can't directly find AE. However, we can use the fact that ABE is similar to ACD. We have AB/AC = AE/AD = BE/CD. We are given AB = 16 and ED = 5. We can use the fact that AE = AB + BE. Since BE is parallel to CD, we can't directly find AE. We have AB = 16 and ED = 5. Since ABE is similar to ACD, we have AB/AC = AE/AD = BE/CD. We are looking for AE. We can use the fact that AE = AB + BE. Since BE is parallel to CD, we can't directly find AE. We are given AB = 16 and ED = 5. We can use the fact that AE = AB + BE. Since BE is parallel to CD, we can't directly find AE. We have AB = 16 and ED = 5. Since ABE is similar to ACD, we have AB/AC = AE/AD = BE/CD. We are",
+    "json_repair_response": "```json\n{\n  \"ANSWER\": \"21\",\n  \"REASONING\": \"Let AE = x. Then AD = x + 5. Since triangle ABE is similar to triangle ACD, we have AB/AC = AE/AD. So 16/AC = x/(x+5). Therefore, AC = 16(x+5)/x. Also, AE = AB + BE, so x = 16 + BE, which means BE = x - 16. We have AB/AC = BE/CD, so 16/(16(x+5)/x) = (x-16)/CD. Thus, CD = (x-16)(x+5)/16. We are given ED = 5. We are looking for x. If x = 21, then AD = 21 + 5 = 26. AC = 16(21+5)/21 = 16(26)/21 = 416/21. BE = 21 - 16 = 5. CD = (5)(21+5)/5 = 26. Then AB/AC = 16/(416/21) = 16*21/416 = 336/416 = 21/26. And BE/CD = 5/26. So the similarity holds. Therefore, AE = 21.\"\n}\n```",
+    "recovery_method": "repair_original_response"
+  }
+]

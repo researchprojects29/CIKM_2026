@@ -1,0 +1,30 @@
+[
+  {
+    "run_folder": "run-1-mistral",
+    "source_csv": "run-1-mistral\\noisy_half_text[typo] + half_diagram.csv",
+    "case_id": 15,
+    "case_label": "noisy_half_text[typo] + half_diagram",
+    "problem_index": 123,
+    "question": "Determine the lateral surface area of this cone.",
+    "triples": [
+      "(A, is_a, point)",
+      "(B, is_a, point)",
+      "(C, is_a, point)",
+      "(AC, is_a, segment)",
+      "(BC, is_a, segment)",
+      "(AB, is_a, segment)",
+      "(ABC, is_a, triangle)",
+      "(ABC, has_measure, 90_deg)",
+      "(BC, has_measure, 3_units)",
+      "(AC, has_measure, 4_units)",
+      "(Lateral Surface Area, is_a, query_target)"
+    ],
+    "model_output": {
+      "ANSWER": "25.1327",
+      "REASONING": "The given triples describe a right-angled triangle ABC with AC = 4 units and BC = 3 units. First, we find the hypotenuse AB using the Pythagorean theorem: AB = sqrt(AC^2 + BC^2) = sqrt(4^2 + 3^2) = 5 units. The lateral surface area of a cone is given by πrl, where r is the radius and l is the slant height. Here, the radius r is BC = 3 units, and the slant height l is AB = 5 units. Therefore, the lateral surface area is π * 3 * 5 = 15π ≈ 25.1327."
+    },
+    "status": "OK",
+    "raw_response": "{\n  \"ANSWER\": \"25.1327\",\n  \"REASONING\": \"The given triples describe a right-angled triangle ABC with AC = 4 units and BC = 3 units. First, we find the hypotenuse AB using the Pythagorean theorem: AB = sqrt(AC^2 + BC^2) = sqrt(4^2 + 3^2) = 5 units. The lateral surface area of a cone is given by πrl, where r is the radius and l is the slant height. Here, the radius r is BC = 3 units, and the slant height l is AB = 5 units. Therefore, the lateral surface area is π * 3 * 5 = 15π ≈ 25.1327.\"\n}",
+    "recovery_method": "original_prompt"
+  }
+]

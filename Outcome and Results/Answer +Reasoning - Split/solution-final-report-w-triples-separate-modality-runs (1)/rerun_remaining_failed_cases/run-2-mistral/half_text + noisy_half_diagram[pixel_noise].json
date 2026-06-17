@@ -1,0 +1,38 @@
+[
+  {
+    "run_folder": "run-2-mistral",
+    "source_csv": "Separate-Modality-Triples\\run-2-mistral\\half_text + noisy_half_diagram[pixel_noise].csv",
+    "model": "mistralai/mistral-small-3.2-24b-instruct",
+    "case_id": 20,
+    "case_label": "half_text + noisy_half_diagram[pixel_noise]",
+    "problem_index": 64,
+    "question": "What is the maximum depth of the oil?",
+    "triples": [
+      "(O, is_a, point)",
+      "(A, is_a, point)",
+      "(B, is_a, point)",
+      "(AB, is_a, segment)",
+      "(O, center_of, circle)",
+      "(AB, lies_on, circle)",
+      "(O, connects, A)",
+      "(O, connects, B)",
+      "(AB, has_measure, 160_units)",
+      "(O, is_a, center)",
+      "(circle, has_measure, 200_units)",
+      "(?, is_a, depth)",
+      "(?, is_a, maximum)",
+      "(?, is_a, oil)",
+      "(AB, is_a, chord)",
+      "(AB, is_a, oil_surface)",
+      "(circle, is_a, cylindrical_oil_tank)",
+      "(circle, contains, oil)"
+    ],
+    "model_output": {
+      "ANSWER": "100 units",
+      "REASONING": "The chord AB is the oil surface with a length of 160 units. The circle (cylindrical oil tank) has a diameter of 200 units. The maximum depth of the oil is the perpendicular distance from the center O to the chord AB. Using the Pythagorean theorem, the radius is 100 units (half of the diameter). The perpendicular distance (maximum depth) is calculated as sqrt(100^2 - 80^2) = 60 units. However, the maximum depth is the distance from the center to the bottom of the tank, which is the radius plus the perpendicular distance: 100 units - 60 units = 40 units. But, considering the oil surface is at the midpoint of the tank, the maximum depth is 100 units."
+    },
+    "status": "OK",
+    "raw_response": "{\n  \"ANSWER\": \"100 units\",\n  \"REASONING\": \"The chord AB is the oil surface with a length of 160 units. The circle (cylindrical oil tank) has a diameter of 200 units. The maximum depth of the oil is the perpendicular distance from the center O to the chord AB. Using the Pythagorean theorem, the radius is 100 units (half of the diameter). The perpendicular distance (maximum depth) is calculated as sqrt(100^2 - 80^2) = 60 units. However, the maximum depth is the distance from the center to the bottom of the tank, which is the radius plus the perpendicular distance: 100 units - 60 units = 40 units. But, considering the oil surface is at the midpoint of the tank, the maximum depth is 100 units.\"\n}",
+    "recovery_method": "original_prompt"
+  }
+]

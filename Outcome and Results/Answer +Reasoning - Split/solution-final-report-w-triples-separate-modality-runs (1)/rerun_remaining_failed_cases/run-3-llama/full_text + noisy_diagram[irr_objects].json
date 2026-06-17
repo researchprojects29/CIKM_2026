@@ -1,0 +1,39 @@
+[
+  {
+    "run_folder": "run-3-llama",
+    "source_csv": "Separate-Modality-Triples\\run-3-llama\\full_text + noisy_diagram[irr_objects].csv",
+    "model": "meta-llama/llama-4-scout",
+    "case_id": 9,
+    "case_label": "full_text + noisy_diagram[irr_objects]",
+    "problem_index": 72,
+    "question": "Find the perimeter of triangle DCE",
+    "triples": [
+      "(B, is_a, point)",
+      "(C, is_a, point)",
+      "(D, is_a, point)",
+      "(E, is_a, point)",
+      "(AB, is_a, segment)",
+      "(BC, is_a, segment)",
+      "(CD, is_a, segment)",
+      "(DA, is_a, segment)",
+      "(AC, is_a, segment)",
+      "(BD, is_a, segment)",
+      "(AO, is_a, segment)",
+      "(OC, is_a, segment)",
+      "(BO, is_a, segment)",
+      "(OD, is_a, segment)",
+      "(OE, is_a, segment)",
+      "(∠AOE, is_a, ABCD, is parallelogram)",
+      "(AC, intersects, BD)",
+      "(O, is_a, intersection of, AC and BD, lies_on, AD)",
+      "(Perimeter of DCE, is_a, query target)"
+    ],
+    "model_output": {
+      "ANSWER": "CD + CE + DE",
+      "REASONING": "To find the perimeter of triangle DCE, we need to sum the lengths of its sides. The sides of triangle DCE are CD, CE, and DE. From the given triples, we can see that CD, CE, and DE are segments. Therefore, the perimeter of triangle DCE is CD + CE + DE."
+    },
+    "status": "OK",
+    "raw_response": "```\n{\n  \"ANSWER\": \"CD + CE + DE\",\n  \"REASONING\": \"To find the perimeter of triangle DCE, we need to sum the lengths of its sides. The sides of triangle DCE are CD, CE, and DE. From the given triples, we can see that CD, CE, and DE are segments. Therefore, the perimeter of triangle DCE is CD + CE + DE.\"\n}\n```",
+    "recovery_method": "original_prompt"
+  }
+]

@@ -1,0 +1,73 @@
+[
+  {
+    "run_folder": "run-2-llama",
+    "source_csv": "Separate-Modality-Triples\\run-2-llama\\half_text + noisy_half_diagram[pixel_noise].csv",
+    "model": "meta-llama/llama-4-scout",
+    "case_id": 20,
+    "case_label": "half_text + noisy_half_diagram[pixel_noise]",
+    "problem_index": 364,
+    "question": "What is the length of the cable h to two decimal places?",
+    "triples": [
+      "(bridge, is_a, structure)",
+      "(tower, is_a, structure)",
+      "(cable, is_a, component)",
+      "(tower, has_measure, 35.5_m)",
+      "(bridge, connects, tower)",
+      "(tower, perpendicular_to, bridge)",
+      "(connection point, lies_on, tower)",
+      "(main cable, connects, connection point)",
+      "(cable, has_measure, h)",
+      "(h, is_a, length)",
+      "(bridge, has_measure, 65.9_m)"
+    ],
+    "model_output": {
+      "ANSWER": "35.50",
+      "REASONING": "The length of the cable 'h' is directly stated to be a measure, and the measure associated with 'tower' is 35.5_m. Since 'h' is identified as a length and 'tower' is a structure with a given measure, it can be inferred that 'h' refers to the height of the tower. Therefore, the length of the cable 'h' to two decimal places is 35.50."
+    },
+    "status": "OK",
+    "raw_response": "```json\n{\n  \"ANSWER\": \"35.50\",\n  \"REASONING\": \"The length of the cable 'h' is directly stated to be a measure, and the measure associated with 'tower' is 35.5_m. Since 'h' is identified as a length and 'tower' is a structure with a given measure, it can be inferred that 'h' refers to the height of the tower. Therefore, the length of the cable 'h' to two decimal places is 35.50.\"\n}\n```",
+    "recovery_method": "original_prompt"
+  },
+  {
+    "run_folder": "run-2-llama",
+    "source_csv": "Separate-Modality-Triples\\run-2-llama\\half_text + noisy_half_diagram[pixel_noise].csv",
+    "model": "meta-llama/llama-4-scout",
+    "case_id": 20,
+    "case_label": "half_text + noisy_half_diagram[pixel_noise]",
+    "problem_index": 438,
+    "question": "What is the equation of hyperbola?",
+    "triples": [
+      "(C, is_a, point)",
+      "(V1, is_a, point)",
+      "(V2, is_a, point)",
+      "(F1, is_a, point)",
+      "(F2, is_a, point)",
+      "(V1V2, is_a, segment)",
+      "(C, lies_on, V1V2)",
+      "(V1, lies_on, V1V2)",
+      "(V2, lies_on, V1V2)",
+      "(F1, has_measure, 5√2_units)",
+      "(F2, has_measure, 5√2_units)",
+      "(V1C, has_measure, 5_units)",
+      "(V2C, has_measure, 5_units)",
+      "(C, center_of, hyperbola)",
+      "(V1, is_a, vertex)",
+      "(V2, is_a, vertex)",
+      "(F1, is_a, focus)",
+      "(F2, is_a, focus)",
+      "(V1, has_measure, 5_units_from_C)",
+      "(V2, has_measure, 5_units_from_C)",
+      "(F1, has_measure, 5√2_units_from_C)",
+      "(F2, has_measure, 5√2_units_from_C)",
+      "(V1, has_measure, 5_units)",
+      "(V2, has_measure, 5_units)"
+    ],
+    "model_output": {
+      "ANSWER": "(x^2/a^2) - (y^2/b^2) = 1",
+      "REASONING": "From the given triples, we know that C is the center of the hyperbola, V1 and V2 are vertices, and F1 and F2 are foci. The distance from C to V1 and V2 is 5 units, and the distance from C to F1 and F2 is 5√2 units. Since V1 and V2 are 5 units from C and lie on the line segment V1V2, 'a' equals 5. Using the relationship c = √(a^2 + b^2) for hyperbolas, where c is the distance from center to focus (5√2), we can solve for 'b': (5√2)^2 = 5^2 + b^2 => 50 = 25 + b^2 => b^2 = 25. Therefore, the equation of the hyperbola is (x^2/5^2) - (y^2/5^2) = 1 or (x^2/25) - (y^2/25) = 1, which simplifies to (x^2/25) - (y^2/25) = 1. In standard form, it is (x^2/a^2) - (y^2/b^2) = 1."
+    },
+    "status": "OK",
+    "raw_response": "```json\n{\n  \"ANSWER\": \"(x^2/a^2) - (y^2/b^2) = 1\",\n  \"REASONING\": \"From the given triples, we know that C is the center of the hyperbola, V1 and V2 are vertices, and F1 and F2 are foci. The distance from C to V1 and V2 is 5 units, and the distance from C to F1 and F2 is 5√2 units. Since V1 and V2 are 5 units from C and lie on the line segment V1V2, 'a' equals 5. Using the relationship c = √(a^2 + b^2) for hyperbolas, where c is the distance from center to focus (5√2), we can solve for 'b': (5√2)^2 = 5^2 + b^2 => 50 = 25 + b^2 => b^2 = 25. Therefore, the equation of the hyperbola is (x^2/5^2) - (y^2/5^2) = 1 or (x^2/25) - (y^2/25) = 1, which simplifies to (x^2/25) - (y^2/25) = 1. In standard form, it is (x^2/a^2) - (y^2/b^2) = 1.\"\n}\n```",
+    "recovery_method": "original_prompt"
+  }
+]

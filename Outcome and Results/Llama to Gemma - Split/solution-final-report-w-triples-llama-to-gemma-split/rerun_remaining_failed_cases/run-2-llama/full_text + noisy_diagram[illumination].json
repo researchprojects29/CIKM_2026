@@ -1,0 +1,69 @@
+[
+  {
+    "run_folder": "run-2-llama",
+    "source_csv": "Llama - Split\\run-2-llama\\full_text + noisy_diagram[illumination].csv",
+    "model": "gemma3:4b",
+    "case_id": 8,
+    "case_label": "full_text + noisy_diagram[illumination]",
+    "problem_index": 115,
+    "question": "What is the bottom perimeter of the paper cap?",
+    "triples": [
+      "(1, is_a, sector)",
+      "(1, has_measure, 120_deg)",
+      "(1, has_radius, 6_units)",
+      "(1, is_rolled_into, conical_cap)",
+      "(conical_cap, is_a, bottomless_paper_cap)",
+      "(bottom_perimeter, is_a, ?)",
+      "(sector, has_arc_length, ?)"
+    ],
+    "model_output": {
+      "ANSWER": "4 * pi",
+      "REASONING": "The triples indicate a sector with a radius of 6 units and an angle of 120 degrees. The arc length is calculated as (1/3) * 2 * pi * 6, which simplifies to 4 * pi."
+    },
+    "status": "OK_AFTER_JSON_REPAIR",
+    "raw_response": "```json\n{\n  \"ANSWER\": \"36 units\",\n  \"REASONING\": \"The paper cap is a conical cap. The bottom perimeter is the arc length of the sector. The sector has a measure of 120 degrees and a radius of 6 units. The arc length of a sector is given by the formula: arc length = (angle/360) * 2 * pi * radius. Therefore, the arc length = (120/360) * 2 * pi * 6 = (1/3) * 12 * pi = 4 * pi. Since the question asks for the bottom perimeter, we assume the question refers to the circumference of the base of the cone. The circumference of a circle is 2 * pi * radius. Thus, the circumference is 2 * pi * 6 = 12 * pi. However, the triples provided do not directly give the bottom perimeter. The triple (sector, has_arc_length, ?) is incomplete. We are given that the radius is 6 units and the angle is 120 degrees. The arc length is (120/360) * 2 * pi * 6 = (1/3) * 12 * pi = 4 * pi. The question asks for the bottom perimeter, which is the arc length. Therefore, the answer is 4 * pi, which is approximately 12.56. However, the triple (1, has_measure, 120_deg) suggests the sector is 120 degrees. The arc length is (120/360) * 2 * pi * 6 = (1/3) * 12 * pi = 4 * pi. The question asks for the bottom perimeter, which is the arc length. The triple (1, has_radius, 6_units) is also relevant. The arc length is 4 * pi. The triple (bottom_perimeter, is_a, ?) is incomplete. The arc length is 4 * pi. The question asks for the bottom perimeter. The arc length is 4 * pi. The arc length is (1/3) * 2 * pi * 6 = 4 * pi. The question asks for the bottom perimeter, which is the arc length. The arc length is 4 * pi. The arc length is (1/3) * 2 * pi * 6 = 4 * pi. The arc length is 4 * pi. The arc length is 4 * pi. The arc length is 4 * pi. The arc length is 4 * pi. The arc length is 4 * pi. The arc length is 4 * pi. The arc length is 4 * pi. The arc length is 4 * pi. The arc length is 4 * pi. The arc length is 4 * pi. The arc length is 4 * pi. The arc length is 4 * pi. The arc length is 4 * pi. The arc length is 4 * pi. The arc length is 4 * pi. The arc length is 4 * pi. The arc length is 4 * pi. The arc length is 4 * pi. The arc length is 4 * pi. The arc length is 4 * pi. The arc length is 4 * pi. The arc length is 4 * pi. The arc length is 4 * pi. The arc length is 4 * pi. The arc length is 4 * pi. The arc length is 4 * pi. The arc length is 4 * pi. The arc length is 4 * pi. The arc length is 4 * pi. The arc length is 4 * pi. The arc length is 4 * pi. The arc length is 4 * pi. The arc length is 4 * pi. The arc length is 4 * pi. The arc length is 4 * pi. The arc length is 4 * pi. The arc length is 4 * pi. The arc length is 4 * pi. The arc length is 4 * pi. The arc length is 4 * pi. The arc length is 4 * pi. The arc length is 4 * pi. The arc length is 4 * pi. The arc length is 4 * pi. The arc length is 4 * pi. The arc length is 4 * pi. The arc length is 4 * pi. The arc length is 4 * pi. The arc length is 4 * pi. The arc length is 4 * pi. The arc length is 4 * pi. The arc length is 4 * pi. The arc length is 4 * pi. The arc length is 4 * pi. The arc length is 4 * pi. The arc length is 4 * pi. The arc length is 4 * pi. The arc length is 4 * pi. The arc length is 4 * pi. The arc length is 4 * pi. The arc length is 4 * pi. The arc length is 4 * pi. The arc length is 4 * pi. The arc length is 4 * pi. The arc length is 4 * pi. The arc length is 4 * pi. The arc length is 4 * pi. The arc length is 4 * pi. The arc length is 4 * pi. The arc length is 4 * pi. The arc length is 4 * pi. The arc length is 4 * pi. The arc length is 4 * pi. The arc length is 4 * pi. The arc length is 4 * pi",
+    "json_repair_response": "```json\n{\n  \"ANSWER\": \"4 * pi\",\n  \"REASONING\": \"The triples indicate a sector with a radius of 6 units and an angle of 120 degrees. The arc length is calculated as (1/3) * 2 * pi * 6, which simplifies to 4 * pi.\"\n}\n```",
+    "recovery_method": "repair_original_response"
+  },
+  {
+    "run_folder": "run-2-llama",
+    "source_csv": "Llama - Split\\run-2-llama\\full_text + noisy_diagram[illumination].csv",
+    "model": "gemma3:4b",
+    "case_id": 8,
+    "case_label": "full_text + noisy_diagram[illumination]",
+    "problem_index": 210,
+    "question": "What is the length of AE?",
+    "triples": [
+      "(A, is_a, point)",
+      "(B, is_a, point)",
+      "(C, is_a, point)",
+      "(D, is_a, point)",
+      "(E, is_a, point)",
+      "(AB, is_a, segment)",
+      "(AC, is_a, segment)",
+      "(AE, is_a, segment)",
+      "(BE, is_a, segment)",
+      "(CD, is_a, segment)",
+      "(ED, is_a, segment)",
+      "(AB, has_measure, 12_units)",
+      "(AC, has_measure, 16_units)",
+      "(ED, has_measure, 5_units)",
+      "(Triangles ABE and ACD, are, similar)",
+      "(BE, parallel_to, CD)",
+      "(ABE, is_a, triangle)",
+      "(ACD, is_a, triangle)",
+      "(BE, lies_on, AB)",
+      "(CD, lies_on, AC)",
+      "(AE, intersects, BE)",
+      "(AE, intersects, CD)"
+    ],
+    "model_output": {
+      "ANSWER": "12",
+      "REASONING": "AB = 12 and AC = 16. Since triangles ABE and ACD are similar, we have AB/AC = BE/CD. We are given ED = 5. We are also given that BE is parallel to CD. Therefore, AB/AC = BE/CD, so 12/16 = BE/CD. Thus, BE = (12/16) * CD = (3/4) * CD."
+    },
+    "status": "OK_AFTER_JSON_REPAIR",
+    "raw_response": "```json\n{\n  \"ANSWER\": \"12\",\n  \"REASONING\": \"Since triangles ABE and ACD are similar, we have the proportion AB/AC = BE/CD. We are given AB = 12, AC = 16, and ED = 5. Also, BE is parallel to CD. Since BE lies on AB and CD lies on AC, we have BE/AB = CD/AC. We are given that BE is parallel to CD. We also know that AE intersects BE and AE intersects CD. However, we are asked for the length of AE. Since ABE is a triangle and AB has measure 12, and AE is a segment, and AE intersects BE, we can assume AE is a side of the triangle ABE. Since AB is given as 12, and AE is a segment, and we are looking for the length of AE, and we know that ABE is a triangle, we can assume that AE is a side of the triangle. However, we are not given enough information to determine the length of AE. Since BE is parallel to CD, and BE lies on AB, and CD lies on AC, we can assume that ABE and ACD are similar triangles. We are given that AB = 12 and AC = 16. We are also given that ED = 5. Since triangles ABE and ACD are similar, we have AB/AC = BE/CD = AE/AD. We are given that BE is parallel to CD. Since BE is parallel to CD, we have AB/AC = BE/CD. We are given AB = 12 and AC = 16. We are also given ED = 5. Since BE is parallel to CD, we have BE/CD = AE/AD. However, we are looking for the length of AE. Since BE is parallel to CD, we have AB/AC = BE/CD. We are given AB = 12 and AC = 16. We are also given ED = 5. Since BE is parallel to CD, we have BE/CD = AE/AD. Since BE is parallel to CD, we have AB/AC = BE/CD. We are given AB = 12 and AC = 16. We are also given ED = 5. Since BE is parallel to CD, we have BE/CD = AE/AD. Since BE is parallel to CD, we have AB/AC = BE/CD. We are given AB = 12 and AC = 16. We are also given ED = 5. Since BE is parallel to CD, we have BE/CD = AE/AD. Since BE is parallel to CD, we have AB/AC = BE/CD. We are given AB = 12 and AC = 16. We are also given ED = 5. Since BE is parallel to CD, we have BE/CD = AE/AD. Since BE is parallel to CD, we have AB/AC = BE/CD. We are given AB = 12 and AC = 16. We are also given ED = 5. Since BE is parallel to CD, we have BE/CD = AE/AD. Since BE is parallel to CD, we have AB/AC = BE/CD. We are given AB = 12 and AC = 16. We are also given ED = 5. Since BE is parallel to CD, we have BE/CD = AE/AD. Since BE is parallel to CD, we have AB/AC = BE/CD. We are given AB = 12 and AC = 16. We are also given ED = 5. Since BE is parallel to CD, we have BE/CD = AE/AD. Since BE is parallel to CD, we have AB/AC = BE/CD. We are given AB = 12 and AC = 16. We are also given ED = 5. Since BE is parallel to CD, we have BE/CD = AE/AD. Since BE is parallel to CD, we have AB/AC = BE/CD. We are given AB = 12 and AC = 16. We are also given ED = 5. Since BE is parallel to CD, we have BE/CD = AE/AD. Since BE is parallel to CD, we have AB/AC = BE/CD. We are given AB = 12 and AC = 16. We are also given ED = 5. Since BE is parallel to CD, we have BE/CD = AE/AD. Since BE is parallel to CD, we have AB/AC = BE/CD. We are given AB = 12 and AC = 16. We are also given ED = 5. Since BE is parallel to CD, we have BE/CD = AE/AD. Since BE is parallel to CD, we have AB/AC = BE/CD. We are given AB = 12 and AC = 16. We are also given ED = 5. Since BE is parallel to CD, we have BE/CD = AE/AD. Since BE is parallel to CD, we have AB/AC = BE/CD. We are given AB = 12 and AC = 16. We are also given ED = 5. Since BE is parallel to CD, we have BE/CD = AE/AD. Since BE is parallel to CD, we have AB/AC = BE/CD. We are given AB = 12 and AC = 16. We are also given ED = 5. Since BE is parallel to CD, we have BE/CD = AE/AD. Since BE is parallel",
+    "json_repair_response": "```json\n{\n  \"ANSWER\": \"12\",\n  \"REASONING\": \"AB = 12 and AC = 16. Since triangles ABE and ACD are similar, we have AB/AC = BE/CD. We are given ED = 5. We are also given that BE is parallel to CD. Therefore, AB/AC = BE/CD, so 12/16 = BE/CD. Thus, BE = (12/16) * CD = (3/4) * CD.\"\n}\n```",
+    "recovery_method": "repair_original_response"
+  }
+]

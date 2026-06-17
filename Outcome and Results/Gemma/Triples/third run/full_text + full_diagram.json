@@ -1,0 +1,52 @@
+[
+  {
+    "run_folder": "third run",
+    "source_csv": "third run\\full_text + full_diagram.csv",
+    "case_id": 1,
+    "case_label": "full_text + full_diagram",
+    "problem_index": 1,
+    "question": "What is the size of angle CED?",
+    "triples": [
+      "(A, is_a, point)",
+      "(B, is_a, point)",
+      "(C, is_a, point)",
+      "(O, is_a, point)",
+      "(AB, is_a, segment)",
+      "(BC, is_a, segment)",
+      "(AC, is_a, segment)",
+      "(∠AOB, has_measure, 80_deg)",
+      "(∠ABC, has_measure, 60_deg)",
+      "(D, lies_on, AB)",
+      "(E, lies_on, AC)",
+      "(DE, parallel_to, BC)"
+    ],
+    "model_output": {
+      "ANSWER": "60 degrees",
+      "REASONING": "Since DE is parallel to BC, and AC intersects both DE and BC, we can use properties of parallel lines and transversals. Specifically, the alternate interior angles are equal. ∠ABC and ∠AED are alternate interior angles, so ∠AED = ∠ABC = 60 degrees. Since ∠CED is the same as ∠AED, therefore ∠CED = 60 degrees."
+    },
+    "status": "OK"
+  },
+  {
+    "run_folder": "third run",
+    "source_csv": "third run\\full_text + full_diagram.csv",
+    "case_id": 1,
+    "case_label": "full_text + full_diagram",
+    "problem_index": 2,
+    "question": "What is the measure of angle EGF?",
+    "triples": [
+      "(AB, lies_on, CD)",
+      "(CD, is_a, line)",
+      "(∠BEF, has_measure, 50_deg)",
+      "(EG, intersects, CD)",
+      "(EG, intersects, BEF)",
+      "(∠EGF, has_measure, ?)",
+      "(EF, intersects, AB, at, E)",
+      "(EF, intersects, CD, at, F)"
+    ],
+    "model_output": {
+      "ANSWER": "50_deg",
+      "REASONING": "The triples state that ∠BEF has a measure of 50_deg. Also, EG intersects CD and BEF. Since EF intersects AB at E and CD at F, and EF intersects BEF at E, it implies that ∠EGF is equal to the measure of ∠BEF, which is 50_deg."
+    },
+    "status": "OK"
+  }
+]

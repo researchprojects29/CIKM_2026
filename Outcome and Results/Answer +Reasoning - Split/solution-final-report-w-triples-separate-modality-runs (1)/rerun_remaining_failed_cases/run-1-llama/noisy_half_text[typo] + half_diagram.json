@@ -1,0 +1,36 @@
+[
+  {
+    "run_folder": "run-1-llama",
+    "source_csv": "Separate-Modality-Triples\\run-1-llama\\noisy_half_text[typo] + half_diagram.csv",
+    "model": "meta-llama/llama-4-scout",
+    "case_id": 15,
+    "case_label": "noisy_half_text[typo] + half_diagram",
+    "problem_index": 53,
+    "question": "Find BFD.",
+    "triples": [
+      "(a, is_a, line)",
+      "(b, is_a, line)",
+      "(c, is_a, line)",
+      "(P, is_a, point)",
+      "(Q, is_a, point)",
+      "(a, parallel_to, b)",
+      "(c, intersects, a)",
+      "(c, intersects, b)",
+      "(\\angle at P, has_measure, 155^\\circ)",
+      "(Q, lies_on, b)",
+      "(P, lies_on, a)",
+      "(P, lies_on, c)",
+      "(Q, lies_on, c)",
+      "(\\angle 2, is_a, angle)",
+      "(\\angle 2, has_measure, ?)"
+    ],
+    "model_output": {
+      "ANSWER": "25",
+      "REASONING": "Given that  has a measure of 155^\\circ, and knowing that the angles formed at the intersection of two lines have a sum of 180^\\circ for the angles on a straight line, we can determine the measure of  (BFD) as follows: Since  at P and  2 are on a straight line and share the same vertex,  2's measure can be found by subtracting the measure of  at P from 180^\\circ. Hence, 180^\\circ - 155^\\circ = 25^\\circ."
+    },
+    "status": "OK_AFTER_JSON_REPAIR",
+    "raw_response": "```json\n{\n  \"ANSWER\": \"25\",\n  \"REASONING\": \"Given that \\u2220 at P has a measure of 155^\\circ, and knowing that the angles formed at the intersection of two lines have a sum of 180^\\circ for the angles on a straight line, we can determine the measure of \\u2220 2 (BFD) as follows: Since \\u2220 at P and \\u2220 2 are on a straight line and share the same vertex, \\u2220 2's measure can be found by subtracting the measure of \\u2220 at P from 180^\\circ. Hence, 180^\\circ - 155^\\circ = 25^\\circ.\"\n}\n```",
+    "json_repair_response": "{\"ANSWER\": \"25\", \"REASONING\": \"Given that  has a measure of 155^\\\\circ, and knowing that the angles formed at the intersection of two lines have a sum of 180^\\\\circ for the angles on a straight line, we can determine the measure of  (BFD) as follows: Since  at P and  2 are on a straight line and share the same vertex,  2's measure can be found by subtracting the measure of  at P from 180^\\\\circ. Hence, 180^\\\\circ - 155^\\\\circ = 25^\\\\circ.\"}",
+    "recovery_method": "repair_original_response"
+  }
+]

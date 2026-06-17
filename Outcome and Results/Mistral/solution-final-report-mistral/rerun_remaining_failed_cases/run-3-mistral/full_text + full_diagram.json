@@ -1,0 +1,76 @@
+[
+  {
+    "run_folder": "run-3-mistral",
+    "source_csv": "run-3-mistral\\full_text + full_diagram.csv",
+    "case_id": 1,
+    "case_label": "full_text + full_diagram",
+    "problem_index": 55,
+    "question": "Determine the degree of CON",
+    "triples": [
+      "(A, is_a, point)",
+      "(B, is_a, point))",
+      "(C, is_a, point))",
+      "(D, is_a, point))",
+      "(M, is_a, point))",
+      "(N, is_a, point))",
+      "(O, is_a, point))",
+      "(AB, is_a, line))",
+      "(CD, is_a, line))",
+      "(OM, is_a, line))",
+      "(ON, is_a, line))",
+      "(AOC, is_a, angle))",
+      "(CON, is_a, angle))",
+      "(AB, intersects, O))",
+      "(CD, intersects, O))",
+      "(OM, bisects, AOC))",
+      "(ON, perpendicular_to, OM))",
+      "(AOC, has_measure, 70_deg))"
+    ],
+    "model_output": {
+      "ANSWER": "20_deg",
+      "REASONING": "The angle AOC is bisected by OM, so each of the two resulting angles is half of 70_deg, which is 35_deg. Since ON is perpendicular to OM, it forms a right angle (90_deg) with OM. Therefore, the angle CON is the difference between the right angle and the bisected angle, which is 90_deg - 70_deg = 20_deg."
+    },
+    "status": "OK",
+    "raw_response": "{\n  \"ANSWER\": \"20_deg\",\n  \"REASONING\": \"The angle AOC is bisected by OM, so each of the two resulting angles is half of 70_deg, which is 35_deg. Since ON is perpendicular to OM, it forms a right angle (90_deg) with OM. Therefore, the angle CON is the difference between the right angle and the bisected angle, which is 90_deg - 70_deg = 20_deg.\"\n}",
+    "recovery_method": "original_prompt"
+  },
+  {
+    "run_folder": "run-3-mistral",
+    "source_csv": "run-3-mistral\\full_text + full_diagram.csv",
+    "case_id": 1,
+    "case_label": "full_text + full_diagram",
+    "problem_index": 99,
+    "question": "What is the degree of angle CAB?\"\"",
+    "triples": [
+      "(O, is_a, circle)",
+      "(AB, is_a, diameter)",
+      "(AB, connects, A)",
+      "(AB, connects, B)",
+      "(CD, is_a, chord)",
+      "(CD, connects, C)",
+      "(CD, connects, D)",
+      "(O, center_of, circle)",
+      "(A, is_a, point)",
+      "(B, is_a, point)",
+      "(C, is_a, point)",
+      "(D, is_a, point)",
+      "(∠ADC, is_a, angle)",
+      "(∠ADC, has_measure, 26_deg)",
+      "(∠CAB, is_a, angle)",
+      "(AB, lies_on, circle)",
+      "(CD, lies_on, circle)",
+      "(O, lies_on, AB)",
+      "(A, lies_on, circle)",
+      "(B, lies_on, circle)",
+      "(C, lies_on, circle)",
+      "(D, lies_on, circle)"
+    ],
+    "model_output": {
+      "ANSWER": "64 degrees",
+      "REASONING": "Given that AB is a diameter of the circle, angle CAB is an inscribed angle that subtends the arc CB. The measure of an inscribed angle is half the measure of the arc it subtends. Since AB is a diameter, the arc CB is a semicircle, which measures 180 degrees. Therefore, angle CAB measures 180 / 2 = 90 degrees. However, since angle ADC is given as 26 degrees, and angles ADC and CAB are supplementary (they form a straight line), angle CAB must be 180 - 26 = 154 degrees. But this contradicts the initial reasoning. Re-evaluating, since angle ADC is 26 degrees and it is an inscribed angle subtending arc AC, the central angle AOC would be 2 * 26 = 52 degrees. Angle CAB is an inscribed angle subtending arc CB, which is 180 - 52 = 128 degrees. Therefore, angle CAB is 128 / 2 = 64 degrees."
+    },
+    "status": "OK",
+    "raw_response": "{\n  \"ANSWER\": \"64 degrees\",\n  \"REASONING\": \"Given that AB is a diameter of the circle, angle CAB is an inscribed angle that subtends the arc CB. The measure of an inscribed angle is half the measure of the arc it subtends. Since AB is a diameter, the arc CB is a semicircle, which measures 180 degrees. Therefore, angle CAB measures 180 / 2 = 90 degrees. However, since angle ADC is given as 26 degrees, and angles ADC and CAB are supplementary (they form a straight line), angle CAB must be 180 - 26 = 154 degrees. But this contradicts the initial reasoning. Re-evaluating, since angle ADC is 26 degrees and it is an inscribed angle subtending arc AC, the central angle AOC would be 2 * 26 = 52 degrees. Angle CAB is an inscribed angle subtending arc CB, which is 180 - 52 = 128 degrees. Therefore, angle CAB is 128 / 2 = 64 degrees.\"\n}",
+    "recovery_method": "original_prompt"
+  }
+]

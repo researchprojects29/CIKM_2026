@@ -1,0 +1,33 @@
+[
+  {
+    "run_folder": "run-2-mistral",
+    "source_csv": "run-2-mistral\\noisy_half_text[punctuation] + half_diagram.csv",
+    "case_id": 13,
+    "case_label": "noisy_half_text[punctuation] + half_diagram",
+    "problem_index": 4,
+    "question": "What is the measure of angle C?",
+    "triples": [
+      "(AB, is_a, tangent)",
+      "(O, is_a, circle)",
+      "(B, is_a, point)",
+      "(AB, tangent_to, O)",
+      "(AB, tangent_to, O, at, B)",
+      "(AO, intersects, O)",
+      "(AO, intersects, O, at, C)",
+      "(C, is_a, point)",
+      "(BC, is_a, segment)",
+      "(A, is_a, point)",
+      "(angle, A, is_a, angle)",
+      "(angle, A, has_measure, 36_deg)",
+      "(OCB, is_a, angle)",
+      "(OCB, has_measure, ?)"
+    ],
+    "model_output": {
+      "ANSWER": "54 degrees",
+      "REASONING": "From the triples, we know that AB is a tangent to the circle O at point B, and AO is a line that intersects the circle at point C. This means that angle A is formed by the tangent AB and the line AO. The measure of angle A is given as 36 degrees. Since AB is a tangent and AO is a secant, angle A is equal to the difference between the measure of the intercepted arc and the measure of the angle formed by the secant and the chord. The angle OCB is the angle formed by the radius OC and the chord BC. The measure of angle OCB can be found using the fact that the angle between a tangent and a chord is equal to half the measure of the intercepted arc. Therefore, angle OCB is equal to 90 degrees minus angle A, which is 90 - 36 = 54 degrees."
+    },
+    "status": "OK",
+    "raw_response": "{\n  \"ANSWER\": \"54 degrees\",\n  \"REASONING\": \"From the triples, we know that AB is a tangent to the circle O at point B, and AO is a line that intersects the circle at point C. This means that angle A is formed by the tangent AB and the line AO. The measure of angle A is given as 36 degrees. Since AB is a tangent and AO is a secant, angle A is equal to the difference between the measure of the intercepted arc and the measure of the angle formed by the secant and the chord. The angle OCB is the angle formed by the radius OC and the chord BC. The measure of angle OCB can be found using the fact that the angle between a tangent and a chord is equal to half the measure of the intercepted arc. Therefore, angle OCB is equal to 90 degrees minus angle A, which is 90 - 36 = 54 degrees.\"\n}",
+    "recovery_method": "original_prompt"
+  }
+]

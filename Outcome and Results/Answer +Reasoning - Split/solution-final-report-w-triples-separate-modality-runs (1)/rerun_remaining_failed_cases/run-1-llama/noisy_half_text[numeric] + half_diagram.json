@@ -1,0 +1,76 @@
+[
+  {
+    "run_folder": "run-1-llama",
+    "source_csv": "Separate-Modality-Triples\\run-1-llama\\noisy_half_text[numeric] + half_diagram.csv",
+    "model": "meta-llama/llama-4-scout",
+    "case_id": 12,
+    "case_label": "noisy_half_text[numeric] + half_diagram",
+    "problem_index": 119,
+    "question": "What is the area of the sector cardboard?",
+    "triples": [
+      "(10.0 cm, is_a, quantitative attribute)",
+      "(24, is_a, quantitative attribute)",
+      "(sector cardboard, is_a, object)",
+      "(conical hat, is_a, object)",
+      "(sector cardboard, mapped_to, conical hat)",
+      "(radius of bottom surface, has_measure, 10.0 cm)",
+      "(sector cardboard, has_measure, ?)",
+      "(24, lies_on, sector cardboard)",
+      "(O, is_a, point)",
+      "(bottom surface of conical hat, has_measure, 10.0 cm)",
+      "(10.0_cm, is_a, quantitative_attribute)",
+      "(24, is_a, quantitative_attribute)",
+      "(sector_cardboard, is_a, object)",
+      "(conical_hat, is_a, object)",
+      "(sector_cardboard, mapped_to, conical_hat)",
+      "(bottom_surface, has_measure, 10.0_cm)",
+      "(sector_cardboard, has_measure, ?)",
+      "(24, lies_on, sector_cardboard)"
+    ],
+    "model_output": {
+      "ANSWER": "24",
+      "REASONING": "The area of the sector cardboard is directly provided in the triples as a quantitative attribute that lies on the sector cardboard. The triple (24, lies_on, sector cardboard) indicates that 24 is a measure associated with the sector cardboard. Since 24 is specified as an area (quantitative attribute) and it is directly linked to the sector cardboard, we can conclude that the area of the sector cardboard is 24."
+    },
+    "status": "OK",
+    "raw_response": "```json\n{\n  \"ANSWER\": \"24\",\n  \"REASONING\": \"The area of the sector cardboard is directly provided in the triples as a quantitative attribute that lies on the sector cardboard. The triple (24, lies_on, sector cardboard) indicates that 24 is a measure associated with the sector cardboard. Since 24 is specified as an area (quantitative attribute) and it is directly linked to the sector cardboard, we can conclude that the area of the sector cardboard is 24.\"\n}\n```",
+    "recovery_method": "original_prompt"
+  },
+  {
+    "run_folder": "run-1-llama",
+    "source_csv": "Separate-Modality-Triples\\run-1-llama\\noisy_half_text[numeric] + half_diagram.csv",
+    "model": "meta-llama/llama-4-scout",
+    "case_id": 12,
+    "case_label": "noisy_half_text[numeric] + half_diagram",
+    "problem_index": 207,
+    "question": "What is the area of the shaded region? Round to the nearest tenth.",
+    "triples": [
+      "(LC, is_a, circle)",
+      "(SC_1, is_a, circle)",
+      "(SC_2, is_a, circle)",
+      "(LC, has_measure, 20_units)",
+      "(LC, diameter, 20_units)",
+      "(SC_1, diameter, 10_units)",
+      "(SC_2, diameter, 10_units)",
+      "(SC_1, radius, 5_units)",
+      "(SC_2, radius, 5_units)",
+      "(SC_1, is_congruent_to, SC_2)",
+      "(SC_1, lies_on, LC)",
+      "(SC_2, lies_on, LC)",
+      "(Shaded region, is_a, region)",
+      "(LC, radius, 10_units)",
+      "(LC, has_measure, ?)",
+      "(SC_1, has_measure, ?)",
+      "(SC_2, has_measure, ?)",
+      "(Query, is_a, area)",
+      "(Query, relates_to, Shaded region)",
+      "(Query, has_target, ?)"
+    ],
+    "model_output": {
+      "ANSWER": "114.2",
+      "REASONING": "The area of the large circle (LC) can be found using the formula for the area of a circle, A = πr^2, where r is the radius. Given that the radius of LC is 10_units, its area is A_LC = π(10)^2 = 100π. The area of each small circle (SC_1 and SC_2) with a radius of 5_units is A_SC = π(5)^2 = 25π. Since there are two small circles, their combined area is 2 * 25π = 50π. The shaded region's area is the area of the large circle minus the combined area of the two small circles: A_Shaded = 100π - 50π = 50π. To find the numerical value, we use π ≈ 3.14159. Thus, A_Shaded ≈ 50 * 3.14159 = 157.0795. Rounding to the nearest tenth gives 157.1, however, reevaluating calculation steps for accuracy: A_Shaded = 100π - 50π = 50π ≈ 50 * 3.14159 = 157.0795, which seems to have been approached correctly but let's ensure accuracy in final presentation."
+    },
+    "status": "OK",
+    "raw_response": "```json\n{\n  \"ANSWER\": \"114.2\",\n  \"REASONING\": \"The area of the large circle (LC) can be found using the formula for the area of a circle, A = πr^2, where r is the radius. Given that the radius of LC is 10_units, its area is A_LC = π(10)^2 = 100π. The area of each small circle (SC_1 and SC_2) with a radius of 5_units is A_SC = π(5)^2 = 25π. Since there are two small circles, their combined area is 2 * 25π = 50π. The shaded region's area is the area of the large circle minus the combined area of the two small circles: A_Shaded = 100π - 50π = 50π. To find the numerical value, we use π ≈ 3.14159. Thus, A_Shaded ≈ 50 * 3.14159 = 157.0795. Rounding to the nearest tenth gives 157.1, however, reevaluating calculation steps for accuracy: A_Shaded = 100π - 50π = 50π ≈ 50 * 3.14159 = 157.0795, which seems to have been approached correctly but let's ensure accuracy in final presentation.\"\n}\n```",
+    "recovery_method": "original_prompt"
+  }
+]

@@ -1,0 +1,52 @@
+[
+  {
+    "run_folder": "first run",
+    "source_csv": "first run\\full_text + full_diagram.csv",
+    "case_id": 1,
+    "case_label": "full_text + full_diagram",
+    "problem_index": 1,
+    "question": "What is the size of angle CED?",
+    "triples": [
+      "(A, is_a, point)",
+      "(B, is_a, point)",
+      "(C, is_a, point)",
+      "(O, is_a, point)",
+      "(AB, is_a, segment)",
+      "(BC, is_a, segment)",
+      "(AC, is_a, segment)",
+      "(∠AOB, has_measure, 80_deg)",
+      "(∠ABC, has_measure, 60_deg)",
+      "(DE, is_a, segment)",
+      "(D, lies_on, AB)",
+      "(E, lies_on, AC)",
+      "(DE, parallel_to, BC)"
+    ],
+    "model_output": {
+      "ANSWER": "60 degrees",
+      "REASONING": "Since DE is parallel to BC, and E lies on AC, angle AED is equal to angle ABC (alternate interior angles). We are given that angle ABC is 60 degrees. Therefore, angle CED is equal to angle AED, which is 60 degrees."
+    },
+    "status": "OK"
+  },
+  {
+    "run_folder": "first run",
+    "source_csv": "first run\\full_text + full_diagram.csv",
+    "case_id": 1,
+    "case_label": "full_text + full_diagram",
+    "problem_index": 2,
+    "question": "What is the measure of angle EGF?",
+    "triples": [
+      "(AB, lies_on, CD)",
+      "(CD, parallel_to, CD)",
+      "(∠BEF, has_measure, 50_deg)",
+      "(EG, intersects, CD)",
+      "(EG, intersects, ∠BEF)",
+      "(G, lies_on, EG)",
+      "(∠EGF, has_measure, ?)"
+    ],
+    "model_output": {
+      "ANSWER": "50 degrees",
+      "REASONING": "Since CD is parallel to CD, ∠BEF and ∠EGF are corresponding angles. Therefore, their measures are equal. ∠BEF has a measure of 50 degrees, so ∠EGF also has a measure of 50 degrees."
+    },
+    "status": "OK"
+  }
+]

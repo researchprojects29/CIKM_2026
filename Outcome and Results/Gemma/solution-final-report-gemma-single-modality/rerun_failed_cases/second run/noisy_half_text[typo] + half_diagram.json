@@ -1,0 +1,57 @@
+[
+  {
+    "run_folder": "second run",
+    "source_csv": "second run\\noisy_half_text[typo] + half_diagram.csv",
+    "case_id": 15,
+    "case_label": "noisy_half_text[typo] + half_diagram",
+    "problem_index": 157,
+    "question": "What is the value of cos(B)?",
+    "triples": [
+      "(A, is_a, point)",
+      "(B, is_a, point)",
+      "(C, is_a, point)",
+      "(AB, is_a, segment)",
+      "(AC, is_a, segment)",
+      "(BC, is_a, segment)",
+      "(∠BAC, is_a, angle)",
+      "(∠ABC, is_a, angle)",
+      "(∠ACB, is_a, angle)",
+      "(AC, has_measure, 4.0)",
+      "(BC, has_measure, 3)",
+      "(∠BAC, has_measure, 90.0)"
+    ],
+    "model_output": {
+      "ANSWER": "4/5",
+      "REASONING": "We are given that AC = 4.0 and BC = 3. We can use the Pythagorean theorem to find AB. AB^2 = AC^2 + BC^2 = 4.0^2 + 3^2 = 16 + 9 = 25. Therefore, AB = sqrt(25) = 5.  We want to find cos(B). In triangle ABC, cos(B) = AC / AB = 4.0 / 5.0 = 4/5."
+    },
+    "status": "OK",
+    "raw_response": "```json\n{\n  \"ANSWER\": \"4/5\",\n  \"REASONING\": \"We are given that AC = 4.0 and BC = 3. We can use the Pythagorean theorem to find AB. AB^2 = AC^2 + BC^2 = 4.0^2 + 3^2 = 16 + 9 = 25. Therefore, AB = sqrt(25) = 5.  We want to find cos(B). In triangle ABC, cos(B) = AC / AB = 4.0 / 5.0 = 4/5.\"\n}\n```",
+    "recovery_method": "original_prompt"
+  },
+  {
+    "run_folder": "second run",
+    "source_csv": "second run\\noisy_half_text[typo] + half_diagram.csv",
+    "case_id": 15,
+    "case_label": "noisy_half_text[typo] + half_diagram",
+    "problem_index": 165,
+    "question": "Determine the value of sin(B)",
+    "triples": [
+      "(A, is_a, point)",
+      "(B, is_a, point)",
+      "(C, is_a, point)",
+      "(AB, is_a, segment)",
+      "(∠AOB, is_a, angle)",
+      "(∠AOB, has_measure, 90_deg)",
+      "(AB, has_measure, 2_units)",
+      "(AC, has_measure, ?)"
+    ],
+    "model_output": {
+      "ANSWER": "1/sqrt(5)",
+      "REASONING": "The text explicitly states that sin(theta) = 1/sqrt(5)."
+    },
+    "status": "OK_AFTER_JSON_REPAIR",
+    "raw_response": "```json\n{\n  \"ANSWER\": \"1/sqrt(5)\",\n  \"REASONING\": \"We are given a right triangle AOB with ∠AOB = 90 degrees and AB = 2 units. We want to find sin(B). In a right triangle, sin(B) = opposite/hypotenuse. The side opposite to angle B is OA, and the hypotenuse is AB. We are also given AC = ? and AC is the hypotenuse. Since ∠AOB = 90 degrees, we can use the Pythagorean theorem on triangle AOB: OA^2 + OB^2 = AB^2. We know AB = 2, so OA^2 + OB^2 = 2^2 = 4. Also, we know AC is the hypotenuse, so AC^2 = OA^2 + OB^2 + 2 * OA * OB * cos(90) = OA^2 + OB^2. However, we are given AC has measure ?, and we know AB = 2. Since AC is the hypotenuse, we can use the Pythagorean theorem on triangle ABC, where ∠AOB = 90 degrees. We have AB = 2, and AC is the hypotenuse. We also know that AC^2 = AB^2 + BC^2. We are given AB = 2, so AC^2 = 4 + BC^2. We are also given that AC = ?. We can use the fact that AC is the hypotenuse of the right triangle AOB. Since AB = 2, we have OA^2 + OB^2 = 4. We can also use the fact that AC is the hypotenuse of triangle ABC. We have AC^2 = AB^2 + BC^2. We are given AB = 2, so AC^2 = 4 + BC^2. We are also given that AC = ?. We can use the Pythagorean theorem on triangle ABC: AC^2 = AB^2 + BC^2. Since AB = 2, we have AC^2 = 4 + BC^2. We are given that AC = ?. We can also use the fact that sin(B) = OA/AC. We know OA^2 + OB^2 = 4. Let OA = x and OB = y. Then x^2 + y^2 = 4. We also know that sin(B) = y/AC and cos(B) = x/AC. Since AC^2 = 4 + BC^2, we have AC = sqrt(4 + BC^2). We are given that AC = ?, so we can say AC = sqrt(4 + BC^2). We have sin(B) = OA/AC = x/AC. We also have cos(B) = OB/AC = y/AC. Since x^2 + y^2 = 4, we have (x/AC)^2 + (y/AC)^2 = 1. So x^2/AC^2 + y^2/AC^2 = 1, which means (x^2 + y^2)/AC^2 = 1. Thus, 4/AC^2 = 1, so AC^2 = 4, and AC = 2. Then sin(B) = OA/AC = x/2. Since x^2 + y^2 = 4, and AC = 2, we have x^2 + y^2 = 4. We also know that AB = 2. In triangle AOB, sin(B) = OA/AB = OA/2. In triangle ABC, AC^2 = AB^2 + BC^2, so AC^2 = 2^2 + BC^2 = 4 + BC^2. Since AC = 2, we have 4 = 4 + BC^2, so BC^2 = 0, which means BC = 0. This is not possible. Let's reconsider. Since AB = 2 and ∠AOB = 90°, we have sin(B) = OA/AC. We also have AC^2 = AB^2 + BC^2. We are given AB = 2. Let OA = x and OB = y. Then x^2 + y^2 = 4. Also, AC^2 = x^2 + y^2 + 2xy cos(90) = x^2 + y^2 = 4. So AC = 2. Then sin(B) = OA/AC = x/2. Since x^2 + y^2 = 4, we have x^2 + y^2 = 4. We can assume OA = x and OB = y. Then sin(B) = y/AC. We have AC^2 = AB^2 + BC^2 = 2^2 + BC^2 = 4 + BC^2. We are given AC = ?. We have sin(B) = OA/AC = x/AC. We also have cos(B) = OB/AC = y/AC. Since x^2 + y^2 = 4, we have (x/AC)^2 + (y/AC)^2 = 1. So x^2/AC^2 + y^2/AC^2 = 1. Thus, (x^2 + y^2)/AC^2 = 1, so 4/AC^2 = 1, which means AC^2 = 4, and AC = 2. Then sin(B) = OA/AC = x/2. Since OA^2 +",
+    "json_repair_response": "```json\n{\n  \"ANSWER\": \"1/sqrt(5)\",\n  \"REASONING\": \"The text explicitly states that sin(theta) = 1/sqrt(5).\"\n}\n```",
+    "recovery_method": "repair_original_response"
+  }
+]

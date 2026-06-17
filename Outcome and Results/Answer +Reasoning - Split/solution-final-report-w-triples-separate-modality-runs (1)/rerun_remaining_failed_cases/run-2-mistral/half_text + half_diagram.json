@@ -1,0 +1,77 @@
+[
+  {
+    "run_folder": "run-2-mistral",
+    "source_csv": "Separate-Modality-Triples\\run-2-mistral\\half_text + half_diagram.csv",
+    "model": "mistralai/mistral-small-3.2-24b-instruct",
+    "case_id": 11,
+    "case_label": "half_text + half_diagram",
+    "problem_index": 150,
+    "question": "Find BC.",
+    "triples": [
+      "(A, is_a, point)",
+      "(B, is_a, point)",
+      "(C, is_a, point)",
+      "(BD, is_a, segment)",
+      "(CE, is_a, segment)",
+      "(AC, is_a, segment)",
+      "(A, B, C, collinear_with)",
+      "(BD, perpendicular_to, AC)",
+      "(CE, perpendicular_to, AC)",
+      "(AB, has_measure, 2.0)",
+      "(BD, has_measure, 7/3)",
+      "(AB, is_a, segment)",
+      "(AB, connects, A, B)",
+      "(BD, connects, B, D)",
+      "(CE, connects, C, E)",
+      "(AC, connects, A, C)",
+      "(BC, is_a, segment)",
+      "(BC, connects, B, C)"
+    ],
+    "model_output": {
+      "ANSWER": "BC = 4.0",
+      "REASONING": "Given that A, B, and C are collinear points and AB = 2.0, we can use the properties of similar triangles formed by the perpendiculars BD and CE to AC. Since BD is perpendicular to AC and BD = 7/3, and CE is also perpendicular to AC, triangles ABD and ACE are similar by AA (Angle-Angle) similarity. The ratio of the corresponding sides of similar triangles is equal. Therefore, AB/AC = BD/CE. Let BC = x. Then AC = AB + BC = 2.0 + x. Using the similarity ratio, 2.0 / (2.0 + x) = (7/3) / CE. However, without the measure of CE, we cannot directly solve for x. Assuming CE is also 7/3 (as both are perpendiculars to AC from points B and C respectively), the ratio becomes 2.0 / (2.0 + x) = 1. This implies 2.0 = 2.0 + x, which is not possible. Therefore, we need to reconsider the approach. Alternatively, since BD and CE are both perpendicular to AC and assuming they are equal in length, the distance between B and C can be found using the Pythagorean theorem in the right triangles formed. If BD = 7/3 and AB = 2.0, then in triangle ABD, AD = sqrt(AB^2 + BD^2) = sqrt(2.0^2 + (7/3)^2) = sqrt(4 + 49/9) = sqrt(85/9) = sqrt(85)/3. Similarly, if CE = 7/3, then in triangle ACE, AE = sqrt(AC^2 + CE^2). However, without additional information, we cannot determine the exact length of BC. Given the constraints and assuming the simplest case where the perpendiculars are equal and the points are symmetrically placed, BC would be 4.0 to maintain the proportionality and similarity of the triangles."
+    },
+    "status": "OK",
+    "raw_response": "{\n  \"ANSWER\": \"BC = 4.0\",\n  \"REASONING\": \"Given that A, B, and C are collinear points and AB = 2.0, we can use the properties of similar triangles formed by the perpendiculars BD and CE to AC. Since BD is perpendicular to AC and BD = 7/3, and CE is also perpendicular to AC, triangles ABD and ACE are similar by AA (Angle-Angle) similarity. The ratio of the corresponding sides of similar triangles is equal. Therefore, AB/AC = BD/CE. Let BC = x. Then AC = AB + BC = 2.0 + x. Using the similarity ratio, 2.0 / (2.0 + x) = (7/3) / CE. However, without the measure of CE, we cannot directly solve for x. Assuming CE is also 7/3 (as both are perpendiculars to AC from points B and C respectively), the ratio becomes 2.0 / (2.0 + x) = 1. This implies 2.0 = 2.0 + x, which is not possible. Therefore, we need to reconsider the approach. Alternatively, since BD and CE are both perpendicular to AC and assuming they are equal in length, the distance between B and C can be found using the Pythagorean theorem in the right triangles formed. If BD = 7/3 and AB = 2.0, then in triangle ABD, AD = sqrt(AB^2 + BD^2) = sqrt(2.0^2 + (7/3)^2) = sqrt(4 + 49/9) = sqrt(85/9) = sqrt(85)/3. Similarly, if CE = 7/3, then in triangle ACE, AE = sqrt(AC^2 + CE^2). However, without additional information, we cannot determine the exact length of BC. Given the constraints and assuming the simplest case where the perpendiculars are equal and the points are symmetrically placed, BC would be 4.0 to maintain the proportionality and similarity of the triangles.\"\n}",
+    "recovery_method": "original_prompt"
+  },
+  {
+    "run_folder": "run-2-mistral",
+    "source_csv": "Separate-Modality-Triples\\run-2-mistral\\half_text + half_diagram.csv",
+    "model": "mistralai/mistral-small-3.2-24b-instruct",
+    "case_id": 11,
+    "case_label": "half_text + half_diagram",
+    "problem_index": 264,
+    "question": "What is the measure of angle M?",
+    "triples": [
+      "(M, is_a, point)",
+      "(N, is_a, point)",
+      "(P, is_a, point)",
+      "(Q, is_a, point)",
+      "(MNPQ, is_a, parallelogram)",
+      "(∠M, is_a, angle)",
+      "(∠M, has_measure, 10x)",
+      "(∠M, equals, ∠P)",
+      "(∠N, equals, ∠Q)",
+      "(∠N, is_a, angle)",
+      "(∠P, is_a, angle)",
+      "(∠Q, is_a, angle)",
+      "(∠N, has_measure, 20x)",
+      "(M, connects, N)",
+      "(N, connects, P)",
+      "(P, connects, Q)",
+      "(Q, connects, M)",
+      "(MN, is_a, segment)",
+      "(NP, is_a, segment)",
+      "(PQ, is_a, segment)",
+      "(QM, is_a, segment)"
+    ],
+    "model_output": {
+      "ANSWER": "100",
+      "REASONING": "Given that MNPQ is a parallelogram, opposite angles are equal. Therefore, ∠M equals ∠P. The measure of ∠M is given as 10x. Since ∠N is 20x and adjacent angles in a parallelogram are supplementary, 10x + 20x = 180. Solving for x, x = 10. Therefore, the measure of angle M is 10x = 100."
+    },
+    "status": "OK",
+    "raw_response": "{\n  \"ANSWER\": \"100\",\n  \"REASONING\": \"Given that MNPQ is a parallelogram, opposite angles are equal. Therefore, ∠M equals ∠P. The measure of ∠M is given as 10x. Since ∠N is 20x and adjacent angles in a parallelogram are supplementary, 10x + 20x = 180. Solving for x, x = 10. Therefore, the measure of angle M is 10x = 100.\"\n}",
+    "recovery_method": "original_prompt"
+  }
+]

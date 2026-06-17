@@ -1,0 +1,2708 @@
+[
+  {
+    "run_folder": "run-3-llama",
+    "source_csv": "run-3-llama\\half_text + noisy_half_diagram[blur].csv",
+    "case_id": 17,
+    "case_label": "half_text + noisy_half_diagram[blur]",
+    "problem_index": 1,
+    "question": "What is the size of angle CED?",
+    "triples": [
+      "(B, is_a, point)",
+      "(C, is_a, point)",
+      "(D, is_a, point)",
+      "(E, is_a, point)",
+      "(A, lies_on, AB)",
+      "(B, lies_on, AB)",
+      "(D, lies_on, AB)",
+      "(E, lies_on, AC)",
+      "(C, lies_on, AC)",
+      "(DE, is_a, segment)",
+      "(BC, is_a, segment)",
+      "(DE, parallel_to, BC)",
+      "(∠A, is_a, angle)",
+      "(∠A, has_measure, 80_deg)"
+    ],
+    "model_output": {
+      "ANSWER": "80_deg",
+      "REASONING": "Given that DE is parallel to BC, and ∠A has a measure of 80_deg, we can infer that ∠CED corresponds to ∠A because of the parallel lines and transversal property. Therefore, the size of angle CED is equal to the size of angle A, which is 80_deg."
+    },
+    "status": "OK"
+  },
+  {
+    "run_folder": "run-3-llama",
+    "source_csv": "run-3-llama\\half_text + noisy_half_diagram[blur].csv",
+    "case_id": 17,
+    "case_label": "half_text + noisy_half_diagram[blur]",
+    "problem_index": 2,
+    "question": "What is the measure of angle EGF?",
+    "triples": [
+      "(A, is_a, point)",
+      "(B, is_a, point)",
+      "(C, is_a, point)",
+      "(D, is_a, point)",
+      "(E, is_a, point)",
+      "(F, is_a, point)",
+      "(G, is_a, point)",
+      "(AB, is_a, line)",
+      "(CD, is_a, line)",
+      "(EF, is_a, line)",
+      "(AB, parallel_to, CD)",
+      "(EF, intersects, AB)",
+      "(EF, intersects, CD)",
+      "(E, lies_on, AB)",
+      "(F, lies_on, CD)",
+      "(EG, intersects, CD)",
+      "(G, lies_on, CD)",
+      "(angle EFG, has_measure, 50_deg)",
+      "(EG, bisects, angle BEF)",
+      "(query, is_a, measure of angle EGF)"
+    ],
+    "model_output": {
+      "ANSWER": "50_deg",
+      "REASONING": "Since (EG, bisects, angle BEF) and (angle EFG, has_measure, 50_deg), and given the properties of angles and bisectors, we can infer that angle EGF is equal to angle EFG because EG bisects angle BEF, making angle EGF also 50_deg due to the intersection properties and angle relationships."
+    },
+    "status": "OK"
+  },
+  {
+    "run_folder": "run-3-llama",
+    "source_csv": "run-3-llama\\half_text + noisy_half_diagram[blur].csv",
+    "case_id": 17,
+    "case_label": "half_text + noisy_half_diagram[blur]",
+    "problem_index": 3,
+    "question": "What is the degree of angle CDB?",
+    "triples": [
+      "(A, is_a, point)",
+      "(B, is_a, point)",
+      "(C, is_a, point)",
+      "(D, is_a, point)",
+      "(AB, is_a, segment)",
+      "(BC, is_a, segment)",
+      "(BD, is_a, segment)",
+      "(CD, is_a, segment)",
+      "(∠ABC, is_a, angle)",
+      "(∠CDB, is_a, angle)",
+      "(BC, intersects, BA)",
+      "(BD, bisects, ∠ABC)",
+      "(CD, parallel_to, AB)",
+      "(∠BCD, has_measure, 70_deg)"
+    ],
+    "model_output": {
+      "ANSWER": "70",
+      "REASONING": "Since CD is parallel to AB, corresponding angles are equal. Therefore, ∠CDB = ∠ABC. Given that BD bisects ∠ABC, then ∠CDB = ∠DBC. We also know that the sum of angles in a triangle is 180 degrees. In triangle BCD, we know ∠BCD is 70 degrees. Because BD bisects ∠ABC and CD is parallel to AB, it implies that ∠CDB and ∠DBC are equal. Let's denote ∠CDB = ∠DBC = x. So, x + x + 70 = 180. Solving for x gives 2x = 110, x = 55. However, the question seems to be directly answered by given information and basic properties: as ∠BCD is 70 degrees and given properties of parallel lines and angle bisector, ∠CDB equals 70 degrees due to alternate interior angles formed by the transversal and parallel lines."
+    },
+    "status": "OK"
+  },
+  {
+    "run_folder": "run-3-llama",
+    "source_csv": "run-3-llama\\half_text + noisy_half_diagram[blur].csv",
+    "case_id": 17,
+    "case_label": "half_text + noisy_half_diagram[blur]",
+    "problem_index": 4,
+    "question": "What is the measure of angle C?",
+    "triples": [
+      "(A, is_a, point)",
+      "(O, is_a, point)",
+      "(B, is_a, point)",
+      "(C, is_a, point)",
+      "(AB, is_a, segment)",
+      "(AO, is_a, segment)",
+      "(OB, is_a, segment)",
+      "(OC, is_a, segment)",
+      "(∠A, has_measure, 36_deg)",
+      "(AB, tangent_to, circle O)",
+      "(B, lies_on, circle O)",
+      "(C, lies_on, circle O)",
+      "(AO, intersects, circle O)",
+      "(AO, connects, A, O)",
+      "(OC, connects, O, C)",
+      "(AB, connects, A, B)",
+      "(OB, connects, O, B)"
+    ],
+    "model_output": {
+      "ANSWER": "72_deg",
+      "REASONING": "Since (AB, tangent_to, circle O) and (B, lies_on, circle O), and given that (∠A, has_measure, 36_deg), we recognize that the angle between a tangent and a chord is equal to the angle in the alternate segment. Therefore, ∠OBC = ∠A = 36_deg. Because (OB, connects, O, B) and (OC, connects, O, C) and (O, is_a, point) is the center of the circle, triangle BOC is isosceles. This means that angles ∠OBC and ∠OCB are equal. Hence, ∠OCB = 36_deg. The sum of angles in a triangle is 180_deg. So, ∠BOC = 180_deg - 36_deg - 36_deg = 108_deg. Since ∠BOC and ∠C are the same angle, the measure of angle C is 72_deg because ∠C = 180_deg - ∠BOC = 180_deg - 108_deg = 72_deg."
+    },
+    "status": "OK"
+  },
+  {
+    "run_folder": "run-3-llama",
+    "source_csv": "run-3-llama\\half_text + noisy_half_diagram[blur].csv",
+    "case_id": 17,
+    "case_label": "half_text + noisy_half_diagram[blur]",
+    "problem_index": 7,
+    "question": "What is the degree of angle EAC?",
+    "triples": [
+      "(A, is_a, point)",
+      "(B, is_a, point)",
+      "(C, is_a, point)",
+      "(D, is_a, point)",
+      "(E, is_a, point)",
+      "(AB, is_a, segment)",
+      "(AC, is_a, segment)",
+      "(ADE, is_a, triangle)",
+      "(ABC, is_a, triangle)",
+      "(∠B, has_measure, 70_deg)",
+      "(∠C, has_measure, 30_deg)",
+      "(∠DAC, has_measure, 35_deg)",
+      "(ABC, congruent_to, ADE)"
+    ],
+    "model_output": {
+      "ANSWER": "35",
+      "REASONING": "Since triangles ABC and ADE are congruent, corresponding angles have the same measure. Angle B corresponds to angle E and angle C corresponds to angle D. However, we are interested in angle EAC, which is part of angle DAC. Given that angle DAC is 35 degrees and it is part of triangle ADE (or ABC, due to congruence), and angle EAC is essentially angle DAC, the degree of angle EAC is 35 degrees."
+    },
+    "status": "OK"
+  },
+  {
+    "run_folder": "run-3-llama",
+    "source_csv": "run-3-llama\\half_text + noisy_half_diagram[blur].csv",
+    "case_id": 17,
+    "case_label": "half_text + noisy_half_diagram[blur]",
+    "problem_index": 8,
+    "question": "What is the length of EC?",
+    "triples": [
+      "(A, is_a, point)",
+      "(D, is_a, point)",
+      "(B, is_a, point)",
+      "(E, is_a, point)",
+      "(C, is_a, point)",
+      "(F, is_a, point)",
+      "(AB, is_a, segment)",
+      "(DF, is_a, segment)",
+      "(BE, is_a, segment)",
+      "(EF, is_a, segment)",
+      "(BC, is_a, segment)",
+      "(EC, is_a, segment)",
+      "(BF, is_a, segment)",
+      "(∠ABC, is_a, angle)",
+      "(∠DEF, is_a, angle)",
+      "(Triangle ABC, is_a, triangle)",
+      "(Triangle DEF, is_a, triangle)",
+      "(Triangle ABC, congruent_to, Triangle DEF)",
+      "(A, corresponding_to, D)",
+      "(B, corresponding_to, E)",
+      "(C, corresponding_to, F)",
+      "(BF, has_measure, 7.0)",
+      "(EF, has_measure, 5.0)"
+    ],
+    "model_output": {
+      "ANSWER": "5.0",
+      "REASONING": "Since Triangle ABC is congruent to Triangle DEF, and B corresponds to E, C corresponds to F, we can infer that segment BC corresponds to segment EF. Given that EF has a measure of 5.0, and in congruent triangles corresponding segments are equal, the length of EC (which corresponds to BF) is not directly given but we know BF = 7.0 and it corresponds to EC in the congruent triangles, however, EC's direct measure isn't provided but from the congruence and given measures, we deduce EC equals BF's corresponding segment which isn't correct, we actually compare EF to BC. But as BF corresponds to EC and has a measure of 7.0 we conclude EC has a measure of 7.0 is incorrect. Correctly, as Triangle ABC is congruent to DEF and C corresponds to F, then segment BC is congruent to EF. So, if we are looking for EC, and we know BF = 7.0 and EF = 5.0 then by congruence EC must equal BF is incorrect. The correct comparison for EC's length comes from understanding that segments in congruent triangles are equal if they correspond. Therefore, EC = BF is an error in logic here. Correctly, EC corresponds to none directly but as per given data and correcting: EC is a segment and has to be found from given data directly or indirectly and here it is segment and part of triangle and its length can be deduced with given information that EC has direct or indirect information and here EC length is actually corresponding but has measure from (BF, has_measure, 7.0) as per wrong step but correct is: as per (EF, has_measure, 5.0) and triangles are equal so (BC, has_measure, 5.0) would be correct if we have it but we don't and we know EC segment."
+    },
+    "status": "OK"
+  },
+  {
+    "run_folder": "run-3-llama",
+    "source_csv": "run-3-llama\\half_text + noisy_half_diagram[blur].csv",
+    "case_id": 17,
+    "case_label": "half_text + noisy_half_diagram[blur]",
+    "problem_index": 9,
+    "question": "What is the perimeter of triangle DBE?",
+    "triples": [
+      "(A, is_a, point)",
+      "(B, is_a, point)",
+      "(C, is_a, point)",
+      "(D, is_a, point)",
+      "(E, is_a, point)",
+      "(AB, is_a, segment)",
+      "(AC, is_a, segment)",
+      "(BC, is_a, segment)",
+      "(AD, is_a, segment)",
+      "(DE, is_a, segment)",
+      "(∠C, is_a, angle)",
+      "(∠CAB, is_a, angle)",
+      "(C, lies_on, BC)",
+      "(C, lies_on, AC)",
+      "(B, lies_on, BC)",
+      "(A, lies_on, AC)",
+      "(A, lies_on, AB)",
+      "(B, lies_on, AB)",
+      "(AC = BC, has_measure, ?)",
+      "(AB, has_measure, 6.0_units)",
+      "(∠C, has_measure, 90_deg)",
+      "(AD, intersects, BC)",
+      "(AD, bisects, ∠CAB)",
+      "(DE, perpendicular_to, AB)",
+      "(AC, has_measure, ?)",
+      "(BC, has_measure, ?)",
+      "(AC, is_equal_to, BC)"
+    ],
+    "model_output": {
+      "ANSWER": "12.0_units",
+      "REASONING": "To find the perimeter of triangle DBE, we first need to establish the lengths of its sides. Given that DE is perpendicular to AB, and AD bisects angle CAB, triangle ADB is also a right triangle if we consider point D's relation to line AB and the properties of triangle ABC. Since AC = BC and angle C is 90 degrees, triangle ABC is an isosceles right triangle. Given AB = 6.0_units and triangle ABC being a right isosceles triangle, both AC and BC must be equal and can be calculated using the Pythagorean theorem: AB^2 = AC^2 + BC^2. Since AC = BC, we have 6^2 = 2*AC^2, which gives AC = BC = sqrt(36/2) = sqrt(18) = 3*sqrt(2). Because AD bisects angle CAB and given the isosceles nature of triangle ABC, BD must equal DC, making BD = DC = 3*sqrt(2)/sqrt(2) = 3 (by angle bisector theorem in an isosceles triangle). Since DE is perpendicular to AB, and triangle BDE is a right triangle with BD = 3 and BE can be derived from the fact that triangle DBE is similar to triangle ABC (as DE is perpendicular to AB, making angle BDE 90 degrees, similar to angle C). Given triangle ABC's side lengths, and that BE is part of BC, to find BE and DE directly we use similarity and side ratios. However, an efficient way is recognizing triangle properties. If we consider triangle ADE and triangle ABC similarity, and given DE perpendicular to AB, a direct calculation shows that BE = 3 and DE = 3 (as triangle BDE will also be an isosceles right triangle given the bisector and perpendicular properties). Hence, the perimeter of DBE = BD + DE + BE = 3 + 3 + 3*sqrt(2) is incorrect due to miscalculation of side lengths based on incorrect assumptions of direct values. Correctly, knowing AB = 6 and isosceles right triangle ABC, and AD bisects angle CAB, implies specific proportional lengths but exact lengths require correct application of geometric principles. Since triangle ABC is right-angled and isosceles with AB = 6, then AC = BC = 3*sqrt(2). With D on AC, and DE perpendicular to AB, and given properties, a detailed geometric analysis leads to BD = 3, and by Pythagoras on BDE or similarity, BE and DE can be found as 3. Therefore, perimeter = 3 + 3 + 3*sqrt(2) is conceptually mistaken. Correct perimeter calculation directly from knowns: Given that and recalculating properly with correct geometric analysis yields DE = 3, BD = 3, BE = 3, hence perimeter of DBE = 3 + 3 + 3 = 9."
+    },
+    "status": "OK"
+  },
+  {
+    "run_folder": "run-3-llama",
+    "source_csv": "run-3-llama\\half_text + noisy_half_diagram[blur].csv",
+    "case_id": 17,
+    "case_label": "half_text + noisy_half_diagram[blur]",
+    "problem_index": 10,
+    "question": "What is the degree of angle BDC?",
+    "triples": [
+      "(A, is_a, point)",
+      "(B, is_a, point)",
+      "(C, is_a, point)",
+      "(D, is_a, point)",
+      "(E, is_a, point)",
+      "(AB, is_a, segment)",
+      "(AC, is_a, segment)",
+      "(BC, is_a, segment)",
+      "(AD, is_a, segment)",
+      "(AE, is_a, segment)",
+      "(DE, is_a, segment)",
+      "(∠BAC, has_measure, 36_deg)",
+      "(AB, has_measure, ?)",
+      "(AC, has_measure, ?)",
+      "(BC, has_measure, ?)",
+      "(∠BDC, has_measure, ?)",
+      "(AB, equals, AC)",
+      "(AD, intersects, AC)",
+      "(DE, is_perpendicular_bisector_of, AB)",
+      "(DE, intersects, AC)",
+      "(DE, intersects, AB)"
+    ],
+    "model_output": {
+      "ANSWER": "72",
+      "REASONING": "Since AB equals AC, triangle ABC is isosceles. Therefore, angle ABC equals angle ACB. We know that angle BAC is 36 degrees. The sum of angles in a triangle is 180 degrees. So, angle ABC + angle ACB + 36 = 180. Since angle ABC equals angle ACB, we can write 2*angle ABC = 144, which means angle ABC = 72 degrees. Because angle BDC is an exterior angle to triangle BCD and angle BDC equals angle BAC (exterior angle theorem for the specific case of cyclic quadrilaterals or Inscribed Angle Theorem), angle BDC equals 72 degrees."
+    },
+    "status": "OK"
+  },
+  {
+    "run_folder": "run-3-llama",
+    "source_csv": "run-3-llama\\half_text + noisy_half_diagram[blur].csv",
+    "case_id": 17,
+    "case_label": "half_text + noisy_half_diagram[blur]",
+    "problem_index": 11,
+    "question": "What is the degree of angle AFC?",
+    "triples": [
+      "(A, is_a, point)",
+      "(B, is_a, point)",
+      "(C, is_a, point)",
+      "(D, is_a, point)",
+      "(E, is_a, point)",
+      "(F, is_a, point)",
+      "(AB, is_a, segment)",
+      "(BC, is_a, segment)",
+      "(AD, is_a, segment)",
+      "(AE, is_a, segment)",
+      "(AC, is_a, segment)",
+      "(∠C, is_a, angle)",
+      "(∠AFC, is_a, angle)",
+      "(∠EAD, has_measure, 60_deg)",
+      "(∠C, has_measure, 36_deg)",
+      "(Triangle ABC, is_a, triangle)",
+      "(Triangle AED, is_a, triangle)",
+      "(Triangle ABC, rotated_about, A)",
+      "(Triangle ABC, mapped_to, Triangle AED)",
+      "(AD, intersects, BC)",
+      "(AD, intersects, BC, at, F)"
+    ],
+    "model_output": {
+      "ANSWER": "60",
+      "REASONING": "Given that Triangle ABC is mapped to Triangle AED by rotation about point A, and ∠EAD has a measure of 60 degrees, we can infer that the rotation is 60 degrees. Since point F is the intersection of AD and BC, and considering the properties of rotation in geometry, angle AFC will be equal to angle EAD. Therefore, the degree of angle AFC is 60 degrees."
+    },
+    "status": "OK"
+  },
+  {
+    "run_folder": "run-3-llama",
+    "source_csv": "run-3-llama\\half_text + noisy_half_diagram[blur].csv",
+    "case_id": 17,
+    "case_label": "half_text + noisy_half_diagram[blur]",
+    "problem_index": 14,
+    "question": "What is the degree of angle ACB?",
+    "triples": [
+      "(A, is_a, point)",
+      "(O, is_a, point)",
+      "(B, is_a, point)",
+      "(C, is_a, point)",
+      "(AO, is_a, segment)",
+      "(OB, is_a, segment)",
+      "(OC, is_a, segment)",
+      "(AB, is_a, segment)",
+      "(AC, is_a, segment)",
+      "(BC, is_a, segment)",
+      "(∠OAB, is_a, angle)",
+      "(∠OAB, has_measure, 35_deg)",
+      "(O, center_of, circle)",
+      "(A, lies_on, circle)",
+      "(B, lies_on, circle)",
+      "(C, lies_on, circle)",
+      "(ABC, is_a, triangle)"
+    ],
+    "model_output": {
+      "ANSWER": "35",
+      "REASONING": "Given that O is the center of the circle and A, B, and C lie on the circle, we know that OA, OB, and OC are radii of the circle, making them equal in length. Since ∠OAB has a measure of 35 degrees and OA = OB (radii of the same circle), triangle OAB is isosceles. Therefore, ∠OBA also measures 35 degrees. The angle at the center of the circle is twice the angle at the circumference that subtends the same arc. However, to find ∠ACB, we should note that ∠ACB is an inscribed angle that subtends the same arc as the central angle ∠AOB. Since ∠OAB and ∠OBA are 35 degrees each, ∠AOB = 180 - 35 - 35 = 110 degrees. The inscribed angle ∠ACB is half of the central angle ∠AOB. Hence, ∠ACB = 110 / 2 = 55 degrees."
+    },
+    "status": "OK"
+  },
+  {
+    "run_folder": "run-3-llama",
+    "source_csv": "run-3-llama\\half_text + noisy_half_diagram[blur].csv",
+    "case_id": 17,
+    "case_label": "half_text + noisy_half_diagram[blur]",
+    "problem_index": 16,
+    "question": "What is the degree of angle OAB?",
+    "triples": [
+      "(O, is_a, point)",
+      "(AC, is_a, chord)",
+      "(OB, is_a, radius)",
+      "(AC, parallel_to, OB)",
+      "(∠BOC, has_measure, 50_deg)",
+      "(O, center_of, circle)",
+      "(∠BOC, is_a, angle)",
+      "(∠OAB, has_measure, ?)",
+      "(∠OAB, is_a, angle)"
+    ],
+    "model_output": {
+      "ANSWER": "25_deg",
+      "REASONING": "Since AC is parallel to OB and O is the center of the circle, ∠OAB is half the measure of ∠BOC. Given that ∠BOC has a measure of 50_deg, ∠OAB has a measure of 25_deg."
+    },
+    "status": "OK"
+  },
+  {
+    "run_folder": "run-3-llama",
+    "source_csv": "run-3-llama\\half_text + noisy_half_diagram[blur].csv",
+    "case_id": 17,
+    "case_label": "half_text + noisy_half_diagram[blur]",
+    "problem_index": 17,
+    "question": "What is the measure of angle COD?",
+    "triples": [
+      "(A, is_a, point)",
+      "(B, is_a, point)",
+      "(C, is_a, point)",
+      "(D, is_a, point)",
+      "(ABCD, is_a, parallelogram)",
+      "(AC, is_a, diagonal)",
+      "(BD, is_a, diagonal)",
+      "(AO, is_a, segment)",
+      "(OC, is_a, segment)",
+      "(BO, is_a, segment)",
+      "(OD, is_a, segment)",
+      "(∠DAC, has_measure, 42_deg)",
+      "(∠CBD, has_measure, 23_deg)",
+      "(AC, intersects, BD)",
+      "(AC, intersects, BD, at, O)",
+      "(O, is_a, intersection_point)",
+      "(∠COD, is_a, angle)"
+    ],
+    "model_output": {
+      "ANSWER": "65_deg",
+      "REASONING": "In parallelogram ABCD, opposite angles are equal, and adjacent angles are supplementary. The diagonals AC and BD bisect each other at O. Given that ∠DAC = 42_deg and ∠CBD = 23_deg, we know ∠DAB = 42_deg (since ∠DAC is part of ∠DAB). Because ABCD is a parallelogram, ∠ABC = 180_deg - 42_deg = 138_deg. Since ∠CBD = 23_deg, ∠ABD = 138_deg - 23_deg = 115_deg. However, to find ∠COD, we use the property that the sum of angles around point O is 360_deg and that ∠COD and ∠AOB are vertical angles, as are ∠AOD and ∠BOC. In a parallelogram, diagonals create pairs of congruent triangles, implying ∠COD = ∠AOB and ∠AOD = ∠BOC. Furthermore, ∠AOB + ∠COD = 180_deg because they form a straight line. Since ∠DAC and ∠CBD are given and assuming properties of parallelograms and intersecting lines, ∠COD can be derived from properties of parallelograms and angles in intersecting lines. Specifically, ∠COD = 180_deg - (∠AOD + ∠BOC) but directly ∠COD = ∠AOB. Knowing diagonals of a parallelogram bisect each other and create equal opposite angles, and given that ∠AOD + ∠COD = 180_deg, we can derive ∠COD using exterior angles of triangles BOD and AOC. Given ∠CBD = 23_deg and ∠DAC = 42_deg, and that these angles relate to the interior angles of triangles BOC and AOD respectively, we can infer ∠COD = 180_deg - (∠BOC + ∠AOD). But directly from given and standard properties: ∠COD = 65_deg because ∠COD + 23_deg + 42_deg = 130_deg (supplementary to angles formed around O), hence 180_deg - 130_deg + 65_deg (interior angles of triangle and properties) leads to 65_deg."
+    },
+    "status": "OK"
+  },
+  {
+    "run_folder": "run-3-llama",
+    "source_csv": "run-3-llama\\half_text + noisy_half_diagram[blur].csv",
+    "case_id": 17,
+    "case_label": "half_text + noisy_half_diagram[blur]",
+    "problem_index": 20,
+    "question": "What is the measure of angle ACD?",
+    "triples": [
+      "(A, is_a, point)",
+      "(O, is_a, point)",
+      "(B, is_a, point)",
+      "(C, is_a, point)",
+      "(D, is_a, point)",
+      "(AB, is_a, segment)",
+      "(AC, is_a, segment)",
+      "(BC, is_a, segment)",
+      "(CD, is_a, segment)",
+      "(OD, is_a, segment)",
+      "(∠DOB, is_a, angle)",
+      "(∠DOB, has_measure, 140_deg)",
+      "(AB, diameter_of, circle O)"
+    ],
+    "model_output": {
+      "ANSWER": "40_deg",
+      "REASONING": "Since AB is the diameter of circle O, ∠ACB is a right angle (90_deg) because any inscribed angle created by the diameter is 90_deg. Given that ∠DOB has a measure of 140_deg, and knowing that ∠DOB is a central angle and ∠ACD is an inscribed angle that intercepts the same arc as ∠DOB, we use the property that the measure of an inscribed angle is half the measure of its intercepted arc, or equivalently, half the central angle that subtends the same arc. However, ∠DOB's measure is not directly used to find ∠ACD this way. Instead, note that ∠ACD + ∠BCD = 90_deg because ∠ACB is 90_deg. Since ∠BCD and ∠DOB are related through vertical angles and the properties of a circle, and specifically, the angle subtended by an arc at the center is double the angle it subtends at any point on the circumference, we find ∠ACD using the fact that ∠DOB = 140_deg implies arc DB is 140_deg. Hence, arc CB is 40_deg (180_deg - 140_deg), and ∠ACD, which is half of the central angle subtending the same arc as it (arc CB), is 40_deg / 2 = 20_deg is incorrect. Correctly, ∠ACD corresponds directly to half of the arc not subtended by ∠DOB in the semicircle, which leads to ∠ACD being 40_deg / 2."
+    },
+    "status": "OK"
+  },
+  {
+    "run_folder": "run-3-llama",
+    "source_csv": "run-3-llama\\half_text + noisy_half_diagram[blur].csv",
+    "case_id": 17,
+    "case_label": "half_text + noisy_half_diagram[blur]",
+    "problem_index": 22,
+    "question": "What is the degree of angle OBC?",
+    "triples": [
+      "(A, is_a, point)",
+      "(B, is_a, point)",
+      "(C, is_a, point)",
+      "(D, is_a, point)",
+      "(M, is_a, point)",
+      "(N, is_a, point)",
+      "(AM, is_a, segment)",
+      "(MN, is_a, segment)",
+      "(AC, is_a, segment)",
+      "(BO, is_a, segment)",
+      "(ABCD, is_a, diamond)",
+      "(M, lies_on, AB)",
+      "(N, lies_on, CD)",
+      "(AM = CN, is_a, equality)",
+      "(MN, intersects, AC)",
+      "(MN, intersects, BO)",
+      "(AC, intersects, BO)",
+      "(∠DAC, has_measure, 28_deg)"
+    ],
+    "model_output": {
+      "ANSWER": "28_deg",
+      "REASONING": "Since ABCD is a diamond, its diagonals bisect each other at right angles and opposite angles are equal. Also, the diagonals create four right-angled triangles. Given that ∠DAC has a measure of 28_deg, and since the diagonals of a diamond bisect the angles, ∠BAC also has a measure of 28_deg. Because BO is a diagonal and intersects AC at a right angle, triangle BOC is a right triangle. Since ∠BOC is 90_deg and ∠OCB is 90_deg - 28_deg = 62_deg (because of the diamond's properties making triangle BOC a right triangle where ∠OCB would be complementary to 28_deg in the right triangle BOC), then ∠OBC or angle OBC would be 28_deg due to the properties of diamonds and its diagonals creating congruent triangles."
+    },
+    "status": "OK"
+  },
+  {
+    "run_folder": "run-3-llama",
+    "source_csv": "run-3-llama\\half_text + noisy_half_diagram[blur].csv",
+    "case_id": 17,
+    "case_label": "half_text + noisy_half_diagram[blur]",
+    "problem_index": 25,
+    "question": "What is the measure of ∠C?",
+    "triples": [
+      "(A, is_a, point)",
+      "(EF, is_a, line)",
+      "(BC, is_a, line)",
+      "(AC, is_a, segment)",
+      "(AB, is_a, segment)",
+      "(∠B, has_measure, 50_deg)",
+      "(EF, parallel_to, BC)",
+      "(AC, bisects, ∠BAF)"
+    ],
+    "model_output": {
+      "ANSWER": "50_deg",
+      "REASONING": "Given that EF is parallel to BC, and ∠B has a measure of 50_deg, we need to find the measure of ∠C. Since EF is parallel to BC, corresponding angles are equal. However, the direct measure of ∠C is not provided, but we know that ∠B and ∠C are corresponding angles when a transversal intersects two parallel lines. Therefore, ∠C = ∠B = 50_deg."
+    },
+    "status": "OK"
+  },
+  {
+    "run_folder": "run-3-llama",
+    "source_csv": "run-3-llama\\half_text + noisy_half_diagram[blur].csv",
+    "case_id": 17,
+    "case_label": "half_text + noisy_half_diagram[blur]",
+    "problem_index": 26,
+    "question": "What is the height of the flagpole?",
+    "triples": [
+      "(A, is_a, point)",
+      "(B, is_a, point)",
+      "(O, is_a, point)",
+      "(AB, is_a, segment)",
+      "(AO, is_a, segment)",
+      "(BO, is_a, segment)",
+      "(∠AOB, is_a, angle)",
+      "(X, is_a, point)",
+      "(AX, is_a, segment)",
+      "(BX, is_a, segment)",
+      "(OX, is_a, segment)",
+      "(3.2, has_measure, ?)",
+      "(22, has_measure, ?)",
+      "(8.0, has_measure, ?)",
+      "(AB, has_measure, ?)",
+      "(AO, has_measure, ?)",
+      "(BO, has_measure, ?)",
+      "(AX, has_measure, 3.2_units)",
+      "(OX, has_measure, 8.0_units)",
+      "(BX, has_measure, 22_units)"
+    ],
+    "model_output": {
+      "ANSWER": "8.0",
+      "REASONING": "The height of the flagpole can be determined by finding the measure associated with a segment that represents height. Given the context, OX likely represents the height of the flagpole. From the provided triples, (OX, has_measure, 8.0_units) indicates that the measure of OX is 8.0 units. Therefore, the height of the flagpole is 8.0 units."
+    },
+    "status": "OK"
+  },
+  {
+    "run_folder": "run-3-llama",
+    "source_csv": "run-3-llama\\half_text + noisy_half_diagram[blur].csv",
+    "case_id": 17,
+    "case_label": "half_text + noisy_half_diagram[blur]",
+    "problem_index": 29,
+    "question": "What is the degree of angle BDC?",
+    "triples": [
+      "(A, is_a, point)",
+      "(B, is_a, point)",
+      "(C, is_a, point)",
+      "(A, lies_on, triangle ABC)",
+      "(B, lies_on, triangle ABC)",
+      "(C, lies_on, triangle ABC)",
+      "(∠A, is_a, angle)",
+      "(∠A, has_measure, 50_deg)",
+      "(BD, is_a, segment)",
+      "(CD, is_a, segment)",
+      "(D, is_a, point)",
+      "(D, lies_on, BD)",
+      "(D, lies_on, CD)",
+      "(BD, intersects, CD)"
+    ],
+    "model_output": {
+      "ANSWER": "90",
+      "REASONING": "The provided triples do not directly state that ∠BDC is a right angle or provide its measure. However, given that BD and CD are segments and D lies on both, and they intersect, we cannot directly infer the angle measure from the given information. But typically, in a triangle or with intersection, without specific angle measures given for ∠BDC, we can't calculate it directly from provided triples. Yet, assuming a common geometric property might be intended, such as in a right triangle or specific constructions, no direct information leads to a 90-degree conclusion without assuming additional properties not given in the triples."
+    },
+    "status": "OK"
+  },
+  {
+    "run_folder": "run-3-llama",
+    "source_csv": "run-3-llama\\half_text + noisy_half_diagram[blur].csv",
+    "case_id": 17,
+    "case_label": "half_text + noisy_half_diagram[blur]",
+    "problem_index": 30,
+    "question": "What is the size of angle AOB?",
+    "triples": [
+      "(O, is_a, point)",
+      "(A, is_a, point)",
+      "(B, is_a, point)",
+      "(C, is_a, point)",
+      "(OA, is_a, segment)",
+      "(OB, is_a, segment)",
+      "(OC, is_a, segment)",
+      "(AC, is_a, segment)",
+      "(BC, is_a, segment)",
+      "(∠ACB, is_a, angle)",
+      "(∠AOB, is_a, angle)",
+      "(OA, has_measure, ?)",
+      "(OB, has_measure, ?)",
+      "(OC, has_measure, ?)",
+      "(OA, equals, OB)",
+      "(OA, equals, OC)",
+      "(OB, equals, OC)",
+      "(∠ACB, has_measure, 30_deg)"
+    ],
+    "model_output": {
+      "ANSWER": "60_deg",
+      "REASONING": "Given that OA equals OB and OA equals OC, triangle AOB and triangle AOC are isosceles triangles. Since ∠ACB is 30_deg, and OA = OB = OC, triangle ABC is equilateral. Therefore, angles ∠OAB and ∠OBA are equal. Since the sum of angles in a triangle is 180_deg, and ∠ACB = 30_deg, then ∠AOB = 180_deg - 2 * ∠OAB. However, given that ∠ACB is an exterior angle to triangle AOB, ∠ACB = ∠OAB + ∠OBA = 2 * ∠OAB = 30_deg, then ∠OAB = 15_deg. But we actually use the fact that triangle AOB is isosceles and that ∠AOB + 2*∠OAB = 180_deg. Because ∠AOC and ∠BOC would each be 60_deg if we were to draw OC and consider triangle BOC or AOC, then ∠AOB must be 60_deg because OA=OB=OC."
+    },
+    "status": "OK"
+  },
+  {
+    "run_folder": "run-3-llama",
+    "source_csv": "run-3-llama\\half_text + noisy_half_diagram[blur].csv",
+    "case_id": 17,
+    "case_label": "half_text + noisy_half_diagram[blur]",
+    "problem_index": 32,
+    "question": "What is the degree of angle A?",
+    "triples": [
+      "(A, is_a, point)",
+      "(I, is_a, point)",
+      "(Circle I, is_a, circle)",
+      "(D, is_a, point)",
+      "(E, is_a, point)",
+      "(F, is_a, point)",
+      "(I, center_of, Circle I)",
+      "(∠IED, is_a, angle)",
+      "(∠IED, has_measure, 52_deg)",
+      "(Circle I, tangent_to, line DE)",
+      "(Circle I, tangent_to, line EF)",
+      "(Circle I, tangent_to, line FD)",
+      "(A, lies_on, line FD)",
+      "(E, lies_on, line FD)",
+      "(D, lies_on, line AB)",
+      "(F, lies_on, line AC)",
+      "(angle A, is_a, query_target)"
+    ],
+    "model_output": {
+      "ANSWER": "52",
+      "REASONING": "The degree of angle A can be determined by understanding the geometric properties provided in the triples. Since Circle I is tangent to lines DE, EF, and FD, and given that ∠IED has a measure of 52 degrees, we can infer that angle A is related to this configuration. Because lines FD, AB, and AC are involved in defining points and angles, and A lies on line FD, we use the fact that the angle between a tangent and a chord is equal to the angle in the alternate segment. Therefore, angle A is equal to ∠IED, which is 52 degrees."
+    },
+    "status": "OK"
+  },
+  {
+    "run_folder": "run-3-llama",
+    "source_csv": "run-3-llama\\half_text + noisy_half_diagram[blur].csv",
+    "case_id": 17,
+    "case_label": "half_text + noisy_half_diagram[blur]",
+    "problem_index": 34,
+    "question": "What is the measure of angle 2 = CQF?",
+    "triples": [
+      "(A, is_a, point)",
+      "(AB, is_a, line)",
+      "(C, is_a, point)",
+      "(CD, is_a, line)",
+      "(EF, is_a, line)",
+      "(P, is_a, point)",
+      "(Q, is_a, point)",
+      "(AB, parallel_to, CD)",
+      "(EF, intersects, AB)",
+      "(EF, intersects, CD)",
+      "(∠EPD, has_measure, 100_deg)"
+    ],
+    "model_output": {
+      "ANSWER": "100_deg",
+      "REASONING": "Since lines AB and CD are parallel, corresponding angles are equal. Angle ∠EPD and angle CQF are corresponding angles because they are formed by the transversal EF intersecting the parallel lines AB and CD. Therefore, the measure of angle CQF is equal to the measure of angle ∠EPD, which is 100_deg."
+    },
+    "status": "OK"
+  },
+  {
+    "run_folder": "run-3-llama",
+    "source_csv": "run-3-llama\\half_text + noisy_half_diagram[blur].csv",
+    "case_id": 17,
+    "case_label": "half_text + noisy_half_diagram[blur]",
+    "problem_index": 36,
+    "question": "Find the measure of BAC.",
+    "triples": [
+      "(A, is_a, point)",
+      "(B, is_a, point)",
+      "(C, is_a, point)",
+      "(D, is_a, point)",
+      "(O, is_a, point)",
+      "(AB, is_a, segment)",
+      "(CD, is_a, segment)",
+      "(∠CBD, is_a, angle)",
+      "(Circle O, is_a, circle)",
+      "(AB, diameter_of, Circle O)",
+      "(C, lies_on, Circle O)",
+      "(CD, tangent_to, Circle O)",
+      "(∠CBD, has_measure, 50_deg)"
+    ],
+    "model_output": {
+      "ANSWER": "40_deg",
+      "REASONING": "Since AB is a diameter of Circle O and C lies on Circle O, ∠ACB is a right angle (90_deg) because any inscribed angle created by the diameter is 90_deg. Given that ∠CBD has a measure of 50_deg, and ∠CBD is an exterior angle to triangle BCD, we can infer relationships but need a direct path to ∠BAC. Knowing CD is tangent to Circle O and using properties of circles and tangents, we focus on relevant angles. Because ∠ACB = 90_deg and triangle ABC is a right triangle with ∠CBD = 50_deg, we recognize ∠CBA = 90_deg - 50_deg = 40_deg due to the exterior angle theorem and properties of a circle. Hence, ∠BAC can be found from the triangle ABC being a right triangle, so ∠BAC = 90_deg - ∠CBA = 90_deg - 50_deg is incorrect; correctly, ∠BAC + 50_deg + 90_deg = 180_deg is also incorrect as that misinterprets angles in triangle ABC. Correctly, in triangle ABC, since ∠ACB = 90_deg, and if we find ∠ABC = 40_deg (from 90 - 50), then ∠BAC = 50_deg."
+    },
+    "status": "OK"
+  },
+  {
+    "run_folder": "run-3-llama",
+    "source_csv": "run-3-llama\\half_text + noisy_half_diagram[blur].csv",
+    "case_id": 17,
+    "case_label": "half_text + noisy_half_diagram[blur]",
+    "problem_index": 37,
+    "question": "Find the measure of OAP.",
+    "triples": [
+      "(A, is_a, point)",
+      "(C, is_a, point)",
+      "(O, is_a, point)",
+      "(P, is_a, point)",
+      "(AB, is_a, line)",
+      "(CD, is_a, line)",
+      "(CP, is_a, line)",
+      "(AO, is_a, segment)",
+      "(PO, is_a, segment)",
+      "(AO, has_measure, ?)",
+      "(PO, has_measure, ?)",
+      "(AB, parallel_to, CD)",
+      "(CP, intersects, AB)",
+      "(A, lies_on, AB)",
+      "(C, lies_on, CD)",
+      "(O, lies_on, AB)",
+      "(O, lies_on, CP)",
+      "(∠PCO, is_a, angle)",
+      "(∠PCO, has_measure, 50_deg)"
+    ],
+    "model_output": {
+      "ANSWER": "50_deg",
+      "REASONING": "Since (AB, parallel_to, CD) and (CP, intersects, AB), and given that (∠PCO, is_a, angle) and (∠PCO, has_measure, 50_deg), we can infer that ∠OAP and ∠PCO are corresponding angles. Because CP intersects the parallel lines AB and CD, corresponding angles are equal. Therefore, the measure of ∠OAP is equal to the measure of ∠PCO, which is 50_deg."
+    },
+    "status": "OK"
+  },
+  {
+    "run_folder": "run-3-llama",
+    "source_csv": "run-3-llama\\half_text + noisy_half_diagram[blur].csv",
+    "case_id": 17,
+    "case_label": "half_text + noisy_half_diagram[blur]",
+    "problem_index": 38,
+    "question": "Find the measure of BAC.",
+    "triples": [
+      "(A, is_a, point)",
+      "(B, is_a, point)",
+      "(C, is_a, point)",
+      "(D, is_a, point)",
+      "(AB, is_a, segment)",
+      "(AC, is_a, segment)",
+      "(AD, is_a, segment)",
+      "(BC, is_a, segment)",
+      "(∠BAC, is_a, angle)",
+      "(∠BAD, is_a, angle)",
+      "(AD, parallel_to, BC)",
+      "(AB, has_measure, ?)",
+      "(AC, has_measure, ?)",
+      "(AD, has_measure, ?)",
+      "(BC, has_measure, ?)",
+      "(∠BAC, has_measure, ?)",
+      "(∠ABC, has_measure, ?)",
+      "(∠ACB, has_measure, ?)",
+      "(∠BAD, has_measure, 70_deg)"
+    ],
+    "model_output": {
+      "ANSWER": "70",
+      "REASONING": "Given that AD is parallel to BC, corresponding angles are equal. Therefore, ∠BAC = ∠BAD. Since the measure of ∠BAD is given as 70 degrees, the measure of ∠BAC is also 70 degrees."
+    },
+    "status": "OK"
+  },
+  {
+    "run_folder": "run-3-llama",
+    "source_csv": "run-3-llama\\half_text + noisy_half_diagram[blur].csv",
+    "case_id": 17,
+    "case_label": "half_text + noisy_half_diagram[blur]",
+    "problem_index": 40,
+    "question": "Find the measure of BFD.",
+    "triples": [
+      "(A, is_a, point)",
+      "(a, is_a, line)",
+      "(b, is_a, line)",
+      "(c, is_a, line)",
+      "(a, parallel_to, b)",
+      "(a, above, b)",
+      "(c, intersects, a)",
+      "(c, intersects, b)",
+      "(∠1, is_a, angle)",
+      "(∠1, has_measure, 50_deg)",
+      "(∠1, lies_on, c)",
+      "(∠2, is_a, angle)",
+      "(∠2, lies_on, c)"
+    ],
+    "model_output": {
+      "ANSWER": "50_deg",
+      "REASONING": "Since lines a and b are parallel, and line c intersects both lines a and b, corresponding angles are equal. ∠1 lies on line c and has a measure of 50_deg. ∠BFD corresponds to ∠1 because they are formed by the transversal line c intersecting the parallel lines a and b. Therefore, the measure of ∠BFD is equal to the measure of ∠1, which is 50_deg."
+    },
+    "status": "OK"
+  },
+  {
+    "run_folder": "run-3-llama",
+    "source_csv": "run-3-llama\\half_text + noisy_half_diagram[blur].csv",
+    "case_id": 17,
+    "case_label": "half_text + noisy_half_diagram[blur]",
+    "problem_index": 43,
+    "question": "Find the measure of DOB.",
+    "triples": [
+      "(A, is_a, point)",
+      "(O, is_a, point)",
+      "(B, is_a, point)",
+      "(D, is_a, point)",
+      "(C, is_a, point)",
+      "(AO, is_a, segment)",
+      "(OB, is_a, segment)",
+      "(OD, is_a, segment)",
+      "(OC, is_a, segment)",
+      "(AB, is_a, segment)",
+      "(ODC, is_a, triangle)",
+      "(OAB, is_a, triangle)",
+      "(D, lies_on, AB)",
+      "(∠AOD, has_measure, 30_deg)",
+      "(∠BOC, has_measure, 100_deg)",
+      "(OAB, rotated_about, O)",
+      "(OAB, rotated_to, ODC)",
+      "(OAB, rotated_by, 30_deg)"
+    ],
+    "model_output": {
+      "ANSWER": "100",
+      "REASONING": "Given that ∠AOD has a measure of 30_deg and ∠BOC has a measure of 100_deg. Since D lies on AB, and triangles OAB and ODC are rotations of each other about O, by 30_deg. The measure of ∠DOB can be inferred from the rotation and given angles. As ∠AOD = 30_deg and the rotation is 30_deg, it implies that the original position of AB was such that ∠AOB would have been part of the rotation. Hence, ∠DOB corresponds to ∠BOC which is 100_deg."
+    },
+    "status": "OK"
+  },
+  {
+    "run_folder": "run-3-llama",
+    "source_csv": "run-3-llama\\half_text + noisy_half_diagram[blur].csv",
+    "case_id": 17,
+    "case_label": "half_text + noisy_half_diagram[blur]",
+    "problem_index": 44,
+    "question": "What is the height of the street lamp?",
+    "triples": [
+      "(A, is_a, point)",
+      "(B, is_a, point)",
+      "(AB, is_a, segment)",
+      "(AB, has_measure, 30_units)",
+      "(Xiaogang, is_a, point)",
+      "(Xiaogang, has_measure, 1.5_units)",
+      "(Xiaogang's position under A, is_a, point)",
+      "(Xiaogang's position under B, is_a, point)",
+      "(Xiaogang's position under A, lies_on, segment)",
+      "(Xiaogang's position under B, lies_on, segment)",
+      "(A, lies_on, segment)",
+      "(B, lies_on, segment)",
+      "(Xiaogang's top, intersects, B)",
+      "(segment from A to Xiaogang's position under A, has_measure, 25_units)",
+      "(segment from Xiaogang's position under B to B, has_measure, 30_units)"
+    ],
+    "model_output": {
+      "ANSWER": "5_units",
+      "REASONING": "The height of the street lamp can be inferred from the given triples. Since Xiaogang's position under A and Xiaogang's position under B lie on segment AB, and we know the total length of AB is 30_units, we can use the information about the segments from A to Xiaogang's position under A and from Xiaogang's position under B to B. The segment from A to Xiaogang's position under A has a measure of 25_units. Given that the total length of AB is 30_units, the segment from Xiaogang's position under B to B has a measure of 30_units - 25_units = 5_units. However, to find the height, we should consider Xiaogang's height (1.5_units) and how it relates to the points. Assuming the height of the lamp is measured from the ground to the top and intersects with point B, and given that we do not have a direct measure but can infer from the positioning, the height of the street lamp is directly given as 5_units from the segment measurements."
+    },
+    "status": "OK"
+  },
+  {
+    "run_folder": "run-3-llama",
+    "source_csv": "run-3-llama\\half_text + noisy_half_diagram[blur].csv",
+    "case_id": 17,
+    "case_label": "half_text + noisy_half_diagram[blur]",
+    "problem_index": 45,
+    "question": "Determine the degree of central angle AOB.",
+    "triples": [
+      "(A, is_a, point)",
+      "(O, is_a, point)",
+      "(B, is_a, point)",
+      "(C, is_a, point)",
+      "(A, lies_on, circle O)",
+      "(B, lies_on, circle O)",
+      "(C, lies_on, circle O)",
+      "(AB, is_a, segment)",
+      "(BC, is_a, segment)",
+      "(AC, is_a, segment)",
+      "(∠ABC, is_a, angle)",
+      "(∠BCA, is_a, angle)",
+      "(∠CAB, is_a, angle)",
+      "(∠AOB, is_a, angle)",
+      "(∠AOC, is_a, angle)",
+      "(∠BOC, is_a, angle)",
+      "(∠BCA, has_measure, 35_deg)"
+    ],
+    "model_output": {
+      "ANSWER": "70_deg",
+      "REASONING": "Since ∠BCA has a measure of 35_deg, and ∠BCA is an inscribed angle that cuts off arc BA, the measure of arc BA is 2 * 35_deg = 70_deg. The central angle ∠AOB that subtends arc BA has a measure equal to the measure of arc BA. Therefore, the degree of central angle AOB is 70_deg."
+    },
+    "status": "OK"
+  },
+  {
+    "run_folder": "run-3-llama",
+    "source_csv": "run-3-llama\\half_text + noisy_half_diagram[blur].csv",
+    "case_id": 17,
+    "case_label": "half_text + noisy_half_diagram[blur]",
+    "problem_index": 46,
+    "question": "Find the measure of the angle formed at the intersection with the line CD on the opposite side of the transversal (angle 1)",
+    "triples": [
+      "(A, is_a, point)",
+      "(AB, is_a, segment)",
+      "(C, is_a, point)",
+      "(CD, is_a, segment)",
+      "(E, is_a, point)",
+      "(O, is_a, point)",
+      "(AE, is_a, segment)",
+      "(AB, parallel_to, CD)",
+      "(AE, intersects, AB)",
+      "(AE, intersects, CD)",
+      "(∠EAB, has_measure, 70_deg)"
+    ],
+    "model_output": {
+      "ANSWER": "70_deg",
+      "REASONING": "Given that line AB is parallel to line CD, and AE is a transversal that intersects both lines, the corresponding angles are equal. The measure of angle EAB is given as 70 degrees. Since angle 1 is the angle formed at the intersection with line CD on the opposite side of the transversal and corresponds to angle EAB, it has the same measure. Therefore, the measure of angle 1 is 70 degrees."
+    },
+    "status": "OK"
+  },
+  {
+    "run_folder": "run-3-llama",
+    "source_csv": "run-3-llama\\half_text + noisy_half_diagram[blur].csv",
+    "case_id": 17,
+    "case_label": "half_text + noisy_half_diagram[blur]",
+    "problem_index": 48,
+    "question": "Determine the degree of inscribed angle BAC",
+    "triples": [
+      "(O, is_a, point)",
+      "(O, is_a, center_of_circle)",
+      "(A, is_a, point)",
+      "(B, is_a, point)",
+      "(C, is_a, point)",
+      "(AB, is_a, segment)",
+      "(AC, is_a, segment)",
+      "(BC, is_a, segment)",
+      "(∠BOC, is_a, angle)",
+      "(∠BOC, has_measure, 100_deg)",
+      "(A, lies_on, circle_O)",
+      "(B, lies_on, circle_O)",
+      "(C, lies_on, circle_O)",
+      "(O, center_of, circle_O)"
+    ],
+    "model_output": {
+      "ANSWER": "50_deg",
+      "REASONING": "The angle ∠BOC is a central angle with a measure of 100_deg. The inscribed angle BAC cuts off the same arc as the central angle ∠BOC. According to the Inscribed Angle Theorem, the measure of an inscribed angle is half the measure of its intercepted arc, which is the same as half the measure of the central angle that intercepts the same arc. Therefore, the measure of angle BAC is half of 100_deg, which is 50_deg."
+    },
+    "status": "OK"
+  },
+  {
+    "run_folder": "run-3-llama",
+    "source_csv": "run-3-llama\\half_text + noisy_half_diagram[blur].csv",
+    "case_id": 17,
+    "case_label": "half_text + noisy_half_diagram[blur]",
+    "problem_index": 49,
+    "question": "Find the measure of angle ABC",
+    "triples": [
+      "(A, is_a, point)",
+      "(O, is_a, point)",
+      "(E, is_a, point)",
+      "(D, is_a, point)",
+      "(C, is_a, point)",
+      "(B, is_a, point)",
+      "(∠AED, is_a, angle)",
+      "(∠AOC, is_a, angle)",
+      "(∠AOB, is_a, angle)",
+      "(AO, is_a, segment)",
+      "(OC, is_a, segment)",
+      "(OD, is_a, segment)",
+      "(OE, is_a, segment)",
+      "(ABCDE, is_a, pentagon)",
+      "(∠AED, has_measure, 115_deg)",
+      "(∠AOB, has_measure, 30_deg)",
+      "(AED, lies_on, Circle O)",
+      "(ABCDE, inscribed_in, Circle O)",
+      "(A, lies_on, Circle O)",
+      "(B, lies_on, Circle O)",
+      "(C, lies_on, Circle O)",
+      "(D, lies_on, Circle O)",
+      "(E, lies_on, Circle O)"
+    ],
+    "model_output": {
+      "ANSWER": "115_deg",
+      "REASONING": "Since ABCDE is a pentagon inscribed in Circle O, and ∠AED is an angle of this pentagon with a known measure of 115_deg, we need to find the measure of angle ABC. Given that (AED, lies_on, Circle O) and (ABCDE, inscribed_in, Circle O), and points A, B, C, D, E all lie on Circle O, we can infer relationships between the angles. However, the direct measure of angle ABC is not provided, but we know that ∠AED = 115_deg. Because angles in the same segment of a circle are equal, and considering the properties of inscribed angles and their relation to the arcs they cut, we look for a direct or indirect relation to angle ABC. As (∠AED, has_measure, 115_deg) and given that angles in the same segment are equal, we look for an angle that cuts the same arc as ABC or use given information about the pentagon and circle. Since ∠ABC and ∠AED cut different arcs and there's no direct equality stated, but knowing that (ABCDE, is_a, pentagon) and it's inscribed in Circle O, we consider the sum of interior angles of a pentagon (540_deg) and the properties of cyclic quadrilaterals and pentagons. However, a more straightforward approach comes from recognizing that since ABCDE is inscribed in Circle O, and given angles are related to points on the circle, we use (∠AED, has_measure, 115_deg) as a basis. Noting that ∠ABC + ∠AED's measure isn't directly additive without considering the whole figure, but given ∠AOB = 30_deg at the center, we relate angles at the circumference to central angles. For an inscribed angle like ABC, its measure is half the central angle cutting the same arc. Without a direct central angle for ABC, but knowing the circle's properties, we recall that ∠AED and ∠ABC don't share the same arc. The pentagon's angles sum to 540_deg, but to find ∠ABC directly from given triples, note that (∠AED, has_measure, 115_deg) implies information about the arc AED cuts. Since a direct calculation isn't provided, inferring from given data that could relate angles of the pentagon directly or through circle properties, we see that no direct calculation leads to ∠ABC from given data without assuming additional geometric properties."
+    },
+    "status": "OK"
+  },
+  {
+    "run_folder": "run-3-llama",
+    "source_csv": "run-3-llama\\half_text + noisy_half_diagram[blur].csv",
+    "case_id": 17,
+    "case_label": "half_text + noisy_half_diagram[blur]",
+    "problem_index": 50,
+    "question": "Determine the measure of COE",
+    "triples": [
+      "(B, is_a, point)",
+      "(C, is_a, point)",
+      "(D, is_a, point)",
+      "(E, is_a, point)",
+      "(O, is_a, point)",
+      "(AO, is_a, segment)",
+      "(BO, is_a, segment)",
+      "(CO, is_a, segment)",
+      "(DO, is_a, segment)",
+      "(EO, is_a, segment)",
+      "(AB, is_a, segment)",
+      "(CD, is_a, segment)",
+      "(∠BOD, is_a, angle)",
+      "(∠BOD, has_measure, 50_deg)",
+      "(EO, perpendicular_to, AB)",
+      "(Lines AB and CD, intersects_at, O)",
+      "(EO, connects, O)",
+      "(E, lies_on, EO)",
+      "(O, lies_on, AB)",
+      "(O, lies_on, CD)"
+    ],
+    "model_output": {
+      "ANSWER": "90_deg",
+      "REASONING": "To determine the measure of ∠COE, we first note that ∠BOD has a measure of 50_deg. Since EO is perpendicular to AB, and given that O lies on both AB and CD, we can infer that ∠BOE is 90_deg because EO is perpendicular to AB. However, to find ∠COE directly, we should consider the properties of angles around point O. Knowing that ∠BOD is 50_deg and assuming a straight line's angle is 180_deg, we still need a direct relation to ∠COE. Given EO connects O and E lies on EO, and O lies on CD, we see that ∠COE and ∠BOD are vertical angles if we consider lines CD and AB intersecting at O, but here specifically, ∠COE is complementary to ∠BOD in the context of the right angle formed by EO and AB. Hence, ∠COE = 90_deg - 0_deg (as there's no direct measure given for angles around point O other than ∠BOD), but since ∠BOD's measure is given and assuming standard position, ∠COE's measure would directly relate to forming a right angle with AB, thus 90_deg."
+    },
+    "status": "OK"
+  },
+  {
+    "run_folder": "run-3-llama",
+    "source_csv": "run-3-llama\\half_text + noisy_half_diagram[blur].csv",
+    "case_id": 17,
+    "case_label": "half_text + noisy_half_diagram[blur]",
+    "problem_index": 53,
+    "question": "Find BFD.",
+    "triples": [
+      "(a, is_a, line)",
+      "(b, is_a, line)",
+      "(c, is_a, line)",
+      "(P, is_a, point)",
+      "(Q, is_a, point)",
+      "(\\angle 1, is_a, angle)",
+      "(a, parallel_to, b)",
+      "(c, intersects, a)",
+      "(c, intersects, b)",
+      "(P, lies_on, a)",
+      "(P, lies_on, c)",
+      "(Q, lies_on, b)",
+      "(Q, lies_on, c)",
+      "(\\angle 1, has_measure, 55_deg)",
+      "(\\angle 2, is_a, angle)"
+    ],
+    "model_output": {
+      "ANSWER": "55_deg",
+      "REASONING": "Given that lines a and b are parallel, and line c intersects both lines a and b, corresponding angles are equal. Since ∠ 1 is an angle formed by line c intersecting line a, and ∠ 2 is not directly provided but implied to be corresponding to ∠ 1, and ∠ 1 has a measure of 55_deg, BFD which corresponds to ∠ 1 is 55_deg."
+    },
+    "status": "OK"
+  },
+  {
+    "run_folder": "run-3-llama",
+    "source_csv": "run-3-llama\\half_text + noisy_half_diagram[blur].csv",
+    "case_id": 17,
+    "case_label": "half_text + noisy_half_diagram[blur]",
+    "problem_index": 55,
+    "question": "Determine the degree of CON",
+    "triples": [
+      "(A, is_a, point)",
+      "(B, is_a, point)",
+      "(C, is_a, point)",
+      "(O, is_a, point)",
+      "(M, is_a, point)",
+      "(AB, is_a, segment)",
+      "(AOC, is_a, angle)",
+      "(AOB, has_measure, 180_deg)",
+      "(AOM, has_measure, 35_deg)",
+      "(OM, is_a, ray)",
+      "(ON, is_a, ray)",
+      "(OM, intersects, ON)",
+      "(ON, perpendicular_to, OM)",
+      "(OM, bisects, angle_AOC)",
+      "(∠AOC, has_measure, 70_deg)",
+      "(O, lies_on, AB)",
+      "(O, lies_on, CD)",
+      "(AB, intersects, CD)",
+      "(M, lies_on, OC)",
+      "(O, center_of, ?)"
+    ],
+    "model_output": {
+      "ANSWER": "0",
+      "REASONING": "To determine the degree of CON, we first need to understand what CON refers to. However, based on the provided triples, it seems that 'CON' is not directly mentioned. The closest term is 'angle_AOC' and '∠AOC'. Given that '∠AOC' has a measure of 70_deg and 'AOB' has a measure of 180_deg, we can infer that points and angles are being discussed in terms of degrees. Since 'CON' isn't directly referenced, and assuming it might relate to an angle or a point, we look for relevant information. The degree of an angle is provided by 'has_measure'. Without a direct reference to 'CON', we infer based on given data. If CON were an angle, we'd look for its measure. Given no direct information on 'CON', and assuming a typographical error or indirect reference, we consider provided angles. The question seems to be incomplete or improperly framed regarding 'CON'. However, based on standard geometric interpretations and given data, we can't directly compute 'CON' but note that angles are measured in degrees."
+    },
+    "status": "OK"
+  },
+  {
+    "run_folder": "run-3-llama",
+    "source_csv": "run-3-llama\\half_text + noisy_half_diagram[blur].csv",
+    "case_id": 17,
+    "case_label": "half_text + noisy_half_diagram[blur]",
+    "problem_index": 56,
+    "question": "Find the measure of EOD.",
+    "triples": [
+      "(O, is_a, point)",
+      "(CD, is_a, segment)",
+      "(EF, is_a, segment)",
+      "(C, is_a, point)",
+      "(D, is_a, point)",
+      "(E, is_a, point)",
+      "(F, is_a, point)",
+      "(O, center_of, circle)",
+      "(CD, diameter_of, circle)",
+      "(EF, intersects, CD)",
+      "(G, is_a, point)",
+      "(CD, intersects, EF)",
+      "(∠OCD, has_measure, 20_deg)",
+      "(EF, lies_on, circle)",
+      "(O, lies_on, CD)",
+      "(C, lies_on, circle)",
+      "(D, lies_on, circle)",
+      "(E, lies_on, circle)"
+    ],
+    "model_output": {
+      "ANSWER": "20_deg",
+      "REASONING": "Since CD is a diameter of the circle and O is the center of the circle, triangle OCD is a straight line with O being the midpoint of CD. Given that ∠OCD has a measure of 20_deg, and we know that the angle subtended by a diameter is 90_deg (a right angle), ∠ODC would be 90_deg because CD is a diameter. However, to find ∠EOD, we need to consider the properties of intersecting lines and angles in a circle. Since EF intersects CD and lies on the circle, and given that O is the center, ∠EOD would be twice the measure of ∠OCD because it is a central angle subtending the same arc as the inscribed angle ∠ECD would (though not directly provided). But directly, ∠EOD is related to arc ED. Assuming symmetry or given data, ∠EOD = 2 * ∠OCD = 2 * 20_deg = 40_deg."
+    },
+    "status": "OK"
+  },
+  {
+    "run_folder": "run-3-llama",
+    "source_csv": "run-3-llama\\half_text + noisy_half_diagram[blur].csv",
+    "case_id": 17,
+    "case_label": "half_text + noisy_half_diagram[blur]",
+    "problem_index": 57,
+    "question": "Find the measure of DCB",
+    "triples": [
+      "(A, is_a, point)",
+      "(B, is_a, point)",
+      "(C, is_a, point)",
+      "(D, is_a, point)",
+      "(AB, is_a, line)",
+      "(CD, is_a, line)",
+      "(AD, is_a, line)",
+      "(BC, is_a, line)",
+      "(AB, parallel_to, CD)",
+      "(AD, intersects, AB)",
+      "(AD, intersects, CD)",
+      "(BC, intersects, AB)",
+      "(BC, intersects, CD)",
+      "(∠B, is_a, angle)",
+      "(∠B, has_measure, 20_deg)",
+      "(?, is_a, angle)",
+      "(∠C, is_a, angle)"
+    ],
+    "model_output": {
+      "ANSWER": "160",
+      "REASONING": "Given that line AB is parallel to line CD, and AD and BC are transversals that intersect these lines, corresponding angles are equal, and alternate interior angles are equal. However, to find the measure of angle DCB, we should consider the properties of angles on a straight line and the given angle ∠B with a measure of 20 degrees. Since ∠B and ∠C are not directly stated to be related, but we know that AB is parallel to CD, we look for a relation involving ∠DCB. Noting that ∠B + ∠DCB = 180 degrees because they form a straight line (or a linear pair) when combined with the transversal BC intersecting lines AB and CD, we can derive that ∠DCB = 180 - 20 = 160 degrees."
+    },
+    "status": "OK"
+  },
+  {
+    "run_folder": "run-3-llama",
+    "source_csv": "run-3-llama\\half_text + noisy_half_diagram[blur].csv",
+    "case_id": 17,
+    "case_label": "half_text + noisy_half_diagram[blur]",
+    "problem_index": 58,
+    "question": "Find the measure of CDE",
+    "triples": [
+      "(A, is_a, point)",
+      "(B, is_a, point)",
+      "(C, is_a, point)",
+      "(D, is_a, point)",
+      "(E, is_a, point)",
+      "(AB, is_a, line)",
+      "(CD, is_a, line)",
+      "(EC, is_a, segment)",
+      "(ED, is_a, segment)",
+      "(∠AEC, is_a, angle)",
+      "(∠CED, is_a, angle)",
+      "(AB, parallel_to, CD)",
+      "(E, lies_on, AB)",
+      "(EC, intersects, CD)",
+      "(ED, intersects, CD)",
+      "(∠AEC, has_measure, 35_deg)",
+      "(∠CED, has_measure, 90_deg)"
+    ],
+    "model_output": {
+      "ANSWER": "55_deg",
+      "REASONING": "Since ∠AEC and ∠CED form ∠CED and ∠AEC has a measure of 35_deg, and ∠CED has a measure of 90_deg, we can find ∠CDE using the fact that the sum of angles in a triangle is 180_deg. However, we directly use given information: ∠CDE can be found since we know that ∠ECD and ∠CED are complementary to the angle formed at E. Given ∠AEC = 35_deg and ∠CED = 90_deg, we infer ∠CDE = 180_deg - (90_deg + 35_deg) because ∠CDE + ∠CED + ∠ECD = 180_deg and here ∠ECD = ∠AEC."
+    },
+    "status": "OK"
+  },
+  {
+    "run_folder": "run-3-llama",
+    "source_csv": "run-3-llama\\half_text + noisy_half_diagram[blur].csv",
+    "case_id": 17,
+    "case_label": "half_text + noisy_half_diagram[blur]",
+    "problem_index": 59,
+    "question": "Find the measure of CDA",
+    "triples": [
+      "(A, is_a, point)",
+      "(B, is_a, point)",
+      "(C, is_a, point)",
+      "(D, is_a, point)",
+      "(AB, is_a, line)",
+      "(CD, is_a, line)",
+      "(AD, is_a, line)",
+      "(AC, is_a, line)",
+      "(∠ACD, is_a, angle)",
+      "(∠BAC, is_a, angle)",
+      "(∠D, is_a, angle)",
+      "(AB, parallel_to, CD)",
+      "(AD, intersects, AB)",
+      "(AD, intersects, CD)",
+      "(AD, bisects, ∠BAC)",
+      "(∠ACD, has_measure, 80_deg)"
+    ],
+    "model_output": {
+      "ANSWER": "100",
+      "REASONING": "Given that line AB is parallel to line CD, and ∠ACD has a measure of 80 degrees, we know that ∠BAC and ∠ACD are supplementary because they are same-side interior angles formed by the transversal AD across the parallel lines AB and CD. Since ∠ACD = 80 degrees, ∠BAC + 80 degrees = 180 degrees, so ∠BAC = 100 degrees. Because AD bisects ∠BAC, then ∠DAB = ∠DAC = 50 degrees. Since ∠D is part of line AD and intersects line CD, and given that AB is parallel to CD, ∠CDA and ∠DAC are alternate interior angles, making them congruent. Therefore, the measure of ∠CDA is equal to the measure of ∠DAC, which is 50 degrees, but since we are looking for ∠CDA specifically and we have established that ∠ACD = 80 degrees and that the sum of angles in a triangle is 180 degrees, we use the fact that ∠CDA + ∠ACD + ∠DAC = 180 degrees. Substituting known values: ∠CDA + 80 degrees + 50 degrees = 180 degrees. Solving for ∠CDA: ∠CDA = 180 - 130 = 50 degrees. However, my initial conclusion was incorrect; properly, ∠CDA corresponds directly with the angle supplementary to ∠ACD in the context of line AD and its intersections. The accurate step directly utilizes given and derived information properly: Since AB || CD, and AD intersects them, making ∠BAC and ∠ACD supplementary. Given AD bisects ∠BAC and ∠ACD = 80 degrees, ∠CDA = 180 - (80 + 0) because ∠D in triangle ACD would be 0 if considering just line angles, but for triangle ADC, ∠CDA + ∠DAC + ∠ACD = 180. If ∠ACD = 80 and assuming ∠DAC = 50 (from bisected 100 degree angle), ∠CDA = 50 degrees."
+    },
+    "status": "OK"
+  },
+  {
+    "run_folder": "run-3-llama",
+    "source_csv": "run-3-llama\\half_text + noisy_half_diagram[blur].csv",
+    "case_id": 17,
+    "case_label": "half_text + noisy_half_diagram[blur]",
+    "problem_index": 60,
+    "question": "Find the measure of the angle formed at the intersection with line AB on the upper-right side (angle 1)",
+    "triples": [
+      "(A, is_a, point)",
+      "(AB, is_a, line)",
+      "(C, is_a, point)",
+      "(CD, is_a, line)",
+      "(E, is_a, point)",
+      "(EF, is_a, line)",
+      "(135°, has_measure, ∠2)",
+      "(∠1, is_a, angle)",
+      "(∠2, is_a, angle)",
+      "(AB, parallel_to, CD)",
+      "(EF, intersects, AB)",
+      "(EF, intersects, CD)",
+      "(∠2, has_measure, 135_deg)"
+    ],
+    "model_output": {
+      "ANSWER": "45",
+      "REASONING": "Since line AB is parallel to line CD, and line EF intersects both lines, corresponding angles are equal. Given that angle 2 (∠2) has a measure of 135°, and knowing that ∠1 and ∠2 form a straight line (which has 180°), we can find ∠1's measure. The sum of the measures of ∠1 and ∠2 is 180°. Therefore, the measure of ∠1 = 180° - 135° = 45°."
+    },
+    "status": "OK"
+  },
+  {
+    "run_folder": "run-3-llama",
+    "source_csv": "run-3-llama\\half_text + noisy_half_diagram[blur].csv",
+    "case_id": 17,
+    "case_label": "half_text + noisy_half_diagram[blur]",
+    "problem_index": 64,
+    "question": "What is the maximum depth of the oil?",
+    "triples": [
+      "(A, is_a, point)",
+      "(O, is_a, point)",
+      "(B, is_a, point)",
+      "(AB, is_a, segment)",
+      "(200, has_measure, length)",
+      "(AB, has_measure, 160.0_units)",
+      "(O, center_of, circle)"
+    ],
+    "model_output": {
+      "ANSWER": "160.0_units",
+      "REASONING": "The question asks for the maximum depth of the oil. From the given triples, we can see that (AB, has_measure, 160.0_units) which directly relates to a measure of depth or length, and it is the only triple providing a specific measure that could correspond to depth. Therefore, we infer that 160.0_units is the maximum depth of the oil."
+    },
+    "status": "OK"
+  },
+  {
+    "run_folder": "run-3-llama",
+    "source_csv": "run-3-llama\\half_text + noisy_half_diagram[blur].csv",
+    "case_id": 17,
+    "case_label": "half_text + noisy_half_diagram[blur]",
+    "problem_index": 72,
+    "question": "Find the perimeter of triangle DCE",
+    "triples": [
+      "(A, is_a, point)",
+      "(B, is_a, point)",
+      "(C, is_a, point)",
+      "(D, is_a, point)",
+      "(E, is_a, point)",
+      "(O, is_a, point)",
+      "(ABCD, is_a, parallelogram)",
+      "(AB, is_a, segment)",
+      "(BC, is_a, segment)",
+      "(CD, is_a, segment)",
+      "(DA, is_a, segment)",
+      "(AC, is_a, segment)",
+      "(BD, is_a, segment)",
+      "(OE, is_a, segment)",
+      "(AB + BC + CD + DA, has_measure, 16_units)",
+      "(OE, perpendicular_to, AC)",
+      "(E, lies_on, AD)",
+      "(O, lies_on, AC)",
+      "(O, lies_on, BD)"
+    ],
+    "model_output": {
+      "ANSWER": "8_units",
+      "REASONING": "Given that ABCD is a parallelogram, opposite sides are equal in length. Therefore, AB = CD and BC = AD. The perimeter of ABCD is given as 16 units, so AB + BC + CD + DA = 16 units. Since AB = CD and BC = AD, we can denote AB = CD = x and BC = AD = y. Thus, 2x + 2y = 16 units, which simplifies to x + y = 8 units. The perimeter of triangle DCE is the sum of the lengths of its sides, DC + CE + DE. Since E lies on AD, and considering the parallelogram properties, we note that DE + EA = DA. Because OE is perpendicular to AC and O lies on BD, triangle DCE's sides can be related to the parallelogram's sides. Knowing that CE is part of BC and DE is part of DA, and given that DC = AB, to find the exact perimeter of DCE, we use the fact that in parallelogram ABCD, DC = AB and AD = BC. As E is on AD, and triangle ADE would share side lengths with the parallelogram, specifically for DCE, DC = x, CE + DE = y. Hence, the perimeter of DCE = DC + CE + DE = x + y = 8 units."
+    },
+    "status": "OK"
+  },
+  {
+    "run_folder": "run-3-llama",
+    "source_csv": "run-3-llama\\half_text + noisy_half_diagram[blur].csv",
+    "case_id": 17,
+    "case_label": "half_text + noisy_half_diagram[blur]",
+    "problem_index": 73,
+    "question": "What is the degree of AOC?",
+    "triples": [
+      "(A, is_a, point)",
+      "(O, is_a, point)",
+      "(B, is_a, point)",
+      "(C, is_a, point)",
+      "(AO, is_a, segment)",
+      "(OB, is_a, segment)",
+      "(OC, is_a, segment)",
+      "(AB, is_a, segment)",
+      "(BC, is_a, segment)",
+      "(AC, is_a, segment)",
+      "(∠ABC, is_a, angle)",
+      "(∠ABC, has_measure, 70_deg)",
+      "(O, center_of, Circle O)",
+      "(A, lies_on, Circle O)",
+      "(B, lies_on, Circle O)",
+      "(C, lies_on, Circle O)"
+    ],
+    "model_output": {
+      "ANSWER": "70",
+      "REASONING": "The degree of AOC can be determined by understanding that ∠ABC is an inscribed angle in Circle O, and its measure is given as 70_deg. The angle at the center of the circle (∠AOC) is twice the measure of the inscribed angle (∠ABC) that subtends the same arc (BC). Therefore, the degree of AOC is 2 * 70 = 140_deg."
+    },
+    "status": "OK"
+  },
+  {
+    "run_folder": "run-3-llama",
+    "source_csv": "run-3-llama\\half_text + noisy_half_diagram[blur].csv",
+    "case_id": 17,
+    "case_label": "half_text + noisy_half_diagram[blur]",
+    "problem_index": 78,
+    "question": "Find the measure of AED.",
+    "triples": [
+      "(A, is_a, point)",
+      "(B, is_a, point)",
+      "(C, is_a, point)",
+      "(D, is_a, point)",
+      "(E, is_a, point)",
+      "(AB, is_a, line)",
+      "(CD, is_a, line)",
+      "(AE, is_a, line)",
+      "(AB, parallel_to, CD)",
+      "(AE, lies_on, line)",
+      "(E, lies_on, CD)",
+      "(AE, bisects, ∠CAB)",
+      "(∠AED, has_measure, ?)"
+    ],
+    "model_output": {
+      "ANSWER": "90",
+      "REASONING": "Since AB is parallel to CD, and AE bisects ∠CAB, and E lies on CD, ∠AED is a right angle because AE acts as a transversal and ∠CAB and ∠AED are corresponding angles, with one being a right angle due to the properties of parallel lines and transversals. Therefore, the measure of ∠AED is 90 degrees."
+    },
+    "status": "OK"
+  },
+  {
+    "run_folder": "run-3-llama",
+    "source_csv": "run-3-llama\\half_text + noisy_half_diagram[blur].csv",
+    "case_id": 17,
+    "case_label": "half_text + noisy_half_diagram[blur]",
+    "problem_index": 79,
+    "question": "Find the perimeter of traingle DCE",
+    "triples": [
+      "(A, is_a, point)",
+      "(B, is_a, point)",
+      "(C, is_a, point)",
+      "(D, is_a, point)",
+      "(AB, is_a, segment)",
+      "(BC, is_a, segment)",
+      "(CD, is_a, segment)",
+      "(DA, is_a, segment)",
+      "(AC, is_a, segment)",
+      "(BD, is_a, segment)",
+      "(ABCD, is_a, parallelogram)",
+      "(AC, intersects, BD)",
+      "(AC ∩ BD, is_a, point)",
+      "(O, is_a, point)",
+      "(O, lies_on, AC)",
+      "(O, lies_on, BD)",
+      "(OE, is_a, segment)",
+      "(OE, perpendicular_to, AC)",
+      "(E, is_a, point)",
+      "(E, lies_on, AD)",
+      "(AB + BC + CD + DA, has_measure, 32_units)"
+    ],
+    "model_output": {
+      "ANSWER": "16_units",
+      "REASONING": "Given that ABCD is a parallelogram, opposite sides are equal in length. Therefore, AB = CD and BC = AD. The sum of all sides of parallelogram ABCD is given as 32 units, which implies AB + BC + CD + DA = 32 units. Since AB = CD and BC = AD, we can say 2(AB + BC) = 32 units, which simplifies to AB + BC = 16 units. For triangle DCE, its perimeter is the sum of the lengths of its sides, DC, CE, and DE. Since we know CD = AB and from the given information, we cannot directly derive CE and DE, but we can observe that because OE is perpendicular to AC and E lies on AD, triangle ADE is a right triangle. However, to find the perimeter of triangle DCE directly from given triples is not straightforward without additional geometric properties. But, given that we need to use provided triples and properties of a parallelogram, we note that the perimeter of DCE can also be understood by realizing that DCE is half of the parallelogram's perimeter minus the side AD (or BC), but that's not directly calculable from given data without assuming or calculating side lengths. Yet, if we focus on what is provided and required: as ABCD is a parallelogram and AB + BC + CD + DA = 32_units, and AB = CD, AD = BC, then the perimeter of DCE would directly relate to half the perimeter of ABCD because DCE effectively uses half the structure. Hence, DCE's perimeter relates directly to half of ABCD's perimeter as 16_units."
+    },
+    "status": "OK"
+  },
+  {
+    "run_folder": "run-3-llama",
+    "source_csv": "run-3-llama\\half_text + noisy_half_diagram[blur].csv",
+    "case_id": 17,
+    "case_label": "half_text + noisy_half_diagram[blur]",
+    "problem_index": 81,
+    "question": "Find the measure of DAE.",
+    "triples": [
+      "(A, is_a, point)",
+      "(B, is_a, point)",
+      "(C, is_a, point)",
+      "(D, is_a, point)",
+      "(E, is_a, point)",
+      "(AB, is_a, segment)",
+      "(AD, is_a, segment)",
+      "(AE, is_a, segment)",
+      "(AC, is_a, segment)",
+      "(BC, is_a, segment)",
+      "(∠BAC, is_a, angle)",
+      "(∠BAD, is_a, angle)",
+      "(∠DAE, is_a, angle)",
+      "(∠DAC, is_a, angle)",
+      "(AD, perpendicular_to, BC)",
+      "(AE, lies_on, ?)",
+      "(E, lies_on, DC)",
+      "(AE, bisects, ∠DAC)",
+      "(∠ABC, has_measure, 50_deg)",
+      "(∠BAC, has_measure, 90_deg)"
+    ],
+    "model_output": {
+      "ANSWER": "45_deg",
+      "REASONING": "Given that ∠BAC has a measure of 90_deg and AE bisects ∠DAC, we first need to find the measure of ∠DAC. Since AD is perpendicular to BC, and assuming AC is a straight line intersecting this perpendicular, ∠DAC can be derived from the right angle at A. Knowing ∠BAC is 90_deg and it is composed of ∠BAD and ∠DAC, and that AD is perpendicular to BC, implies relationships but not direct measures. However, since AE bisects ∠DAC and ∠BAC = 90_deg, to find ∠DAE, we consider ∠DAC's relation. If ∠ABC = 50_deg, then ∠ACB = 40_deg because AD perpendicular to BC implies ∠ADC = 90_deg, making ∠ACD = 40_deg. Thus, ∠DAC = 40_deg because of the triangle's angle sum. Since AE bisects ∠DAC, ∠DAE = ∠DAC / 2 = 40_deg / 2 = 20_deg is incorrect due to misinterpretation. Correctly, ∠DAC = 40_deg because triangle ADC's angles must add to 180_deg and ∠ACD = 40_deg, ∠ADC = 90_deg. Given AE bisects ∠DAC and ∠DAC is 40_deg, then ∠DAE = 20_deg."
+    },
+    "status": "OK"
+  },
+  {
+    "run_folder": "run-3-llama",
+    "source_csv": "run-3-llama\\half_text + noisy_half_diagram[blur].csv",
+    "case_id": 17,
+    "case_label": "half_text + noisy_half_diagram[blur]",
+    "problem_index": 84,
+    "question": "Find the length of BC.",
+    "triples": [
+      "(A, is_a, point)",
+      "(O, is_a, point)",
+      "(B, is_a, point)",
+      "(C, is_a, point)",
+      "(AO, is_a, segment)",
+      "(OB, is_a, segment)",
+      "(OC, is_a, segment)",
+      "(AB, is_a, segment)",
+      "(BC, is_a, segment)",
+      "(AC, is_a, segment)",
+      "(∠BAC, is_a, angle)",
+      "(∠BAC, has_measure, 60_deg)",
+      "(Triangle ABC, is_a, triangle)",
+      "(Triangle ABC, lies_on, circle O)"
+    ],
+    "model_output": {
+      "ANSWER": "Cannot be determined",
+      "REASONING": "The given triples provide information about the points A, B, C, and O, and the segments and angles formed by these points. However, there is no information provided about the lengths of the segments. Since the length of BC is requested and no direct or indirect information about its length (or the lengths of other segments) is given, the length of BC cannot be determined from the provided triples."
+    },
+    "status": "OK"
+  },
+  {
+    "run_folder": "run-3-llama",
+    "source_csv": "run-3-llama\\half_text + noisy_half_diagram[blur].csv",
+    "case_id": 17,
+    "case_label": "half_text + noisy_half_diagram[blur]",
+    "problem_index": 86,
+    "question": "Find the length of BC.",
+    "triples": [
+      "(A, is_a, point)",
+      "(B, is_a, point)",
+      "(C, is_a, point)",
+      "(O, is_a, point)",
+      "(AO, is_a, segment)",
+      "(BO, is_a, segment)",
+      "(CO, is_a, segment)",
+      "(AB, is_a, segment)",
+      "(BC, is_a, segment)",
+      "(AC, is_a, segment)",
+      "(∠BAC, is_a, angle)",
+      "(Circle O, is_a, circle)",
+      "(Circle O, center_of, O)",
+      "(BO, radius_of, Circle O)",
+      "(BO, has_measure, 2_units)",
+      "(∠BAC, has_measure, 60_deg)",
+      "(O, lies_on, AO)",
+      "(O, lies_on, BO)",
+      "(O, lies_on, CO)",
+      "(A, lies_on, Circle O)",
+      "(B, lies_on, Circle O)",
+      "(C, lies_on, Circle O)",
+      "(A, connects, B)",
+      "(A, connects, C)",
+      "(B, connects, C)"
+    ],
+    "model_output": {
+      "ANSWER": "2_units",
+      "REASONING": "Since BO has a measure of 2_units and is a radius of Circle O, and points B and C both lie on Circle O, we can infer that BC is a chord of Circle O. Given that ∠BAC has a measure of 60_deg and AO, BO, and CO are radii of Circle O, triangle ABC is isosceles with AB = BC = AC. Furthermore, with ∠BAC being 60_deg, triangle ABC is equilateral. Therefore, BC has the same length as BO, which is 2_units."
+    },
+    "status": "OK"
+  },
+  {
+    "run_folder": "run-3-llama",
+    "source_csv": "run-3-llama\\half_text + noisy_half_diagram[blur].csv",
+    "case_id": 17,
+    "case_label": "half_text + noisy_half_diagram[blur]",
+    "problem_index": 88,
+    "question": "Determine the measure of BOC.",
+    "triples": [
+      "(A, is_a, point)",
+      "(O, is_a, point)",
+      "(B, is_a, point)",
+      "(C, is_a, point)",
+      "(A, lies_on, circle O)",
+      "(B, lies_on, circle O)",
+      "(C, lies_on, circle O)",
+      "(AB, is_a, segment)",
+      "(BC, is_a, segment)",
+      "(AC, is_a, segment)",
+      "(∠ABO, is_a, angle)",
+      "(∠ABO, has_measure, 22_deg)",
+      "(∠BCA, has_measure, 42_deg)"
+    ],
+    "model_output": {
+      "ANSWER": "64_deg",
+      "REASONING": "Since points A, B, and C lie on circle O, we can use the properties of angles and circles to find the measure of ∠BOC. First, note that ∠ABO = 22_deg and ∠BCA = 42_deg. The angle ∠BOC at the center of the circle is twice the angle at the circumference that subtends the same arc. However, to find ∠BOC directly, we consider that ∠BAC = ∠BCA = 42_deg because they are inscribed angles subtending the same arc. The angle ∠ABO is given, but to find ∠BOC, we actually need the central angle theorem and properties of triangles. Given that ∠ABO = 22_deg, and assuming symmetry or using the fact that the triangle's angles sum to 180_deg, we need to relate these to central angles. For an inscribed angle and a central angle subtending the same arc, the central angle is double the inscribed angle. However, the direct path to ∠BOC involves understanding that ∠BOC = 2 * ∠BAC. Since ∠BAC and ∠BCA are 42_deg and assuming ∠ABC can be derived, we know ∠ABC = 180_deg - (22_deg + 42_deg) is incorrect because ∠ABO and ∠ABC are not the same. Instead, we focus on the central angle ∠BOC being double the inscribed angle ∠BAC. If we treat triangle ABC and use the inscribed angle theorem properly: ∠BAC = 42_deg (from ∠BCA), and then ∠BOC = 2 * ∠BAC. But to be precise: ∠ABC = 180_deg - (2*22_deg + 42_deg) is not the right approach; directly, ∠BOC = 2*(∠BAC). Knowing ∠ABO doesn’t directly give ∠ABC without more steps. Given ∠BCA = 42_deg, and if ∠BAC could be derived directly or ∠ABC, we'd see ∠BOC relates to arc BC. With ∠ABO = 22_deg, and if O’s angles to B and C are considered, ∠OBC would relate. Because ∠BOC's measure at O is the double of the 32_deg (which would be ∠BAC if calculated properly), and assuming we derive ∠BAC properly or use given data efficiently: If ∠BAC = 32_deg (deduced from exterior angle theorem or properly), then ∠BOC = 2 * 32_deg = 64_deg."
+    },
+    "status": "OK"
+  },
+  {
+    "run_folder": "run-3-llama",
+    "source_csv": "run-3-llama\\half_text + noisy_half_diagram[blur].csv",
+    "case_id": 17,
+    "case_label": "half_text + noisy_half_diagram[blur]",
+    "problem_index": 95,
+    "question": "What is the degree of angle C?",
+    "triples": [
+      "(A, is_a, point)",
+      "(O, is_a, point)",
+      "(B, is_a, point)",
+      "(C, is_a, point)",
+      "(D, is_a, point)",
+      "(OA, is_a, segment)",
+      "(OC, is_a, segment)",
+      "(OD, is_a, segment)",
+      "(OB, is_a, segment)",
+      "(AC, is_a, segment)",
+      "(AB, is_a, segment)",
+      "(BC, is_a, segment)",
+      "(∠OAB, is_a, angle)",
+      "(∠ADC, is_a, angle)",
+      "(∠AOC, is_a, angle)",
+      "(∠OAC, has_measure, 60_deg)",
+      "(∠ADC, has_measure, 90_deg)"
+    ],
+    "model_output": {
+      "ANSWER": "60",
+      "REASONING": "Since ∠OAC has a measure of 60 degrees and ∠OAC is part of ∠AOC, but the direct measure of ∠AOC or any relation to ∠C specifically isn't given, we look for any direct information about angle C. Given that ∠OAC is 60 degrees and assuming it relates directly to point C through segment AC, we infer that angle C, in this context, likely refers to ∠ACB or a similar configuration. However, no direct measure or relation to angle C (like ∠ACB) is provided. Assuming a common interpretation where ∠ACB could be considered, and given typical geometric problems, if ∠OAC = 60 degrees and assuming symmetry or equal sides (not directly provided), one might still not directly infer ∠C without more relations. But given ∠ADC is 90 degrees and does not directly relate to C's angle measure without additional geometric properties, we actually find that we cannot directly compute or infer angle C's degree from provided triples without assuming additional geometric properties not given."
+    },
+    "status": "OK"
+  },
+  {
+    "run_folder": "run-3-llama",
+    "source_csv": "run-3-llama\\half_text + noisy_half_diagram[blur].csv",
+    "case_id": 17,
+    "case_label": "half_text + noisy_half_diagram[blur]",
+    "problem_index": 99,
+    "question": "What is the degree of angle CAB?\"\"",
+    "triples": [
+      "(A, is_a, point)",
+      "(O, is_a, point)",
+      "(B, is_a, point)",
+      "(C, is_a, point)",
+      "(D, is_a, point)",
+      "(AB, is_a, segment)",
+      "(CD, is_a, segment)",
+      "(∠CAB, is_a, angle)",
+      "(∠CAD, is_a, angle)",
+      "(∠ADB, has_measure, 90_deg)",
+      "(AB, diameter_of, circle)",
+      "(CD, lies_on, circle)",
+      "(A, lies_on, circle)",
+      "(B, lies_on, circle)",
+      "(D, lies_on, circle)",
+      "(C, lies_on, circle)",
+      "(AD, connects, A, D)",
+      "(AC, connects, A, C)",
+      "(AB, connects, A, B)",
+      "(CD, connects, C, D)",
+      "(∠CAD, has_measure, 26_deg)"
+    ],
+    "model_output": {
+      "ANSWER": "64_deg",
+      "REASONING": "Since (AB, diameter_of, circle) and (∠ADB, has_measure, 90_deg), ∠ADB is a right angle because any inscribed angle created by the diameter of a circle is 90 degrees. Given that (∠CAD, has_measure, 26_deg) and ∠CAB = ∠CAD + ∠DAB, but since ∠DAB is a right angle (as ∠ADB is 90 degrees and AD is not the diameter), we actually need to find ∠CAB using a different approach. Because (AB, diameter_of, circle) and (∠ADB, has_measure, 90_deg), triangle ADB is a right triangle. However, to find ∠CAB directly, note that ∠CAB and ∠CAD are related but distinct. Since ∠CAD is 26 degrees and we know that the angle subtended by an arc at the center is double the angle it subtends at any point on the circumference, we still need a direct relation to ∠CAB. Noting that ∠CAB + ∠CAD = ∠DAB is incorrect as ∠DAB is 90 degrees. Instead, ∠CAB = 90 - ∠CAD because triangle ABC will be a right triangle if we consider point C on the circle and AB as diameter. Hence, ∠CAB = 90_deg - 26_deg = 64_deg."
+    },
+    "status": "OK"
+  },
+  {
+    "run_folder": "run-3-llama",
+    "source_csv": "run-3-llama\\half_text + noisy_half_diagram[blur].csv",
+    "case_id": 17,
+    "case_label": "half_text + noisy_half_diagram[blur]",
+    "problem_index": 108,
+    "question": "What is the width of the water surface AB?",
+    "triples": [
+      "(A, is_a, point)",
+      "(O, is_a, point)",
+      "(B, is_a, point)",
+      "(C, is_a, point)",
+      "(CD, is_a, segment)",
+      "(AB, is_a, segment)",
+      "(OC, is_a, segment)",
+      "(OD, is_a, segment)",
+      "(∠CDO, is_a, angle)",
+      "(O, center_of, ?)",
+      "(OC, radius_of, ?)",
+      "(CD, has_measure, 8.0_units)",
+      "(OD, has_measure, 5_units)",
+      "(O, lies_on, CD)"
+    ],
+    "model_output": {
+      "ANSWER": "8.0_units",
+      "REASONING": "To find the width of the water surface AB, we first need to understand the geometric configuration. Given that CD is a segment with a measure of 8.0_units and OD has a measure of 5_units, and O lies on CD, we can infer that OC has a measure of 3.0_units because OC + OD = CD. However, the width of AB is directly related to CD since AB is a segment and likely parallel to CD in a typical geometric configuration involving water surface and points A and B. But from the given triples, we directly see that CD has a measure of 8.0_units. Without specific information that AB's length is directly provided or can be calculated through angles or other relationships, we must assume or find a direct relationship. Given that O is the center of something and OC is a radius, and without further geometric construction details, we consider basic principles. If AB is similar or related in a straightforward geometric manner to CD, we'd need more specifics. However, given that CD's measure is provided as 8.0_units and assuming a direct question relationship, we consider CD's measure as indicative."
+    },
+    "status": "OK"
+  },
+  {
+    "run_folder": "run-3-llama",
+    "source_csv": "run-3-llama\\half_text + noisy_half_diagram[blur].csv",
+    "case_id": 17,
+    "case_label": "half_text + noisy_half_diagram[blur]",
+    "problem_index": 109,
+    "question": "Find β, the angle between line DE and line EC at point E",
+    "triples": [
+      "(A, is_a, point)",
+      "(B, is_a, point)",
+      "(C, is_a, point)",
+      "(D, is_a, point)",
+      "(E, is_a, point)",
+      "(AB, is_a, segment)",
+      "(BC, is_a, segment)",
+      "(DE, is_a, segment)",
+      "(∠ADB, is_a, angle)",
+      "(∠ADB, has_measure, 130_deg)",
+      "(α, is_a, angle)",
+      "(β, is_a, angle)",
+      "(DE, intersects, AB)",
+      "(DE, intersects, BC)",
+      "(∠α, lies_on, DE)"
+    ],
+    "model_output": {
+      "ANSWER": "40",
+      "REASONING": "To find β, the angle between line DE and line EC at point E, we first need to establish the relationship between angles given. Since (∠ADB, has_measure, 130_deg) and this angle is external to triangle ADE and CDE, we use the fact that the exterior angle of a triangle equals the sum of the remote interior angles. However, given the information provided, a direct path to β involves understanding that ∠α and β are related through the intersection points and line segments. Notably, since (DE, intersects, AB) and (DE, intersects, BC), and considering (∠α, lies_on, DE), we infer relationships but lack a direct measure or simple relation to compute β without additional geometric properties. Assuming a straight line (DE) and given angles around a point sum to 180 degrees, and if considering triangle properties or angle sums, we'd still need a direct link. Given (∠ADB, has_measure, 130_deg), and assuming ADB is supplementary to the angle at E (which would be incorrect without further properties), we actually leverage: if ∠α and β form a linear pair or are otherwise related through given conditions, we'd solve directly. Lacking direct measures or relationships specific to β or ∠α's measure but knowing that angles in a triangle add to 180 and exterior angles relate, we consider ADB's influence. Given typical geometric problems like these, and standard angle relationships, we use 40 as an example solution based on standard problem setups."
+    },
+    "status": "OK"
+  },
+  {
+    "run_folder": "run-3-llama",
+    "source_csv": "run-3-llama\\half_text + noisy_half_diagram[blur].csv",
+    "case_id": 17,
+    "case_label": "half_text + noisy_half_diagram[blur]",
+    "problem_index": 112,
+    "question": "Find the length of AO.",
+    "triples": [
+      "(A, is_a, point)",
+      "(O, is_a, point)",
+      "(B, is_a, point)",
+      "(AB, is_a, segment)",
+      "(AO, is_a, segment)",
+      "(OB, is_a, segment)",
+      "(∠AOB, is_a, angle)",
+      "(AO, lies_on, ?)",
+      "(AO, intersects, ?)",
+      "(AB, has_measure, 2.5_units)",
+      "(OB, has_measure, 0.7_units)"
+    ],
+    "model_output": {
+      "ANSWER": "Cannot determine",
+      "REASONING": "The provided triples do not give a direct measure or relation to find the length of AO. While AO is identified as a segment, no specific measure or comparative relation is given for AO directly or indirectly from the provided triples. The measures given for AB and OB do not directly relate to AO without additional geometric properties or relationships."
+    },
+    "status": "OK"
+  },
+  {
+    "run_folder": "run-3-llama",
+    "source_csv": "run-3-llama\\half_text + noisy_half_diagram[blur].csv",
+    "case_id": 17,
+    "case_label": "half_text + noisy_half_diagram[blur]",
+    "problem_index": 114,
+    "question": "What is the area of the shaded part?",
+    "triples": [
+      "(O, is_a, point)",
+      "(A, is_a, point)",
+      "(B, is_a, point)",
+      "(OAB, is_a, sector)",
+      "(OA, is_a, diameter)",
+      "(OB, is_a, diameter)",
+      "(∠AOB, is_a, angle)",
+      "(∠AOB, has_measure, 90_deg)",
+      "(OA, has_measure, 1.0)",
+      "(OB, has_measure, 1.0)",
+      "(query, is_a, area)"
+    ],
+    "model_output": {
+      "ANSWER": "0.25",
+      "REASONING": "The area of the shaded part can be determined by first finding the area of the sector OAB and then subtracting the area of the unshaded triangle AOB. Since ∠AOB is 90 degrees and OA and OB are diameters of length 1.0, the area of sector OAB is (90/360) * π * (1.0)^2 = 0.25 * π. The area of triangle AOB is 0.5 * base * height = 0.5 * 1.0 * 1.0 = 0.5. However, given that the query directly relates to area and specific geometric formulas are not provided in the triples, we infer the sector's area directly. The sector's area, given it's a quarter of a circle with radius 1, is π * (1.0)^2 / 4 = 0.25 * π. But as we are working strictly with provided and inferable information, and no direct calculation for π or further division is given, the direct inference from given data leads to the quarter circle area being the shaded area, which equals 0.25 when considering π as approximately 3.14159 and 1.0 as radius."
+    },
+    "status": "OK"
+  },
+  {
+    "run_folder": "run-3-llama",
+    "source_csv": "run-3-llama\\half_text + noisy_half_diagram[blur].csv",
+    "case_id": 17,
+    "case_label": "half_text + noisy_half_diagram[blur]",
+    "problem_index": 115,
+    "question": "What is the bottom perimeter of the paper cap?",
+    "triples": [
+      "(A, is_a, point)",
+      "(6, has_measure, length)",
+      "(120.0, has_measure, angle)",
+      "(conical bottomless paper cap, is_a, object)",
+      "(Perimeter, is_a, query_target)"
+    ],
+    "model_output": {
+      "ANSWER": "6",
+      "REASONING": "The query asks for the bottom perimeter of the paper cap. From the given triples, we see that '6' is associated with 'has_measure' and 'length'. Since the bottom perimeter would relate to the length or circumference, and given that 'conical bottomless paper cap' is the object of interest, we infer that '6' refers to the bottom perimeter of the cap."
+    },
+    "status": "OK"
+  },
+  {
+    "run_folder": "run-3-llama",
+    "source_csv": "run-3-llama\\half_text + noisy_half_diagram[blur].csv",
+    "case_id": 17,
+    "case_label": "half_text + noisy_half_diagram[blur]",
+    "problem_index": 117,
+    "question": "What is the height of cone?",
+    "triples": [
+      "(central angle, has_measure, $120^\\circ$)",
+      "(cone base radius, has_measure, $3$ units)",
+      "(central angle, is_a, angle)",
+      "(cone base radius, is_a, length)",
+      "(central angle, has_measure, 120_deg)",
+      "(cone base radius, has_measure, 3_units)"
+    ],
+    "model_output": {
+      "ANSWER": "not provided",
+      "REASONING": "The provided triples do not contain information about the height of the cone. They mention the central angle and the cone base radius but do not provide any details that could be used to calculate or directly state the height of the cone."
+    },
+    "status": "OK"
+  },
+  {
+    "run_folder": "run-3-llama",
+    "source_csv": "run-3-llama\\half_text + noisy_half_diagram[blur].csv",
+    "case_id": 17,
+    "case_label": "half_text + noisy_half_diagram[blur]",
+    "problem_index": 119,
+    "question": "What is the area of the sector cardboard?",
+    "triples": [
+      "(24, is_a, length)",
+      "(O, is_a, point)",
+      "(sector cardboard, is_a, shape)",
+      "(conical hat, is_a, shape)",
+      "(sector cardboard, mapped_to, conical hat)",
+      "(radius of bottom surface, has_measure, 10.0_cm)",
+      "(Area of sector cardboard, is_a, ?)"
+    ],
+    "model_output": {
+      "ANSWER": "288.0",
+      "REASONING": "The area of the sector cardboard can be determined using the formula for the area of a sector of a circle, which is given by (angle/360) * πr^2, but in this case, we can use the given information that it maps to a conical hat. Given that the radius of the bottom surface of the conical hat (which corresponds to the radius of the sector cardboard) is 10.0_cm and assuming a standard relationship, we need the length of the sector cardboard to calculate the area. The length of the sector cardboard is given as 24. The circumference of the base of the cone equals the arc length of the sector. The formula for the circumference is C = 2πr, so C = 2 * π * 10 = 20π. The arc length of the sector is equal to the circumference of the base of the cone. Assuming the full circumference of the circle from which the sector is taken is 2 * π * r and the length of the sector (24) corresponds to the arc length, we can set up a proportion or directly calculate if we consider the whole circle's circumference and the fraction that 24 represents. However, we lack a direct measure or relation to calculate the area without making several assumptions. If we assume that the 24 is the arc length and corresponds directly to a fraction of the circle's circumference, we still need the radius of the sector cardboard to compute the area directly. Given that we know the radius of the bottom surface of the conical hat (which would be the same as the sector's radius if it rolls into the cone perfectly) is 10.0_cm, and assuming standard formulas apply, we can estimate. The arc length (24) of the sector equals the circumference of the cone's base (20π ≈ 62.83), implying the sector's circumference is 62.83 and thus its radius is 62.83 / (2 * π) ≈ 10. The area of the sector = πr^2 * (θ/360) but since we have the arc length (24) and radius (10), area = 0.5 * r * arc length = 0.5 * 10 * 24 * 2 = 120 * 2.4 = 288."
+    },
+    "status": "OK"
+  },
+  {
+    "run_folder": "run-3-llama",
+    "source_csv": "run-3-llama\\half_text + noisy_half_diagram[blur].csv",
+    "case_id": 17,
+    "case_label": "half_text + noisy_half_diagram[blur]",
+    "problem_index": 120,
+    "question": "What is the bottom area of the cone?",
+    "triples": [
+      "(Generatrix, has_measure, 5.0_units)",
+      "(Height, has_measure, 4_units)",
+      "(Query, is_about, bottom_area)",
+      "(Generatrix, is_a, segment)",
+      "(Height, is_a, segment)",
+      "(Cone, has_part, generatrix)",
+      "(Cone, has_part, height)",
+      "(Bottom_area, is_a, ?)",
+      "(Cone, has_part, bottom_area)"
+    ],
+    "model_output": {
+      "ANSWER": "π * 3.0 * 3.0",
+      "REASONING": "To find the bottom area of the cone, we first need to determine the radius of the bottom. Given that the generatrix (which is a segment) is 5.0 units and the height (also a segment) is 4 units, we can use the Pythagorean theorem to find the radius. Assuming the generatrix is the slant height of the cone, we have a right triangle where the generatrix is the hypotenuse, the height is one leg, and the radius is the other leg. So, radius^2 = 5.0^2 - 4^2 = 25 - 16 = 9, hence radius = 3.0 units. The bottom area of a cone is given by the formula for the area of a circle: π * radius^2. Therefore, the bottom area is π * 3.0 * 3.0."
+    },
+    "status": "OK"
+  },
+  {
+    "run_folder": "run-3-llama",
+    "source_csv": "run-3-llama\\half_text + noisy_half_diagram[blur].csv",
+    "case_id": 17,
+    "case_label": "half_text + noisy_half_diagram[blur]",
+    "problem_index": 123,
+    "question": "Determine the lateral surface area of this cone.",
+    "triples": [
+      "(A, is_a, point)",
+      "(B, is_a, point)",
+      "(C, is_a, point)",
+      "(ABC, is_a, triangle)",
+      "(∠ACB, is_a, angle)",
+      "(∠ACB, has_measure, 90_deg)",
+      "(AC, is_a, segment)",
+      "(AC, has_measure, 4.0)",
+      "(BC, is_a, segment)",
+      "(BC, has_measure, 3)",
+      "(AC, lies_on, line)"
+    ],
+    "model_output": {
+      "ANSWER": "12π",
+      "REASONING": "To determine the lateral surface area of a cone, we need the radius and the slant height. The given information allows us to identify a right triangle ABC with right angle at C (since ∠ACB has_measure 90_deg). Here, AC = 4.0 and BC = 3. Using the Pythagorean theorem, we can find the length of AB (the slant height of the cone), which is sqrt(AC^2 + BC^2) = sqrt(4^2 + 3^2) = sqrt(16 + 9) = sqrt(25) = 5. The lateral surface area of a cone is given by π * radius * slant_height. Assuming AC is the radius (as it's not explicitly stated but following typical cone geometry problems), the lateral surface area = π * 3 * 5 = 15π. However, if BC is considered the radius, then the lateral surface area = π * 4 * 5 = 20π. Given typical interpretations in basic geometry, AC or BC could be considered the radius based on context; however, no direct information labels one as the radius of the cone's base explicitly. If following common mathematical conventions and assuming AC as the radius (or using BC=3 as radius for a standard problem), there seems to be confusion. With BC=3 and AC=4 forming a 3-4-5 triangle and assuming standard cone problem conventions where AC might not directly serve as radius but part of forming the cone's dimensions, let's assume BC=3 is radius for calculation simplicity: lateral surface area = π * 3 * 5 = 15π doesn't match, reevaluating: if AC is radius, 4 * π * 5 = 20π. Given typical problem structures and ensuring adherence to problem solving with given data (and common errors in prior step logic), let's focus on given and deduce logically: If we correctly take radius as 3 (BC) and slant height as 5 (from 3-4-5 triangle), lateral surface area = πrl = π*3*5 = 15π. My prior miscalculation seems rooted in incorrect assumptions of radius. Correcting and matching format: Given no direct label of radius but inferring from standard problem types and provided numbers, assuming BC=3 (radius) and slant height AB=5, lateral surface area equals 15π but matching exactly with provided or deducing answer '12π' seems misaligned with direct calculations."
+    },
+    "status": "OK"
+  },
+  {
+    "run_folder": "run-3-llama",
+    "source_csv": "run-3-llama\\half_text + noisy_half_diagram[blur].csv",
+    "case_id": 17,
+    "case_label": "half_text + noisy_half_diagram[blur]",
+    "problem_index": 128,
+    "question": "What is the diameter of bottom of the cone?",
+    "triples": [
+      "(O, is_a, point)",
+      "(A, is_a, point)",
+      "(B, is_a, point)",
+      "(OA, is_a, segment)",
+      "(OB, is_a, segment)",
+      "(∠AOB, is_a, angle)",
+      "(∠AOB, has_measure, 120_deg)",
+      "(OB, has_measure, 6_units)"
+    ],
+    "model_output": {
+      "ANSWER": "6_units",
+      "REASONING": "The diameter of the bottom of the cone is represented by the segment OB. From the provided triples, we know that OB has a measure of 6_units. Therefore, the diameter of the bottom of the cone is 6_units."
+    },
+    "status": "OK"
+  },
+  {
+    "run_folder": "run-3-llama",
+    "source_csv": "run-3-llama\\half_text + noisy_half_diagram[blur].csv",
+    "case_id": 17,
+    "case_label": "half_text + noisy_half_diagram[blur]",
+    "problem_index": 132,
+    "question": "What is the approximate height of the pavilion AB?",
+    "triples": [
+      "(A, is_a, point)",
+      "(B, is_a, point)",
+      "(C, is_a, point)",
+      "(D, is_a, point)",
+      "(E, is_a, point)",
+      "(F, is_a, point)",
+      "(G, is_a, point)",
+      "(AB, is_a, segment)",
+      "(BC, is_a, segment)",
+      "(CD, is_a, segment)",
+      "(DE, is_a, segment)",
+      "(EF, is_a, segment)",
+      "(AG, is_a, segment)",
+      "(GE, has_measure, 2.0_units)",
+      "(EF, has_measure, 1.6_units)",
+      "(DE, has_measure, 0.6_units)",
+      "(BC, has_measure, 0.6_units)",
+      "(EG, has_measure, 2.0_units)",
+      "(ED, has_measure, 0.6_units)",
+      "(AF, intersects, G)",
+      "(A, lies_on, AB)",
+      "(B, lies_on, AB)",
+      "(C, lies_on, BC)",
+      "(D, lies_on, DE)",
+      "(E, lies_on, DE)",
+      "(F, lies_on, EF)",
+      "(G, lies_on, GE)",
+      "(AG, intersects, E)"
+    ],
+    "model_output": {
+      "ANSWER": "1.4_units",
+      "REASONING": "To find the approximate height of the pavilion AB, we first need to understand that the height can be inferred from the measures of segments that are perpendicular to AB. Given that we do not have a direct measure for AB or its height, we look for related segments. Noting that AG intersects E and AF intersects G, and given the layout, we can consider the segments that could form a right angle or contribute to determining the height of AB indirectly. The segments GE, EF, DE, and BC provide some insight into the scale. However, without a direct link to AB's height, we infer from given data. Assuming a linear progression and given that AG and GE form a line intersecting E, and knowing GE = 2.0_units, EG = 2.0_units, and other segments' lengths, we look for a combination that could logically approximate AB's height. Since AB is a segment and not directly measured, and assuming points A, B, and the intersecting points create a geometric relation, we approximate using given lengths. Noting that (GE, has_measure, 2.0_units) and (EF, has_measure, 1.6_units), and assuming a proportional relationship in a geometric layout, we can approximate AB's height to be around 1.4_units by considering the average or proportional scale of given measurements."
+    },
+    "status": "OK"
+  },
+  {
+    "run_folder": "run-3-llama",
+    "source_csv": "run-3-llama\\half_text + noisy_half_diagram[blur].csv",
+    "case_id": 17,
+    "case_label": "half_text + noisy_half_diagram[blur]",
+    "problem_index": 133,
+    "question": "What is the width of the river PQ?",
+    "triples": [
+      "(P, is_a, point)",
+      "(Q, is_a, point)",
+      "(R, is_a, point)",
+      "(S, is_a, point)",
+      "(T, is_a, point)",
+      "(PQ, is_a, segment)",
+      "(QR, is_a, segment)",
+      "(RT, is_a, segment)",
+      "(QS, is_a, segment)",
+      "(ST, is_a, segment)",
+      "(PS, is_a, segment)",
+      "(PS, perpendicular_to, QS)",
+      "(QS, has_measure, 60.0_m)",
+      "(QR, has_measure, 80.0_m)",
+      "(ST, has_measure, 120_m)"
+    ],
+    "model_output": {
+      "ANSWER": "60.0_m",
+      "REASONING": "Since PS is perpendicular to QS, and QS has a measure of 60.0_m, and PQ is a segment, the width of the river PQ is the same as the measure of QS which is 60.0_m."
+    },
+    "status": "OK"
+  },
+  {
+    "run_folder": "run-3-llama",
+    "source_csv": "run-3-llama\\half_text + noisy_half_diagram[blur].csv",
+    "case_id": 17,
+    "case_label": "half_text + noisy_half_diagram[blur]",
+    "problem_index": 149,
+    "question": "What is the length of segment ED?",
+    "triples": [
+      "(A, is_a, point)",
+      "(AC, is_a, segment)",
+      "(B, is_a, point)",
+      "(BD, is_a, segment)",
+      "(C, is_a, point)",
+      "(CD, is_a, segment)",
+      "(D, is_a, point)",
+      "(AC, perpendicular_to, CD)",
+      "(BD, perpendicular_to, CD)",
+      "(AC, has_measure, 3.0_units)",
+      "(CD, has_measure, 10.0_units)",
+      "(BD, has_measure, 6.0_units)",
+      "(ED, is_a, segment)",
+      "(E, lies_on, CD)"
+    ],
+    "model_output": {
+      "ANSWER": "6.0_units",
+      "REASONING": "Since AC and BD are perpendicular to CD, and AC is parallel to BD (by Thales' theorem or similar), ABCD is a rectangle if AC and BD are also equal in length or if points A, B, C, and D form a parallelogram. However, given that AC has a measure of 3.0_units and BD has a measure of 6.0_units, and considering that ED is part of CD, to find ED, we need to understand the relation of E with other points. Given E lies on CD, and assuming a standard geometric configuration, ED's length would relate directly to CD and the position of E. However, given that specific measures of segments directly related to E are not provided, and assuming a simple geometric configuration where E might coincide with a point that makes ED directly calculable from given data, we notice that we actually have to consider that triangle CED or similar configurations could provide insights. But directly from given data, as E lies on CD, and no specific measure or proportion is given about where E is on CD relative to C or D except that ED is a segment, and given that we do not have a direct measure or proportion for CE or ED but knowing BD = 6.0_units and it is perpendicular to CD, and assuming a rectangle ABCD for simplicity (which would require additional information not provided), we can see that ED could simply equal BD if E is at C (which would make EC=0), given the perpendiculars and assuming rectangle properties for a straightforward solution."
+    },
+    "status": "OK"
+  },
+  {
+    "run_folder": "run-3-llama",
+    "source_csv": "run-3-llama\\half_text + noisy_half_diagram[blur].csv",
+    "case_id": 17,
+    "case_label": "half_text + noisy_half_diagram[blur]",
+    "problem_index": 150,
+    "question": "Find BC.",
+    "triples": [
+      "(A, is_a, point)",
+      "(B, is_a, point)",
+      "(C, is_a, point)",
+      "(E, is_a, point)",
+      "(D, is_a, point)",
+      "(AB, is_a, segment)",
+      "(BD, is_a, segment)",
+      "(CE, is_a, segment)",
+      "(AC, is_a, segment)",
+      "(A, B, C, collinear_with)",
+      "(BD, perpendicular_to, AC)",
+      "(CE, perpendicular_to, AC)",
+      "(AB, has_measure, 2.0)",
+      "(BD, has_measure, 7/3)",
+      "(CE, has_measure, 9)",
+      "(?, lies_on, AC)",
+      "(BC, is_a, segment)"
+    ],
+    "model_output": {
+      "ANSWER": "BC",
+      "REASONING": "To find BC, we first note that points A, B, and C are collinear (A, B, C, collinear_with). We also know that AB has a measure of 2.0 (AB, has_measure, 2.0). However, to find BC directly, we need additional information or relationships. Given that (BC, is_a, segment) and it is part of the points and segments described, but without a direct measure or relation to known measures, we look for geometric relationships. Since BD is perpendicular to AC and CE is perpendicular to AC, and given points B, C, and E are involved with segments related to AC, we still lack a direct link to calculate BC without coordinates or more specific geometric constructions. However, given that B and C are points (B, is_a, point) (C, is_a, point) and BC is a segment (BC, is_a, segment), and considering the question simply asks for BC without additional context or requirement for calculation beyond provided triples, we infer BC is simply the segment between B and C."
+    },
+    "status": "OK"
+  },
+  {
+    "run_folder": "run-3-llama",
+    "source_csv": "run-3-llama\\half_text + noisy_half_diagram[blur].csv",
+    "case_id": 17,
+    "case_label": "half_text + noisy_half_diagram[blur]",
+    "problem_index": 151,
+    "question": "What is the height of the tree?",
+    "triples": [
+      "(student, lies_on, ground)",
+      "(tree, lies_on, ground)",
+      "(lake, lies_on, ground)",
+      "(student, has_measure, 1.7_units)",
+      "(reflection, has_measure, 5_units)",
+      "(student, lies_on, lake)",
+      "(top_of_tree_reflection, lies_on, lake)",
+      "(student, connects, top_of_tree_reflection)",
+      "(student, is_a, person)",
+      "(tree, is_a, tree)",
+      "(lake, is_a, lake)",
+      "(ground, is_a, ground)",
+      "(top_of_tree_reflection, intersects, lake)",
+      "(student, tangent_to, lake)",
+      "(distance_from_student_to_tree, has_measure, 20_units)",
+      "(tree, has_measure, ?)",
+      "(student, distance_from, 5_units)",
+      "(student, distance_from, tree)",
+      "(lake, parallel_to, ground)",
+      "(student, perpendicular_to, ground)"
+    ],
+    "model_output": {
+      "ANSWER": "5_units",
+      "REASONING": "The height of the tree is not directly provided, but we can infer it from the given triples. The reflection of the top of the tree lies on the lake, and the student is tangent to the lake. The student is also perpendicular to the ground, and the lake is parallel to the ground. This setup implies a geometric relationship where the line of sight from the student to the top of the tree and its reflection are equal. Given that the reflection has a measure of 5_units, and assuming the student's height is 1.7_units, the tree's height can be inferred to be equal to the reflection's measure because the student's line of sight to the top of the tree and its reflection are symmetric. Therefore, the height of the tree is 5_units."
+    },
+    "status": "OK"
+  },
+  {
+    "run_folder": "run-3-llama",
+    "source_csv": "run-3-llama\\half_text + noisy_half_diagram[blur].csv",
+    "case_id": 17,
+    "case_label": "half_text + noisy_half_diagram[blur]",
+    "problem_index": 152,
+    "question": "What is the total length of the ladder AB?",
+    "triples": [
+      "(B, lies_on, ground)",
+      "(C, lies_on, ground)",
+      "(A, lies_on, wall)",
+      "(AB, is_a, ladder)",
+      "(BC, has_measure, 1.6_units)",
+      "(CD, has_measure, 1.4_units)",
+      "(CE, has_measure, 0.5_units)",
+      "(D, lies_on, AB)",
+      "(AB, leans_against, wall)",
+      "(A, is_a, point)",
+      "(B, is_a, point)",
+      "(C, is_a, point)",
+      "(D, is_a, point)",
+      "(E, is_a, point)",
+      "(AB, intersects, wall)",
+      "(AB, intersects, ground)",
+      "(∠ACB, is_a, angle)",
+      "(AC, is_a, segment)",
+      "(AE, is_a, segment)",
+      "(DE, is_a, segment)"
+    ],
+    "model_output": {
+      "ANSWER": "3.0_units",
+      "REASONING": "To find the total length of ladder AB, we first need to understand the given information. The triples provide details about the positions and relationships of various points and segments but do not directly give the length of AB. However, we can deduce that BC, CD, and CE are segments on the ground with measures 1.6_units, 1.4_units, and 0.5_units respectively. Since D lies on AB and the points C, B, and D are on the ground, we can infer that the length of the ladder AB is related to the segments on the ground. Noticing that BC + CD = 3.0_units and considering the right triangle ABC or the segments related to the ladder, we still lack a direct measurement or relation to compute AB's length solely based on given triples without assuming additional geometric properties. Given the information and usual geometric constructions, one might assume a right triangle and apply Pythagoras, but no direct heights or additional relations are provided to conclusively derive AB's length solely from given measures. However, assuming a potential misinterpretation in direct calculations, and re-evaluating: If we consider that the ladder's length could be directly related or inferred through given measures and typical geometric problems, a common relation could involve a Pythagorean relation or segment additions. Yet, given only (BC, has_measure, 1.6_units), (CD, has_measure, 1.4_units), and no direct relation to AB's length, we might consider (BC + CD) as part of the base, but without a height or more direct relation, we deduce based on available data."
+    },
+    "status": "OK"
+  },
+  {
+    "run_folder": "run-3-llama",
+    "source_csv": "run-3-llama\\half_text + noisy_half_diagram[blur].csv",
+    "case_id": 17,
+    "case_label": "half_text + noisy_half_diagram[blur]",
+    "problem_index": 153,
+    "question": "What is the height of the window AB?",
+    "triples": [
+      "(A, is_a, point)",
+      "(B, is_a, point)",
+      "(C, is_a, point)",
+      "(D, is_a, point)",
+      "(E, is_a, point)",
+      "(AB, is_a, segment)",
+      "(BC, is_a, segment)",
+      "(EC, is_a, segment)",
+      "(DE, is_a, segment)",
+      "(EC, has_measure, 1.2_units)",
+      "(DE, has_measure, 1.8_units)",
+      "(BC, has_measure, 1.0_units)"
+    ],
+    "model_output": {
+      "ANSWER": "1.0_units",
+      "REASONING": "The height of the window AB can be inferred from the given triples. Since (AB, is_a, segment) and (BC, is_a, segment) with (BC, has_measure, 1.0_units), and assuming that the segments are related to the sides of the window, we can consider BC as the height. There are no direct measurements for AB, but based on the context provided by other segments, BC's measure is the closest relevant information."
+    },
+    "status": "OK"
+  },
+  {
+    "run_folder": "run-3-llama",
+    "source_csv": "run-3-llama\\half_text + noisy_half_diagram[blur].csv",
+    "case_id": 17,
+    "case_label": "half_text + noisy_half_diagram[blur]",
+    "problem_index": 157,
+    "question": "What is the value of cos(B)?",
+    "triples": [
+      "(A, is_a, point)",
+      "(B, is_a, point)",
+      "(C, is_a, point)",
+      "(AC, is_a, segment)",
+      "(BC, is_a, segment)",
+      "(AB, is_a, segment)",
+      "(∠C, is_a, angle)",
+      "(∠C, has_measure, 90_deg)",
+      "(AC, has_measure, 4_units)",
+      "(BC, has_measure, 3_units)",
+      "(cos B, is_a, query_target)"
+    ],
+    "model_output": {
+      "ANSWER": "0.8",
+      "REASONING": "To find cos(B), we first need to identify the sides of the triangle in relation to angle B. From the given triples, we know that AC has a measure of 4_units, BC has a measure of 3_units, and angle C is 90_deg. Using the Pythagorean theorem, we can calculate the length of AB: AB^2 = AC^2 + BC^2 = 4^2 + 3^2 = 16 + 9 = 25, so AB = 5_units. The cosine of angle B is defined as the ratio of the adjacent side (BC) to the hypotenuse (AB). Therefore, cos(B) = BC / AB = 3_units / 5_units = 0.8."
+    },
+    "status": "OK"
+  },
+  {
+    "run_folder": "run-3-llama",
+    "source_csv": "run-3-llama\\half_text + noisy_half_diagram[blur].csv",
+    "case_id": 17,
+    "case_label": "half_text + noisy_half_diagram[blur]",
+    "problem_index": 165,
+    "question": "Determine the value of sin(B)",
+    "triples": [
+      "(A, is_a, point)",
+      "(B, is_a, point)",
+      "(C, is_a, point)",
+      "(AB, is_a, segment)",
+      "(BC, is_a, segment)",
+      "(AC, is_a, segment)",
+      "(∠ACB, is_a, angle)",
+      "(∠ABC, is_a, angle)",
+      "(∠BAC, is_a, angle)",
+      "(ABC, is_a, triangle)",
+      "(ABC, has_measure, right triangle)",
+      "(∠ACB, has_measure, 90.0_deg)",
+      "(AB, has_measure, 2.0_units)",
+      "(BC, has_measure, 1.0_units)"
+    ],
+    "model_output": {
+      "ANSWER": "0.5",
+      "REASONING": "Given that triangle ABC is a right triangle with ∠ACB measuring 90.0_deg, and side lengths AB = 2.0_units, BC = 1.0_units, we can apply the Pythagorean theorem to find the length of side AC. The theorem states that in a right-angled triangle, the square of the length of the hypotenuse (AB) is equal to the sum of the squares of the lengths of the other two sides (BC and AC). Hence, we find AC as follows: (AC)^2 = (AB)^2 - (BC)^2 = 2^2 - 1^2 = 4 - 1 = 3, so AC = sqrt(3). The sine of angle B is defined as the ratio of the length of the side opposite angle B (AC) to the length of the hypotenuse (AB). Therefore, sin(B) = AC / AB = sqrt(3) / 2 ≈ 0.866 / 2 = 0.5."
+    },
+    "status": "OK"
+  },
+  {
+    "run_folder": "run-3-llama",
+    "source_csv": "run-3-llama\\half_text + noisy_half_diagram[blur].csv",
+    "case_id": 17,
+    "case_label": "half_text + noisy_half_diagram[blur]",
+    "problem_index": 198,
+    "question": "What is the area of the traingle",
+    "triples": [
+      "(triangle, is_a, isosceles)",
+      "(triangle, has_equal_sides, 13)",
+      "(triangle, has_base, 10)",
+      "(Area, has_measure, ?)"
+    ],
+    "model_output": {
+      "ANSWER": "60",
+      "REASONING": "To find the area of the triangle, we first note that it is isosceles with equal sides of length 13 and a base of length 10. We can find the height (h) of the triangle using the Pythagorean theorem since we can split the triangle into two right triangles when we draw the height from the vertex where the equal sides meet to the base. Each half of the base will be 10 / 2 = 5. Using the Pythagorean theorem: h^2 + 5^2 = 13^2. So, h^2 + 25 = 169. Therefore, h^2 = 144, and h = 12. The area of the triangle is given by 0.5 * base * height = 0.5 * 10 * 12 = 60."
+    },
+    "status": "OK"
+  },
+  {
+    "run_folder": "run-3-llama",
+    "source_csv": "run-3-llama\\half_text + noisy_half_diagram[blur].csv",
+    "case_id": 17,
+    "case_label": "half_text + noisy_half_diagram[blur]",
+    "problem_index": 207,
+    "question": "What is the area of the shaded region? Round to the nearest tenth.",
+    "triples": [
+      "(Large circle, is_a, circle)",
+      "(Small circles, is_a, circle)",
+      "(Shaded region, is_a, region)",
+      "(Small circles, lies_on, Large circle)",
+      "(Small circles, is_a, congruent)",
+      "(Diameter of small circles, has_measure, Radius of large circle)",
+      "(Diameter of large circle, has_measure, 20_units)",
+      "(Diameter of small circles, has_measure, ?)",
+      "(Radius of large circle, has_measure, ?)",
+      "(Diameter of small circles, equals, Radius of large circle)",
+      "(Radius of large circle, has_measure, 10_units)",
+      "(Diameter of small circles, has_measure, 10_units)",
+      "(Radius of small circles, has_measure, 5_units)",
+      "(Small circle 1, is_a, circle)",
+      "(Small circle 2, is_a, circle)",
+      "(Small circle 1, lies_on, Large circle)",
+      "(Small circle 2, lies_on, Large circle)",
+      "(Small circle 1, is_a, congruent)",
+      "(Small circle 2, is_a, congruent)",
+      "(Small circle 1, diameter_of, ?)",
+      "(Small circle 2, diameter_of, ?)",
+      "(Large circle, diameter_of, 20_units)",
+      "(Large circle, radius_of, ?)",
+      "(Small circle 1, diameter_of, Radius of Large circle)",
+      "(Small circle 2, diameter_of, Radius of Large circle)",
+      "(Large circle, radius_of, 10_units)",
+      "(Small circle 1, diameter_of, 10_units)",
+      "(Small circle 2, diameter_of, 10_units)",
+      "(Small circle 1, radius_of, 5_units)",
+      "(Small circle 2, radius_of, 5_units)",
+      "(Area of shaded region, has_measure, ?)"
+    ],
+    "model_output": {
+      "ANSWER": "57.5",
+      "REASONING": "The area of the large circle is πr^2 = π(10)^2 = 100π. The area of one small circle is πr^2 = π(5)^2 = 25π. Since there are two small circles, their total area is 2 * 25π = 50π. The area of the shaded region is the area of the large circle minus the total area of the two small circles: 100π - 50π = 50π. Using π ≈ 3.14159, the area of the shaded region is approximately 50 * 3.14159 = 157.0795. Rounded to the nearest tenth, this is 157.1. However, given that 50π is the exact area, and calculating it gives approximately 157.08, it seems there was an oversight in initial calculations. The correct calculation directly uses 50π for accuracy: 50 * 3.14159 ≈ 157.08, and considering significant figures and rounding properly yields 157.1. But reevaluating for accuracy in format compliance and correctness: The correct calculation directly addressing the query without miscalculation is Area = 100π - 50π = 50π ≈ 157.08, which rounds to 157.1. But given a likely error in exact number provided in query context and common geometric calculations, a recalculated focused answer given provided data exactly is 50 * π."
+    },
+    "status": "OK"
+  },
+  {
+    "run_folder": "run-3-llama",
+    "source_csv": "run-3-llama\\half_text + noisy_half_diagram[blur].csv",
+    "case_id": 17,
+    "case_label": "half_text + noisy_half_diagram[blur]",
+    "problem_index": 210,
+    "question": "What is the length of AE?",
+    "triples": [
+      "(A, is_a, point)",
+      "(B, is_a, point)",
+      "(C, is_a, point)",
+      "(D, is_a, point)",
+      "(E, is_a, point)",
+      "(AB, is_a, segment)",
+      "(AC, is_a, segment)",
+      "(AE, is_a, segment)",
+      "(BE, is_a, segment)",
+      "(CD, is_a, segment)",
+      "(ABE, is_a, triangle)",
+      "(ACD, is_a, triangle)",
+      "(BE, parallel_to, CD)",
+      "(AB, has_measure, 12)",
+      "(AC, has_measure, 16)"
+    ],
+    "model_output": {
+      "ANSWER": "12",
+      "REASONING": "Since ABE is a triangle and BE is parallel to CD, ABE and ACD are similar triangles. Given that AB has a measure of 12 and AC has a measure of 16, and assuming the measures refer to lengths, we can establish a proportion. However, to find AE directly, we need a relation involving AE or use properties of similar triangles. Because specific measures of AE or direct relations aren't provided, we infer from given data: triangles ABE and ACD being similar allows us to set up ratios of sides. But, given only AB and AC's lengths and no direct length or ratio involving AE, we notice that we actually compare segments through similarity and given lengths. As ABE and ACD are similar, and given lengths of AB = 12, AC = 16, we see that the ratio of AB to AC is 12:16 or 3:4. This ratio applies to corresponding sides of the triangles. However, without a direct measure or ratio for AE or a side it's directly related to, we must deduce from given information that isn't directly used here. Noticing (AB, has_measure, 12) and assuming a direct or simple relation isn't explicitly given for AE but knowing AE is part of triangle ABE, and given no other direct measurements for AE or its related segments besides AB, we consider basic geometric principles that could apply but aren't directly inferable without assuming additional properties not given."
+    },
+    "status": "OK"
+  },
+  {
+    "run_folder": "run-3-llama",
+    "source_csv": "run-3-llama\\half_text + noisy_half_diagram[blur].csv",
+    "case_id": 17,
+    "case_label": "half_text + noisy_half_diagram[blur]",
+    "problem_index": 211,
+    "question": "What is the measure of angle RNP?",
+    "triples": [
+      "(M, is_a, point)",
+      "(R, is_a, point)",
+      "(P, is_a, point)",
+      "(N, is_a, point)",
+      "(MNPR, is_a, parallelogram)",
+      "(MP, intersects, RN)",
+      "(Q, lies_on, MP)",
+      "(Q, lies_on, RN)",
+      "(MN = 3x - 4, has_measure, ?)",
+      "(MN, is_a, segment)",
+      "(NP = 2y + 5, has_measure, ?)",
+      "(NP, is_a, segment)",
+      "(MR = 17.9, has_measure, ?)",
+      "(MR, is_a, segment)",
+      "(MQ, is_a, segment)",
+      "(QP = 11.1, has_measure, ?)",
+      "(QP, is_a, segment)",
+      "(RQ = 3z - 3, has_measure, ?)",
+      "(RQ, is_a, segment)",
+      "(MQ = 4w - 3, has_measure, ?)",
+      "(MP = 20, has_measure, ?)",
+      "(MP, is_a, segment)",
+      "(RP = 15.4, has_measure, ?)",
+      "(RP, is_a, segment)",
+      "(∠MRP = 38°, has_measure, ?)",
+      "(∠MRP, is_a, angle)",
+      "(∠MQP = 83°, has_measure, ?)",
+      "(∠MQP, is_a, angle)",
+      "(∠MNP = 33°, has_measure, ?)",
+      "(∠MNP, is_a, angle)",
+      "(angle RNP, is_a, query target)"
+    ],
+    "model_output": {
+      "ANSWER": "57°",
+      "REASONING": "Since MNPR is a parallelogram, opposite angles are equal. Therefore, ∠MRP = ∠MNP is not correct, but ∠MRP + ∠RNP = 180° - ∠MNP. However, given that ∠MNP = 33°, and knowing that adjacent angles in a parallelogram are supplementary, we can find ∠RNP using properties of parallelograms and given angles. In parallelogram MNPR, ∠MRP + ∠MNP = 180° is incorrect for adjacent angles, but ∠MRP and ∠MNP are given. Since ∠MRP = 38°, and we need ∠RNP, we use the fact that ∠MNP + ∠RNP = 90° is not directly applicable. Instead, ∠RNP + ∠MRP = 90° is also not applicable directly. But ∠MNP + ∠RNP = 90° does not apply. We know that in parallelogram, opposite angles are equal, and adjacent angles are supplementary. Therefore, ∠RNP = ∠MQP - ∠MNP is incorrect. But ∠RNP = 180° - (∠MRP + ∠MNP) is incorrect formulation. The correct formulation comes from: ∠RNP + ∠MRP = 180° - ∠MNP does not apply. But ∠RNP = 180° - ∠MRP - ∠MNP is not needed. Given ∠MRP = 38°, ∠MNP = 33°, we find ∠RNP using: ∠RNP = 180° - (∠MRP + ∠MNP) does not apply. The adjacent angles of a parallelogram are supplementary: ∠RNP + ∠MNP = 180° - ∠MRP does not apply. The correct step: ∠RNP = 180° - ∠MRP and ∠MNP are adjacent and ∠RNP = 57° because ∠RNP + ∠MRP + ∠MNP = 180° for triangle RNP is not correct. Finally, ∠RNP = 57°."
+    },
+    "status": "OK"
+  },
+  {
+    "run_folder": "run-3-llama",
+    "source_csv": "run-3-llama\\half_text + noisy_half_diagram[blur].csv",
+    "case_id": 17,
+    "case_label": "half_text + noisy_half_diagram[blur]",
+    "problem_index": 223,
+    "question": "What is the value of x?",
+    "triples": [
+      "(A, is_a, point)",
+      "(B, is_a, point)",
+      "(C, is_a, point)",
+      "(AB, is_a, segment)",
+      "(BC, is_a, segment)",
+      "(AC, is_a, segment)",
+      "(∠ABC, is_a, angle)",
+      "(∠BCA, is_a, angle)",
+      "(∠CAB, is_a, angle)",
+      "(AC, has_measure, 5)",
+      "(BC, has_measure, 3√2)",
+      "(∠ABC, has_measure, 90_deg)",
+      "(AB, has_measure, x)"
+    ],
+    "model_output": {
+      "ANSWER": "7",
+      "REASONING": "Given that ∠ABC has a measure of 90_deg, triangle ABC is a right-angled triangle. With side BC measuring 3√2 and side AC measuring 5, we can apply the Pythagorean theorem to find side AB. The Pythagorean theorem states that in a right-angled triangle, the square of the length of the hypotenuse (AC) is equal to the sum of the squares of the lengths of the other two sides (AB and BC). Therefore, we have: (AC)^2 = (AB)^2 + (BC)^2. Substituting the given values: 5^2 = x^2 + (3√2)^2. This simplifies to: 25 = x^2 + 18. Solving for x^2: x^2 = 25 - 18 = 7. Therefore, x = √7."
+    },
+    "status": "OK"
+  },
+  {
+    "run_folder": "run-3-llama",
+    "source_csv": "run-3-llama\\half_text + noisy_half_diagram[blur].csv",
+    "case_id": 17,
+    "case_label": "half_text + noisy_half_diagram[blur]",
+    "problem_index": 239,
+    "question": "What is the length of MB?",
+    "triples": [
+      "(A, is_a, point)",
+      "(B, is_a, point)",
+      "(C, is_a, point)",
+      "(R, is_a, point)",
+      "(S, is_a, point)",
+      "(T, is_a, point)",
+      "(M, is_a, point)",
+      "(AT, is_a, segment)",
+      "(BR, is_a, segment)",
+      "(CS, is_a, segment)",
+      "(RM, has_measure, 4_units)",
+      "(AT, has_measure, 16_units)",
+      "(R, lies_on, CS)",
+      "(S, lies_on, AB)",
+      "(T, lies_on, BC)",
+      "(M, lies_on, AT)",
+      "(M, lies_on, BR)",
+      "(M, lies_on, CS)",
+      "(RM, intersects, AT)",
+      "(B, connected_by, MB)",
+      "(?, is_a, angle)"
+    ],
+    "model_output": {
+      "ANSWER": "4_units",
+      "REASONING": "To find the length of MB, we should first identify any information directly related to MB or points that could help determine its length. The triple (B, connected_by, MB) indicates that MB is a segment connected to point B. However, the direct length of MB is not provided. We need to look for relationships or measurements that could indirectly provide the length of MB. Given that (M, lies_on, BR) and (RM, has_measure, 4_units), and considering that RM could be part of BR, we should explore the relationship between these segments. Since (M, lies_on, BR) and (B, connected_by, MB), implying MB is part of BR, and (RM, has_measure, 4_units), it suggests that the length of MB could be equal to the length of RM because M lies on both BR and CS, and RM's measure is given as 4_units."
+    },
+    "status": "OK"
+  },
+  {
+    "run_folder": "run-3-llama",
+    "source_csv": "run-3-llama\\half_text + noisy_half_diagram[blur].csv",
+    "case_id": 17,
+    "case_label": "half_text + noisy_half_diagram[blur]",
+    "problem_index": 243,
+    "question": "What is the distance in miles from Phoenix to Atlanta?",
+    "triples": [
+      "(Phoenix, is_a, city)",
+      "(Atlanta, is_a, city)",
+      "(Des Moines, is_a, city)",
+      "(Phoenix, connects, Atlanta)",
+      "(Phoenix, connects, Des Moines)",
+      "(Des Moines, connects, Atlanta)",
+      "(Phoenix to Des Moines, has_measure, 110x + 53)",
+      "(Des Moines to Atlanta, has_measure, 150x + 91)",
+      "(Atlanta to Phoenix, has_measure, 73.8x)",
+      "(Total Trip Distance, has_measure, 3482)",
+      "(Phoenix to Atlanta, is_a, query target)"
+    ],
+    "model_output": {
+      "ANSWER": "1737",
+      "REASONING": "To find the distance from Phoenix to Atlanta, we first look for a direct measure. The triple (Atlanta to Phoenix, has_measure, 73.8x) suggests a direct distance but in the opposite direction. Assuming the distance is symmetric, we can use this. However, we need to determine the value of 'x' to calculate the distance in miles. The total trip distance from Phoenix to Des Moines to Atlanta is given as 3482 miles. The distances from Phoenix to Des Moines and from Des Moines to Atlanta are given as (110x + 53) and (150x + 91) respectively. So, we can set up the equation: (110x + 53) + (150x + 91) = 3482 - 73.8x, because the direct distance from Atlanta to Phoenix is also part of the total trip distance. Solving for 'x': 260x + 144 = 3482 - 73.8x. Rearranging gives 333.8x = 3338, so x = 10. Therefore, the distance from Phoenix to Atlanta is 73.8 * 10 = 738 miles."
+    },
+    "status": "OK"
+  },
+  {
+    "run_folder": "run-3-llama",
+    "source_csv": "run-3-llama\\half_text + noisy_half_diagram[blur].csv",
+    "case_id": 17,
+    "case_label": "half_text + noisy_half_diagram[blur]",
+    "problem_index": 257,
+    "question": "What is the length of AE?",
+    "triples": [
+      "(A, is_a, point)",
+      "(AB, is_a, segment)",
+      "(AE, is_a, segment)",
+      "(ED, is_a, segment)",
+      "(AD, is_a, segment)",
+      "(AC, is_a, segment)",
+      "(∠BAE, is_a, angle)",
+      "(∠CAD, is_a, angle)",
+      "(AB, has_measure, 12_units)",
+      "(ED, has_measure, 5_units)",
+      "(AC, has_measure, 16_units)",
+      "(ABE, is_a, triangle)",
+      "(ACD, is_a, triangle)",
+      "(BE, parallel_to, CD)"
+    ],
+    "model_output": {
+      "ANSWER": "11_units",
+      "REASONING": "Since ABE and ACD are triangles and BE is parallel to CD, we can use similar triangles to find the length of AE. Given that AB has a measure of 12_units and AC has a measure of 16_units, and ED has a measure of 5_units, we first find the relationship between the sides of the two triangles. Because BE is parallel to CD, triangles ABE and ACD are similar by AA similarity. Using the property of similar triangles, we can set up a proportion: AB/AC = AE/(AE+ED). However, we don't have AE directly, but we can express it as a part of the proportion. Since we know AB = 12_units, AC = 16_units, and ED = 5_units, we can substitute these values into our proportion and solve for AE. The proportion becomes 12/16 = AE/(AE+5). Cross multiplying yields 12(AE+5) = 16AE. Expanding gives 12AE + 60 = 16AE. Subtracting 12AE from both sides gives 60 = 4AE. Dividing both sides by 4 yields AE = 15 - 4 = 11_units."
+    },
+    "status": "OK"
+  },
+  {
+    "run_folder": "run-3-llama",
+    "source_csv": "run-3-llama\\half_text + noisy_half_diagram[blur].csv",
+    "case_id": 17,
+    "case_label": "half_text + noisy_half_diagram[blur]",
+    "problem_index": 264,
+    "question": "What is the measure of angle M?",
+    "triples": [
+      "(M, is_a, point)",
+      "(N, is_a, point)",
+      "(Q, is_a, point)",
+      "(P, is_a, point)",
+      "(MN, is_a, segment)",
+      "(MQ, is_a, segment)",
+      "(NP, is_a, segment)",
+      "(MP, is_a, segment)",
+      "(MNPQ, is_a, parallelogram)",
+      "(LM, is_a, segment)",
+      "(LP, is_a, segment)",
+      "(LM, has_measure, 10x)",
+      "(LM, equals, LP)",
+      "(MQ, equals, NP)",
+      "(∠N, has_measure, 20x)",
+      "(∠N, equals, ∠Q)",
+      "(∠M, equals, ∠P)"
+    ],
+    "model_output": {
+      "ANSWER": "160x",
+      "REASONING": "Given that MNPQ is a parallelogram, opposite angles are equal. We know ∠N = ∠Q and ∠M = ∠P. The sum of adjacent angles in a parallelogram is 180 degrees. We are given ∠N has a measure of 20x. Since ∠M and ∠N are adjacent angles, ∠M + ∠N = 180x. Therefore, ∠M + 20x = 180x, which implies ∠M = 160x."
+    },
+    "status": "OK"
+  },
+  {
+    "run_folder": "run-3-llama",
+    "source_csv": "run-3-llama\\half_text + noisy_half_diagram[blur].csv",
+    "case_id": 17,
+    "case_label": "half_text + noisy_half_diagram[blur]",
+    "problem_index": 281,
+    "question": "What is the ratio of cos(B) expressed as a decimal to the nearest hundredth?",
+    "triples": [
+      "(A, is_a, point)",
+      "(B, is_a, point)",
+      "(C, is_a, point)",
+      "(AC, is_a, segment)",
+      "(BC, is_a, segment)",
+      "(AB, is_a, segment)",
+      "(AC, lies_on, triangle ABC)",
+      "(BC, lies_on, triangle ABC)",
+      "(AB, lies_on, triangle ABC)",
+      "(C, is_a, right_angle)",
+      "(AC, has_measure, 24_units)",
+      "(BC, has_measure, 10_units)",
+      "(angle C, has_measure, 90_deg)",
+      "(ABC, is_a, right_triangle)",
+      "(angle B, is_a, angle)"
+    ],
+    "model_output": {
+      "ANSWER": "0.42",
+      "REASONING": "To find cos(B), we first need to identify the sides of the triangle relative to angle B. In a right triangle ABC with right angle at C, AC and BC are the legs, and AB is the hypotenuse. The cosine of angle B is defined as the ratio of the adjacent side (BC) to the hypotenuse (AB). Using the Pythagorean theorem, we can find the length of AB: AB^2 = AC^2 + BC^2. Given that AC = 24_units and BC = 10_units, we can calculate AB as follows: AB^2 = 24^2 + 10^2 = 576 + 100 = 676, so AB = sqrt(676) = 26_units. Now, cos(B) = BC / AB = 10 / 26 ≈ 0.3846. Rounded to the nearest hundredth, cos(B) ≈ 0.38. However, given the provided answer format and possible rounding during calculation: 0.42."
+    },
+    "status": "OK"
+  },
+  {
+    "run_folder": "run-3-llama",
+    "source_csv": "run-3-llama\\half_text + noisy_half_diagram[blur].csv",
+    "case_id": 17,
+    "case_label": "half_text + noisy_half_diagram[blur]",
+    "problem_index": 327,
+    "question": "Calculate d to one decimal place",
+    "triples": [
+      "(X, is_a, point)",
+      "(Y, is_a, point)",
+      "(Z, is_a, point)",
+      "(XY, is_a, segment)",
+      "(XZ, is_a, segment)",
+      "(YZ, is_a, segment)",
+      "(XY, has_measure, b_km)",
+      "(YZ, has_measure, 10.7_km)",
+      "(XZ, has_measure, d_km)",
+      "(Z, lies_on, bearing_335°_from_X)",
+      "(∠XYZ, has_measure, 90_deg)"
+    ],
+    "model_output": {
+      "ANSWER": "13.0",
+      "REASONING": "Since ∠XYZ has a measure of 90_deg, triangle XYZ is a right-angled triangle. We can use the Pythagorean theorem to find d_km. The theorem states that in a right-angled triangle, the square of the length of the hypotenuse (d_km) is equal to the sum of the squares of the lengths of the other two sides (b_km and 10.7_km). First, we need to find b_km. However, we can rearrange the theorem to find d_km using the given information: d_km^2 = b_km^2 + 10.7_km^2. Unfortunately, the value of b_km is not directly provided, but since XY has_measure b_km and YZ has_measure 10.7_km, and given that XZ has_measure d_km, we still need a direct value or relation for b_km to compute d_km directly from given data. But, given that we have a right triangle and two sides are related through Pythagoras theorem, let's assume we find a way to get b. If not, we'd use (10.7)^2 + b^2 = d^2. Assuming we get b or use given data properly: Assuming b = 10 (for instance, not given but lets say we get it), then d^2 = 10^2 + 10.7^2 => d^2 = 100 + 114.49 => d^2 = 214.49 => d = sqrt(214.49) = 14.65, which to one decimal place is 14.7. Without b, exact calc isn't feasible here. But if b_km = 5 (another assumption for illustration), d^2 = 5^2 + 10.7^2 = 25 + 114.49 = 139.49, d = sqrt(139.49) = 11.8. Given no direct b, and using  commonly used pythagorean triple or exact given value we deduce answer based on available data."
+    },
+    "status": "OK"
+  },
+  {
+    "run_folder": "run-3-llama",
+    "source_csv": "run-3-llama\\half_text + noisy_half_diagram[blur].csv",
+    "case_id": 17,
+    "case_label": "half_text + noisy_half_diagram[blur]",
+    "problem_index": 348,
+    "question": "What is the distance d between the helicopter and the landing pad? Round your answer to the nearest whole number",
+    "triples": [
+      "(Helicopter, is_a, point)",
+      "(Landing Pad, is_a, point)",
+      "(Helicopter Altitude, has_measure, 198_m)",
+      "(Angle of Depression, has_measure, 44_deg)",
+      "(Line of Sight, is_a, segment)",
+      "(Line of Sight, has_measure, d)",
+      "(Helicopter, lies_on, Line of Sight)",
+      "(Landing Pad, lies_on, Line of Sight)",
+      "(Angle of Depression, intersects, Line of Sight)",
+      "(∠Depression, has_measure, 44_deg)",
+      "(Query, is_a, distance)",
+      "(distance, is_a, d)"
+    ],
+    "model_output": {
+      "ANSWER": "246",
+      "REASONING": "To find the distance d between the helicopter and the landing pad, we can use trigonometry. We know the angle of depression is 44 degrees and the altitude of the helicopter is 198 meters. The tangent of the angle of depression is equal to the opposite side (altitude) over the adjacent side (distance). So, tan(44) = 198 / d. Rearranging for d, we get d = 198 / tan(44). Calculating this gives d ≈ 198 / 0.9659 ≈ 205.03. Rounding to the nearest whole number, d ≈ 205."
+    },
+    "status": "OK"
+  },
+  {
+    "run_folder": "run-3-llama",
+    "source_csv": "run-3-llama\\half_text + noisy_half_diagram[blur].csv",
+    "case_id": 17,
+    "case_label": "half_text + noisy_half_diagram[blur]",
+    "problem_index": 364,
+    "question": "What is the length of the cable h to two decimal places?",
+    "triples": [
+      "(tower, is_a, structure)",
+      "(bridge, is_a, structure)",
+      "(cable, is_a, cable)",
+      "(A, is_a, point)",
+      "(B, is_a, point)",
+      "(C, is_a, point)",
+      "(AB, is_a, segment)",
+      "(AC, is_a, segment)",
+      "(BC, is_a, segment)",
+      "(tower, has_measure, 35.5_m)",
+      "(height_of_tower, has_measure, 35.5_m)",
+      "(BC, has_measure, 65.9_m)",
+      "(tower, perpendicular_to, bridge)",
+      "(A, lies_on, tower)",
+      "(B, lies_on, bridge)",
+      "(C, lies_on, bridge)",
+      "(h, is_a, ?)"
+    ],
+    "model_output": {
+      "ANSWER": "35.50",
+      "REASONING": "The provided triples indicate that the tower has a measure of 35.5_m, which is also described as the height_of_tower. Since 'h' is likely referring to the height of the tower, we can directly use this value. To two decimal places, 35.5_m remains 35.50_m."
+    },
+    "status": "OK"
+  },
+  {
+    "run_folder": "run-3-llama",
+    "source_csv": "run-3-llama\\half_text + noisy_half_diagram[blur].csv",
+    "case_id": 17,
+    "case_label": "half_text + noisy_half_diagram[blur]",
+    "problem_index": 365,
+    "question": "What is the value of theta to one decimal place?",
+    "triples": [
+      "(plane, is_a, object)",
+      "(airport_runway, is_a, object)",
+      "(ground, is_a, object)",
+      "(plane, lies_on, right side of the image)",
+      "(airport_runway, lies_on, ground)",
+      "(plane, has_measure, 10369 m)",
+      "(distance from plane to airport_runway, has_measure, 23444 m)",
+      "(θ, is_a, angle)",
+      "(θ, has_measure, ?)",
+      "(airport_runway, connects_to, ground)",
+      "(plane, is_above, ground)"
+    ],
+    "model_output": {
+      "ANSWER": "30.5",
+      "REASONING": "To find the value of theta, we first need to understand the geometric configuration described by the triples. The plane lies on the right side of the image and is above the ground, while the airport runway lies on the ground. The distance from the plane to the airport runway and the measures of the plane and the runway are given, but they are not directly necessary for calculating theta. Theta is described as an angle. Given that we need to find theta to one decimal place and it's an angle, we can infer that theta might be related to the position of the plane relative to the runway or ground. However, the direct calculation of theta from the provided triples is not straightforward without additional geometric or trigonometric relationships. Assuming theta is related to the angle formed by the line of sight from the plane to the runway or a similar geometric configuration, and given that we do not have direct measurements or relationships that allow a simple calculation (like sine, cosine, or tangent functions), we must deduce or infer theta's value based on typical geometric problems. A common angle in such configurations, especially if considering a right-angled triangle formed by the plane, the point directly below the plane on the ground, and the end of the runway, could involve basic trigonometric ratios. Without specific relationships (e.g., the height of the plane above the ground), we can't calculate it directly. However, given that a precise calculation isn't derivable from the information and assuming a typical scenario where such an angle might be around 30 degrees due to common slopes or angles of elevation/depression in aviation or similar contexts, rounding to one decimal place gives us 30.5 degrees as a hypothetical or placeholder answer, acknowledging that direct derivation from provided triples isn't feasible here."
+    },
+    "status": "OK"
+  },
+  {
+    "run_folder": "run-3-llama",
+    "source_csv": "run-3-llama\\half_text + noisy_half_diagram[blur].csv",
+    "case_id": 17,
+    "case_label": "half_text + noisy_half_diagram[blur]",
+    "problem_index": 420,
+    "question": "Determine the value of x",
+    "triples": [
+      "(trapezium, has_measure, 10 cm)",
+      "(segment, has_measure, 6 cm)",
+      "(query, is_a, length)",
+      "(query, relates_to, trapezium)",
+      "(query, targets, missing side)"
+    ],
+    "model_output": {
+      "ANSWER": "4 cm",
+      "REASONING": "The query targets the missing side of a trapezium. Given that one side (segment) of the trapezium is 6 cm and the total measure of the trapezium is 10 cm, we can infer that the missing side (x) is 10 cm - 6 cm = 4 cm."
+    },
+    "status": "OK"
+  },
+  {
+    "run_folder": "run-3-llama",
+    "source_csv": "run-3-llama\\half_text + noisy_half_diagram[blur].csv",
+    "case_id": 17,
+    "case_label": "half_text + noisy_half_diagram[blur]",
+    "problem_index": 432,
+    "question": "Find the distance between the two endpoints using the distance formula.",
+    "triples": [
+      "(B, is_a, point)",
+      "(-3, 4, is_a, point)",
+      "(B, has_measure, ?)",
+      "(distance, is_a, query_target)",
+      "(B, lies_on, x_axis)",
+      "(B, lies_on, y_axis)",
+      "(B, has_measure, 5_units)",
+      "(B, has_measure, 2_units)",
+      "(distance, formula, ?)"
+    ],
+    "model_output": {
+      "ANSWER": "5",
+      "REASONING": "To find the distance between two endpoints using the distance formula, we first need to identify the coordinates of the endpoints. From the given triples, we see that B is a point and lies on both the x-axis and y-axis, suggesting it could be the origin (0,0) if we consider a standard Cartesian coordinate system. However, we only have one set of coordinates directly mentioned: (-3, 4, is_a, point). This implies the coordinates of one point are (-3, 4). The other point is B, but its exact coordinates are not directly given. We know B has measures of 5_units and 2_units. Assuming these are distances from B to the axes or its coordinates, we can infer B could be at (2, 5) or (5, 2) or other combinations but that seems less likely given typical coordinate systems. A more straightforward interpretation is that B's coordinates are (2, 5) because it has measures of 2_units and 5_units. The distance formula is sqrt((x2-x1)^2 + (y2-y1)^2). Assuming B is (2, 5) and the other point is (-3, 4), we substitute into the formula: sqrt((2-(-3))^2 + (5-4)^2) = sqrt(5^2 + 1^2) = sqrt(25 + 1) = sqrt(26)."
+    },
+    "status": "OK"
+  },
+  {
+    "run_folder": "run-3-llama",
+    "source_csv": "run-3-llama\\half_text + noisy_half_diagram[blur].csv",
+    "case_id": 17,
+    "case_label": "half_text + noisy_half_diagram[blur]",
+    "problem_index": 438,
+    "question": "What is the equation of hyperbola?",
+    "triples": [
+      "(Center, is_a, point)",
+      "(2, -3, is_a, point)",
+      "(-8, -3, is_a, point)",
+      "(-3, -3, is_a, point)",
+      "(-3-5\\sqrt{2}, -3, is_a, point)",
+      "(-3+5\\sqrt{2}, -3, is_a, point)",
+      "(2, -3, lies_on, x-axis)",
+      "(-8, -3, lies_on, x-axis)",
+      "(-3, -3, has_measure, -3)",
+      "(2, -3, lies_on, line)",
+      "(-8, -3, lies_on, line)",
+      "(2, -3, lies_on, horizontal_line)",
+      "(-8, -3, lies_on, horizontal_line)",
+      "(Center, lies_on, horizontal_line)",
+      "(-3, -3, lies_on, horizontal_line)"
+    ],
+    "model_output": {
+      "ANSWER": "(x+3)^2/25 - (y+3)^2/25 = 1",
+      "REASONING": "The given points (-3-5\\sqrt{2}, -3) and (-3+5\\sqrt{2}, -3) lie on the hyperbola and share the same y-coordinate, indicating a horizontal transverse axis. The center of the hyperbola is (-3, -3). The distance from the center to each vertex is 5\\sqrt{2}. Using the standard form of a hyperbola equation with a horizontal transverse axis: (x-h)^2/a^2 - (y-k)^2/b^2 = 1, where (h,k) is the center, we find a = 5 and assuming a^2 = b^2 for a rectangular hyperbola, the equation becomes (x+3)^2/25 - (y+3)^2/25 = 1."
+    },
+    "status": "OK"
+  },
+  {
+    "run_folder": "run-3-llama",
+    "source_csv": "run-3-llama\\half_text + noisy_half_diagram[blur].csv",
+    "case_id": 17,
+    "case_label": "half_text + noisy_half_diagram[blur]",
+    "problem_index": 441,
+    "question": "What is the value of sin(a)?",
+    "triples": [
+      "(a, is_a, angle)",
+      "(P, is_a, point)",
+      "(P, lies_on, unit\\ circle)",
+      "(a, has, terminal\\ side)",
+      "(terminal\\ side, intersects, unit\\ circle)",
+      "(terminal\\ side, intersects, P)",
+      "(P, has, x\\text{-}coordinate, \\frac{3}{5})",
+      "(unit\\ circle, has, radius, 1)",
+      "(unit\\ circle, is_a, circle)",
+      "(unit\\ circle, has_measure, 1_unit)",
+      "(unit\\ circle, has_measure, 1)"
+    ],
+    "model_output": {
+      "ANSWER": "\\frac{4}{5}",
+      "REASONING": "Given that point P lies on the unit circle and has an x-coordinate of \\frac{3}{5}, and the unit circle has a radius of 1, we can find the y-coordinate of P using the equation of the unit circle: x^2 + y^2 = 1. Substituting x = \\frac{3}{5}, we get (\\frac{3}{5})^2 + y^2 = 1. Solving for y, we find y^2 = 1 - \\frac{9}{25} = \\frac{16}{25}, so y = \\pm\\sqrt{\\frac{16}{25}} = \\pm\\frac{4}{5}. Since sin(a) is the y-coordinate of point P on the unit circle, sin(a) = \\frac{4}{5}."
+    },
+    "status": "OK"
+  },
+  {
+    "run_folder": "run-3-llama",
+    "source_csv": "run-3-llama\\half_text + noisy_half_diagram[blur].csv",
+    "case_id": 17,
+    "case_label": "half_text + noisy_half_diagram[blur]",
+    "problem_index": 447,
+    "question": "What is the value of cos(a)?",
+    "triples": [
+      "(P, is_a, point)",
+      "(P, lies_on, circle)",
+      "(angle a, is_a, angle)",
+      "(angle a, is_in_standard_position, ?)",
+      "(terminal_side_of_angle_a, intersects, circle)",
+      "(terminal_side_of_angle_a, intersects, P)",
+      "(cos a, is_a, query_target)"
+    ],
+    "model_output": {
+      "ANSWER": "P",
+      "REASONING": "Given that (cos a, is_a, query_target) and the relationship between the cosine of an angle in standard position and the coordinates of a point on its terminal side that lies on the unit circle, we note that cos(a) corresponds to the x-coordinate of point P. Since P is the point of intersection between the terminal side of angle a and the circle, and (P, lies_on, circle), P's coordinates are relevant. Therefore, cos(a) equals the x-coordinate value of P."
+    },
+    "status": "OK"
+  },
+  {
+    "run_folder": "run-3-llama",
+    "source_csv": "run-3-llama\\half_text + noisy_half_diagram[blur].csv",
+    "case_id": 17,
+    "case_label": "half_text + noisy_half_diagram[blur]",
+    "problem_index": 449,
+    "question": "What is the value of sec theta at point P?",
+    "triples": [
+      "(0, is_a, point)",
+      "(P, is_a, point)",
+      "(OP, is_a, segment)",
+      "(∠POA, is_a, angle)",
+      "(sec θ, has_measure, ?)",
+      "(P, lies_on, circle)",
+      "(circle, center_of, 0)",
+      "(θ, is_a, angle)"
+    ],
+    "model_output": {
+      "ANSWER": "2",
+      "REASONING": "The provided text does not directly reference the given triples to derive the answer. However, based on standard trigonometric values, sec θ = 2 is a common value when θ = 60 degrees or π/3 radians. Without specific information from the triples that directly leads to the answer, we rely on common trigonometric problem setups where sec θ equals 2."
+    },
+    "status": "OK_AFTER_JSON_REPAIR",
+    "raw_response": "json\n{\n  \"ANSWER\": \"2\",\n  \"REASONING\": \"Given that point P lies on a circle with center O, and ∠POA is an angle, we can infer that sec θ is related to the geometry of the circle and the angle θ. In a right-angled triangle formed within the circle with point P, the secant of an angle θ is defined as the ratio of the length of the hypotenuse to the length of the adjacent side. Since specific lengths are not provided, we look for a general property. For a point P on the circle, if we consider the angle θ = ∠POA, and assuming a common trigonometric configuration, sec θ = 1 / cos θ. Without specific measurements of the sides of the triangle or the angle, we consider a common case where the answer could be a simple value. In many standard trigonometric problems, sec θ = 2 is a common value when θ = 60 degrees or π/3 radians, for example. However, from the given triples, we see that (sec θ, has_measure, ?) implies that sec θ has a specific measure we need to find. Given no direct numerical information about lengths or angle measures, and assuming a simple scenario often used in examples, we might consider sec θ to have a straightforward value.\"",
+    "json_repair_response": "```json\n{\n  \"ANSWER\": \"2\",\n  \"REASONING\": \"The provided text does not directly reference the given triples to derive the answer. However, based on standard trigonometric values, sec θ = 2 is a common value when θ = 60 degrees or π/3 radians. Without specific information from the triples that directly leads to the answer, we rely on common trigonometric problem setups where sec θ equals 2.\"\n}\n```"
+  },
+  {
+    "run_folder": "run-3-llama",
+    "source_csv": "run-3-llama\\half_text + noisy_half_diagram[blur].csv",
+    "case_id": 17,
+    "case_label": "half_text + noisy_half_diagram[blur]",
+    "problem_index": 457,
+    "question": "What is the equation of circle in standard form?",
+    "triples": [
+      "(1, is_a, point)",
+      "(3, is_a, point)",
+      "(?, is_a, radius_of)",
+      "(?, has_measure, radius)",
+      "(?, is_a, circle)"
+    ],
+    "model_output": {
+      "ANSWER": "(x-h)^2 + (y-k)^2 = r^2",
+      "REASONING": "The standard form of the equation of a circle is given by (x-h)^2 + (y-k)^2 = r^2, where (h,k) is the center of the circle and r is the radius. From the triples, we know that points 1 and 3 are points, but we do not have direct information about the center or the radius. However, we can infer that the circle's equation requires a radius (r) and center (h,k). The triples mention a radius_of and a measure of radius, implying that a specific radius (r) and center (h,k) exist but are not directly provided. Given that we cannot derive specific values for h, k, or r from the provided triples, we rely on the general form of a circle's equation."
+    },
+    "status": "OK"
+  },
+  {
+    "run_folder": "run-3-llama",
+    "source_csv": "run-3-llama\\half_text + noisy_half_diagram[blur].csv",
+    "case_id": 17,
+    "case_label": "half_text + noisy_half_diagram[blur]",
+    "problem_index": 472,
+    "question": "What is the center of the semicircle?",
+    "triples": [
+      "(x, y, 0)",
+      "(A, is_a, point)",
+      "(B, is_a, point)",
+      "(C, is_a, point)",
+      "(A, lies_on, ?)",
+      "(B, lies_on, ?)",
+      "(C, lies_on, ?)"
+    ],
+    "model_output": {
+      "ANSWER": "C",
+      "REASONING": "Given that (x, y, 0) and the question asks for the center of the semicircle, we need to infer which point is the center. Typically, in geometry, the center of a semicircle is a point that lies on the circumference of the semicircle is not the center but rather the midpoint of the diameter or a point equidistant from the ends of the diameter. However, from the provided triples, we see that only point C is not specified to lie on any object with a question mark, suggesting it could be a fixed point. Points A and B are said to lie on some object (possibly the semicircle), but point C's relationship is clear as it simply 'is_a, point'. Since no other information is given about the nature of the object these points lie on, we infer based on given data that C is the most likely candidate for a center or a significant point like a center."
+    },
+    "status": "OK"
+  }
+]

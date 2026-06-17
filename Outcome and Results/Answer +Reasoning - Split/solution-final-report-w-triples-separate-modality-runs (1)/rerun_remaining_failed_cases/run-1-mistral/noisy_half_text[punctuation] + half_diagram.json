@@ -1,0 +1,35 @@
+[
+  {
+    "run_folder": "run-1-mistral",
+    "source_csv": "Separate-Modality-Triples\\run-1-mistral\\noisy_half_text[punctuation] + half_diagram.csv",
+    "model": "mistralai/mistral-small-3.2-24b-instruct",
+    "case_id": 13,
+    "case_label": "noisy_half_text[punctuation] + half_diagram",
+    "problem_index": 150,
+    "question": "Find BC.",
+    "triples": [
+      "(E, is_a, point)",
+      "(A, is_a, point)",
+      "(B, is_a, point)",
+      "(C, is_a, point)",
+      "(D, is_a, point)",
+      "(CE, is_a, segment)",
+      "(BD, is_a, segment)",
+      "(AC, is_a, segment)",
+      "(AB, is_a, segment)",
+      "(BD, perpendicular_to, AC)",
+      "(CE, perpendicular_to, AC)",
+      "(A, B, C, colinear_with)",
+      "(AB, has_measure, 2.0)",
+      "(BD, has_measure, 7/3)",
+      "(CE, has_measure, 9)"
+    ],
+    "model_output": {
+      "ANSWER": "BC = 1",
+      "REASONING": "Given that A, B, and C are colinear points, and AB has a measure of 2.0, we can infer that the distance from A to C (AC) is the sum of AB and BC. Since CE is perpendicular to AC and has a measure of 9, and BD is also perpendicular to AC and has a measure of 7/3, we can use the properties of similar triangles to find BC. The triangles formed by the perpendiculars are similar, so the ratios of their corresponding sides are equal. Therefore, BC/BD = CE/AC. Let BC = x. Then, x/(7/3) = 9/(2 + x). Solving for x, we get x = 1."
+    },
+    "status": "OK",
+    "raw_response": "{\n  \"ANSWER\": \"BC = 1\",\n  \"REASONING\": \"Given that A, B, and C are colinear points, and AB has a measure of 2.0, we can infer that the distance from A to C (AC) is the sum of AB and BC. Since CE is perpendicular to AC and has a measure of 9, and BD is also perpendicular to AC and has a measure of 7/3, we can use the properties of similar triangles to find BC. The triangles formed by the perpendiculars are similar, so the ratios of their corresponding sides are equal. Therefore, BC/BD = CE/AC. Let BC = x. Then, x/(7/3) = 9/(2 + x). Solving for x, we get x = 1.\"\n}",
+    "recovery_method": "original_prompt"
+  }
+]

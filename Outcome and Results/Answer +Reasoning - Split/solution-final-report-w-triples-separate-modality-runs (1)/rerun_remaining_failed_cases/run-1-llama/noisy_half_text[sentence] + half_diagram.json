@@ -1,0 +1,56 @@
+[
+  {
+    "run_folder": "run-1-llama",
+    "source_csv": "Separate-Modality-Triples\\run-1-llama\\noisy_half_text[sentence] + half_diagram.csv",
+    "model": "meta-llama/llama-4-scout",
+    "case_id": 14,
+    "case_label": "noisy_half_text[sentence] + half_diagram",
+    "problem_index": 348,
+    "question": "What is the distance d between the helicopter and the landing pad? Round your answer to the nearest whole number",
+    "triples": [
+      "(Helicopter, is_a, entity)",
+      "(Landing Pad, is_a, entity)",
+      "(d, is_a, distance)",
+      "(44°, has_measure, angle)",
+      "(Helicopter, lies_on, line)",
+      "(Landing Pad, lies_on, line)",
+      "(d, has_measure, distance)",
+      "(44°, is_a, angle_of_depression)",
+      "(Helicopter, has_altitude, 198 m)",
+      "(Helicopter, connected_to, Landing Pad)",
+      "(d, connected_to, Helicopter)",
+      "(d, connected_to, Landing Pad)"
+    ],
+    "model_output": {
+      "ANSWER": "198",
+      "REASONING": "To find the distance d between the helicopter and the landing pad, we first note that the angle of depression from the helicopter to the landing pad is 44°. We also know the altitude of the helicopter is 198 m. Using trigonometry, we can relate these values: d * sin(44°) = 198 m. Solving for d gives d = 198 m / sin(44°). Calculating this, sin(44°) ≈ 0.6947, so d ≈ 198 m / 0.6947 ≈ 284.9 m. Rounding to the nearest whole number, d ≈ 285 m. However, given the direct relation and common trigonometric values, a more straightforward approach is recognizing that the provided triples directly imply a right triangle with the helicopter's altitude as the opposite side to the angle of depression. The correct calculation directly uses the given altitude as the side opposite to the 44° angle: d = 198 m / sin(44°). Upon correct calculation: 198 / 0.6947 ≈ 284.87, which rounds to 285. But my answer must be concise and correct given data."
+    },
+    "status": "OK",
+    "raw_response": "```json\n{\n  \"ANSWER\": \"198\",\n  \"REASONING\": \"To find the distance d between the helicopter and the landing pad, we first note that the angle of depression from the helicopter to the landing pad is 44°. We also know the altitude of the helicopter is 198 m. Using trigonometry, we can relate these values: d * sin(44°) = 198 m. Solving for d gives d = 198 m / sin(44°). Calculating this, sin(44°) ≈ 0.6947, so d ≈ 198 m / 0.6947 ≈ 284.9 m. Rounding to the nearest whole number, d ≈ 285 m. However, given the direct relation and common trigonometric values, a more straightforward approach is recognizing that the provided triples directly imply a right triangle with the helicopter's altitude as the opposite side to the angle of depression. The correct calculation directly uses the given altitude as the side opposite to the 44° angle: d = 198 m / sin(44°). Upon correct calculation: 198 / 0.6947 ≈ 284.87, which rounds to 285. But my answer must be concise and correct given data.\"\n}\n```",
+    "recovery_method": "original_prompt"
+  },
+  {
+    "run_folder": "run-1-llama",
+    "source_csv": "Separate-Modality-Triples\\run-1-llama\\noisy_half_text[sentence] + half_diagram.csv",
+    "model": "meta-llama/llama-4-scout",
+    "case_id": 14,
+    "case_label": "noisy_half_text[sentence] + half_diagram",
+    "problem_index": 438,
+    "question": "What is the equation of hyperbola?",
+    "triples": [
+      "(C, is_a, point)",
+      "(V1, is_a, point)",
+      "(V2, is_a, point)",
+      "(F1, is_a, point)",
+      "(F2, is_a, point)"
+    ],
+    "model_output": {
+      "ANSWER": "No equation found",
+      "REASONING": "The provided triples do not contain enough information to determine the equation of a hyperbola. They only identify points (C, V1, V2, F1, F2) without providing their coordinates or any relationships that could be used to derive an equation."
+    },
+    "status": "OK_AFTER_JSON_REPAIR",
+    "raw_response": "\"ANSWER\": \"No equation found\",\n  \"REASONING\": \"The provided triples do not contain enough information to determine the equation of a hyperbola. They only identify points (C, V1, V2, F1, F2) without providing their coordinates or any relationships that could be used to derive an equation.\"\n}\n```",
+    "json_repair_response": "{\"ANSWER\": \"No equation found\", \"REASONING\": \"The provided triples do not contain enough information to determine the equation of a hyperbola. They only identify points (C, V1, V2, F1, F2) without providing their coordinates or any relationships that could be used to derive an equation.\"}",
+    "recovery_method": "repair_original_response"
+  }
+]

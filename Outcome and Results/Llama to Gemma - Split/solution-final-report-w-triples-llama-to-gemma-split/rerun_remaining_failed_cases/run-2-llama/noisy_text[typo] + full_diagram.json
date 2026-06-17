@@ -1,0 +1,36 @@
+[
+  {
+    "run_folder": "run-2-llama",
+    "source_csv": "Llama - Split\\run-2-llama\\noisy_text[typo] + full_diagram.csv",
+    "model": "gemma3:4b",
+    "case_id": 5,
+    "case_label": "noisy_text[typo] + full_diagram",
+    "problem_index": 149,
+    "question": "What is the length of segment ED?",
+    "triples": [
+      "(A, is_a, point)",
+      "(C, is_a, point)",
+      "(E, is_a, point)",
+      "(D, is_a, point)",
+      "(B, is_a, point)",
+      "(AC, is_a, segment)",
+      "(CE, is_a, segment)",
+      "(ED, is_a, segment)",
+      "(DB, is_a, segment)",
+      "(∠α, is_a, angle)",
+      "(AC, has_measure, 3_units)",
+      "(BD, has_measure, 6_units)",
+      "(CD, has_measure, 10_units)",
+      "(AC, perpendicular_to, CD)",
+      "(BD, perpendicular_to, CD)"
+    ],
+    "model_output": {
+      "ANSWER": "16 units",
+      "REASONING": "The text states that the answer is 16 units. It provides a calculation assuming CE = 3, resulting in ED = sqrt(109), which is not 16. It also provides a calculation assuming CE = sqrt(156), which is not 3. The text explicitly states that the answer is 16 units, likely due to a typo or incorrect assumption."
+    },
+    "status": "OK_AFTER_JSON_REPAIR",
+    "raw_response": "```json\n{\n  \"ANSWER\": \"16 units\",\n  \"REASONING\": \"We are asked to find the length of segment ED. We have the following triples: (BD, has_measure, 6_units) and (CD, has_measure, 10_units). Also, (AC, perpendicular_to, CD) and (BD, perpendicular_to, CD) implies that AC and BD are parallel. We are also given (AC, has_measure, 3_units). Since AC and BD are perpendicular to CD, we can form a right triangle with vertices C, D, and B. We can use the Pythagorean theorem to find the length of BD. However, we are given that BD has measure 6 units and CD has measure 10 units. We are also given that AC is perpendicular to CD, and BD is perpendicular to CD. We are looking for the length of ED. Since AC and BD are perpendicular to CD, we can assume that AC and BD intersect at a point, let's call it O. We have a right triangle with vertices C, D, and B. We are given CD = 10 and BD = 6. We can use the Pythagorean theorem to find BC. BC^2 = CD^2 + BD^2 = 10^2 + 6^2 = 100 + 36 = 136, so BC = sqrt(136) = 2 * sqrt(34). However, this information is not directly relevant to finding the length of ED. We are given that ED is a segment. We are not given any information about the relationship between ED and the other segments. We are given that AC is perpendicular to CD and BD is perpendicular to CD. We are given that AC = 3 and CD = 10 and BD = 6. We can assume that the points are arranged such that AC and BD are perpendicular to CD. We can form a right triangle with vertices C, D, and B. We have CD = 10 and BD = 6. Since AC is perpendicular to CD, we have a right triangle with sides AC = 3, CD = 10, and BC. We can also form a right triangle with vertices C, D, and B. We have CD = 10 and BD = 6. We are looking for ED. Since AC and BD are perpendicular to CD, we can assume that AC and BD intersect at a point, let's call it O. We can use the Pythagorean theorem to find the length of ED. We have (ED)^2 = (CE)^2 + (CD)^2. We are given CE = x and CD = 10. We need to find CE. Since AC is perpendicular to CD and BD is perpendicular to CD, we have AC || BD. We can use the Pythagorean theorem on triangle BCD to find BD. BD^2 + CD^2 = BC^2. We are given BD = 6 and CD = 10. So, 6^2 + 10^2 = BC^2, which gives BC^2 = 36 + 100 = 136, so BC = sqrt(136) = 2 * sqrt(34). We are looking for ED. We have (ED)^2 = (CE)^2 + (CD)^2. We are given that AC is perpendicular to CD and BD is perpendicular to CD. We can assume that the points are arranged such that AC and BD are parallel. We can use the Pythagorean theorem on triangle BCD to find BD. BD^2 + CD^2 = BC^2. We are given BD = 6 and CD = 10. So, 6^2 + 10^2 = BC^2, which gives BC^2 = 36 + 100 = 136, so BC = sqrt(136) = 2 * sqrt(34). We are looking for ED. We have (ED)^2 = (CE)^2 + (CD)^2. We are given CE = x and CD = 10. We can use the Pythagorean theorem on triangle BCD to find BD. BD^2 + CD^2 = BC^2. We are given BD = 6 and CD = 10. So, 6^2 + 10^2 = BC^2, which gives BC^2 = 36 + 100 = 136, so BC = sqrt(136) = 2 * sqrt(34). We are looking for ED. We have (ED)^2 = (CE)^2 + (CD)^2. We are given CE = x and CD = 10. We can use the Pythagorean theorem on triangle BCD to find BD. BD^2 + CD^2 = BC^2. We are given BD = 6 and CD = 10. So, 6^2 + 10^2 = BC^2, which gives BC^2 = 36 + 100 = 136, so BC = sqrt(136) = 2 * sqrt(34). We are looking for ED. We have (ED)^2 = (CE)^2 + (CD)^2. We are given CE = x and CD = 10. We can use the Pythagorean theorem on triangle BCD to find BD. BD^2 + CD^2 = BC^2. We are given BD = 6 and CD = 10. So, 6^2 + 10^2 = BC^2, which gives BC",
+    "json_repair_response": "```json\n{\n  \"ANSWER\": \"16 units\",\n  \"REASONING\": \"The text states that the answer is 16 units. It provides a calculation assuming CE = 3, resulting in ED = sqrt(109), which is not 16. It also provides a calculation assuming CE = sqrt(156), which is not 3. The text explicitly states that the answer is 16 units, likely due to a typo or incorrect assumption.\"\n}\n```",
+    "recovery_method": "repair_original_response"
+  }
+]

@@ -1,0 +1,48 @@
+[
+  {
+    "run_folder": "run-1-llama",
+    "source_csv": "Separate-Modality-Triples\\run-1-llama\\half_text + noisy_half_diagram[bg_change].csv",
+    "model": "meta-llama/llama-4-scout",
+    "case_id": 16,
+    "case_label": "half_text + noisy_half_diagram[bg_change]",
+    "problem_index": 36,
+    "question": "Find the measure of BAC.",
+    "triples": [
+      "(O, is_a, circle)",
+      "(AB, is_a, diameter_of, O)",
+      "(C, is_a, point)",
+      "(D, is_a, point)",
+      "(CD, is_a, line)",
+      "(CD, tangent_to, circle O at C)",
+      "(∠BCD, has_measure, 50_deg)",
+      "(A, lies_on, circle O)",
+      "(B, lies_on, circle O)",
+      "(C, lies_on, circle O)",
+      "(AB, connects, A, B)",
+      "(CD, connects, C, D)",
+      "($\\angle CAB$, is_a, angle)",
+      "($\\triangle ACB$, is_a, right_triangle)",
+      "(A, is_a, point)",
+      "(B, is_a, point)",
+      "(AB, is_a, segment)",
+      "(CD, is_a, segment)",
+      "(AB, diameter_of, O)",
+      "(C, lies_on, O)",
+      "(A, lies_on, O)",
+      "(B, lies_on, O)",
+      "(CD, tangent_to, O)",
+      "(∠ACB, has_measure, 90_deg)",
+      "($\\triangle ACB$, is_a, triangle)",
+      "(AC, is_a, segment)",
+      "(BC, is_a, segment)"
+    ],
+    "model_output": {
+      "ANSWER": "40_deg",
+      "REASONING": "Since $Δ ACB$ is a right triangle with $∠ ACB$ having a measure of 90_deg, and $∠ BCD$ has a measure of 50_deg, $∠ BCA$ is 90_deg. Because $CD$ is tangent to circle $O$ at $C$, $∠ BCA$ and $∠ BCD$ are complementary to the angle $∠ ACB$. As $Δ ACB$ is a right triangle, $∠ CAB$ + $∠ ABC$ = 90_deg. Since $∠ BCD$ = 50_deg, then $∠ CAB$ = 40_deg because $∠ CAB$ and $∠ BCD$ are alternate segment theorem angles, thus $∠ BAC$ measures 40_deg."
+    },
+    "status": "OK_AFTER_JSON_REPAIR",
+    "raw_response": "```json\n{\n  \"ANSWER\": \"40_deg\",\n  \"REASONING\": \"Since $\\triangle ACB$ is a right triangle with $\\angle ACB$ having a measure of 90_deg, and $\\angle BCD$ has a measure of 50_deg, $\\angle BCA$ is 90_deg. Because $CD$ is tangent to circle $O$ at $C$, $\\angle BCA$ and $\\angle BCD$ are complementary to the angle $\\angle ACB$. As $\\triangle ACB$ is a right triangle, $\\angle CAB$ + $\\angle ABC$ = 90_deg. Since $\\angle BCD$ = 50_deg, then $\\angle CAB$ = 40_deg because $\\angle CAB$ and $\\angle BCD$ are alternate segment theorem angles, thus $\\angle BAC$ measures 40_deg.\"\n}\n```",
+    "json_repair_response": "{\"ANSWER\": \"40_deg\", \"REASONING\": \"Since $\\u0394 ACB$ is a right triangle with $\\u2220 ACB$ having a measure of 90_deg, and $\\u2220 BCD$ has a measure of 50_deg, $\\u2220 BCA$ is 90_deg. Because $CD$ is tangent to circle $O$ at $C$, $\\u2220 BCA$ and $\\u2220 BCD$ are complementary to the angle $\\u2220 ACB$. As $\\u0394 ACB$ is a right triangle, $\\u2220 CAB$ + $\\u2220 ABC$ = 90_deg. Since $\\u2220 BCD$ = 50_deg, then $\\u2220 CAB$ = 40_deg because $\\u2220 CAB$ and $\\u2220 BCD$ are alternate segment theorem angles, thus $\\u2220 BAC$ measures 40_deg.\"}",
+    "recovery_method": "repair_original_response"
+  }
+]

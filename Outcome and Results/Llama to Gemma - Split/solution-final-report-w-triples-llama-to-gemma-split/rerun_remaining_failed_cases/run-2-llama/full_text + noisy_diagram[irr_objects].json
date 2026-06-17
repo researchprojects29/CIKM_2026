@@ -1,0 +1,36 @@
+[
+  {
+    "run_folder": "run-2-llama",
+    "source_csv": "Llama - Split\\run-2-llama\\full_text + noisy_diagram[irr_objects].csv",
+    "model": "gemma3:4b",
+    "case_id": 9,
+    "case_label": "full_text + noisy_diagram[irr_objects]",
+    "problem_index": 149,
+    "question": "What is the length of segment ED?",
+    "triples": [
+      "(A, is_a, point)",
+      "(C, is_a, point)",
+      "(D, is_a, point)",
+      "(E, is_a, point)",
+      "(B, is_a, point)",
+      "(AC, is_a, segment)",
+      "(CD, is_a, segment)",
+      "(BD, is_a, segment)",
+      "(ED, is_a, segment)",
+      "(AC, has_measure, 3_units)",
+      "(BD, has_measure, 6_units)",
+      "(CD, has_measure, 10_units)",
+      "(AC, perpendicular_to, CD)",
+      "(BD, perpendicular_to, CD)",
+      "(α, is_a, angle)",
+      "(ED, has_measure, ?)"
+    ],
+    "model_output": {
+      "ANSWER": "10",
+      "REASONING": "The question asks for the length of segment ED. We are given that CD has a measure of 10 units. Since AC and BD are perpendicular to CD, and AC and BD both intersect CD, we can deduce that ED must also have the same length as CD. Therefore, the length of segment ED is 10."
+    },
+    "status": "OK",
+    "raw_response": "```json\n{\n  \"ANSWER\": \"10\",\n  \"REASONING\": \"The question asks for the length of segment ED. We are given that CD has a measure of 10 units. Since AC and BD are perpendicular to CD, and AC and BD both intersect CD, we can deduce that ED must also have the same length as CD. Therefore, the length of segment ED is 10.\"\n}\n```",
+    "recovery_method": "original_prompt"
+  }
+]

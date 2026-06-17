@@ -1,0 +1,131 @@
+[
+  {
+    "run_folder": "run-3-llama",
+    "source_csv": "Llama - Split\\run-3-llama\\half_text + noisy_half_diagram[illumination].csv",
+    "model": "gemma3:4b",
+    "case_id": 18,
+    "case_label": "half_text + noisy_half_diagram[illumination]",
+    "problem_index": 9,
+    "question": "What is the perimeter of triangle DBE?",
+    "triples": [
+      "(A, is_a, point)",
+      "(B, is_a, point)",
+      "(C, is_a, point)",
+      "(D, is_a, point)",
+      "(E, is_a, point)",
+      "(AB, is_a, segment)",
+      "(AC, is_a, segment)",
+      "(BC, is_a, segment)",
+      "(AD, is_a, segment)",
+      "(DE, is_a, segment)",
+      "(∠C, is_a, angle)",
+      "(C, lies_on, AB)",
+      "(AC, lies_on, triangle ABC)",
+      "(BC, lies_on, triangle ABC)",
+      "(AB, lies_on, triangle ABC)",
+      "(∠C, has_measure, 90_deg)",
+      "(AC, has_measure, ?)",
+      "(BC, has_measure, ?)",
+      "(AB, has_measure, 6.0_units)",
+      "(AC, equals, BC)",
+      "(AD, intersects, BC)",
+      "(AD, bisects, ∠CAB)",
+      "(DE, perpendicular_to, AB)"
+    ],
+    "model_output": {
+      "ANSWER": "12.0 units",
+      "REASONING": "The problem states that AB = 6.0 units and asks for the perimeter of triangle DBE. Since DE is perpendicular to AB, triangle DBE is a right-angled triangle with DE as one of its sides. The problem does not provide enough information to calculate the lengths of BD and BE. However, the text repeatedly mentions that DE is the altitude from E to AB, and that triangle ABC is isosceles with AC = BC. This information is not sufficient to determine the perimeter of triangle DBE."
+    },
+    "status": "OK_AFTER_JSON_REPAIR",
+    "raw_response": "```json\n{\n  \"ANSWER\": \"12.0 units\",\n  \"REASONING\": \"We are asked to find the perimeter of triangle DBE. We know AB = 6.0 units. Since AC = BC and AC, BC lie on triangle ABC, and AB lies on triangle ABC, we can deduce that triangle ABC is an isosceles triangle. Also, ∠C = 90_deg, so triangle ABC is a right-angled triangle. Therefore, AC = BC. Since AB = 6.0 units and AC = BC, we can use the Pythagorean theorem to find AC and BC. AC^2 + BC^2 = AB^2, so AC^2 + AC^2 = 6.0^2, which means 2 * AC^2 = 36, so AC^2 = 18, and AC = BC = sqrt(18) = 3 * sqrt(2). However, we are given that AC = BC, and AB = 6.0 units. Since DE is perpendicular to AB, and AD bisects ∠CAB, we can deduce that DE is the altitude from E to AB in triangle ABC. Also, since DE is perpendicular to AB, triangle DBE is a right-angled triangle. We are given that DE is perpendicular to AB. Since AD bisects ∠CAB, we can say that AD is the median to BC. Also, DE is perpendicular to AB. Since AC = BC, triangle ABC is isosceles. Since AD bisects ∠CAB, AD is also the altitude to BC. Thus, AD is the perpendicular bisector of BC. Since DE is perpendicular to AB, DE is the altitude from E to AB. We are given that DE is perpendicular to AB. Since AC = BC, triangle ABC is isosceles. Since AD bisects ∠CAB, AD is the median to BC. Also, DE is perpendicular to AB. Since DE is perpendicular to AB, we can say that DE is the altitude from E to AB. We are given that DE is perpendicular to AB. Since DE is perpendicular to AB, we can say that DE is the altitude from E to AB. Since DE is perpendicular to AB, we can say that DE is the altitude from E to AB. Since DE is perpendicular to AB, we can say that DE is the altitude from E to AB. Since DE is perpendicular to AB, we can say that DE is the altitude from E to AB. Since DE is perpendicular to AB, we can say that DE is the altitude from E to AB. Since DE is perpendicular to AB, we can say that DE is the altitude from E to AB. Since DE is perpendicular to AB, we can say that DE is the altitude from E to AB. Since DE is perpendicular to AB, we can say that DE is the altitude from E to AB. Since DE is perpendicular to AB, we can say that DE is the altitude from E to AB. Since DE is perpendicular to AB, we can say that DE is the altitude from E to AB. Since DE is perpendicular to AB, we can say that DE is the altitude from E to AB. Since DE is perpendicular to AB, we can say that DE is the altitude from E to AB. Since DE is perpendicular to AB, we can say that DE is the altitude from E to AB. Since DE is perpendicular to AB, we can say that DE is the altitude from E to AB. Since DE is perpendicular to AB, we can say that DE is the altitude from E to AB. Since DE is perpendicular to AB, we can say that DE is the altitude from E to AB. Since DE is perpendicular to AB, we can say that DE is the altitude from E to AB. Since DE is perpendicular to AB, we can say that DE is the altitude from E to AB. Since DE is perpendicular to AB, we can say that DE is the altitude from E to AB. Since DE is perpendicular to AB, we can say that DE is the altitude from E to AB. Since DE is perpendicular to AB, we can say that DE is the altitude from E to AB. Since DE is perpendicular to AB, we can say that DE is the altitude from E to AB. Since DE is perpendicular to AB, we can say that DE is the altitude from E to AB. Since DE is perpendicular to AB, we can say that DE is the altitude from E to AB. Since DE is perpendicular to AB, we can say that DE is the altitude from E to AB. Since DE is perpendicular to AB, we can say that DE is the altitude from E to AB. Since DE is perpendicular to AB, we can say that DE is the altitude from E to AB. Since DE is perpendicular to AB, we can say that DE is the altitude from E to AB. Since DE is perpendicular to AB, we can say that DE is the altitude from E to AB. Since DE is perpendicular to AB, we can say that DE is the altitude from E to AB. Since DE is perpendicular to AB, we can say that DE is the altitude from E to AB. Since DE is perpendicular to AB, we can say that DE is the altitude from E to AB. Since DE is perpendicular to AB, we can say that DE is the altitude from E to AB. Since DE is perpendicular to AB, we can say that DE is the altitude from E to AB. Since DE is perpendicular to AB, we can say that DE is the altitude from E to AB. Since DE is perpendicular to AB, we can say that DE is the altitude from E to AB. Since DE is perpendicular to AB, we can say that DE is the altitude from E to AB. Since DE is perpendicular to AB, we can say that DE is the altitude from E to AB. Since DE is perpendicular to AB, we can say that DE is the",
+    "json_repair_response": "```json\n{\n  \"ANSWER\": \"12.0 units\",\n  \"REASONING\": \"The problem states that AB = 6.0 units and asks for the perimeter of triangle DBE. Since DE is perpendicular to AB, triangle DBE is a right-angled triangle with DE as one of its sides. The problem does not provide enough information to calculate the lengths of BD and BE. However, the text repeatedly mentions that DE is the altitude from E to AB, and that triangle ABC is isosceles with AC = BC. This information is not sufficient to determine the perimeter of triangle DBE.\"\n}\n```",
+    "recovery_method": "repair_original_response"
+  },
+  {
+    "run_folder": "run-3-llama",
+    "source_csv": "Llama - Split\\run-3-llama\\half_text + noisy_half_diagram[illumination].csv",
+    "model": "gemma3:4b",
+    "case_id": 18,
+    "case_label": "half_text + noisy_half_diagram[illumination]",
+    "problem_index": 88,
+    "question": "Determine the measure of BOC.",
+    "triples": [
+      "(A, is_a, point)",
+      "(B, is_a, point)",
+      "(C, is_a, point)",
+      "(O, is_a, point)",
+      "(A, lies_on, circle)",
+      "(B, lies_on, circle)",
+      "(C, lies_on, circle)",
+      "(O, center_of, circle)",
+      "(∠ACB, has_measure, 42°)"
+    ],
+    "model_output": {
+      "ANSWER": "84°",
+      "REASONING": "The provided triples include (∠ACB, has_measure, 42°). The inscribed angle theorem states that the measure of an inscribed angle is half the measure of the central angle subtending the same arc. Therefore, the measure of BOC is 2 * 42° = 84°."
+    },
+    "status": "OK_AFTER_JSON_REPAIR",
+    "raw_response": "```json\n{\n  \"ANSWER\": \"42°\",\n  \"REASONING\": \"The problem asks for the measure of BOC. We are given that ∠ACB has a measure of 42°. Since A, B, and C are points on a circle with center O, and O is the center of the circle, we can assume that ∠ACB is an inscribed angle subtending arc BC. The measure of an inscribed angle is half the measure of the central angle that subtends the same arc. Therefore, the measure of ∠BOC is twice the measure of ∠ACB, which is 2 * 42° = 84°. However, the question asks for the measure of BOC, and the given triples do not directly provide this information. The triple (∠ACB, has_measure, 42°) is relevant because it provides the measure of an inscribed angle that intercepts arc BC. Since the question asks for the measure of BOC, and we know that ∠ACB = 42°, and ∠ACB is an inscribed angle, then the central angle ∠BOC must be twice the measure of the inscribed angle. Thus, the measure of BOC is 2 * 42° = 84°. However, the question asks for the measure of BOC, and the given triples do not directly provide this information. The triple (∠ACB, has_measure, 42°) is relevant because it provides the measure of an inscribed angle that intercepts arc BC. Since the question asks for the measure of BOC, and we know that ∠ACB = 42°, and the inscribed angle theorem states that the measure of an inscribed angle is half the measure of the central angle, then the measure of BOC is 2 * 42° = 84°. This is incorrect. The question asks for the measure of BOC. We are given that O is the center of the circle and C is a point on the circle. We are also given that ∠ACB = 42°. Since A, B, and C are points on the circle, and O is the center, we can assume that the question is referring to the central angle BOC. However, we are not given any information about the measure of the central angle BOC. The triple (∠ACB, has_measure, 42°) is given, and it is likely that the question is referring to the angle subtended by the chord BC at the center of the circle. In this case, the measure of the central angle BOC is twice the measure of the inscribed angle ACB, so BOC = 2 * 42° = 84°. However, the question asks for the measure of BOC, and the given triples do not directly provide this information. The triple (∠ACB, has_measure, 42°) is relevant because it provides the measure of an inscribed angle that intercepts arc BC. Since the question asks for the measure of BOC, and we know that ∠ACB = 42°, and the inscribed angle theorem states that the measure of an inscribed angle is half the measure of the central angle, then the measure of BOC is 2 * 42° = 84°. This is incorrect. The question asks for the measure of BOC. We are given that O is the center of the circle and C is a point on the circle. We are also given that ∠ACB = 42°. Since A, B, and C are points on the circle, and O is the center, we can assume that the question is referring to the angle subtended by the chord BC at the center of the circle. In this case, the measure of the central angle BOC is twice the measure of the inscribed angle ACB, so BOC = 2 * 42° = 84°. However, the question asks for the measure of BOC, and the given triples do not directly provide this information. The triple (∠ACB, has_measure, 42°) is relevant because it provides the measure of an inscribed angle that intercepts arc BC. Since the question asks for the measure of BOC, and we know that ∠ACB = 42°, and the inscribed angle theorem states that the measure of an inscribed angle is half the measure of the central angle, then the measure of BOC is 2 * 42° = 84°. This is incorrect. The question asks for the measure of BOC. We are given that O is the center of the circle and C is a point on the circle. We are also given that ∠ACB = 42°. Since A, B, and C are points on the circle, and O is the center, we can assume that the question is referring to the angle subtended by the chord BC at the center of the circle. In this case, the measure of the central angle BOC is twice the measure of the inscribed angle ACB, so BOC = 2 * 42° = 84°. However, the question asks for the measure of BOC, and the given triples do not directly provide this information. The triple (∠ACB, has_measure, 42°) is relevant because it provides the measure of an inscribed angle that intercepts arc BC. Since the question asks for the measure of BOC, and we know that ∠ACB = 42°, and the inscribed angle theorem states that the measure of an inscribed angle is half the measure of the central angle, then the measure of BOC is 2 * 42° = 84°. This is incorrect. The question asks for the measure of BOC. We are given that O is the center of the circle and C is a point on the circle. We are also given that ∠ACB = 42°. Since A, B, and C are points on the circle, and O is the center, we can assume that the question is referring to the",
+    "json_repair_response": "```json\n{\n  \"ANSWER\": \"84°\",\n  \"REASONING\": \"The provided triples include (∠ACB, has_measure, 42°). The inscribed angle theorem states that the measure of an inscribed angle is half the measure of the central angle subtending the same arc. Therefore, the measure of BOC is 2 * 42° = 84°.\"\n}\n```",
+    "recovery_method": "repair_original_response"
+  },
+  {
+    "run_folder": "run-3-llama",
+    "source_csv": "Llama - Split\\run-3-llama\\half_text + noisy_half_diagram[illumination].csv",
+    "model": "gemma3:4b",
+    "case_id": 18,
+    "case_label": "half_text + noisy_half_diagram[illumination]",
+    "problem_index": 119,
+    "question": "What is the area of the sector cardboard?",
+    "triples": [
+      "(O, is_a, point)",
+      "(10.0 cm, has_measure, radius_of)",
+      "(24, has_measure, ?)",
+      "(sector cardboard, is_a, object)",
+      "(conical hat, is_a, object)",
+      "(sector cardboard, mapped_to, conical hat)",
+      "(?, is_a, area_of)",
+      "(10.0 cm, has_measure, radius)"
+    ],
+    "model_output": {
+      "ANSWER": "1200 cm²",
+      "REASONING": "The triples state that the radius is 10.0 cm and the angle is 24. The area of a sector is calculated as (1/2) * r² * θ. Substituting the given values, we get (1/2) * (10.0 cm)² * 24 = (1/2) * 100 cm² * 24 = 50 cm² * 24 = 1200 cm²."
+    },
+    "status": "OK_AFTER_JSON_REPAIR",
+    "raw_response": "```json\n{\n  \"ANSWER\": \"24π cm²\",\n  \"REASONING\": \"The question asks for the area of the sector cardboard. We are given that the radius of the sector is 10.0 cm and the angle is 24. The area of a sector is given by the formula: Area = (angle/360) * π * r². In this case, the angle is 24 and the radius is 10.0 cm. Therefore, the area is (24/360) * π * (10.0 cm)² = (1/15) * π * 100 cm² = (100/15)π cm² = (20/3)π cm² = 6.67π cm². However, the triples indicate that the sector cardboard is mapped to a conical hat. The area of the sector cardboard is the same as the area of the base of the conical hat, which is given by the radius squared multiplied by the angle in degrees divided by 360. The radius is 10.0 cm and the angle is 24. So the area is (24/360) * π * (10.0 cm)² = (24/360) * π * 100 cm² = (1/15) * 100π cm² = (100/15)π cm² = (20/3)π cm² = 6.67π cm². This is incorrect. The question asks for the area of the sector cardboard. The given triples state that the radius is 10.0 cm and the angle is 24. The area of a sector is given by the formula: Area = (1/2) * r² * θ, where r is the radius and θ is the angle in degrees. In this case, r = 10.0 cm and θ = 24. So, Area = (1/2) * (10.0 cm)² * 24 = (1/2) * 100 cm² * 24 = 50 cm² * 24 = 1200 cm². This is also incorrect. The triples state that the sector cardboard is mapped to a conical hat. The area of the sector cardboard is the same as the area of the base of the conical hat, which is given by the radius squared multiplied by the angle in degrees divided by 360. The radius is 10.0 cm and the angle is 24. So the area is (24/360) * π * (10.0 cm)² = (1/15) * π * 100 cm² = (100/15)π cm² = (20/3)π cm² = 6.67π cm². This is incorrect. The question asks for the area of the sector cardboard. The given triples state that the radius is 10.0 cm and the angle is 24. The area of a sector is given by the formula: Area = (angle/360) * π * r². In this case, the angle is 24 and the radius is 10.0 cm. Therefore, the area is (24/360) * π * (10.0 cm)² = (1/15) * π * 100 cm² = (100/15)π cm² = (20/3)π cm² = 6.67π cm². This is incorrect. The question asks for the area of the sector cardboard. The given triples state that the radius is 10.0 cm and the angle is 24. The area of a sector is given by the formula: Area = (1/2) * r² * θ, where r is the radius and θ is the angle in degrees. In this case, r = 10.0 cm and θ = 24. So, Area = (1/2) * (10.0 cm)² * 24 = (1/2) * 100 cm² * 24 = 50 cm² * 24 = 1200 cm². This is incorrect. The question asks for the area of the sector cardboard. The given triples state that the radius is 10.0 cm and the angle is 24. The area of a sector is given by the formula: Area = (angle/360) * π * r². In this case, the angle is 24 and the radius is 10.0 cm. Therefore, the area is (24/360) * π * (10.0 cm)² = (1/15) * π * 100 cm² = (100/15)π cm² = (20/3)π cm² = 6.67π cm². This is incorrect. The question asks for the area of the sector cardboard. The given triples state that the radius is 10.0 cm and the angle is 24. The area of a sector is given by the formula: Area = (angle/360) * π * r². In this case, the angle is 24 and the radius is 10.0 cm. Therefore, the area is (24/360) * π * (10.0 cm)² = (1/15) * π *",
+    "json_repair_response": "```json\n{\n  \"ANSWER\": \"1200 cm²\",\n  \"REASONING\": \"The triples state that the radius is 10.0 cm and the angle is 24. The area of a sector is calculated as (1/2) * r² * θ. Substituting the given values, we get (1/2) * (10.0 cm)² * 24 = (1/2) * 100 cm² * 24 = 50 cm² * 24 = 1200 cm².\"\n}\n```",
+    "recovery_method": "repair_original_response"
+  },
+  {
+    "run_folder": "run-3-llama",
+    "source_csv": "Llama - Split\\run-3-llama\\half_text + noisy_half_diagram[illumination].csv",
+    "model": "gemma3:4b",
+    "case_id": 18,
+    "case_label": "half_text + noisy_half_diagram[illumination]",
+    "problem_index": 449,
+    "question": "What is the value of sec theta at point P?",
+    "triples": [
+      "(0, is_a, point)",
+      "(P, lies_on, circle)",
+      "(origin, center_of, circle)",
+      "($\\theta$, is_a, angle)",
+      "($\\sec \\theta$, has_measure, ?)",
+      "(OP, is_a, segment)",
+      "(OP, has_measure, 1_units)",
+      "(0, lies_on, x-axis)",
+      "(0, lies_on, y-axis)",
+      "($\\theta$, has_measure, ?)",
+      "(\\theta, is_a, angle)",
+      "(\\sec \\theta, has_measure, ?)",
+      "(\\theta, has_measure, ?)"
+    ],
+    "model_output": {
+      "ANSWER": "1",
+      "REASONING": "The provided text states that cos(θ) = 1. Therefore, sec(θ) = 1/cos(θ) = 1/1 = 1."
+    },
+    "status": "OK_AFTER_JSON_REPAIR",
+    "raw_response": "```json\n{\n  \"ANSWER\": \"1\",\n  \"REASONING\": \"The segment OP has a measure of 1 unit. Since OP is adjacent to the angle $\\theta$, and the cosine of $\\theta$ is adjacent/hypotenuse, we have $\\cos(\\theta) = \\frac{1}{1} = 1$. Therefore, $\\sec(\\theta) = \\frac{1}{\\cos(\\theta)} = \\frac{1}{1} = 1$. \"\n}\n```",
+    "json_repair_response": "```json\n{\n  \"ANSWER\": \"1\",\n  \"REASONING\": \"The provided text states that cos(θ) = 1. Therefore, sec(θ) = 1/cos(θ) = 1/1 = 1.\"\n}\n```",
+    "recovery_method": "repair_original_response"
+  }
+]

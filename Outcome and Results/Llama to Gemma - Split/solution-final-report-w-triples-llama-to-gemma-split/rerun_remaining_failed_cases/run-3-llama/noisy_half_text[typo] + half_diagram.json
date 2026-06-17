@@ -1,0 +1,67 @@
+[
+  {
+    "run_folder": "run-3-llama",
+    "source_csv": "Llama - Split\\run-3-llama\\noisy_half_text[typo] + half_diagram.csv",
+    "model": "gemma3:4b",
+    "case_id": 15,
+    "case_label": "noisy_half_text[typo] + half_diagram",
+    "problem_index": 26,
+    "question": "What is the height of the flagpole?",
+    "triples": [
+      "(B, is_a, point)",
+      "(X, is_a, point)",
+      "(P, is_a, point)",
+      "(AB, is_a, segment)",
+      "(BX, is_a, segment)",
+      "(BP, is_a, segment)",
+      "(XP, is_a, segment)",
+      "(?, is_a, height)",
+      "(BX, has_measure, 8.0_m)",
+      "(XP, has_measure, 22.0_m)",
+      "(BP, has_measure, 3.2_m)"
+    ],
+    "model_output": {
+      "ANSWER": "22.0_m",
+      "REASONING": "We are asked to find the height of the flagpole. The height is represented by '?'. We are given that XP has a measure of 22.0_m and BP has a measure of 3.2_m. Since XP is the height of the flagpole, the height is 22.0_m."
+    },
+    "status": "OK",
+    "raw_response": "```json\n{\n  \"ANSWER\": \"22.0_m\",\n  \"REASONING\": \"We are asked to find the height of the flagpole. The height is represented by '?'. We are given that XP has a measure of 22.0_m and BP has a measure of 3.2_m. Since XP is the height of the flagpole, the height is 22.0_m.\"\n}\n```",
+    "recovery_method": "original_prompt"
+  },
+  {
+    "run_folder": "run-3-llama",
+    "source_csv": "Llama - Split\\run-3-llama\\noisy_half_text[typo] + half_diagram.csv",
+    "model": "gemma3:4b",
+    "case_id": 15,
+    "case_label": "noisy_half_text[typo] + half_diagram",
+    "problem_index": 281,
+    "question": "What is the ratio of cos(B) expressed as a decimal to the nearest hundredth?",
+    "triples": [
+      "(A, is_a, point)",
+      "(B, is_a, point)",
+      "(C, is_a, point)",
+      "(AB, is_a, segment)",
+      "(BC, is_a, segment)",
+      "(AC, is_a, segment)",
+      "(∠ACB, is_a, angle)",
+      "(∠ACB, has_measure, 90_deg)",
+      "(AC, has_measure, 24_units)",
+      "(BC, has_measure, 10_units)",
+      "(AB, has_measure, 26_units)",
+      "(C, lies_on, AC)",
+      "(C, lies_on, BC)",
+      "(A, lies_on, AC)",
+      "(B, lies_on, BC)",
+      "(A, lies_on, AB)",
+      "(B, lies_on, AB)"
+    ],
+    "model_output": {
+      "ANSWER": "0.38",
+      "REASONING": "The text states that cos(B) = 5/13 ≈ 0.3846. To the nearest hundredth, cos(B) is 0.38."
+    },
+    "status": "OK_AFTER_JSON_REPAIR",
+    "raw_response": "```json\n{\n  \"ANSWER\": \"0.91\",\n  \"REASONING\": \"We are asked to find the ratio of cos(B) to the nearest hundredth. We have a triangle ABC with AC = 24, BC = 10, and AB = 26. We can use the law of cosines to find cos(B). The law of cosines states that $b^2 = a^2 + c^2 - 2ac \\cos(B)$, where $a = BC = 10$, $b = AC = 24$, and $c = AB = 26$. Plugging in the values, we get: $24^2 = 10^2 + 26^2 - 2(10)(26) \\cos(B)$. This simplifies to $576 = 100 + 676 - 520 \\cos(B)$. So, $576 = 776 - 520 \\cos(B)$. Therefore, $520 \\cos(B) = 776 - 576 = 200$. Thus, $\\cos(B) = \\frac{200}{520} = \\frac{20}{52} = \\frac{5}{13} \\approx 0.3846$. To the nearest hundredth, $\\cos(B) \\approx 0.38$. The ratio of cos(B) to the nearest hundredth is 0.38.\"\n}\n```",
+    "json_repair_response": "```json\n{\n  \"ANSWER\": \"0.38\",\n  \"REASONING\": \"The text states that cos(B) = 5/13 ≈ 0.3846. To the nearest hundredth, cos(B) is 0.38.\"\n}\n```",
+    "recovery_method": "repair_original_response"
+  }
+]

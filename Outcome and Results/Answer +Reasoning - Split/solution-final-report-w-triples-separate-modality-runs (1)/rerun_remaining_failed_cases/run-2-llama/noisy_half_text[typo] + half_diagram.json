@@ -1,0 +1,33 @@
+[
+  {
+    "run_folder": "run-2-llama",
+    "source_csv": "Separate-Modality-Triples\\run-2-llama\\noisy_half_text[typo] + half_diagram.csv",
+    "model": "meta-llama/llama-4-scout",
+    "case_id": 15,
+    "case_label": "noisy_half_text[typo] + half_diagram",
+    "problem_index": 50,
+    "question": "Determine the measure of COE",
+    "triples": [
+      "(A, is_a, point)",
+      "(B, is_a, point)",
+      "(C, is_a, point)",
+      "(D, is_a, point)",
+      "(E, is_a, point)",
+      "(O, is_a, point)",
+      "(AB, is_a, segment)",
+      "(CD, is_a, segment)",
+      "(EO, is_a, segment)",
+      "(AB, intersects, CD)",
+      "(EO, perpendicular_to, AB)",
+      "(angle BOE, has_measure, 50_deg)",
+      "(angle EOB, has_measure, 90_deg)"
+    ],
+    "model_output": {
+      "ANSWER": "40_deg",
+      "REASONING": "Given that angle BOE has a measure of 50_deg and angle EOB has a measure of 90_deg, and EO is perpendicular to AB, we can infer that angle EOB is actually the right angle formed by EO and OB. Since angle BOE and angle COE would form angle COB, and we know EO is perpendicular to AB, angle COE can be calculated as 90_deg - 50_deg = 40_deg."
+    },
+    "status": "OK",
+    "raw_response": "```json\n{\n  \"ANSWER\": \"40_deg\",\n  \"REASONING\": \"Given that angle BOE has a measure of 50_deg and angle EOB has a measure of 90_deg, and EO is perpendicular to AB, we can infer that angle EOB is actually the right angle formed by EO and OB. Since angle BOE and angle COE would form angle COB, and we know EO is perpendicular to AB, angle COE can be calculated as 90_deg - 50_deg = 40_deg.\"\n}\n```",
+    "recovery_method": "original_prompt"
+  }
+]

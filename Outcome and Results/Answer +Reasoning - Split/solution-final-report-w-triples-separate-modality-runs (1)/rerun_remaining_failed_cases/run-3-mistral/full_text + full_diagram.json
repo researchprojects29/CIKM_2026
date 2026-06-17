@@ -1,0 +1,47 @@
+[
+  {
+    "run_folder": "run-3-mistral",
+    "source_csv": "Separate-Modality-Triples\\run-3-mistral\\full_text + full_diagram.csv",
+    "model": "mistralai/mistral-small-3.2-24b-instruct",
+    "case_id": 1,
+    "case_label": "full_text + full_diagram",
+    "problem_index": 210,
+    "question": "What is the length of AE?",
+    "triples": [
+      "(A, is_a, point)",
+      "(B, is_a, point)",
+      "(C, is_a, point)",
+      "(D, is_a, point)",
+      "(E, is_a, point)",
+      "(AB, is_a, segment)",
+      "(AC, is_a, segment)",
+      "(AD, is_a, segment)",
+      "(AE, is_a, segment)",
+      "(CD, is_a, segment)",
+      "(ED, is_a, segment)",
+      "(BE, is_a, segment)",
+      "(ABE, is_a, triangle)",
+      "(ACD, is_a, triangle)",
+      "(A, connects, B)",
+      "(A, connects, C)",
+      "(A, connects, D)",
+      "(A, connects, E)",
+      "(B, connects, E)",
+      "(C, connects, D)",
+      "(D, connects, E)",
+      "(triangles, ABE, is_a, similar)",
+      "(triangles, ACD, is_a, similar)",
+      "(AB, has_measure, 12)",
+      "(AC, has_measure, 16)",
+      "(ED, has_measure, 5)",
+      "(BE, parallel_to, CD)"
+    ],
+    "model_output": {
+      "ANSWER": "8",
+      "REASONING": "Triangles ABE and ACD are similar. The ratio of the sides of similar triangles is equal. Given AB = 12 and AC = 16, the ratio of the sides is 12/16 or 3/4. Since ED = 5, AE, which corresponds to CD, will be 4/3 times ED. Therefore, AE = (4/3) * 5 = 20/3 = 8."
+    },
+    "status": "OK",
+    "raw_response": "{\n  \"ANSWER\": \"8\",\n  \"REASONING\": \"Triangles ABE and ACD are similar. The ratio of the sides of similar triangles is equal. Given AB = 12 and AC = 16, the ratio of the sides is 12/16 or 3/4. Since ED = 5, AE, which corresponds to CD, will be 4/3 times ED. Therefore, AE = (4/3) * 5 = 20/3 = 8.\"\n}",
+    "recovery_method": "original_prompt"
+  }
+]

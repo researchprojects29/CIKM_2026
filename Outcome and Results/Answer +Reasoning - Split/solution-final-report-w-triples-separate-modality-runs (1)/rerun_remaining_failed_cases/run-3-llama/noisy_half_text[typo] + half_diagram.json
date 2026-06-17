@@ -1,0 +1,98 @@
+[
+  {
+    "run_folder": "run-3-llama",
+    "source_csv": "Separate-Modality-Triples\\run-3-llama\\noisy_half_text[typo] + half_diagram.csv",
+    "model": "meta-llama/llama-4-scout",
+    "case_id": 15,
+    "case_label": "noisy_half_text[typo] + half_diagram",
+    "problem_index": 53,
+    "question": "Find BFD.",
+    "triples": [
+      "(a, is_a, line)",
+      "(b, is_a, line)",
+      "(c, is_a, line)",
+      "(P, is_a, point)",
+      "(Q, is_a, point)",
+      "(\\angle, is_a, angle)",
+      "(c, intersects, a)",
+      "(c, intersects, b)",
+      "(P, lies_on, c)",
+      "(Q, lies_on, c)",
+      "(P, lies_on, a)",
+      "(Q, lies_on, b)",
+      "(\\angle cPa, has_measure, 155^\\circ)",
+      "(2, is_a, angle)",
+      "(a, parallel_to, b)"
+    ],
+    "model_output": {
+      "ANSWER": "25",
+      "REASONING": "The provided triples are not necessary to answer the question as the answer and reasoning are already given."
+    },
+    "status": "OK_AFTER_JSON_REPAIR",
+    "raw_response": "```json\n{\n  \"ANSWER\": \"25\",\n  \"REASONING\": \"Given that line a is parallel to line b, and \\u2220cPa has a measure of 155^\\circ, we need to find \\u2220BFD, denoted as BFD. Since P lies on line a and Q lies on line b, and both c and a intersect with c and b intersect with c respectively, we use the properties of parallel lines and transversals. \\u2220cPa and \\u2220BFD are corresponding angles, but since \\u2220cPa is 155^\\circ, the supplementary angle to \\u2220cPa on line a is 25^\\circ because 180^\\circ - 155^\\circ = 25^\\circ. Since a is parallel to b, \\u2220BFD equals 25^\\circ due to alternate interior angles being congruent.\"\n}\n```",
+    "json_repair_response": "{\n  \"ANSWER\": \"25\",\n  \"REASONING\": \"The provided triples are not necessary to answer the question as the answer and reasoning are already given.\"\n}",
+    "recovery_method": "repair_original_response"
+  },
+  {
+    "run_folder": "run-3-llama",
+    "source_csv": "Separate-Modality-Triples\\run-3-llama\\noisy_half_text[typo] + half_diagram.csv",
+    "model": "meta-llama/llama-4-scout",
+    "case_id": 15,
+    "case_label": "noisy_half_text[typo] + half_diagram",
+    "problem_index": 109,
+    "question": "Find β, the angle between line DE and line EC at point E",
+    "triples": [
+      "(A, is_a, point)",
+      "(B, is_a, point)",
+      "(C, is_a, point)",
+      "(D, is_a, point)",
+      "(E, is_a, point)",
+      "(AB, is_a, segment)",
+      "(BC, is_a, segment)",
+      "(DE, is_a, segment)",
+      "(∠ADB, is_a, angle)",
+      "(∠ADB, has_measure, 130_deg)",
+      "(∠ADB, is_a, exterior_angle)",
+      "(∠BEC, is_a, angle)",
+      "(DE, intersects, AB)",
+      "(DE, intersects, BC)"
+    ],
+    "model_output": {
+      "ANSWER": "40_deg",
+      "REASONING": "Given that ∠ADB is an exterior angle to triangle BEC and has a measure of 130_deg, and knowing that an exterior angle of a triangle equals the sum of the remote interior angles, we can find ∠BEC. However, to find β, the angle between line DE and line EC at point E, we need to understand that ∠BEC and β are the same angle. Since ∠ADB = 130_deg, and it is exterior to triangle BEC, ∠BEC + ∠ECB + ∠CBE = 180_deg (sum of angles in a triangle), but specifically for exterior angle ∠ADB: ∠ADB = ∠BEC + ∠ECB. Assuming ∠ECB and ∠CBE are not directly provided but knowing a straight line is 180_deg and typical properties, we actually use ∠BEC directly related to β. If we consider triangle properties and given data, ∠BEC = 40_deg because ∠ADB's measure suggests the other angle at E (β or ∠DEC) would relate directly via exterior angle property. Hence β = 40_deg."
+    },
+    "status": "OK",
+    "raw_response": "```json\n{\n  \"ANSWER\": \"40_deg\",\n  \"REASONING\": \"Given that ∠ADB is an exterior angle to triangle BEC and has a measure of 130_deg, and knowing that an exterior angle of a triangle equals the sum of the remote interior angles, we can find ∠BEC. However, to find β, the angle between line DE and line EC at point E, we need to understand that ∠BEC and β are the same angle. Since ∠ADB = 130_deg, and it is exterior to triangle BEC, ∠BEC + ∠ECB + ∠CBE = 180_deg (sum of angles in a triangle), but specifically for exterior angle ∠ADB: ∠ADB = ∠BEC + ∠ECB. Assuming ∠ECB and ∠CBE are not directly provided but knowing a straight line is 180_deg and typical properties, we actually use ∠BEC directly related to β. If we consider triangle properties and given data, ∠BEC = 40_deg because ∠ADB's measure suggests the other angle at E (β or ∠DEC) would relate directly via exterior angle property. Hence β = 40_deg.\"\n}\n```",
+    "recovery_method": "original_prompt"
+  },
+  {
+    "run_folder": "run-3-llama",
+    "source_csv": "Separate-Modality-Triples\\run-3-llama\\noisy_half_text[typo] + half_diagram.csv",
+    "model": "meta-llama/llama-4-scout",
+    "case_id": 15,
+    "case_label": "noisy_half_text[typo] + half_diagram",
+    "problem_index": 120,
+    "question": "What is the bottom area of the cone?",
+    "triples": [
+      "(generatrix, has_measure, 5.0_units)",
+      "(height, has_measure, 4_units)",
+      "(cone, has_part, generatrix)",
+      "(cone, has_part, height)",
+      "(cone, has_part, bottom)",
+      "(generatrix, is_a, segment)",
+      "(height, is_a, segment)",
+      "(bottom, is_a, circle)",
+      "(cone, is_a, cone)",
+      "(radius, has_measure, 3_units)",
+      "(bottom, has_measure, ?)",
+      "(radius, has_measure, ?)"
+    ],
+    "model_output": {
+      "ANSWER": "9π square units",
+      "REASONING": "To find the bottom area of the cone, we first need to identify that the bottom of the cone is a circle. From the triples, we know that the bottom is a circle and that it has a measure (which we are trying to find). We also know that the radius of the circle has a measure of 3 units. The formula for the area of a circle is πr^2. Substituting the given radius (r = 3 units) into the formula gives us π(3)^2 = 9π square units. Therefore, the bottom area of the cone is 9π square units."
+    },
+    "status": "OK",
+    "raw_response": "```json\n{\n  \"ANSWER\": \"9π square units\",\n  \"REASONING\": \"To find the bottom area of the cone, we first need to identify that the bottom of the cone is a circle. From the triples, we know that the bottom is a circle and that it has a measure (which we are trying to find). We also know that the radius of the circle has a measure of 3 units. The formula for the area of a circle is πr^2. Substituting the given radius (r = 3 units) into the formula gives us π(3)^2 = 9π square units. Therefore, the bottom area of the cone is 9π square units.\"\n}\n```",
+    "recovery_method": "original_prompt"
+  }
+]

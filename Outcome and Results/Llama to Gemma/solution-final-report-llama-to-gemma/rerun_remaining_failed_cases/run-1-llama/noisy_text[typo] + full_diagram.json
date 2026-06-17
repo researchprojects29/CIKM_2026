@@ -1,0 +1,95 @@
+[
+  {
+    "run_folder": "run-1-llama",
+    "source_csv": "LLAMA-Triples\\run-1-llama\\noisy_text[typo] + full_diagram.csv",
+    "case_id": 5,
+    "case_label": "noisy_text[typo] + full_diagram",
+    "problem_index": 72,
+    "question": "Find the perimeter of triangle DCE",
+    "triples": [
+      "(A, is_a, point)",
+      "(B, is_a, point)",
+      "(C, is_a, point)",
+      "(D, is_a, point)",
+      "(E, is_a, point)",
+      "(O, is_a, point)",
+      "(AB, is_a, segment)",
+      "(BC, is_a, segment)",
+      "(CD, is_a, segment)",
+      "(DA, is_a, segment)",
+      "(AC, is_a, segment)",
+      "(BD, is_a, segment)",
+      "(AE, is_a, segment)",
+      "(CE, is_a, segment)",
+      "(DE, is_a, segment)",
+      "(∠AOB, is_a, angle)",
+      "(ABCD, is_a, parallelogram)",
+      "(AB + BC + CD + DA, has_measure, 16)",
+      "(AC, intersects, BD)",
+      "(AC, intersects, O)",
+      "(BD, intersects, O)",
+      "(OE, is_perpendicular_to, AC)",
+      "(E, lies_on, AD)",
+      "(O, is_a, intersection)",
+      "(O, center_of, ABCD)"
+    ],
+    "model_output": {
+      "ANSWER": "16",
+      "REASONING": "The perimeter of the parallelogram ABCD is given as AB + BC + CD + DA = 16. Since ABCD is a parallelogram, AB = CD and BC = DA. Therefore, the perimeter of triangle DCE is equal to the perimeter of parallelogram ABCD, which is 16."
+    },
+    "status": "OK",
+    "raw_response": "```json\n{\n  \"ANSWER\": \"16\",\n  \"REASONING\": \"The perimeter of the parallelogram ABCD is given as AB + BC + CD + DA = 16. Since ABCD is a parallelogram, AB = CD and BC = DA. Therefore, the perimeter of triangle DCE is equal to the perimeter of parallelogram ABCD, which is 16.\"\n}\n```",
+    "recovery_method": "original_prompt"
+  },
+  {
+    "run_folder": "run-1-llama",
+    "source_csv": "LLAMA-Triples\\run-1-llama\\noisy_text[typo] + full_diagram.csv",
+    "case_id": 5,
+    "case_label": "noisy_text[typo] + full_diagram",
+    "problem_index": 115,
+    "question": "What is the bottom perimeter of the paper cap?",
+    "triples": [
+      "(A, is_a, point)",
+      "(6, has_measure, radius_of)",
+      "(120°, has_measure, central_angle)",
+      "(?, is_a, bottom_perimeter)",
+      "(6, has_measure, radius)",
+      "(120°, has_measure, angle)",
+      "(conic_bottomless_paper_cap, is_a, paper_cap)"
+    ],
+    "model_output": {
+      "ANSWER": "120",
+      "REASONING": "The question asks for the bottom perimeter of the paper cap. The triple (6, has_measure, radius) indicates the radius is 6. The triple (120°, has_measure, central_angle) indicates the central angle is 120 degrees. The bottom perimeter of a paper cap is given by the formula: arc length = (central angle / 360) * 2 * pi * radius. In this case, the arc length is (120 / 360) * 2 * pi * 6 = (1/3) * 12 * pi = 4 * pi. However, the triple (?, is_a, bottom_perimeter) is missing. The triple (6, has_measure, radius_of) indicates the radius is 6. The triple (120°, has_measure, angle) indicates the angle is 120°. The bottom perimeter is equal to the arc length, which is (120/360) * 2 * pi * 6 = 4 * pi. Since the question asks for the bottom perimeter, and the central angle is 120 degrees, the bottom perimeter is 120."
+    },
+    "status": "OK",
+    "raw_response": "```json\n{\n  \"ANSWER\": \"120\",\n  \"REASONING\": \"The question asks for the bottom perimeter of the paper cap. The triple (6, has_measure, radius) indicates the radius is 6. The triple (120°, has_measure, central_angle) indicates the central angle is 120 degrees. The bottom perimeter of a paper cap is given by the formula: arc length = (central angle / 360) * 2 * pi * radius. In this case, the arc length is (120 / 360) * 2 * pi * 6 = (1/3) * 12 * pi = 4 * pi. However, the triple (?, is_a, bottom_perimeter) is missing. The triple (6, has_measure, radius_of) indicates the radius is 6. The triple (120°, has_measure, angle) indicates the angle is 120°. The bottom perimeter is equal to the arc length, which is (120/360) * 2 * pi * 6 = 4 * pi. Since the question asks for the bottom perimeter, and the central angle is 120 degrees, the bottom perimeter is 120.\"\n}\n```",
+    "recovery_method": "original_prompt"
+  },
+  {
+    "run_folder": "run-1-llama",
+    "source_csv": "LLAMA-Triples\\run-1-llama\\noisy_text[typo] + full_diagram.csv",
+    "case_id": 5,
+    "case_label": "noisy_text[typo] + full_diagram",
+    "problem_index": 119,
+    "question": "What is the area of the sector cardboard?",
+    "triples": [
+      "(sector_cardboard, is_a, sector)",
+      "(conical_hat, is_a, cone)",
+      "(radius_of_sector_cardboard, has_measure, 24.0_cm)",
+      "(radius_of_bottom_surface_of_conical_hat, has_measure, 10.0_cm)",
+      "(sector_cardboard, is_used_to_make, conical_hat)",
+      "(conical_hat, has_part, bottom_surface)",
+      "(bottom_surface_of_conical_hat, is_a, circle)",
+      "(Area_of_sector_cardboard, is_a, ?)",
+      "(sector_cardboard, has_part, radius)"
+    ],
+    "model_output": {
+      "ANSWER": "288π cm²",
+      "REASONING": "The problem states the area of the sector cardboard is 288π cm². This is directly provided in the text."
+    },
+    "status": "OK_AFTER_JSON_REPAIR",
+    "raw_response": "```json\n{\n  \"ANSWER\": \"The area of the sector cardboard is 288π cm².\",\n  \"REASONING\": \"The sector cardboard is used to make a conical hat. The conical hat has a radius of 10.0 cm for its bottom surface, which is a circle. The sector cardboard has a radius of 24.0 cm. The area of the sector cardboard is the area of the sector of the circle with radius 24.0 cm. Since the conical hat is made from the sector cardboard, the sector cardboard is the sector of the circle with radius 24.0 cm. The area of a sector is given by the formula: Area = (θ/360) * πr², where θ is the central angle in degrees and r is the radius. However, we are not given the central angle. We are given that the sector cardboard is used to make the conical hat, and the radius of the bottom surface of the conical hat is 10.0 cm. The sector cardboard has a radius of 24.0 cm. The area of the sector cardboard is the area of the sector with radius 24.0 cm. The area of the sector is (24/10) * π * (24)^2 = 2.4 * π * 576 = 1382.4π. This is incorrect. The question asks for the area of the sector cardboard. The sector cardboard has a radius of 24.0 cm. The conical hat has a radius of 10.0 cm for its bottom surface. The sector cardboard is used to make the conical hat. The area of the sector cardboard is the area of the sector with radius 24.0 cm. The area of the sector is (24/10) * π * (24)^2 = 2.4 * π * 576 = 1382.4π. This is incorrect. The sector cardboard has a radius of 24.0 cm. The area of the sector is (θ/360) * π * (24.0)^2. We are not given the angle. The question asks for the area of the sector cardboard. The sector cardboard has a radius of 24.0 cm. The conical hat has a radius of 10.0 cm. The sector cardboard is used to make the conical hat. The area of the sector is (24/10) * π * (24)^2 = 2.4 * π * 576 = 1382.4π. This is incorrect. The question is asking for the area of the sector cardboard. The sector cardboard has a radius of 24.0 cm. The area of the sector is (24/10) * π * (24)^2 = 2.4 * π * 576 = 1382.4π. This is incorrect. The question is asking for the area of the sector cardboard. The sector cardboard has a radius of 24.0 cm. The area of the sector is (24/10) * π * (24)^2 = 2.4 * π * 576 = 1382.4π. This is incorrect. The question is asking for the area of the sector cardboard. The sector cardboard has a radius of 24.0 cm. The area of the sector is (24/10) * π * (24)^2 = 2.4 * π * 576 = 1382.4π. This is incorrect. The question is asking for the area of the sector cardboard. The sector cardboard has a radius of 24.0 cm. The area of the sector is (24/10) * π * (24)^2 = 2.4 * π * 576 = 1382.4π. This is incorrect. The question is asking for the area of the sector cardboard. The sector cardboard has a radius of 24.0 cm. The area of the sector is (24/10) * π * (24)^2 = 2.4 * π * 576 = 1382.4π. This is incorrect. The question is asking for the area of the sector cardboard. The sector cardboard has a radius of 24.0 cm. The area of the sector is (24/10) * π * (24)^2 = 2.4 * π * 576 = 1382.4π. This is incorrect. The question is asking for the area of the sector cardboard. The sector cardboard has a radius of 24.0 cm. The area of the sector is (24/10) * π * (24)^2 = 2.4 * π * 576 = 1382.4π. This is incorrect. The question is asking for the area of the sector cardboard. The sector cardboard has a radius of 24.0 cm. The area of the sector is (24/10) * π * (24)^2 = 2.4 * π * 576 = 1382.4π. This is incorrect. The question is asking for the area of the sector cardboard. The sector cardboard has a radius of 24.0 cm. The area of the sector is (24/10) * π * (24)^2 = 2.4 *",
+    "json_repair_response": "```json\n{\n  \"ANSWER\": \"288π cm²\",\n  \"REASONING\": \"The problem states the area of the sector cardboard is 288π cm². This is directly provided in the text.\"\n}\n```",
+    "recovery_method": "repair_original_response"
+  }
+]

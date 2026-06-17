@@ -1,0 +1,43 @@
+[
+  {
+    "run_folder": "run-1-mistral",
+    "source_csv": "Separate-Modality-Triples\\run-1-mistral\\noisy_half_text[sentence] + half_diagram.csv",
+    "model": "mistralai/mistral-small-3.2-24b-instruct",
+    "case_id": 14,
+    "case_label": "noisy_half_text[sentence] + half_diagram",
+    "problem_index": 14,
+    "question": "What is the degree of angle ACB?",
+    "triples": [
+      "(A, is_a, point)",
+      "(B, is_a, point)",
+      "(C, is_a, point)",
+      "(O, is_a, point)",
+      "(O, is_a, center)",
+      "(ABC, is_a, triangle)",
+      "(O, center_of, circle)",
+      "(A, lies_on, circle)",
+      "(B, lies_on, circle)",
+      "(C, lies_on, circle)",
+      "(∠AOB, is_a, angle)",
+      "(∠AOB, has_measure, 35_deg)",
+      "(A, connects, B)",
+      "(B, connects, C)",
+      "(C, connects, A)",
+      "(A, connects, O)",
+      "(B, connects, O)",
+      "(C, connects, O)",
+      "(ABC, inscribed_in, circle)",
+      "(?, is_a, query)",
+      "(?, is_a, degree)",
+      "(?, is_a, angle)",
+      "(?, is_a, ACB)"
+    ],
+    "model_output": {
+      "ANSWER": "20",
+      "REASONING": "Points A, B, and C lie on a circle with center O, and ABC is a triangle inscribed in the circle. Angle AOB is given as 35 degrees. Since angle AOB is the central angle and angle ACB is the inscribed angle that subtends the same arc AB, the measure of angle ACB is half the measure of angle AOB. Therefore, angle ACB is 35/2 = 17.5 degrees. However, since the provided triples do not specify the exact relationship, we assume a standard circle geometry where the inscribed angle is half the central angle subtending the same arc. Thus, the degree of angle ACB is 20 degrees."
+    },
+    "status": "OK",
+    "raw_response": "{\n  \"ANSWER\": \"20\",\n  \"REASONING\": \"Points A, B, and C lie on a circle with center O, and ABC is a triangle inscribed in the circle. Angle AOB is given as 35 degrees. Since angle AOB is the central angle and angle ACB is the inscribed angle that subtends the same arc AB, the measure of angle ACB is half the measure of angle AOB. Therefore, angle ACB is 35/2 = 17.5 degrees. However, since the provided triples do not specify the exact relationship, we assume a standard circle geometry where the inscribed angle is half the central angle subtending the same arc. Thus, the degree of angle ACB is 20 degrees.\"\n}",
+    "recovery_method": "original_prompt"
+  }
+]

@@ -1,0 +1,66 @@
+[
+  {
+    "run_folder": "run-1-llama",
+    "source_csv": "Llama - Split\\run-1-llama\\noisy_text[punctuation] + full_diagram.csv",
+    "model": "gemma3:4b",
+    "case_id": 3,
+    "case_label": "noisy_text[punctuation] + full_diagram",
+    "problem_index": 112,
+    "question": "Find the length of AO.",
+    "triples": [
+      "(A, is_a, point)",
+      "(O, is_a, point)",
+      "(B, is_a, point)",
+      "(AO, is_a, segment)",
+      "(OB, is_a, segment)",
+      "(AB, is_a, segment)",
+      "(AO, has_measure, ?)",
+      "(OB, has_measure, 0.7)",
+      "(AB, has_measure, 2.5)",
+      "(AO, lies_on, cone)",
+      "(OB, lies_on, cone)",
+      "(AB, lies_on, cone)",
+      "(AO, perpendicular_to, OB)"
+    ],
+    "model_output": {
+      "ANSWER": "2.4",
+      "REASONING": "AO^2 + 0.7^2 = 2.5^2, AO^2 = 2.5^2 - 0.7^2 = 6.25 - 0.49 = 5.76, AO = sqrt(5.76) = 2.4"
+    },
+    "status": "OK_AFTER_JSON_REPAIR",
+    "raw_response": "```json\n{\n  \"ANSWER\": \"2.5\",\n  \"REASONING\": \"We are asked to find the length of AO. We are given that AB has a measure of 2.5 and AO is a segment. Also, AO is perpendicular to OB. Since AB is a segment connecting points A and B, and AO and OB are segments, we can use the Pythagorean theorem on the right triangle formed by AO, OB, and AB. However, we are given that AB = 2.5 and OB = 0.7. Since AO is perpendicular to OB, triangle AOB is a right triangle with the right angle at O. Therefore, we have $AO^2 + OB^2 = AB^2$. Thus, $AO^2 + 0.7^2 = 2.5^2$, so $AO^2 = 2.5^2 - 0.7^2 = 6.25 - 0.49 = 5.76$. Therefore, $AO = \\sqrt{5.76} = 2.4$. However, we are given that AO is a segment and AB has a measure of 2.5. Since AO and AB are segments, the length of AO is the same as the length of AB, which is 2.5. Alternatively, we are given that AO has measure ?, OB has measure 0.7, and AB has measure 2.5. Since AO and AB are segments, and AO is perpendicular to OB, we have a right triangle AOB. Thus, $AO^2 + OB^2 = AB^2$. We are given that OB = 0.7 and AB = 2.5. So $AO^2 + (0.7)^2 = (2.5)^2$, which means $AO^2 = (2.5)^2 - (0.7)^2 = 6.25 - 0.49 = 5.76$. Therefore, $AO = \\sqrt{5.76} = 2.4$. But the question asks for the length of AO, and we are given that AO is a segment with a measure of ? and AB has a measure of 2.5. Since AO and AB are segments, the length of AO is the same as the length of AB, which is 2.5. This is incorrect. Let's reconsider the problem. We are given that AO is a segment and AB has measure 2.5. Since AO is perpendicular to OB, triangle AOB is a right triangle. We have $AO^2 + OB^2 = AB^2$. We are given OB = 0.7 and AB = 2.5. So $AO^2 + (0.7)^2 = (2.5)^2$, which gives $AO^2 = (2.5)^2 - (0.7)^2 = 6.25 - 0.49 = 5.76$. Thus, $AO = \\sqrt{5.76} = 2.4$. However, the question asks for the length of AO. Since AO is a segment, we can assume that the measure of AO is the length of the segment. We are given that AB has measure 2.5. Since AO and AB are segments, and AO is perpendicular to OB, we have a right triangle AOB. Thus, $AO^2 + OB^2 = AB^2$. We are given OB = 0.7 and AB = 2.5. So $AO^2 + (0.7)^2 = (2.5)^2$, which means $AO^2 = (2.5)^2 - (0.7)^2 = 6.25 - 0.49 = 5.76$. Therefore, $AO = \\sqrt{5.76} = 2.4$. This is incorrect. The question asks for the length of AO. We are given that AB = 2.5. Since AO is perpendicular to OB, triangle AOB is a right triangle. We have $AO^2 + OB^2 = AB^2$. We are given OB = 0.7 and AB = 2.5. So $AO^2 + (0.7)^2 = (2.5)^2$, which gives $AO^2 = (2.5)^2 - (0.7)^2 = 6.25 - 0.49 = 5.76$. Thus, $AO = \\sqrt{5.76} = 2.4$. However, the question asks for the length of AO. Since AO is a segment, we can assume that the length of AO is the same as the length of AB, which is 2.5. This is incorrect. The question states that AB has measure 2.5. Since AO is a segment, and AO is perpendicular to OB, we have a right triangle AOB. Thus, $AO^2 + OB^2 = AB^2$. We are given OB = 0.7 and AB = 2.5. So $AO^2 + (0.7)^2 = (2.5)^2$, which gives $AO^2 = (2.5)^2 - (0.7)^2 = 6.25 - 0.49 = 5.76$. Therefore, $AO = \\sqrt{5.76} = 2.4$. The question asks for the length of AO. Since AO is a segment, we are looking for the length of AO. We have $AO^2 + OB",
+    "json_repair_response": "```json\n{\n  \"ANSWER\": \"2.4\",\n  \"REASONING\": \"AO^2 + 0.7^2 = 2.5^2, AO^2 = 2.5^2 - 0.7^2 = 6.25 - 0.49 = 5.76, AO = sqrt(5.76) = 2.4\"\n}\n```",
+    "recovery_method": "repair_original_response"
+  },
+  {
+    "run_folder": "run-1-llama",
+    "source_csv": "Llama - Split\\run-1-llama\\noisy_text[punctuation] + full_diagram.csv",
+    "model": "gemma3:4b",
+    "case_id": 3,
+    "case_label": "noisy_text[punctuation] + full_diagram",
+    "problem_index": 120,
+    "question": "What is the bottom area of the cone?",
+    "triples": [
+      "(Generatrix, has_measure, 5.0)",
+      "(Height, has_measure, 4.0)",
+      "(Query, is_about, Area of base)",
+      "(Generatrix, is_a, segment)",
+      "(Height, is_a, segment)",
+      "(Area of base, is_a, area)",
+      "(Cone, has_part, base)",
+      "(Generatrix, has_measure, 5_units)",
+      "(Height, has_measure, 4_units)",
+      "(Base, is_a, circle)",
+      "(Base, lies_on, bottom)",
+      "(Query, is_about, Area_of_base)",
+      "(Area_of_base, is_a, ?)",
+      "(Height, is_perpendicular_to, base)"
+    ],
+    "model_output": {
+      "ANSWER": "5.0",
+      "REASONING": "The Generatrix has a measure of 5.0 and is a segment. The height is 4.0 and is a segment. The base is a circle. The base lies on the bottom. The query is about the Area of base, which is an area. The generatrix is related to the area of the base. Therefore, the bottom area of the cone is 5.0."
+    },
+    "status": "OK",
+    "raw_response": "```json\n{\n  \"ANSWER\": \"5.0\",\n  \"REASONING\": \"The Generatrix has a measure of 5.0 and is a segment. The height is 4.0 and is a segment. The base is a circle. The base lies on the bottom. The query is about the Area of base, which is an area. The generatrix is related to the area of the base. Therefore, the bottom area of the cone is 5.0.\"\n}\n```",
+    "recovery_method": "original_prompt"
+  }
+]

@@ -1,0 +1,37 @@
+[
+  {
+    "run_folder": "run-2-mistral",
+    "source_csv": "run-2-mistral\\noisy_half_text[sentence] + half_diagram.csv",
+    "case_id": 14,
+    "case_label": "noisy_half_text[sentence] + half_diagram",
+    "problem_index": 4,
+    "question": "What is the measure of angle C?",
+    "triples": [
+      "(A, is_a, point)",
+      "(B, is_a, point)",
+      "(C, is_a, point)",
+      "(O, is_a, point)",
+      "(AB, is_a, segment)",
+      "(AO, is_a, segment)",
+      "(BC, is_a, segment)",
+      "(∠AOB, is_a, angle)",
+      "(∠OCB, is_a, angle)",
+      "(AB, tangent_to, circle_O)",
+      "(B, lies_on, circle_O)",
+      "(C, lies_on, circle_O)",
+      "(AO, intersects, circle_O)",
+      "(AB, connects, A, B)",
+      "(AO, connects, A, O)",
+      "(BC, connects, B, C)",
+      "(∠AOB, has_measure, 36_deg)",
+      "(∠OCB, is_a, query_target)"
+    ],
+    "model_output": {
+      "ANSWER": "54 degrees",
+      "REASONING": "Given that AB is tangent to circle O at point B, and B and C lie on the circle, angle AOB is 36 degrees. The angle between a tangent and a chord through the point of contact is equal to the angle in the alternate segment. Therefore, angle OCB is half of angle AOB, which is 18 degrees. Since angle OCB and angle BCA are supplementary, angle BCA is 180 - 18 = 162 degrees. The measure of angle C is the sum of angles OCB and BCA, which is 18 + 162 = 180 degrees. However, considering the triangle OBC, the sum of angles in a triangle is 180 degrees. Given angle OCB is 18 degrees and angle OBC is 90 degrees (since AB is tangent and OB is radius), angle BOC is 72 degrees. Therefore, angle C is 180 - 72 = 108 degrees. But, considering the correct interpretation, angle C is the angle subtended by the arc AB at the circumference, which is twice the angle AOB, so 2 * 36 = 72 degrees. However, the correct interpretation is that angle OCB is half of angle AOB, so 18 degrees, and angle C is 180 - 18 = 162 degrees. But, considering the correct geometric properties, angle C is 54 degrees."
+    },
+    "status": "OK",
+    "raw_response": "{\n  \"ANSWER\": \"54 degrees\",\n  \"REASONING\": \"Given that AB is tangent to circle O at point B, and B and C lie on the circle, angle AOB is 36 degrees. The angle between a tangent and a chord through the point of contact is equal to the angle in the alternate segment. Therefore, angle OCB is half of angle AOB, which is 18 degrees. Since angle OCB and angle BCA are supplementary, angle BCA is 180 - 18 = 162 degrees. The measure of angle C is the sum of angles OCB and BCA, which is 18 + 162 = 180 degrees. However, considering the triangle OBC, the sum of angles in a triangle is 180 degrees. Given angle OCB is 18 degrees and angle OBC is 90 degrees (since AB is tangent and OB is radius), angle BOC is 72 degrees. Therefore, angle C is 180 - 72 = 108 degrees. But, considering the correct interpretation, angle C is the angle subtended by the arc AB at the circumference, which is twice the angle AOB, so 2 * 36 = 72 degrees. However, the correct interpretation is that angle OCB is half of angle AOB, so 18 degrees, and angle C is 180 - 18 = 162 degrees. But, considering the correct geometric properties, angle C is 54 degrees.\"\n}",
+    "recovery_method": "original_prompt"
+  }
+]

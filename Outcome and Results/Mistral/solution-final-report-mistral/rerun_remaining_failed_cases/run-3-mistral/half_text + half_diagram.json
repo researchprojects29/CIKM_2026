@@ -1,0 +1,39 @@
+[
+  {
+    "run_folder": "run-3-mistral",
+    "source_csv": "run-3-mistral\\half_text + half_diagram.csv",
+    "case_id": 11,
+    "case_label": "half_text + half_diagram",
+    "problem_index": 88,
+    "question": "Determine the measure of BOC.",
+    "triples": [
+      "(A, is_a, point)",
+      "(B, is_a, point)",
+      "(C, is_a, point)",
+      "(O, is_a, point)",
+      "(A, lies_on, circle)",
+      "(B, lies_on, circle)",
+      "(C, lies_on, circle)",
+      "(O, center_of, circle)",
+      "(∠ACB, is_a, angle)",
+      "(∠ACB, has_measure, 42_deg)",
+      "(∠ABO, is_a, angle)",
+      "(∠ABO, has_measure, 22_deg)",
+      "(∠BOC, is_a, angle)",
+      "(AB, is_a, segment)",
+      "(AC, is_a, segment)",
+      "(BC, is_a, segment)",
+      "(BO, is_a, segment)",
+      "(CO, is_a, segment)",
+      "(AO, is_a, segment)",
+      "(∠BOC, is_a, query_target)"
+    ],
+    "model_output": {
+      "ANSWER": "64_deg",
+      "REASONING": "Given that points A, B, and C lie on a circle with center O, and angle ACB is 42 degrees, we can use the property of angles subtended by the same arc. Angle AOB is twice angle ACB because angle at the center is twice the angle at the circumference. Therefore, angle AOB = 2 * 42 degrees = 84 degrees. Similarly, angle BOC is twice angle BAC. Since angle ABO is 22 degrees, angle BAC can be found using the fact that the sum of angles in triangle ABC is 180 degrees. Angle BAC = 180 - angle ACB - angle ABO = 180 - 42 - 22 = 116 degrees. Therefore, angle BOC = 2 * angle BAC = 2 * 116 / 2 = 64 degrees."
+    },
+    "status": "OK",
+    "raw_response": "{\n  \"ANSWER\": \"64_deg\",\n  \"REASONING\": \"Given that points A, B, and C lie on a circle with center O, and angle ACB is 42 degrees, we can use the property of angles subtended by the same arc. Angle AOB is twice angle ACB because angle at the center is twice the angle at the circumference. Therefore, angle AOB = 2 * 42 degrees = 84 degrees. Similarly, angle BOC is twice angle BAC. Since angle ABO is 22 degrees, angle BAC can be found using the fact that the sum of angles in triangle ABC is 180 degrees. Angle BAC = 180 - angle ACB - angle ABO = 180 - 42 - 22 = 116 degrees. Therefore, angle BOC = 2 * angle BAC = 2 * 116 / 2 = 64 degrees.\"\n}",
+    "recovery_method": "original_prompt"
+  }
+]
