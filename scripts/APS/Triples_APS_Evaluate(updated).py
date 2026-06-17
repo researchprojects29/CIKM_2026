@@ -1,25 +1,25 @@
-"""
-evaluate_triple_sufficiency_no_answers.py
-==========================================
-Judges whether model-generated Knowledge Triples are logically sufficient to
-derive an answer for each ARS (Atomic Reasoning Step) perception question,
-using Llama 4 Scout as the judge via OpenRouter.
+# """
+# evaluate_triple_sufficiency_no_answers.py
+# ==========================================
+# Judges whether model-generated Knowledge Triples are logically sufficient to
+# derive an answer for each ARS (Atomic Reasoning Step) perception question,
+# using Llama 4 Scout as the judge via OpenRouter.
 
-Unlike the original script, this variant:
-  - Does NOT require gold answers in the ARS JSON
-  - Does NOT compute accuracy / Ct scores
-  - Outputs only: problem_index, ars_id, question, answer, reasoning,
-                  triples_used, triples_count, unique_triples_count,
-                  which_triples_used
+# Unlike the original script, this variant:
+#   - Does NOT require gold answers in the ARS JSON
+#   - Does NOT compute accuracy / Ct scores
+#   - Outputs only: problem_index, ars_id, question, answer, reasoning,
+#                   triples_used, triples_count, unique_triples_count,
+#                   which_triples_used
 
-─────────────────────────────────────────────────────────────────────────────
-QUICK-START
-─────────────────────────────────────────────────────────────────────────────
-  pip install openai pandas numpy python-dotenv tqdm
-  export OPENROUTER_API_KEY=sk-or-v1-...
-  python evaluate_triple_sufficiency_no_answers.py
-─────────────────────────────────────────────────────────────────────────────
-"""
+# ─────────────────────────────────────────────────────────────────────────────
+# QUICK-START
+# ─────────────────────────────────────────────────────────────────────────────
+#   pip install openai pandas numpy python-dotenv tqdm
+#   export OPENROUTER_API_KEY="YOUR_API_KEY"
+#   python evaluate_triple_sufficiency_no_answers.py
+# ─────────────────────────────────────────────────────────────────────────────
+# """
 
 from __future__ import annotations
 

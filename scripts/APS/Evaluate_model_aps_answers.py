@@ -1,87 +1,87 @@
-"""
-APS Model Answer Evaluator
-==========================
-Compares results_*_APS_detail.json files from Gemma, Llama, Mistral
-against ground truth in ars_perceive_sub_answers_only.json
+# """
+# APS Model Answer Evaluator
+# ==========================
+# Compares results_*_APS_detail.json files from Gemma, Llama, Mistral
+# against ground truth in ars_perceive_sub_answers_only.json
 
-EXPECTED STRUCTURES:
---------------------
-results_*_APS_detail.json (model output):
-[
-  {
-    "problem_index": 1,
-    "judgments": [
-      { "ars_id": "Q1", "answer": "null", "reasoning": "..." },
-      { "ars_id": "Q2", "answer": "60_deg", "reasoning": "..." },
-      ...
-    ]
-  },
-  ...
-]
+# EXPECTED STRUCTURES:
+# --------------------
+# results_*_APS_detail.json (model output):
+# [
+#   {
+#     "problem_index": 1,
+#     "judgments": [
+#       { "ars_id": "Q1", "answer": "null", "reasoning": "..." },
+#       { "ars_id": "Q2", "answer": "60_deg", "reasoning": "..." },
+#       ...
+#     ]
+#   },
+#   ...
+# ]
 
-ars_perceive_sub_answers_only.json (ground truth):
-{
-  "1": { "Q1": "some_answer", "Q2": "60_deg", ... },
-  ...
-}
-OR list form:
-[
-  { "problem_index": 1, "Q1": "...", "Q2": "..." },
-  ...
-]
+# ars_perceive_sub_answers_only.json (ground truth):
+# {
+#   "1": { "Q1": "some_answer", "Q2": "60_deg", ... },
+#   ...
+# }
+# OR list form:
+# [
+#   { "problem_index": 1, "Q1": "...", "Q2": "..." },
+#   ...
+# ]
 
-questions.json (optional):
-{
-  "1": { "Q1": "What is angle A?", "Q2": "What is angle B?" },
-  ...
-}
+# questions.json (optional):
+# {
+#   "1": { "Q1": "What is angle A?", "Q2": "What is angle B?" },
+#   ...
+# }
 
-FOLDER STRUCTURE:
------------------
-your_data_folder/
-├── ars_perceive_sub_answers_only.json
-├── questions.json                       (optional)
-├── Gemma/
-│   ├── run1/  results_*_APS_detail.json  (up to 20 files)
-│   ├── run2/  ...
-│   └── run3/  ...
-├── Llama/
-│   └── run1/, run2/, run3/ ...
-└── Mistral/
-    └── run1/, run2/, run3/ ...
+# FOLDER STRUCTURE:
+# -----------------
+# your_data_folder/
+# ├── ars_perceive_sub_answers_only.json
+# ├── questions.json                       (optional)
+# ├── Gemma/
+# │   ├── run1/  results_*_APS_detail.json  (up to 20 files)
+# │   ├── run2/  ...
+# │   └── run3/  ...
+# ├── Llama/
+# │   └── run1/, run2/, run3/ ...
+# └── Mistral/
+#     └── run1/, run2/, run3/ ...
 
-OUTPUT (in evaluation_results/):
----------------------------------
-  Gemma_run1_comparison.xlsx   ← green=correct, red=wrong, per Q
-  Llama_run2_comparison.xlsx
-  ...
-  summary_all_models.xlsx      ← accuracy table across all models/runs
-  summary_report.txt
+# OUTPUT (in evaluation_results/):
+# ---------------------------------
+#   Gemma_run1_comparison.xlsx   ← green=correct, red=wrong, per Q
+#   Llama_run2_comparison.xlsx
+#   ...
+#   summary_all_models.xlsx      ← accuracy table across all models/runs
+#   summary_report.txt
 
-USAGE:
-------
-  pip install anthropic openpyxl
+# USAGE:
+# ------
+#   pip install anthropic openpyxl
 
-  # With Claude semantic comparison (recommended):
-  export ANTHROPIC_API_KEY="sk-ant-..."
-  python evaluate_model_answers.py --data_dir ./your_data_folder
+#   # With Claude semantic comparison (recommended):
+#   export ANTHROPIC_API_KEY="sk-ant-..."
+#   python evaluate_model_answers.py --data_dir ./your_data_folder
 
-  # Rule-based only (no API key needed):
-  python evaluate_model_answers.py --data_dir ./your_data_folder --no_api
+#   # Rule-based only (no API key needed):
+#   python evaluate_model_answers.py --data_dir ./your_data_folder --no_api
 
-  # Evaluate only selected settings for every model:
-  python evaluate_model_answers.py --settings FTFD FTNDBGC
+#   # Evaluate only selected settings for every model:
+#   python evaluate_model_answers.py --settings FTFD FTNDBGC
 
-  # Evaluate different settings for different models:
-  python evaluate_model_answers.py \
-      --model_settings Gemma:FTFD,FTNDBGC Llama:FTFD Mistral:HTHD
+#   # Evaluate different settings for different models:
+#   python evaluate_model_answers.py \
+#       --model_settings Gemma:FTFD,FTNDBGC Llama:FTFD Mistral:HTHD
 
-  # Custom filenames:
-  python evaluate_model_answers.py --data_dir ./data \
-      --gt_file ars_perceive_sub_answers_only.json \
-      --q_file  questions.json \
-      --out_dir evaluation_results
-"""
+#   # Custom filenames:
+#   python evaluate_model_answers.py --data_dir ./data \
+#       --gt_file ars_perceive_sub_answers_only.json \
+#       --q_file  questions.json \
+#       --out_dir evaluation_results
+# """
 
 import os, json, glob, re, argparse, time
 import urllib.error
@@ -106,7 +106,7 @@ except ImportError:
     print("WARNING: openpyxl not installed. pip install openpyxl  (will fallback to CSV)")
 
 # ── CONFIG ─────────────────────────────────────────────────────`──────────────
-API_KEY    = "YOUR_API_KEY"  # or paste key here: "sk-ant-..."
+API_KEY    = "YOUR_API_KEY"  
 MODEL      = "anthropic/claude-sonnet-4-5"
 MAX_TOKENS = 150
 API_DELAY  = 0.15   # seconds between API calls to avoid rate limits
